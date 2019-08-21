@@ -4,7 +4,7 @@ about: Pattern template for the creation of the User Stories issues
 
 ---
 
-## US X - Issue title 
+## Issue title (if it is a User Story, US X - Issue name) 
 
 ### Description:
 
