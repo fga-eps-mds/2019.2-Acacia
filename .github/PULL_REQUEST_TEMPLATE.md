@@ -1,18 +1,17 @@
-## Description 
+## Descrição 
 
-Complete description about what was done.
+Descrição completa do que foi feito
 
-## Related PRs 
+## PRs relacionados 
 
-Branch | PR
+branch | PR
 ------ | ------
-other_pr_production | [link]()
-other_pr_master | [link]()
+outro_pr_relacionado | [link]()
 
-## Solves (Issues)
+## Resolve (Issues)
 
-Issues that have been solved with the PR
+Issues que foram resolvidas com o PR
 
-## PR Extra observations
+## Notas pessoais sobre o PR
 
-Specific observations about the PR
+Ressalvas específicas sobre o PR
