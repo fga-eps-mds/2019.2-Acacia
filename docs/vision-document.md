@@ -2,21 +2,73 @@
 | Data   | Versão | Modificação  | Autor  |
 | :- | :- | :- | :- |
 | 30/08/2019 | 0.1 | Criação da estrutura do documento |  Durval Carvalho |
+| 31/08/2019 | 0.2 | Adição dos tópico Introdução, Propósito, Escopo, Definições, acrônimos e abreviações e Visão Geral |  Durval Carvalho |
 
 ## 1. Introdução
+
+Este documento estará repleto de dados que sustentarão o propósito, o 
+contexto e a visão geral do produto, para assim garantir o total 
+endetendimento do projeto.
+
 ### 1.1 Propósito
+
+A finalidade desse documento é obter uma visão geral a respeito do 
+problema encontrado de todas as partes envolvidas. Para assim 
+obter uma melhor compreensão do projeto e seus aspectos principais, 
+com o objetivo de diminuir os riscos envolvidos.
+
 ### 1.2 Escopo
+
 ### 1.3 Definições, acrônimos e abreviações
+Estarão listadas neste tópico as definições, acrônimos e abreviações dos 
+termos usados neste documento, para assim facilitar o compreendimento do 
+público interessado no projeto
+
+| **Sigla/Termo/Acrônimo** | **Definição** |
+| ------------------------ | ------------- |
+| Saskatoon | Sistema de gerenciamento de colheita desenvolvido pela Les fruits défendus | 
+| Santropol Roulant | Centro comunitário de alimentos situado em Montreal| 
+| Les Fruits Défendus | Projeto de colheita urbana voluntariada organizada pela Santropol Roulant | 
+| ODS | Objetivos de Desenvolvimento Sustentável | 
+| MDS | Métodos de Desenvolvimento de <i>Software</i> | 
+| EPS | Engenharia de Produto de <i>Software</i> | 
+| FGA | Faculdade do Gama | 
+| UnB | Universidade de Brasília | 
+
+
 ### 1.4 Referências
+- Documento de visão do projeto MerandaMais https://github.com/fga-eps-mds/2017.2-MerendaMais/wiki/Documento-de-Vis%C3%A3o#11-prop%C3%B3sito. Acesso em 30 de agosto de 2019;
 - Documento de visão do projeto Ada https://github.com/fga-eps-mds/2019.1-ADA/blob/gh-pages/docs/product/vision_document.md. Acesso em 30 de agosto de 2019;
 - Documento de visão do projeto Lino https://github.com/fga-eps-mds/2018.2-Lino/blob/master/docs/documento-de-visao.md. Acesso em 30 de agosto de 2019;
 - Documento de visão do projeto Tino https://github.com/fga-eps-mds/2019.1-Tino/blob/master/docs/documento-de-visao.md. Acesso em 30 de agosto de 2019;
+- Documento de visão do projeto UnBrake https://fga-eps-mds.github.io/2019.1-unbrake/documentos/documento-de-visao/. Acesso em 30 de agosto de 2019;
 
 ### 1.5 Visão Geral
+
+Este documento visa descrever os detalhes sobre as características 
+do software a ser implementado e suas técnicas para a execução. 
+O documento é dividido da seguinte maneira: inicialmente, é 
+explorado uma visão geral de todo o documento, exposição do 
+problema que este projeto busca resolver e a descrição da parte 
+interessada.
+
+Logo após, foram expostos os recursos necessários, restrições e a descrição do desempenho do produto. Por fim, foram denominados os requisitos necessários para a realização do projeto.
+
+Desta forma, a ideia principal deste documento de visão é fornecer 
+de maneira objetiva e organizada os assuntos que tangem à 
+problemática inicial.
 
 ## 2. Posicionamento
 ### 2.1 Oportunidade de negócios
 ### 2.2 Descrição do problema
+|  |  |
+| -------- | ------------- |
+| O problema é | ... |
+| que afeta | ... |
+| cujo impacto é | ... |
+| uma boa solução seria | ... |
+
+
 ### 2.3 Descrição do posição do produto
 
 ## 3. Descrição dos Envolvidos e dos Usuários
