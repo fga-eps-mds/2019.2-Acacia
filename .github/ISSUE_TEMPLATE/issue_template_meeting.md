@@ -92,9 +92,6 @@ about: Template padrão para criação de atas de reunião
     <td colspan="5"></td>
   </tr>
   <tr>
-    <td colspan="9"><center><b>Duração</b></td>
-  </tr>
-  <tr>
     <td colspan="2"><b>Início</b></td>
     <td colspan="7"></td>
   </tr>
