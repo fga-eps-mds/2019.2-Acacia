@@ -1,10 +1,11 @@
-# Histórico de Revisão ?
+# Histórico de Revisão
 | Data   | Versão | Modificação  | Autor  |
 | :- | :- | :- | :- |
 | 30/08/2019 | 0.1 | Criação da estrutura do documento |  Durval Carvalho |
 | 31/08/2019 | 0.2 | Adição dos tópico Introdução, Propósito, Escopo, Definições, acrônimos e abreviações e Visão Geral |  Durval Carvalho |
+| 01/09/2019 | 0.3 | Adição dos tópico Posicionamento, Oportunidade de negócios, Descrição do problema |  Durval Carvalho |
 
-## 1. Introdução
+## **1. Introdução**
 
 Este documento estará repleto de dados que sustentarão o propósito, o 
 contexto e a visão geral do produto, para assim garantir o total 
@@ -58,20 +59,52 @@ Desta forma, a ideia principal deste documento de visão é fornecer
 de maneira objetiva e organizada os assuntos que tangem à 
 problemática inicial.
 
-## 2. Posicionamento
+## **2. Posicionamento**
+
+
+A organização [Santropol Roulant](https://santropolroulant.org/en/history/) 
+foi criada com a missão de diminuir o isolamento social e econômico entre 
+jovens e idosos por meio da produção, preparo e distribuição de alimentos.[1]
+
+Apartir dessa visão, diversos programas são desenvolvidos e apoiados com o 
+objetivo de  produzir, adquirir, preparar e distribuir alimentos, 
+principalmente orgânicos.[2]
+
+Um dos programa é o Les Fruits Défendus, que tem como objetivo 
+conectar proprietários de árvores frutíferas locais com colheitores 
+voluntarios para garantir que esses alimentos não sejam desperdiçados.[3]
+
 ### 2.1 Oportunidade de negócios
+
+Com base na visão do programa Les Fruits Défendus e na visão da organização
+mãe Santropol Roulant, foi identificado a oportunidade de aumentar o 
+engajamento dos proprietários de plantações frutíferas e dos voluntários por
+meio de um aplicativo mobile e um website.
+
+Essas plataformas digitais se propõe a aumentar a transparência das 
+atividades que serão realizadas, a facilitar a difusão das ideias por trás 
+do projeto e facilitar o primeiro contato com o projeto.
+
 ### 2.2 Descrição do problema
-|  |  |
-| -------- | ------------- |
-| O problema é | ... |
-| que afeta | ... |
-| cujo impacto é | ... |
-| uma boa solução seria | ... |
+|   |   |
+| - | - |
+| O problema é | o desperdício de alimentos produzido por árvores frutíferas locais |
+| que afeta | as pessoas e organizações que não tem acesso à comida orgânica |
+| cujo impacto é | o consumo de alimentos não nutritivos danosos a saúde |
+| uma boa solução seria | convencer proprietários de árvores frutíferas locais à permitir a colheita e distribuição da produção excedente de frutos |
 
 
 ### 2.3 Descrição do posição do produto
 
-## 3. Descrição dos Envolvidos e dos Usuários
+### 2.4 Referências
+
+[1] História da Santropol Roulant. Disponível em https://santropolroulant.org/en/history/. Acesso em 01 de setembro de 2019.
+
+[2] Programas desenvolvidos pela Santropol Roulant. Disponível em https://santropolroulant.org/en/what-is-the-roulant/#block_cross. Acesso em 01 de setembro de 2019
+
+[3] Projeto Les Fruits Défendus. Disponível em https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/. Acesso em 01 de setembro de 2019
+
+## **3. Descrição dos Envolvidos e dos Usuários**
 ### 3.1 Resumo dos Envolvidos
 ### 3.2 Descrição do Usuários
 ### 3.3 Principais Necessidades dos Usuários e dos Envolvidos
@@ -88,7 +121,7 @@ problemática inicial.
 ### 3.7.1 Alternativa 1
 ### 3.7.2 Alternativa 2
 
-### 4. Visão geral do Produto
+### **4. Visão geral do Produto**
 ### 4.1 Perspectiva do Produto
 ### 4.2 Resumo das capacidades
 ### 4.2 Funções do Produto
@@ -97,19 +130,19 @@ problemática inicial.
 ### 4.5 Licenciamento e instalação
 ### 4.6 Instalação
 
-## 5. Recursos do Produto
+## **5. Recursos do Produto**
 ### 5.1 Recurso 1
 ### 5.2 Recurso 2
 
-## 6. Restrições
+## **6. Restrições**
 ### 6.1 Restrições de Implementação
 ### 6.2 Restrições externas
 ### 6.3 Restrições de Design
 ### 6.4 Restrições de Confiabilidade
 
-## 7. Faixas de Qualidade
+## **7. Faixas de Qualidade**
 
-## 8. Requisitos do Produto
+## **8. Requisitos do Produto**
 ### 8.1 Requisitos do Sistema
 ### 8.2 Requisitos de Design
 ### 8.3 Requisitos de Portabilidade
