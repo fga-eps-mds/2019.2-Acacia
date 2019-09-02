@@ -151,13 +151,12 @@ Uso da aplicação desenvolvida por celular e computador de mesa.
 
 #### 3.4.3 Avaliadores
 
-<b>TODO: Nome do professor de MDS, avaliar se os avalidores realmente são stakeholders ou não, se sim, como escrever sobre eles aqui</b>
-
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
-| Carla Rocha,  | Professores de EPS e MDS na UnB FGA | Avaliar qualidade do projeto criado |  | Baixo |
+| Carla Rocha, Joenio Marques da Costa | Professores de EPS e MDS na UnB FGA | Avaliar qualidade do projeto criado | Transmitir conhecimento sobre projetos de <i>software</i> em grupo | Baixo |
 
 ### 3.5 Perfis dos Usuários
+
 #### 3.5.1 Beneficiários
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
@@ -182,10 +181,11 @@ Uso da aplicação desenvolvida por celular e computador de mesa.
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
 | Entusiastas/interessados em trabalho voluntário | Pessoas com porte físico capaz de auxiliar colheita | Se candidatar a participar de colheita, comparecer ao event e seguir ordens do líder | Participar em colheira | Médio |
 
-### 3.6 Principais Necessidades dos Usuários ou dos Envolvidos
 ### 3.7 Alternativas e Concorrências
-### 3.7.1 Alternativa 1
-### 3.7.2 Alternativa 2
+
+#### 3.7.1 Saskatoon
+
+O Saskatoon ([Repositório](https://github.com/tiagovaz/saskatoon), [Website](https://saskatoon.lesfruitsdefendus.org/)) é outro projeto open source que cumpre a mesma proposta, porém usa tecnologias antigas e não é de uso intuitivo. Como o objetivo é fomentar o senso de comunidade e facilitar o processo de se fazer colheita coletiva para todos os usuários, uma solução para o problema que cumpre seus objectivos de forma melhor que saskatoon pode ser desenvolvida.
 
 ### **4. Visão geral do Produto**
 ### 4.1 Perspectiva do Produto
