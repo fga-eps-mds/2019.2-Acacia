@@ -119,7 +119,7 @@ do projeto e facilitar o primeiro contato com o projeto.
 | :- | :- |
 | Beneficiários | Instituições recebedoras de doações da colheita |
 | Líderes de colheita | Escolhe e gerencia voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> |
-| Proprietários de árvores | Cadastram sua(s) proriedades e árvores, disponibilizam terreno para colheita voluntária com a condição de doar parte dos frutos para a <i>Les Fruits Défendus</i> |
+| Proprietários de árvores | Cadastram sua(s) proriedade(s) e suas respectivas árvores, disponibilizam terreno para colheita voluntária com a condição de doar parte dos frutos para a <i>Les Fruits Défendus</i> |
 | Voluntários de colheita | Se candidatam a participar de colheitas |
 
 ### 3.3 Principais Necessidades dos Usuários e dos Envolvidos
@@ -129,7 +129,7 @@ do projeto e facilitar o primeiro contato com o projeto.
 | Beneficiário | Doações de colheita | Website Saskatoon além de outros projetos do Les Fruit Défendus | Website para analisar colheitas e se candidatar a receber doação |
 | Líder de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Website Saskatoon | Website (com suporte mobile) para gerenciar responsabilidades |
 | Proprietário de árvores | Receber ajuda em colheita e/ou interesse em forteceler comunidade local | Website Saskatoon | Website transparente para registrar propriedade(s) e agendar colheitas |
-| Volutário de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Website Saskatoon | Website (com suporte mobile) de simples uso para se candidatar à trabalho voluntário e receber informações à respeito de suas colheitas |
+| Voluntário de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Website Saskatoon | Website (com suporte mobile) de simples uso para se candidatar à trabalho voluntário e receber informações à respeito de suas colheitas |
 
 ### 3.3 Ambiente dos Usuários
 
@@ -167,7 +167,7 @@ Uso da aplicação desenvolvida por celular e computador de mesa.
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
-| Entisiastas/interessados em trabalho voluntário | Líderes de colheita | Escolhe e gerencia voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> | Completar colheitas com sucesso | Alto |
+| Entusiastas/interessados em trabalho voluntário | Líderes de colheita | Escolhe e gerencia voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> | Completar colheitas com sucesso | Alto |
 
 #### 3.5.3 Proprietários de árvores
 
@@ -179,7 +179,7 @@ Uso da aplicação desenvolvida por celular e computador de mesa.
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
-| Entusiastas/interessados em trabalho voluntário | Pessoas com porte físico capaz de auxiliar colheita | Se candidatar a participar de colheita, comparecer ao event e seguir ordens do líder | Participar em colheira | Médio |
+| Entusiastas/interessados em trabalho voluntário | Pessoas com porte físico capaz de auxiliar colheita | Se candidatar a participar de colheita, comparecer ao evento e seguir ordens do líder de colheita | Participar em colheita | Médio |
 
 ### 3.7 Alternativas e Concorrências
 
