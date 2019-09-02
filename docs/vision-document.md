@@ -124,9 +124,12 @@ do projeto e facilitar o primeiro contato com o projeto.
 
 ### 3.3 Principais Necessidades dos Usuários e dos Envolvidos
 
-| Necessidade | Prioridade | Interesses | Solução Atual | Solução Proposta |
-| :- | :- | :- | :- | :- |
-| | | | |
+| Usuário | Necessidade | Solução Atual | Solução Proposta |
+| :- | :- | :- | :- |
+| Beneficiário | Doações de colheita | Website Saskatoon além de outros projetos do Les Fruit Défendus | Website para analisar colheitas e se candidatar a receber doação |
+| Líder de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Website Saskatoon | Website (com suporte mobile) para gerenciar responsabilidades |
+| Proprietário de árvores | Receber ajuda em colheita e/ou interesse em forteceler comunidade local | Website Saskatoon | Website transparente para registrar propriedade(s) e agendar colheitas |
+| Volutário de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Website Saskatoon | Website (com suporte mobile) de simples uso para se candidatar à trabalho voluntário e receber informações à respeito de suas colheitas |
 
 ### 3.3 Ambiente dos Usuários
 
@@ -136,48 +139,48 @@ Uso da aplicação desenvolvida por celular e computador de mesa.
 
 #### 3.4.1 Equipe de Desenvolvimento de <i>Software</i>
 
-| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
-| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
-| Durval Carvalho de Souza, Flávio Vieira, Hugo Sobral de Lima Salomão,	João Pedro Silva de Carvalho, Leonardo da Silva Gomes, Renato Britto Araújo | Desenvolvedores | Estudantes de MDS na UnB FGA | Criar e manter documentos; Desenvolver e testar o software | Completar o projeto proposto dentro do período estipulado e atendendo à todos os requisitos | Alto |
+| Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | ---- | ---------------- | ------------------- | ------------ |
+| Durval Carvalho de Souza, Flávio Vieira, Hugo Sobral de Lima Salomão,	João Pedro Silva de Carvalho, Leonardo da Silva Gomes, Renato Britto Araújo | Estudantes de MDS na UnB FGA | Criar e manter documentos; Desenvolver e testar o software | Completar o projeto proposto dentro do período estipulado e atendendo à todos os requisitos | Alto |
 
 #### 3.4.2 Equipe de Engenharia de Produto de <i>Software</i> 
 
-| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
-| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
-| Fabíola Malta Fleury, Martha Dantas Silva, Shayane Marques Alcântara, Vítor Cardoso Xoteslem | Engenheiros de produto de software | Estudantes de EPS na UnB FGA | Criar e manter documentos; Gerenciar os desenvolvedores; Tomada de decisões a respeito do <i>stack</i> de tecnologias | Completar o projeto proposto dentro do período estipulado e atendendo à todos os requisitos | Alto |
+| Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | ---- | ---------------- | ------------------- | ------------ |
+| Fabíola Malta Fleury, Martha Dantas Silva, Shayane Marques Alcântara, Vítor Cardoso Xoteslem | Estudantes de EPS na UnB FGA | Criar e manter documentos; Gerenciar os desenvolvedores; Tomada de decisões a respeito do <i>stack</i> de tecnologias | Completar o projeto proposto dentro do período estipulado e atendendo à todos os requisitos | Alto |
 
 #### 3.4.3 Avaliadores
 
 <b>TODO: Nome do professor de MDS, avaliar se os avalidores realmente são stakeholders ou não, se sim, como escrever sobre eles aqui</b>
 
-| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
-| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
-| Carla Rocha,  | Avalidores | Professores de EPS e MDS na UnB FGA | Avaliar qualidade do projeto criado |  | Baixo |
+| Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | ---- | ---------------- | ------------------- | ------------ |
+| Carla Rocha,  | Professores de EPS e MDS na UnB FGA | Avaliar qualidade do projeto criado |  | Baixo |
 
 ### 3.5 Perfis dos Usuários
 #### 3.5.1 Beneficiários
 
-| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
-| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
-| Instituições de auxílio a idosos/orfanatos |  |  |  |  | Baixo |
+| Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | ---- | ---------------- | ------------------- | ------------ |
+| Instituições | Instituições de auxílio a idosos/orfanatos | Se candidatar a receber doação, checar informações sobre colheitas | Conseguir doações de forma a suprir sua demanda de comida | Baixo |
 
 #### 3.5.2 Líderes de colheita
 
-| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
-| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
-| Entisiastas/interessados em trabalho voluntário |  |  |  |  | Alto |
+| Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | ---- | ---------------- | ------------------- | ------------ |
+| Entisiastas/interessados em trabalho voluntário | Líderes de colheita | Escolhe e gerencia voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> | Completar colheitas com sucesso | Alto |
 
 #### 3.5.3 Proprietários de árvores
 
-| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
-| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
-| Donos de propriedade urbana com árvores frutíferas |  |  |  |  | Alto |
+| Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | ---- | ---------------- | ------------------- | ------------ |
+| Donos de propriedade urbana com árvores frutíferas | Proprietários de árvores dispostos a ajudar a comunidade e/ou incapacitados para realizar colheita | Disponibilizar sua propriedade para colheita e parte de seus frutos para a <i>Les Fruits Défendus</i> | Conseguir ajuda na colheita de suas árvores | Alto |
 
 #### 3.5.4 Voluntário de colheita
 
-| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
-| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
-| Entisiastas/interessados em trabalho voluntário |  |  |  |  | Médio |
+| Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | ---- | ---------------- | ------------------- | ------------ |
+| Entusiastas/interessados em trabalho voluntário | Pessoas com porte físico capaz de auxiliar colheita | Se candidatar a participar de colheita, comparecer ao event e seguir ordens do líder | Participar em colheira | Médio |
 
 ### 3.6 Principais Necessidades dos Usuários ou dos Envolvidos
 ### 3.7 Alternativas e Concorrências
