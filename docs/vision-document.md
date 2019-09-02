@@ -3,7 +3,8 @@
 | :- | :- | :- | :- |
 | 30/08/2019 | 0.1 | Criação da estrutura do documento |  Durval Carvalho |
 | 31/08/2019 | 0.2 | Adição dos tópico Introdução, Propósito, Escopo, Definições, acrônimos e abreviações e Visão Geral |  Durval Carvalho |
-| 01/09/2019 | 0.3 | Adição dos tópico Posicionamento, Oportunidade de negócios, Descrição do problema |  Durval Carvalho |
+| 01/09/2019 | 0.3 | Adição dos tópico Posicionamento, Oportunidade de negócios, Descrição do problema |  Durval Carvalho 
+| 02/09/2019 | 0.4 | Adição dos Envolvidos e dos Usuários, atualização do layout da Descrição do Problema  | Renato Britto Araujo |
 
 ## **1. Introdução**
 
@@ -86,12 +87,10 @@ atividades que serão realizadas, a facilitar a difusão das ideias por trás
 do projeto e facilitar o primeiro contato com o projeto.
 
 ### 2.2 Descrição do problema
-|   |   |
-| - | - |
-| O problema é | o desperdício de alimentos produzido por árvores frutíferas locais |
-| que afeta | as pessoas e organizações que não tem acesso à comida orgânica |
-| cujo impacto é | o consumo de alimentos não nutritivos danosos a saúde |
-| uma boa solução seria | convencer proprietários de árvores frutíferas locais à permitir a colheita e distribuição da produção excedente de frutos |
+
+| O problema é | que afeta | cujo impacto é | uma boa solução seria | 
+| ------------- | ----- | -------------- | --------------------- | 
+| O desperdício de alimentos produzido por árvores frutíferas locais | as pessoas e organizações que não tem acesso à comida orgânica | o consumo de alimentos não nutritivos danosos a saúde | convencer proprietários de árvores frutíferas locais à permitir a colheita e distribuição da produção excedente de frutos |
 
 
 ### 2.3 Descrição do posição do produto
@@ -105,17 +104,81 @@ do projeto e facilitar o primeiro contato com o projeto.
 [3] Projeto Les Fruits Défendus. Disponível em https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/. Acesso em 01 de setembro de 2019
 
 ## **3. Descrição dos Envolvidos e dos Usuários**
+
 ### 3.1 Resumo dos Envolvidos
-### 3.2 Descrição do Usuários
+
+| Nome | Descrição | Responsabilidade |
+| :- | :- | :- |
+| Avaliadores | Professores das disciplinas de MDS e EPS | Avaliar a qualidade do projeto desenvolvido pelos alunos de MDS e EPS |
+| Desenvolvedores | Estudantes da Disciplina MDS da UnB FGA | Criar e manter documentos; Desenvolver e testar o software |
+| Equipe de Engenharia de Produto | Estudantes da Disciplina EPS da UnB FGA | Criar e manter documentos; Gerenciar os desenvolvedores; Tomada de decisões a respeito do <i>stack</i> de tecnologias |
+
+### 3.2 Descrição dos Usuários
+
+| Nome | Descrição |
+| :- | :- |
+| Beneficiários | Instituições recebedoras de doações da colheita |
+| Líderes de colheita | Escolhe e gerencia voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> |
+| Proprietários de árvores | Cadastram sua(s) proriedades e árvores, disponibilizam terreno para colheita voluntária com a condição de doar parte dos frutos para a <i>Les Fruits Défendus</i> |
+| Voluntários de colheita | Se candidatam a participar de colheitas |
+
 ### 3.3 Principais Necessidades dos Usuários e dos Envolvidos
+
+| Necessidade | Prioridade | Interesses | Solução Atual | Solução Proposta |
+| :- | :- | :- | :- | :- |
+| | | | |
+
 ### 3.3 Ambiente dos Usuários
+
+Uso da aplicação desenvolvida por celular e computador de mesa.
+
 ### 3.4 Perfis dos Envolvidos
+
 #### 3.4.1 Equipe de Desenvolvimento de <i>Software</i>
+
+| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
+| Durval Carvalho de Souza, Flávio Vieira, Hugo Sobral de Lima Salomão,	João Pedro Silva de Carvalho, Leonardo da Silva Gomes, Renato Britto Araújo | Desenvolvedores | Estudantes de MDS na UnB FGA | Criar e manter documentos; Desenvolver e testar o software | Completar o projeto proposto dentro do período estipulado e atendendo à todos os requisitos | Alto |
+
 #### 3.4.2 Equipe de Engenharia de Produto de <i>Software</i> 
-#### 3.4.3 Equipe de Orientação
+
+| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
+| Fabíola Malta Fleury, Martha Dantas Silva, Shayane Marques Alcântara, Vítor Cardoso Xoteslem | Engenheiros de produto de software | Estudantes de EPS na UnB FGA | Criar e manter documentos; Gerenciar os desenvolvedores; Tomada de decisões a respeito do <i>stack</i> de tecnologias | Completar o projeto proposto dentro do período estipulado e atendendo à todos os requisitos | Alto |
+
+#### 3.4.3 Avaliadores
+
+<b>TODO: Nome do professor de MDS, avaliar se os avalidores realmente são stakeholders ou não, se sim, como escrever sobre eles aqui</b>
+
+| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
+| Carla Rocha,  | Avalidores | Professores de EPS e MDS na UnB FGA | Avaliar qualidade do projeto criado |  | Baixo |
+
 ### 3.5 Perfis dos Usuários
-#### 3.5.1 Usuário 1
-#### 3.5.2 Usuário 2
+#### 3.5.1 Beneficiários
+
+| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
+| Instituições de auxílio a idosos/orfanatos |  |  |  |  | Baixo |
+
+#### 3.5.2 Líderes de colheita
+
+| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
+| Entisiastas/interessados em trabalho voluntário |  |  |  |  | Alto |
+
+#### 3.5.3 Proprietários de árvores
+
+| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
+| Donos de propriedade urbana com árvores frutíferas |  |  |  |  | Alto |
+
+#### 3.5.4 Voluntário de colheita
+
+| Representantes | Descrição | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
+| -------------- | --------- | ---- | ---------------- | ------------------- | ------------ |
+| Entisiastas/interessados em trabalho voluntário |  |  |  |  | Médio |
+
 ### 3.6 Principais Necessidades dos Usuários ou dos Envolvidos
 ### 3.7 Alternativas e Concorrências
 ### 3.7.1 Alternativa 1
