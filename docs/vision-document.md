@@ -5,6 +5,7 @@
 | 31/08/2019 | 0.2 | Adição dos tópico Introdução, Propósito, Escopo, Definições, acrônimos e abreviações e Visão Geral |  Durval Carvalho |
 | 01/09/2019 | 0.3 | Adição dos tópico Posicionamento, Oportunidade de negócios, Descrição do problema |  Durval Carvalho 
 | 02/09/2019 | 0.4 | Adição dos Envolvidos e dos Usuários, atualização do layout da Descrição do Problema  | Renato Britto Araujo |
+| 02/09/2019 | 0.5 | Adição dos Recursos do Produto | Durval Carvalho |
 
 ## **1. Introdução**
 
@@ -197,8 +198,47 @@ O Saskatoon ([Repositório](https://github.com/tiagovaz/saskatoon), [Website](ht
 ### 4.6 Instalação
 
 ## **5. Recursos do Produto**
-### 5.1 Recurso 1
-### 5.2 Recurso 2
+
+### 5.1 Recursos de suporte ao voluntário
+
+Os voluntários que tiverem interessados no projeto podem se cadastrar na 
+plataforma. Quando logados terão acesso aos seguintes recursos: 
+* Histórico de colheitas que participaram.
+* Organizações ou pessoas que foram beneficiadas com os alimentos coletados na colheita em que o voluntário estava presente.
+* Próximas colheitas que podem se voluntariar.
+* Vincular-se a uma colheita cadastrada
+
+### 5.2 Recursos de suporte ao proprietário
+
+Os proprietários de árvores frutíferas locais que tiverem interesse no 
+projeto podem se cadastar na plataforma. Quando logados terão acesso ao:
+
+* Cadastro de plantações disponível para colheita
+* Histórico de colheitas realizas em suas propriedades.
+* Organizações ou pessoas que foram beneficiadas com os alimentos coletados em sua propriedade.
+
+### 5.5 Disponibilizar os resultados das últimas colheitas
+
+Qualquer pessoa interessada no projeto terá acesso aos paineis de 
+informação. Nessa parte da aplicação não será necessário autenticação do 
+usuário e qualquer pessoa terá acesso aos dados das últimas colheitas, o 
+destino dos frutos colheitados e informações sobre o projeto.
+
+### 5.6 Enviar email para grupos cadastrados
+ 
+A aplicação poderá enviar email para os usuários de acordo com as atividades 
+que estão se aproximando. Esses emails serão enviados automaticamente de 
+acordo com o contexto do usuário. Esses emails são:
+
+5.6.1 Para os proprietários
+* Sua platação atingiu o número de voluntários necessários
+* Sua platação não atingiu o número de voluntários necessários
+* A data de colheita está próxima
+
+5.6.2 Para os voluntários
+* A colheita que você está escrito atingiu o número de voluntários necessários
+* A colheita que você está escrito não atingiu o número de voluntários necessários
+* A colheita que você está escrito está próxima
 
 ## **6. Restrições**
 ### 6.1 Restrições de Implementação
