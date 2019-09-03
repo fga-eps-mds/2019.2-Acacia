@@ -6,10 +6,11 @@
 | 01/09/2019 | 0.3 | Adição dos tópico Posicionamento, Oportunidade de negócios, Descrição do problema |  Durval Carvalho 
 | 02/09/2019 | 0.4 | Adição dos Envolvidos e dos Usuários, atualização do layout da Descrição do Problema  | Renato Britto Araujo |
 | 02/09/2019 | 0.5 | Adição dos tópicos Recursos do Produto, Restrições | Durval Carvalho |
+| 02/09/2019 | 0.6 | Adição da Visão geral do Produto, Perspectiva do Produto, Resumo das capacidades, Funções do Produto, Suposições e dependências | Leonardo da Silva Gomes |
 
 ## **1. Introdução**
 
-Este documento estará repleto de dados que sustentarão o propósito, o 
+    Este documento estará repleto de dados que sustentarão o propósito, o 
 contexto e a visão geral do produto, para assim garantir o total 
 endetendimento do projeto.
 
@@ -187,14 +188,35 @@ Uso da aplicação desenvolvida por celular e computador de mesa.
 
 O Saskatoon ([Repositório](https://github.com/tiagovaz/saskatoon), [Website](https://saskatoon.lesfruitsdefendus.org/)) é outro projeto open source que cumpre a mesma proposta, porém usa tecnologias antigas e não é de uso intuitivo. Como o objetivo é fomentar o senso de comunidade e facilitar o processo de se fazer colheita coletiva para todos os usuários, uma solução para o problema que cumpre seus objectivos de forma melhor que saskatoon pode ser desenvolvida.
 
-### **4. Visão geral do Produto**
+## **4. Visão geral do Produto**
+ 
 ### 4.1 Perspectiva do Produto
+ 
+O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas urbanas, fomentando a agricultura urbana e a agroecologia que interfere fortemente em vários aspectos sociais e econômicos. Assim, utilizamos da relação entre proprietários de árvores frutíferas, voluntários para colheita e locais que possam receber doações destas frutas, para a diminuição de desperdício de comida, aumento do acesso a comida saudável e nutritiva e colaboração comunitária (socialização) acarretando na diminuição de transtornos mentais e fortalecimento de culturas locais. O produto é baseado em um sistema já existente,  o [Saskatoon](https://github.com/tiagovaz/saskatoon) utilizado pelo coletivo [LES FRUITS DÉFENDUS](https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/) em Montreal, uma iniciativa da organização [Santropol Roulant](https://santropolroulant.org/en/history/).
+ 
 ### 4.2 Resumo das capacidades
-### 4.2 Funções do Produto
-### 4.3 Suposições e dependências
-### 4.4 Custo e precificação
-### 4.5 Licenciamento e instalação
-### 4.6 Instalação
+ 
+| Benefício para o Usuário | Recursos de suporte |
+|:---:|:---:|
+|Melhor meio de atrair voluntários|A partir das informações da colheita colaborativa disponibilizadas pelo usuário (proprietário da árvore), voluntários poderão pela plataforma se inscrever e saber das informações da colheita.|
+|Facilidade em se voluntariar|O projeto utiliza de um meio simples, no qual haverá um calendário que estará expondo todos os "eventos", onde você poderá escolher e se inscrever para se tornar um voluntário.|
+|Facilidade em marcar um evento colaborativo|O projeto, terá um formulário que pedirá as informações da colheita para atrair voluntários e assim marcará no calendário o dia do "evento".|
+ 
+### 4.3 Funções do Produto
+ 
+O projeto visa ser o conectivo entre os proprietários de árvores e os voluntários, facilitando o processo de colaboração. A plataforma agrega diversas funcionalidades como cadastro, gerenciamento,  inscrição no projeto, etc.
+ 
+### 4.4 Suposições e dependências
+ 
+- O usuário deverá possuir um celular ou um computador que possa, de forma online, acessar a página.
+ 
+- O aplicativo será utilizado por pessoas que desejam se voluntariar e pessoas que querem ajudar na colheita de seus frutos.
+ 
+- O aplicativo facilitará esse processo de comunicação entre proprietário da árvore frutífera e o voluntário.
+
+### 4.5 Custo e precificação
+### 4.6 Licenciamento e instalação
+### 4.7 Instalação
 
 ## **5. Recursos do Produto**
 
@@ -243,11 +265,10 @@ acordo com o contexto do usuário. Esses emails são:
 
 Listagem de restrições externas e outras dependências:
 
-* Conexão com a Internet
-* O projeto deve ser finalizado até o prazo limite 17/12/19. 
-* Foco para aprender novas tecnologias
-* Conhecimento básico da Português;
-* Conhecimento básico de Inglês;
+* Conexão com a Internet.
+* O projeto deve ser finalizado até o prazo limite 17/12/19.
+* Foco para aprender novas tecnologias.
+* Conhecimento básico de Inglês.
 
 ### 6.1 Restrições de Implementação
 
