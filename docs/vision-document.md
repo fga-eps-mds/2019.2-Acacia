@@ -5,7 +5,7 @@
 | 31/08/2019 | 0.2 | Adição dos tópico Introdução, Propósito, Escopo, Definições, acrônimos e abreviações e Visão Geral |  Durval Carvalho |
 | 01/09/2019 | 0.3 | Adição dos tópico Posicionamento, Oportunidade de negócios, Descrição do problema |  Durval Carvalho 
 | 02/09/2019 | 0.4 | Adição dos Envolvidos e dos Usuários, atualização do layout da Descrição do Problema  | Renato Britto Araujo |
-| 02/09/2019 | 0.5 | Adição dos Recursos do Produto | Durval Carvalho |
+| 02/09/2019 | 0.5 | Adição dos tópicos Recursos do Produto, Restrições | Durval Carvalho |
 
 ## **1. Introdução**
 
@@ -45,6 +45,13 @@ público interessado no projeto
 - Documento de visão do projeto Lino https://github.com/fga-eps-mds/2018.2-Lino/blob/master/docs/documento-de-visao.md. Acesso em 30 de agosto de 2019;
 - Documento de visão do projeto Tino https://github.com/fga-eps-mds/2019.1-Tino/blob/master/docs/documento-de-visao.md. Acesso em 30 de agosto de 2019;
 - Documento de visão do projeto UnBrake https://fga-eps-mds.github.io/2019.1-unbrake/documentos/documento-de-visao/. Acesso em 30 de agosto de 2019;
+- Texto descritivo sobre o documento de visão. https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html. Acesso em 02 de setembro de 2019
+
+- [1] História da Santropol Roulant. Disponível em https://santropolroulant.org/en/history/. Acesso em 01 de setembro de 2019.
+
+- [2] Programas desenvolvidos pela Santropol Roulant. Disponível em https://santropolroulant.org/en/what-is-the-roulant/#block_cross. Acesso em 01 de setembro de 2019
+
+- [3] Projeto Les Fruits Défendus. Disponível em https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/. Acesso em 01 de setembro de 2019
 
 ### 1.5 Visão Geral
 
@@ -95,14 +102,6 @@ do projeto e facilitar o primeiro contato com o projeto.
 
 
 ### 2.3 Descrição do posição do produto
-
-### 2.4 Referências
-
-[1] História da Santropol Roulant. Disponível em https://santropolroulant.org/en/history/. Acesso em 01 de setembro de 2019.
-
-[2] Programas desenvolvidos pela Santropol Roulant. Disponível em https://santropolroulant.org/en/what-is-the-roulant/#block_cross. Acesso em 01 de setembro de 2019
-
-[3] Projeto Les Fruits Défendus. Disponível em https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/. Acesso em 01 de setembro de 2019
 
 ## **3. Descrição dos Envolvidos e dos Usuários**
 
@@ -241,10 +240,29 @@ acordo com o contexto do usuário. Esses emails são:
 * A colheita que você está escrito está próxima
 
 ## **6. Restrições**
+
+Listagem de restrições externas e outras dependências:
+
+* Conexão com a Internet
+* O projeto deve ser finalizado até o prazo limite 17/12/19. 
+* Foco para aprender novas tecnologias
+* Conhecimento básico da Português;
+* Conhecimento básico de Inglês;
+
 ### 6.1 Restrições de Implementação
+
 ### 6.2 Restrições externas
+Dentre as restrições externas as que mais irão influenciar são a 
+inexperiência com o framework Django, além de possíveis transtornos entre 
+a equipe de desenvolvimento e de gerência.
+
 ### 6.3 Restrições de Design
+A aplicação deve ter uma interface que seja de fácil uso para pessoas. Dessa 
+forma, será necessário uma interface intuitiva pensando na experiência do 
+usuário.
+
 ### 6.4 Restrições de Confiabilidade
+O sistema deverá ter cobertura de testes de no mínimo 90%
 
 ## **7. Faixas de Qualidade**
 
