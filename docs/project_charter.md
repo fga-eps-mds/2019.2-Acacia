@@ -1,5 +1,13 @@
 ﻿# Termo de abertura
 
+# Histórico de Revisão
+
+
+| Data   | Versão | Modificação  | Autor  |
+| :- | :- | :- | :- |
+| 04/09/2019 | 0.1 | Criação da versão inicial do documento | Fabíola |
+| 04/08/2019 | 0.2 | Atualização de custos e oportunidade de negócio | Fabíola |
+
 # 1. Introdução
 
 Este documento inicia formalmente o projeto do Sistema de Colheita Colaborativa. Nas próximas sessões são detalhados: o que este projeto visa realizar, a oportunidade de negócio identificada, o escopo de atuação, os envolvidos (*stakeholders*), características de riscos, restrições e de custos, entregáveis, prazos e as ferramentas utilizadas no processo de desenvolvimento. Tais descrições visam elucidar a viabilidade do projeto.
@@ -16,7 +24,7 @@ Este projeto possui como objetivos:
 -   Auxiliar na diminuição do desperdício de comida
 -   Aumentar o acesso a comida local
 -   Facilitar a disseminação de conhecimento de colheita e plantio de árvores frutíferas urbanas
-- Facilitar o conhecimento de feiras e troca de conhecimento entre produtores de agricultura familiar e urbana
+-   Facilitar o conhecimento de feiras e troca de conhecimento entre produtores de agricultura familiar e urbana
 
 
 # 4. Oportunidade de Negócios
@@ -32,7 +40,7 @@ O projeto [Saskatoon](https://github.com/tiagovaz/saskatoon) está inserido nest
 
 # 5. Escopo do Projeto
 
-Plataforma web responsiva, troca de informações entre pessoas em relação a agricultura urbana
+A plataforma que será desenvolvida será uma aplicação web responsiva, permitindo o uso assim em computadores e celulares que facilitará as colheitas, por meio de calendários com cadastro de plantios e datas de realização de colheita, bem como o registro de voluntários e seu gerenciamento, por meio de um responsável da colheita. Deve ainda permitir visualizações que sejam adequadas ao uso de coletivos e também facilitar a troca de conhecimento sobre agricultura urbana e a construção de comunidade em relação a tal atividade.
 
 # 6. Equipe e Papéis
 
