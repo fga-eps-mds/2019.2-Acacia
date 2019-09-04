@@ -28,6 +28,8 @@ diminuir os riscos envolvidos.
 
 ### 1.2 Escopo
 
+Esse projeto tem como objetivo auxiliar os integrantes do projeto Saskatoon que promovem a mobilização de voluntários para ajudarem a donos de plantações frutífera a fazerem suas colheitas. O software, que tem a função de gerenciar essa mobilização fazendo uma comunicação entre os participantes desse projeto, será uma aplicação tanto web quanto mobile. Com isso o software contribuiria com o Saskatoon para ajudar no não disperdício de comida e promover uma alimentação mais saudável, que são parte dos Objetivos de Desenvolvimento Sustentável (ODS) definidos pela ONU.
+
 ### 1.3 Definições, acrônimos e abreviações
 Estarão listadas neste tópico as definições, acrônimos e abreviações dos 
 termos usados neste documento, para assim facilitar o compreendimento do 
