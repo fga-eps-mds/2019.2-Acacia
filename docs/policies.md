@@ -1,4 +1,10 @@
 # Políticas do Repositório
+## Histórico de versão
+
+| Data | Versão | Modificação | Autor |
+| :- | :- | :- | :- |
+| 23/08/2019 | 1.0 | Criação da primeira versão do documento | Vítor Cardoso |
+| 03/09/2019 | 1.1 | Tradução do documento para português | Vítor Cardoso |
 
 ## Introdução
 
