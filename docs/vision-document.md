@@ -10,6 +10,7 @@
 | 03/09/2019 | 0.7 | Adição dos tópicos Faixas de Qualidade, Requisitos e Descrição do posição do produto | Durval Carvalho |
 | 03/09/2019 | 0.7.1 | Revisão dos tópicos Propósito, Visão Geral, Descrição do posição do produto, Principais Necessidades dos Usuários e dos Envolvidos, Alternativas e Concorrências, Resumo das capacidades | Durval Carvalho |
 | 03/09/2019 | 0.7.2 | Revisão gramatical e estrutural de todo o documento | Renato Britto Araujo, Leonardo da Silva Gomes |
+| 04/09/2019 | 0.8 | Adição do escopo do projeto | João Pedro Silva de Carvalho |
 
 ## **1. Introdução**
 
