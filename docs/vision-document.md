@@ -9,12 +9,13 @@
 | 02/09/2019 | 0.6 | Adição da Visão geral do Produto, Perspectiva do Produto, Resumo das capacidades, Funções do Produto, Suposições e dependências | Leonardo da Silva Gomes |
 | 03/09/2019 | 0.7 | Adição dos tópicos Faixas de Qualidade, Requisitos e Descrição do posição do produto | Durval Carvalho |
 | 03/09/2019 | 0.7.1 | Revisão dos tópicos Propósito, Visão Geral, Descrição do posição do produto, Principais Necessidades dos Usuários e dos Envolvidos, Alternativas e Concorrências, Resumo das capacidades | Durval Carvalho |
+| 03/09/2019 | 0.7.2 | Revisão gramatical de todo o documento | Renato Britto Araujo |
 
 ## **1. Introdução**
 
 Este documento estará repleto de dados que sustentarão o propósito, 
 o contexto e a visão geral do produto, para assim garantir o total 
-endetendimento do projeto.
+entendimento do projeto.
 
 ### 1.1 Propósito
 
@@ -36,7 +37,7 @@ público interessado no projeto
 | ------------------------ | ------------- |
 | Saskatoon | Sistema de gerenciamento de colheita desenvolvido pelo Les Fruits Défendus | 
 | Santropol Roulant | Centro comunitário de alimentos situado em Montreal| 
-| Les Fruits Défendus | Projeto de colheita urbana voluntariada organizada pela Santropol Roulant | 
+| Les Fruits Défendus | Projeto de colheita urbana voluntária organizada pela Santropol Roulant | 
 | ODS | Objetivos de Desenvolvimento Sustentável | 
 | MDS | Métodos de Desenvolvimento de <i>Software</i> | 
 | EPS | Engenharia de Produto de <i>Software</i> | 
@@ -82,7 +83,7 @@ A organização [Santropol Roulant](https://santropolroulant.org/en/history/)
 foi criada com a missão de diminuir o isolamento social e econômico entre 
 jovens e idosos por meio da produção, preparo e distribuição de alimentos.[1]
 
-Apartir dessa visão, diversos programas são desenvolvidos e apoiados com o 
+A partir dessa visão, diversos programas são desenvolvidos e apoiados com o 
 objetivo de  produzir, adquirir, preparar e distribuir alimentos, 
 principalmente orgânicos.[2]
 
@@ -133,7 +134,7 @@ produto criado.
 | :--- | :-------- |
 | Beneficiários | Instituições recebedoras de doações da colheita |
 | Líderes de colheita | Escolhe e gerencia voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> |
-| Proprietários de árvores | Cadastram sua(s) proriedade(s) e suas respectivas árvores, disponibilizam terreno para colheita voluntária com a condição de doar parte dos frutos para a <i>Les Fruits Défendus</i> |
+| Proprietários de árvores | Cadastram sua(s) proriedade(s) e suas respectivas árvores, candidatam terreno para colheita voluntária com a condição de doar parte dos frutos para a <i>Les Fruits Défendus</i> |
 | Voluntários de colheita | Se candidatam a participar de colheitas |
 
 ### 3.3 Principais Necessidades dos Usuários e dos Envolvidos
@@ -147,7 +148,7 @@ produto criado.
 
 ### 3.3 Ambiente dos Usuários
 
-Os usários poderam utilizar a aplicação através do seus 
+Os usuários podem utilizar a aplicação através do seus 
 computadores e celulares.
 
 ### 3.4 Perfis dos Envolvidos
@@ -182,7 +183,7 @@ computadores e celulares.
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
-| Entusiastas/interessados em trabalho voluntário | Líderes de colheita | Escolhe e gerencia voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> | Completar colheitas com sucesso | Alto |
+| Entusiastas/interessados em trabalho voluntário | Líderes de colheita | Escolhe e gerência voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> | Completar colheitas com sucesso | Alto |
 
 #### 3.5.3 Proprietários de árvores
 
@@ -220,9 +221,9 @@ O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas
  
 | Benefício para o Usuário | Recursos de suporte |
 |:------------------------:|:-------------------:|
-| Facilidade em se voluntariar| A aplicação disponibiliza uma interface de fácil entendimento onde os voluntários poderam visualizar todos os futuros eventos e se inscrever de acordo com sua aptidão. |
+| Facilidade em se voluntariar | A aplicação disponibiliza uma interface de fácil entendimento onde os voluntários poderão visualizar todos os futuros eventos e se inscrever de acordo com sua aptidão. |
 | Facilidade para visualizar o impacto de ações voluntárias na comunidade local | A partir das informações coletadas durante e após as ações coletivas, qualquer pessoa interessada no projeto poderá visualizar o impacto gerado pelo projeto, como quantidade de alimentos arrecadados e organizações beneficiadas |
-| Facilidade em cadastar um novo evento colaborativo | A aplicação irá estimular que proprietários de plantações locais criem novos eventos colaborativos em suas propriedades uma vez que visualizarem o impacto positivo gerado por ações anteriores.
+| Facilidade em cadastrar um novo evento colaborativo | A aplicação irá estimular que proprietários de plantações locais criem novos eventos colaborativos em suas propriedades uma vez que visualizarem o impacto positivo gerado por ações anteriores.
  
 ### 4.3 Funções do Produto
  
@@ -254,10 +255,10 @@ plataforma. Quando logados terão acesso aos seguintes recursos:
 ### 5.2 Recursos de suporte ao proprietário
 
 Os proprietários de árvores frutíferas locais que tiverem interesse no 
-projeto podem se cadastar na plataforma. Quando logados terão acesso ao:
+projeto podem se cadastrar na plataforma. Quando logados terão acesso ao:
 
 * Cadastro de plantações disponível para colheita
-* Histórico de colheitas realizas em suas propriedades.
+* Histórico de colheitas realizadas em suas propriedades.
 * Organizações ou pessoas que foram beneficiadas com os alimentos coletados em sua propriedade.
 
 ### 5.5 Disponibilizar os resultados das últimas colheitas
@@ -265,7 +266,7 @@ projeto podem se cadastar na plataforma. Quando logados terão acesso ao:
 Qualquer pessoa interessada no projeto terá acesso aos paineis de 
 informação. Nessa parte da aplicação não será necessário autenticação do 
 usuário e qualquer pessoa terá acesso aos dados das últimas colheitas, o 
-destino dos frutos colheitados e informações sobre o projeto.
+destino dos frutos colhidos e informações sobre o projeto.
 
 ### 5.6 Enviar email para grupos cadastrados
  
@@ -274,8 +275,8 @@ que estão se aproximando. Esses emails serão enviados automaticamente de
 acordo com o contexto do usuário. Esses emails são:
 
 5.6.1 Para os proprietários
-* Sua platação atingiu o número de voluntários necessários
-* Sua platação não atingiu o número de voluntários necessários
+* Sua plantação atingiu o número de voluntários necessários
+* Sua plantação não atingiu o número de voluntários necessários
 * A data de colheita está próxima
 
 5.6.2 Para os voluntários
@@ -330,7 +331,7 @@ através do aplicativo mobile da aplicação.
 
 A aplicação deve ser auto explicativa, de forma que, o usuário não precise 
 recorrer a canais de suporte para realizar alguma ação. Deste modo, toda os 
-fluxos de uso devem ser pensandos de modo que o resultado seja intuitivo e 
+fluxos de uso devem ser pensados de modo que o resultado seja intuitivo e 
 fácil de usar.
 
 ### 8.3 Requisitos de Portabilidade
