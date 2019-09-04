@@ -7,20 +7,23 @@
 | 02/09/2019 | 0.4 | Adição dos Envolvidos e dos Usuários, atualização do layout da Descrição do Problema  | Renato Britto Araujo |
 | 02/09/2019 | 0.5 | Adição dos tópicos Recursos do Produto, Restrições | Durval Carvalho |
 | 02/09/2019 | 0.6 | Adição da Visão geral do Produto, Perspectiva do Produto, Resumo das capacidades, Funções do Produto, Suposições e dependências | Leonardo da Silva Gomes |
-| 03/09/2019 | 0.7 | Adição dos tópicos Faixas de Qualidade e Requisitos | Durval Carvalho |
+| 03/09/2019 | 0.7 | Adição dos tópicos Faixas de Qualidade, Requisitos e Descrição do posição do produto | Durval Carvalho |
+| 03/09/2019 | 0.7.1 | Revisão dos tópicos Propósito, Visão Geral, Descrição do posição do produto, Principais Necessidades dos Usuários e dos Envolvidos, Alternativas e Concorrências, Resumo das capacidades | Durval Carvalho |
 
 ## **1. Introdução**
 
-Este documento estará repleto de dados que sustentarão o propósito, o 
-contexto e a visão geral do produto, para assim garantir o total 
+Este documento estará repleto de dados que sustentarão o propósito, 
+o contexto e a visão geral do produto, para assim garantir o total 
 endetendimento do projeto.
 
 ### 1.1 Propósito
 
-A finalidade desse documento é obter uma visão geral a respeito do 
-problema encontrado de todas as partes envolvidas. Para assim 
-obter uma melhor compreensão do projeto e seus aspectos principais, 
-com o objetivo de diminuir os riscos envolvidos.
+A finalidade desse documento é obter uma visão geral do projeto que 
+será desenvolvido. Assim, será explicado o problema evidenciado, 
+a oportunidade encontrada, a descrição dos principais envolvidos, 
+uma possível solução, suas principais funcionalidades e seus 
+requisitos. Para assim obter uma melhor compreensão do escopo e 
+diminuir os riscos envolvidos.
 
 ### 1.2 Escopo
 
@@ -31,7 +34,7 @@ público interessado no projeto
 
 | **Sigla/Termo/Acrônimo** | **Definição** |
 | ------------------------ | ------------- |
-| Saskatoon | Sistema de gerenciamento de colheita desenvolvido pela Les fruits défendus | 
+| Saskatoon | Sistema de gerenciamento de colheita desenvolvido pelo Les Fruits Défendus | 
 | Santropol Roulant | Centro comunitário de alimentos situado em Montreal| 
 | Les Fruits Défendus | Projeto de colheita urbana voluntariada organizada pela Santropol Roulant | 
 | ODS | Objetivos de Desenvolvimento Sustentável | 
@@ -58,13 +61,15 @@ público interessado no projeto
 ### 1.5 Visão Geral
 
 Este documento visa descrever os detalhes sobre as características 
-do software a ser implementado e suas técnicas para a execução. 
+do software a ser implementado. 
 O documento é dividido da seguinte maneira: inicialmente, é 
 explorado uma visão geral de todo o documento, exposição do 
 problema que este projeto busca resolver e a descrição da parte 
 interessada.
 
-Logo após, foram expostos os recursos necessários, restrições e a descrição do desempenho do produto. Por fim, foram denominados os requisitos necessários para a realização do projeto.
+Logo após, foram expostos os recursos necessários, restrições e a 
+descrição do desempenho do produto. Por fim, foram denominados os 
+requisitos necessários para a realização do projeto.
 
 Desta forma, a ideia principal deste documento de visão é fornecer 
 de maneira objetiva e organizada os assuntos que tangem à 
@@ -99,11 +104,18 @@ do projeto e facilitar o primeiro contato com o projeto.
 ### 2.2 Descrição do problema
 
 | O problema é | que afeta | cujo impacto é | uma boa solução seria | 
-| ------------- | ----- | -------------- | --------------------- | 
+| ------------ | --------- | -------------- | --------------------- | 
 | O desperdício de alimentos produzido por árvores frutíferas locais | as pessoas e organizações que não tem acesso à comida orgânica | o consumo de alimentos não nutritivos danosos a saúde | convencer proprietários de árvores frutíferas locais à permitir a colheita e distribuição da produção excedente de frutos |
 
 
 ### 2.3 Descrição do posição do produto
+
+O produto uma vez desenvolvido, poderá se posicionar no mercado 
+como uma plataforma online de fácil utilização capaz de engajar 
+voluntários para realizar diversas tarefas que beneficiam a 
+comunidade local. Podendo assim chamar atenção de pessoas e 
+empresas que buscam se associar com a imagem sustentável no 
+produto criado.
 
 ## **3. Descrição dos Envolvidos e dos Usuários**
 
@@ -113,12 +125,12 @@ do projeto e facilitar o primeiro contato com o projeto.
 | :- | :- | :- |
 | Avaliadores | Professores das disciplinas de MDS e EPS | Avaliar a qualidade do projeto desenvolvido pelos alunos de MDS e EPS |
 | Desenvolvedores | Estudantes da Disciplina MDS da UnB FGA | Criar e manter documentos; Desenvolver e testar o software |
-| Equipe de Engenharia de Produto | Estudantes da Disciplina EPS da UnB FGA | Criar e manter documentos; Gerenciar os desenvolvedores; Tomada de decisões a respeito do <i>stack</i> de tecnologias |
+| Equipe de Engenharia de Produto | Estudantes da Disciplina EPS da UnB FGA | Criar e manter documentos; Gerenciar os desenvolvedores; Tomada de decisões a respeito do produto |
 
 ### 3.2 Descrição dos Usuários
 
 | Nome | Descrição |
-| :- | :- |
+| :--- | :-------- |
 | Beneficiários | Instituições recebedoras de doações da colheita |
 | Líderes de colheita | Escolhe e gerencia voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> |
 | Proprietários de árvores | Cadastram sua(s) proriedade(s) e suas respectivas árvores, disponibilizam terreno para colheita voluntária com a condição de doar parte dos frutos para a <i>Les Fruits Défendus</i> |
@@ -127,15 +139,16 @@ do projeto e facilitar o primeiro contato com o projeto.
 ### 3.3 Principais Necessidades dos Usuários e dos Envolvidos
 
 | Usuário | Necessidade | Solução Atual | Solução Proposta |
-| :- | :- | :- | :- |
-| Beneficiário | Doações de colheita | Website Saskatoon além de outros projetos do Les Fruit Défendus | Website para analisar colheitas e se candidatar a receber doação |
-| Líder de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Website Saskatoon | Website (com suporte mobile) para gerenciar responsabilidades |
-| Proprietário de árvores | Receber ajuda em colheita e/ou interesse em forteceler comunidade local | Website Saskatoon | Website transparente para registrar propriedade(s) e agendar colheitas |
-| Voluntário de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Website Saskatoon | Website (com suporte mobile) de simples uso para se candidatar à trabalho voluntário e receber informações à respeito de suas colheitas |
+| :------ | :---------- | :------------ | :--------------- |
+| Beneficiário | Doações de alimentos | Doações de pessoas e de ONGs | Website para se candidatar a receber doação |
+| Líder de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Participação de coletivos, de OGNs e ações de iniciativa individual | Website e aplicativo para se candidatar à colheitas requisitadas pela comunidade local. |
+| Proprietário de árvores | Receber ajuda em colheita e/ou interesse em forteceler comunidade local | Ações coletivas organizada pela Les Fruits Défendus | Website e aplicativo para cadastrar plantações que podem ser colheitas e doadas para outras organizações |
+| Voluntário de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Participação de coletivos, de OGNs e ações de iniciativa individual | Website e aplicativo para se candidatar à trabalho voluntário e receber informações à respeito de suas colheitas |
 
 ### 3.3 Ambiente dos Usuários
 
-Uso da aplicação desenvolvida por celular e computador de mesa.
+Os usários poderam utilizar a aplicação através do seus 
+computadores e celulares.
 
 ### 3.4 Perfis dos Envolvidos
 
@@ -187,7 +200,15 @@ Uso da aplicação desenvolvida por celular e computador de mesa.
 
 #### 3.7.1 Saskatoon
 
-O Saskatoon ([Repositório](https://github.com/tiagovaz/saskatoon), [Website](https://saskatoon.lesfruitsdefendus.org/)) é outro projeto open source que cumpre a mesma proposta, porém usa tecnologias antigas e não é de uso intuitivo. Como o objetivo é fomentar o senso de comunidade e facilitar o processo de se fazer colheita coletiva para todos os usuários, uma solução para o problema que cumpre seus objectivos de forma melhor que saskatoon pode ser desenvolvida.
+O Saskatoon ([Repositório](https://github.com/tiagovaz/saskatoon), 
+[Website](https://saskatoon.lesfruitsdefendus.org/)) é um projeto 
+desenvolvido pelo coletivo Les Fruits Défendus com o objetivo é 
+fomentar o senso de comunidade e facilitar o processo de se fazer 
+colheita coletiva para todos os usuários. Porém este projeto 
+possui baixo engajamento da comunidade de o desenvolve e baixa 
+aderência de novos colaboradores open source. Devido principalmente 
+à sua falta de documentação e a utilização de tecnologias que 
+serão descontinuadas, como o Python 2.7.
 
 ## **4. Visão geral do Produto**
  
@@ -198,10 +219,10 @@ O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas
 ### 4.2 Resumo das capacidades
  
 | Benefício para o Usuário | Recursos de suporte |
-|:---:|:---:|
-|Melhor meio de atrair voluntários|A partir das informações da colheita colaborativa disponibilizadas pelo usuário (proprietário da árvore), voluntários poderão pela plataforma se inscrever e saber das informações da colheita.|
-|Facilidade em se voluntariar|O projeto utiliza de um meio simples, no qual haverá um calendário que estará expondo todos os "eventos", onde você poderá escolher e se inscrever para se tornar um voluntário.|
-|Facilidade em marcar um evento colaborativo|O projeto, terá um formulário que pedirá as informações da colheita para atrair voluntários e assim marcará no calendário o dia do "evento".|
+|:------------------------:|:-------------------:|
+| Facilidade em se voluntariar| A aplicação disponibiliza uma interface de fácil entendimento onde os voluntários poderam visualizar todos os futuros eventos e se inscrever de acordo com sua aptidão. |
+| Facilidade para visualizar o impacto de ações voluntárias na comunidade local | A partir das informações coletadas durante e após as ações coletivas, qualquer pessoa interessada no projeto poderá visualizar o impacto gerado pelo projeto, como quantidade de alimentos arrecadados e organizações beneficiadas |
+| Facilidade em cadastar um novo evento colaborativo | A aplicação irá estimular que proprietários de plantações locais criem novos eventos colaborativos em suas propriedades uma vez que visualizarem o impacto positivo gerado por ações anteriores.
  
 ### 4.3 Funções do Produto
  
@@ -209,7 +230,7 @@ O projeto visa ser o conectivo entre os proprietários de árvores e os voluntá
  
 ### 4.4 Suposições e dependências
  
-- O usuário deverá possuir um celular ou um computador que possa, de forma online, acessar a página.
+- O usuário deverá possuir um celular ou um computador com acesso à internet para acessar a aplicação.
  
 - O aplicativo será utilizado por pessoas que desejam se voluntariar e pessoas que querem ajudar na colheita de seus frutos.
  
