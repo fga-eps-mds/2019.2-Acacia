@@ -2,4 +2,6 @@
 
 * [Home](/)
 * [Policies](policies.md)
-* [Termo de Abertura(project_charter.md)
+* [Policies](policies.md)
+* [Termo de Abertura](project_charter.md)
+* [Documento de Visão](vision-document.md)
