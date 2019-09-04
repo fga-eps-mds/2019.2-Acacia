@@ -9,7 +9,7 @@
 | 02/09/2019 | 0.6 | Adição da Visão geral do Produto, Perspectiva do Produto, Resumo das capacidades, Funções do Produto, Suposições e dependências | Leonardo da Silva Gomes |
 | 03/09/2019 | 0.7 | Adição dos tópicos Faixas de Qualidade, Requisitos e Descrição do posição do produto | Durval Carvalho |
 | 03/09/2019 | 0.7.1 | Revisão dos tópicos Propósito, Visão Geral, Descrição do posição do produto, Principais Necessidades dos Usuários e dos Envolvidos, Alternativas e Concorrências, Resumo das capacidades | Durval Carvalho |
-| 03/09/2019 | 0.7.2 | Revisão gramatical de todo o documento | Renato Britto Araujo |
+| 03/09/2019 | 0.7.2 | Revisão gramatical e estrutural de todo o documento | Renato Britto Araujo, Leonardo da Silva Gomes |
 
 ## **1. Introdução**
 
@@ -205,11 +205,11 @@ computadores e celulares.
 
 O Saskatoon ([Repositório](https://github.com/tiagovaz/saskatoon), 
 [Website](https://saskatoon.lesfruitsdefendus.org/)) é um projeto 
-desenvolvido pelo coletivo Les Fruits Défendus com o objetivo é 
-fomentar o senso de comunidade e facilitar o processo de se fazer 
+desenvolvido pelo coletivo Les Fruits Défendus com o objetivo de 
+fomentar o senso de comunidade e facilitar o processo de fazer 
 colheita coletiva para todos os usuários. Porém este projeto 
-possui baixo engajamento da comunidade de o desenvolve e baixa 
-aderência de novos colaboradores open source. Devido principalmente 
+possui baixo engajamento da comunidade que o desenvolve e baixa 
+aderência de novos colaboradores. Devido principalmente 
 à sua falta de documentação e a utilização de tecnologias que 
 serão descontinuadas, como o Python 2.7.
 
@@ -217,7 +217,7 @@ serão descontinuadas, como o Python 2.7.
  
 ### 4.1 Perspectiva do Produto
  
-O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas urbanas, fomentando a agricultura urbana e a agroecologia que interfere fortemente em vários aspectos sociais e econômicos. Assim, utilizamos da relação entre proprietários de árvores frutíferas, voluntários para colheita e locais que possam receber doações destas frutas, para a diminuição de desperdício de comida, aumento do acesso a comida saudável e nutritiva e colaboração comunitária (socialização) acarretando na diminuição de transtornos mentais e fortalecimento de culturas locais. O produto é baseado em um sistema já existente,  o [Saskatoon](https://github.com/tiagovaz/saskatoon) utilizado pelo coletivo [LES FRUITS DÉFENDUS](https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/) em Montreal, uma iniciativa da organização [Santropol Roulant](https://santropolroulant.org/en/history/).
+O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas urbanas, fomentando a agricultura urbana e a agroecologia que interfere fortemente em vários aspectos sociais e econômicos. Assim, utilizamos da relação entre proprietários de árvores frutíferas, voluntários para colheita e locais que possam receber doações destas frutas, para a diminuição de desperdício de comida, aumento do acesso a comida saudável e colaboração comunitária (socialização) acarretando na diminuição de transtornos mentais e fortalecimento de culturas locais. O produto é baseado em um sistema já existente,  o [Saskatoon](https://github.com/tiagovaz/saskatoon) utilizado pelo coletivo [LES FRUITS DÉFENDUS](https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/) em Montreal, uma iniciativa da organização [Santropol Roulant](https://santropolroulant.org/en/history/).
  
 ### 4.2 Resumo das capacidades
  
@@ -229,7 +229,7 @@ O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas
  
 ### 4.3 Funções do Produto
  
-O projeto visa ser o conectivo entre os proprietários de árvores e os voluntários, facilitando o processo de colaboração. A plataforma agrega diversas funcionalidades como cadastro, gerenciamento,  inscrição no projeto, etc.
+O projeto está encarregado de ser o conectivo entre os proprietários de árvores e os voluntários, facilitando o processo de colaboração. A plataforma agrega diversas funcionalidades como cadastro, gerenciamento,  inscrição no projeto, etc.
  
 ### 4.4 Suposições e dependências
  
@@ -346,7 +346,7 @@ ser compatível com as últimas versões do Android.
 A aplicação deve ser comprometer com os dados dos usuários cadastrados, de 
 modo que informações sensíveis não seja comprometidas. 
 
-## ** 9. Requisitos de não funcionais **
+## **9. Requisitos de não funcionais**
 
 ### 9.1 Requisitos de Suportabilidade
 O software desenvolvido deve ser compatível com os principais navegadores e 
