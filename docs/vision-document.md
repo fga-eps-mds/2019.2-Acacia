@@ -7,10 +7,11 @@
 | 02/09/2019 | 0.4 | Adição dos Envolvidos e dos Usuários, atualização do layout da Descrição do Problema  | Renato Britto Araujo |
 | 02/09/2019 | 0.5 | Adição dos tópicos Recursos do Produto, Restrições | Durval Carvalho |
 | 02/09/2019 | 0.6 | Adição da Visão geral do Produto, Perspectiva do Produto, Resumo das capacidades, Funções do Produto, Suposições e dependências | Leonardo da Silva Gomes |
+| 03/09/2019 | 0.7 | Adição dos tópicos Faixas de Qualidade e Requisitos | Durval Carvalho |
 
 ## **1. Introdução**
 
-    Este documento estará repleto de dados que sustentarão o propósito, o 
+Este documento estará repleto de dados que sustentarão o propósito, o 
 contexto e a visão geral do produto, para assim garantir o total 
 endetendimento do projeto.
 
@@ -271,24 +272,70 @@ Listagem de restrições externas e outras dependências:
 * Conhecimento básico de Inglês.
 
 ### 6.1 Restrições de Implementação
+TODO: Quais tecnologias serão usadas?
 
 ### 6.2 Restrições externas
 Dentre as restrições externas as que mais irão influenciar são a 
-inexperiência com o framework Django, além de possíveis transtornos entre 
-a equipe de desenvolvimento e de gerência.
+inexperiência com o framework Django, além de possíveis 
+transtornos entre a equipe de desenvolvimento e de gerência.
 
 ### 6.3 Restrições de Design
-A aplicação deve ter uma interface que seja de fácil uso para pessoas. Dessa 
-forma, será necessário uma interface intuitiva pensando na experiência do 
-usuário.
+É necessário que os usuários tenham acesso à internet para poder utilizar o 
+software.
 
 ### 6.4 Restrições de Confiabilidade
 O sistema deverá ter cobertura de testes de no mínimo 90%
 
 ## **7. Faixas de Qualidade**
 
+Toda da interação com o software deve ocorrer de forma natural, de modo que 
+o usuário não fique com dúvidas sobre como realizar determinada tarefa.
+
+Os recursos que cada usuário tem acesso deve ser fácil entendimento, de modo 
+que o usuário não desista durante alguma ação.
+
+Com a finalidade de alcançar um público maior de usuários, a aplicação será 
+desenvolvida tanto para o ambiente web quanto para smartphones.
+
 ## **8. Requisitos do Produto**
+
 ### 8.1 Requisitos do Sistema
+
+Essa aplicação poderá ser acessada por meio dos principais navegadores web. 
+Usuários mobile poderão acessar a aplicação através do seu site responsivo ou 
+através do aplicativo mobile da aplicação.
+
 ### 8.2 Requisitos de Design
+
+A aplicação deve ser auto explicativa, de forma que, o usuário não precise 
+recorrer a canais de suporte para realizar alguma ação. Deste modo, toda os 
+fluxos de uso devem ser pensandos de modo que o resultado seja intuitivo e 
+fácil de usar.
+
 ### 8.3 Requisitos de Portabilidade
-### 8.3 Requisitos de Confiabilidade
+
+O sistema deve ter suporte para principais navegadores web atuais, além de 
+ser compatível com as últimas versões do Android.
+
+### 8.4 Requisitos de Confiabilidade
+
+A aplicação deve ser comprometer com os dados dos usuários cadastrados, de 
+modo que informações sensíveis não seja comprometidas. 
+
+## ** 9. Requisitos de não funcionais **
+
+### 9.1 Requisitos de Suportabilidade
+O software desenvolvido deve ser compatível com os principais navegadores e 
+smartphones modernos
+
+### 9.2 Requisitos de Design
+A aplicação deve ter uma interface que seja de fácil uso para pessoas. Dessa 
+forma, será necessário uma interface intuitiva pensando na experiência do 
+usuário.
+
+### 9.3 Requisitos de Segurança
+O sistema deve garantir a integridade dos dados fornecidos pelos usuários
+
+### 9.4 Requisitos de Desempenho
+O sistema deve ser otimizado de forma que usuários com conexões lentas 
+recebam resposta de forma satisfatória.
