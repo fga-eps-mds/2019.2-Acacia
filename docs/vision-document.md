@@ -11,27 +11,32 @@
 | 03/09/2019 | 0.7.1 | Revisão dos tópicos Propósito, Visão Geral, Descrição do posição do produto, Principais Necessidades dos Usuários e dos Envolvidos, Alternativas e Concorrências, Resumo das capacidades | Durval Carvalho |
 | 03/09/2019 | 0.7.2 | Revisão gramatical e estrutural de todo o documento | Renato Britto Araujo, Leonardo da Silva Gomes |
 | 04/09/2019 | 0.8 | Adição do escopo do projeto | João Pedro Silva de Carvalho |
+| 05/09/2019 | 0.8.1 | União dos tópicos Introdução e Propósito; Adição das Referências no final do documento; Remoção do termo aplicativo para o termo aplicação web responsiva  | Durval Carvalho e Flavio Vieira |
 
 ## **1. Introdução**
 
 Este documento estará repleto de dados que sustentarão o propósito, 
-o contexto e a visão geral do produto, para assim garantir o total 
-entendimento do projeto.
+o contexto e a visão geral do produto, permitindo assim o entendimento do 
+escopo do projeto.
 
-### 1.1 Propósito
+Assim, será explicado o problema evidenciado, a oportunidade encontrada, a 
+descrição dos principais envolvidos, uma possível solução, suas principais 
+funcionalidades e seus requisitos. Para assim obter uma melhor compreensão 
+do escopo e diminuir os riscos envolvidos.
 
-A finalidade desse documento é obter uma visão geral do projeto que 
-será desenvolvido. Assim, será explicado o problema evidenciado, 
-a oportunidade encontrada, a descrição dos principais envolvidos, 
-uma possível solução, suas principais funcionalidades e seus 
-requisitos. Para assim obter uma melhor compreensão do escopo e 
-diminuir os riscos envolvidos.
+### 1.1 Escopo
 
-### 1.2 Escopo
+Esse projeto tem como objetivo auxiliar os integrantes do projeto 
+Saskatoon que promovem a mobilização de voluntários para ajudarem 
+a donos de plantações frutífera a fazerem suas colheitas. 
+O software, que tem a função de gerenciar essa mobilização fazendo 
+uma comunicação entre os participantes desse projeto, será uma 
+aplicação web responsiva. Com isso o software contribuiria com o 
+Saskatoon para ajudar no não disperdício de comida e promover uma 
+alimentação mais saudável, que são parte dos Objetivos de 
+Desenvolvimento Sustentável (ODS) definidos pela ONU.
 
-Esse projeto tem como objetivo auxiliar os integrantes do projeto Saskatoon que promovem a mobilização de voluntários para ajudarem a donos de plantações frutífera a fazerem suas colheitas. O software, que tem a função de gerenciar essa mobilização fazendo uma comunicação entre os participantes desse projeto, será uma aplicação tanto web quanto mobile. Com isso o software contribuiria com o Saskatoon para ajudar no não disperdício de comida e promover uma alimentação mais saudável, que são parte dos Objetivos de Desenvolvimento Sustentável (ODS) definidos pela ONU.
-
-### 1.3 Definições, acrônimos e abreviações
+### 1.2 Definições, acrônimos e abreviações
 Estarão listadas neste tópico as definições, acrônimos e abreviações dos 
 termos usados neste documento, para assim facilitar o compreendimento do 
 público interessado no projeto
@@ -48,21 +53,7 @@ público interessado no projeto
 | UnB | Universidade de Brasília | 
 
 
-### 1.4 Referências
-- Documento de visão do projeto MerandaMais https://github.com/fga-eps-mds/2017.2-MerendaMais/wiki/Documento-de-Vis%C3%A3o#11-prop%C3%B3sito. Acesso em 30 de agosto de 2019;
-- Documento de visão do projeto Ada https://github.com/fga-eps-mds/2019.1-ADA/blob/gh-pages/docs/product/vision_document.md. Acesso em 30 de agosto de 2019;
-- Documento de visão do projeto Lino https://github.com/fga-eps-mds/2018.2-Lino/blob/master/docs/documento-de-visao.md. Acesso em 30 de agosto de 2019;
-- Documento de visão do projeto Tino https://github.com/fga-eps-mds/2019.1-Tino/blob/master/docs/documento-de-visao.md. Acesso em 30 de agosto de 2019;
-- Documento de visão do projeto UnBrake https://fga-eps-mds.github.io/2019.1-unbrake/documentos/documento-de-visao/. Acesso em 30 de agosto de 2019;
-- Texto descritivo sobre o documento de visão. https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html. Acesso em 02 de setembro de 2019
-
-- [1] História da Santropol Roulant. Disponível em https://santropolroulant.org/en/history/. Acesso em 01 de setembro de 2019.
-
-- [2] Programas desenvolvidos pela Santropol Roulant. Disponível em https://santropolroulant.org/en/what-is-the-roulant/#block_cross. Acesso em 01 de setembro de 2019
-
-- [3] Projeto Les Fruits Défendus. Disponível em https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/. Acesso em 01 de setembro de 2019
-
-### 1.5 Visão Geral
+### 1.3 Visão Geral
 
 Este documento visa descrever os detalhes sobre as características 
 do software a ser implementado. 
@@ -84,22 +75,24 @@ problemática inicial.
 
 A organização [Santropol Roulant](https://santropolroulant.org/en/history/) 
 foi criada com a missão de diminuir o isolamento social e econômico entre 
-jovens e idosos por meio da produção, preparo e distribuição de alimentos.[1]
+jovens e idosos por meio da produção, preparo e distribuição de alimentos.
 
 A partir dessa visão, diversos programas são desenvolvidos e apoiados com o 
 objetivo de  produzir, adquirir, preparar e distribuir alimentos, 
-principalmente orgânicos.[2]
+principalmente orgânicos.
 
 Um dos programa é o Les Fruits Défendus, que tem como objetivo 
 conectar proprietários de árvores frutíferas locais com colheitores 
-voluntarios para garantir que esses alimentos não sejam desperdiçados.[3]
+voluntarios para garantir que esses alimentos não sejam desperdiçados.
 
 ### 2.1 Oportunidade de negócios
 
-Com base na visão do programa Les Fruits Défendus e na visão da organização
-mãe Santropol Roulant, foi identificado a oportunidade de aumentar o 
-engajamento dos proprietários de plantações frutíferas e dos voluntários por
-meio de um aplicativo mobile e um website.
+Com base na visão do programa Les Fruits Défendus e na visão da 
+organização mãe Santropol Roulant, foi identificado a oportunidade 
+de aumentar o engajamento dos proprietários de plantações 
+frutíferas e dos voluntários por meio de uma aplicação web 
+responsiva, onde usuários podem acessar pode meio de computadores e 
+smartphones.
 
 Essas plataformas digitais se propõe a aumentar a transparência das 
 atividades que serão realizadas, a facilitar a difusão das ideias por trás 
@@ -145,64 +138,64 @@ produto criado.
 | Usuário | Necessidade | Solução Atual | Solução Proposta |
 | :------ | :---------- | :------------ | :--------------- |
 | Beneficiário | Doações de alimentos | Doações de pessoas e de ONGs | Website para se candidatar a receber doação |
-| Líder de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Participação de coletivos, de OGNs e ações de iniciativa individual | Website e aplicativo para se candidatar à colheitas requisitadas pela comunidade local. |
-| Proprietário de árvores | Receber ajuda em colheita e/ou interesse em forteceler comunidade local | Ações coletivas organizada pela Les Fruits Défendus | Website e aplicativo para cadastrar plantações que podem ser colheitas e doadas para outras organizações |
-| Voluntário de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Participação de coletivos, de OGNs e ações de iniciativa individual | Website e aplicativo para se candidatar à trabalho voluntário e receber informações à respeito de suas colheitas |
+| Líder de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Participação de coletivos, de OGNs e ações de iniciativa individual | Aplicação web responsiva para se candidatar à colheitas requisitadas pela comunidade local. |
+| Proprietário de árvores | Receber ajuda em colheita e/ou interesse em forteceler comunidade local | Ações coletivas organizada pela Les Fruits Défendus | Aplicação web responsiva para cadastrar plantações que podem ser colheitas e doadas para outras organizações |
+| Voluntário de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Participação de coletivos, de OGNs e ações de iniciativa individual | Aplicação web responsiva para se candidatar à trabalho voluntário e receber informações à respeito de suas colheitas |
 
-### 3.3 Ambiente dos Usuários
+### 3.4 Ambiente dos Usuários
 
-Os usuários podem utilizar a aplicação através do seus 
-computadores e celulares.
+Os usuários poderão utilizar a aplicação por meio de navegadores desktop e 
+mobile.
 
-### 3.4 Perfis dos Envolvidos
+### 3.5 Perfis dos Envolvidos
 
-#### 3.4.1 Equipe de Desenvolvimento de <i>Software</i>
+#### 3.5.1 Equipe de Desenvolvimento de <i>Software</i>
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
 | Durval Carvalho de Souza, Flávio Vieira, Hugo Sobral de Lima Salomão,	João Pedro Silva de Carvalho, Leonardo da Silva Gomes, Renato Britto Araújo | Estudantes de MDS na UnB FGA | Criar e manter documentos; Desenvolver e testar o software | Completar o projeto proposto dentro do período estipulado e atendendo à todos os requisitos | Alto |
 
-#### 3.4.2 Equipe de Engenharia de Produto de <i>Software</i> 
+#### 3.5.2 Equipe de Engenharia de Produto de <i>Software</i> 
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
 | Fabíola Malta Fleury, Martha Dantas Silva, Shayane Marques Alcântara, Vítor Cardoso Xoteslem | Estudantes de EPS na UnB FGA | Criar e manter documentos; Gerenciar os desenvolvedores; Tomada de decisões a respeito do <i>stack</i> de tecnologias | Completar o projeto proposto dentro do período estipulado e atendendo à todos os requisitos | Alto |
 
-#### 3.4.3 Avaliadores
+#### 3.5.3 Avaliadores
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
 | Carla Rocha, Joenio Marques da Costa | Professores de EPS e MDS na UnB FGA | Avaliar qualidade do projeto criado | Transmitir conhecimento sobre projetos de <i>software</i> em grupo | Baixo |
 
-### 3.5 Perfis dos Usuários
+### 3.6 Perfis dos Usuários
 
-#### 3.5.1 Beneficiários
+#### 3.6.1 Beneficiários
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
 | Instituições | Instituições de auxílio a idosos/orfanatos | Se candidatar a receber doação, checar informações sobre colheitas | Conseguir doações de forma a suprir sua demanda de comida | Baixo |
 
-#### 3.5.2 Líderes de colheita
+#### 3.6.2 Líderes de colheita
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
 | Entusiastas/interessados em trabalho voluntário | Líderes de colheita | Escolhe e gerência voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> | Completar colheitas com sucesso | Alto |
 
-#### 3.5.3 Proprietários de árvores
+#### 3.6.3 Proprietários de árvores
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
 | Donos de propriedade urbana com árvores frutíferas | Proprietários de árvores dispostos a ajudar a comunidade e/ou incapacitados para realizar colheita | Disponibilizar sua propriedade para colheita e parte de seus frutos para a <i>Les Fruits Défendus</i> | Conseguir ajuda na colheita de suas árvores | Alto |
 
-#### 3.5.4 Voluntário de colheita
+#### 3.6.4 Voluntário de colheita
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
 | Entusiastas/interessados em trabalho voluntário | Pessoas com porte físico capaz de auxiliar colheita | Se candidatar a participar de colheita, comparecer ao evento e seguir ordens do líder de colheita | Participar em colheita | Médio |
 
-### 3.7 Alternativas e Concorrências
+### 3.8 Alternativas e Concorrências
 
-#### 3.7.1 Saskatoon
+#### 3.8.1 Saskatoon
 
 O Saskatoon ([Repositório](https://github.com/tiagovaz/saskatoon), 
 [Website](https://saskatoon.lesfruitsdefendus.org/)) é um projeto 
@@ -236,9 +229,9 @@ O projeto está encarregado de ser o conectivo entre os proprietários de árvor
  
 - O usuário deverá possuir um celular ou um computador com acesso à internet para acessar a aplicação.
  
-- O aplicativo será utilizado por pessoas que desejam se voluntariar e pessoas que querem ajudar na colheita de seus frutos.
+- A aplicação web responsiva será utilizada por pessoas que desejam se voluntariar e pessoas que querem ajudar na colheita de seus frutos.
  
-- O aplicativo facilitará esse processo de comunicação entre proprietário da árvore frutífera e o voluntário.
+- A aplicação web responsiva irá facilitar a comunicação entre proprietário da árvore frutífera e o voluntário.
 
 ### 4.5 Custo e precificação
 ### 4.6 Licenciamento e instalação
@@ -264,25 +257,25 @@ projeto podem se cadastrar na plataforma. Quando logados terão acesso ao:
 * Histórico de colheitas realizadas em suas propriedades.
 * Organizações ou pessoas que foram beneficiadas com os alimentos coletados em sua propriedade.
 
-### 5.5 Disponibilizar os resultados das últimas colheitas
+### 5.3 Disponibilizar os resultados das últimas colheitas
 
 Qualquer pessoa interessada no projeto terá acesso aos paineis de 
 informação. Nessa parte da aplicação não será necessário autenticação do 
 usuário e qualquer pessoa terá acesso aos dados das últimas colheitas, o 
 destino dos frutos colhidos e informações sobre o projeto.
 
-### 5.6 Enviar email para grupos cadastrados
+### 5.4 Enviar email para grupos cadastrados
  
 A aplicação poderá enviar email para os usuários de acordo com as atividades 
 que estão se aproximando. Esses emails serão enviados automaticamente de 
 acordo com o contexto do usuário. Esses emails são:
 
-5.6.1 Para os proprietários
+5.4.1 Para os proprietários
 * Sua plantação atingiu o número de voluntários necessários
 * Sua plantação não atingiu o número de voluntários necessários
 * A data de colheita está próxima
 
-5.6.2 Para os voluntários
+5.4.2 Para os voluntários
 * A colheita que você está escrito atingiu o número de voluntários necessários
 * A colheita que você está escrito não atingiu o número de voluntários necessários
 * A colheita que você está escrito está próxima
@@ -297,7 +290,8 @@ Listagem de restrições externas e outras dependências:
 * Conhecimento básico de Inglês.
 
 ### 6.1 Restrições de Implementação
-TODO: Quais tecnologias serão usadas?
+O sistema será implementado utilizando 2 principais frameworks, sendo eles
+o Django Rest para o back-end e o Vue JS para o front-end.
 
 ### 6.2 Restrições externas
 Dentre as restrições externas as que mais irão influenciar são a 
@@ -309,7 +303,9 @@ transtornos entre a equipe de desenvolvimento e de gerência.
 software.
 
 ### 6.4 Restrições de Confiabilidade
-O sistema deverá ter cobertura de testes de no mínimo 90%
+Visando uma maior mantenabilidade do projeto pela comunidade open source, 
+esse projeto tem o comprometimento de manter uma cobertura de testes de no 
+mínimo 90%, para assim produzir um produto melhor.
 
 ## **7. Faixas de Qualidade**
 
@@ -327,8 +323,6 @@ desenvolvida tanto para o ambiente web quanto para smartphones.
 ### 8.1 Requisitos do Sistema
 
 Essa aplicação poderá ser acessada por meio dos principais navegadores web. 
-Usuários mobile poderão acessar a aplicação através do seu site responsivo ou 
-através do aplicativo mobile da aplicação.
 
 ### 8.2 Requisitos de Design
 
@@ -347,20 +341,27 @@ ser compatível com as últimas versões do Android.
 A aplicação deve ser comprometer com os dados dos usuários cadastrados, de 
 modo que informações sensíveis não seja comprometidas. 
 
-## **9. Requisitos de não funcionais**
-
-### 9.1 Requisitos de Suportabilidade
+### 8.1 Requisitos de Suportabilidade
 O software desenvolvido deve ser compatível com os principais navegadores e 
 smartphones modernos
 
-### 9.2 Requisitos de Design
+### 8.2 Requisitos de Design
 A aplicação deve ter uma interface que seja de fácil uso para pessoas. Dessa 
 forma, será necessário uma interface intuitiva pensando na experiência do 
 usuário.
 
-### 9.3 Requisitos de Segurança
+### 8.3 Requisitos de Segurança
 O sistema deve garantir a integridade dos dados fornecidos pelos usuários
 
-### 9.4 Requisitos de Desempenho
+### 8.4 Requisitos de Desempenho
 O sistema deve ser otimizado de forma que usuários com conexões lentas 
 recebam resposta de forma satisfatória.
+
+## Referências
+- Texto descritivo sobre a estrutura e objetivo dos tópicos do documento de visão. https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html. Acesso em 02 de setembro de 2019
+
+- História da Santropol Roulant. Disponível em https://santropolroulant.org/en/history/. Acesso em 01 de setembro de 2019.
+
+- Programas desenvolvidos pela Santropol Roulant. Disponível em https://santropolroulant.org/en/what-is-the-roulant/#block_cross. Acesso em 01 de setembro de 2019
+
+- Projeto Les Fruits Défendus. Disponível em https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/. Acesso em 01 de setembro de 2019
