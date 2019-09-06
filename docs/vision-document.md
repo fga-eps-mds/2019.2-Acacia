@@ -15,6 +15,7 @@
 | 05/09/2019 | 0.8.2 | Revisão de duplicações e mudanças estruturais | Renato Britto Araujo |
 | 05/09/2019 | 0.8.3 | Revisão do escopo | Durval Carvalho |
 | 06/09/2019 | 0.8.4 | Revisão de perspectiva de produto e requisitos | Renato Britto Araujo |
+| 06/09/2019 | 0.8.5 | Revisão de restrições | Leonardo da Silva Gomes |
 
 ## **1. Introdução**
 
@@ -276,10 +277,8 @@ acordo com o contexto do usuário. Esses emails são:
 
 Listagem de restrições externas e outras dependências:
 
-* Conexão com a Internet.
-* O projeto deve ser finalizado até o prazo limite 17/12/19.
-* Foco para aprender novas tecnologias.
-* Conhecimento básico de Inglês.
+* Ter um aparelho celular ou um computador.
+* Conexão com a internet.
 
 ### 6.1 Restrições de Implementação
 O sistema será implementado utilizando 2 principais frameworks, sendo eles
@@ -296,7 +295,7 @@ Toda da interação com o software deve ocorrer de forma natural, de modo que o 
 ### 6.4 Restrições de Confiabilidade
 Visando uma maior mantenabilidade do projeto pela comunidade open source, tem o comprometimento de manter uma cobertura de testes de no mínimo 90%.
 
-## **8. Requisitos do Produto**
+## **7. Requisitos do Produto**
 
 Lista de categorias de prioridades para requisitos
 
