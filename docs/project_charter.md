@@ -93,9 +93,9 @@ Os valores para os salários foram obtidos a partir de salários de pessoas que 
 
 # 9. Estratégia de Comunicação
 
-Para comunicação interna da equipe são utilizados: o aplicativo Telegram, Hangouts, aulas e reuniões presenciais.
+Para comunicação interna da equipe são utilizados: o aplicativo Telegram, discord, aulas e reuniões presenciais.
 
-Para comunicação com outros envolvidos são utilizados e-mails, hangouts e o github.
+Para comunicação com outros envolvidos são utilizados e-mails, o github e telegram.
 
 
 # Referências
