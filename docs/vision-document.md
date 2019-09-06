@@ -12,7 +12,9 @@
 | 03/09/2019 | 0.7.2 | Revisão gramatical e estrutural de todo o documento | Renato Britto Araujo, Leonardo da Silva Gomes |
 | 04/09/2019 | 0.8 | Adição do escopo do projeto | João Pedro Silva de Carvalho |
 | 05/09/2019 | 0.8.1 | União dos tópicos Introdução e Propósito; Adição das Referências no final do documento; Remoção do termo aplicativo para o termo aplicação web responsiva  | Durval Carvalho e Flavio Vieira |
-| 05/09/2019 | 0.8.2 | Revisão do Escopo | Durval Carvalho |
+| 05/09/2019 | 0.8.2 | Revisão de duplicações e mudanças estruturais | Renato Britto Araujo |
+| 05/09/2019 | 0.8.3 | Revisão do escopo | Durval Carvalho |
+| 06/09/2019 | 0.8.4 | Revisão de perspectiva de produto e requisitos | Renato Britto Araujo |
 
 ## **1. Introdução**
 
@@ -28,8 +30,8 @@ do escopo e diminuir os riscos envolvidos.
 ### 1.1 Escopo
 
 Esse projeto tem como objetivo desenvolver uma aplicaçao web responsiva com a 
-finlidade de conectar donos de árvores e colheitores voluntários, visanddo a 
-disponibilizaçao do resultado das colheitas à projetos caridosos. 
+finlidade de conectar proprietários de árvores frutíferas em ambiente urbano e colheitores voluntários, visando a 
+disponibilização de parte do resultado das colheitas à instituições e projetos carentes de recursos e fomentar a união comunitária. 
 
 Desse modo, aumentando o consumo de alimentos orgânicos produzidos 
 localmente, assim diminuindo o desperdício de alimentos e fortalecendo a 
@@ -70,7 +72,7 @@ voluntarios para garantir que esses alimentos não sejam desperdiçados.
 Com base na visão do programa Les Fruits Défendus e na visão da 
 organização mãe Santropol Roulant, foi identificado a oportunidade 
 de aumentar o engajamento dos proprietários de plantações 
-frutíferas e dos voluntários por meio de uma aplicação web 
+frutíferas urbanas e dos voluntários por meio de uma aplicação web 
 responsiva, onde usuários podem acessar pode meio de computadores e 
 smartphones.
 
@@ -82,7 +84,7 @@ do projeto e facilitar o primeiro contato com o projeto.
 
 | O problema é | que afeta | cujo impacto é | uma boa solução seria | 
 | ------------ | --------- | -------------- | --------------------- | 
-| O desperdício de alimentos produzido por árvores frutíferas locais | as pessoas e organizações que não tem acesso à comida orgânica | o consumo de alimentos não nutritivos danosos a saúde | convencer proprietários de árvores frutíferas locais à permitir a colheita e distribuição da produção excedente de frutos |
+| O desperdício de alimentos produzido por árvores frutíferas locais | as pessoas e organizações que não tem acesso à comida orgânica | o consumo de alimentos não nutritivos danosos a saúde | convencer proprietários de árvores frutíferas locais à permitir a colheita e distribuição da produção excedente de frutos entre os voluntários que o ajudam e instituições beneficiárias de doações. |
 
 
 ### 2.3 Descrição do posição do produto
@@ -191,7 +193,7 @@ serão descontinuadas, como o Python 2.7.
  
 ### 4.1 Perspectiva do Produto
  
-O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas urbanas, fomentando a agricultura urbana e a agroecologia que interfere fortemente em vários aspectos sociais e econômicos. Assim, utilizamos da relação entre proprietários de árvores frutíferas, voluntários para colheita e locais que possam receber doações destas frutas, para a diminuição de desperdício de comida, aumento do acesso a comida saudável e colaboração comunitária (socialização) acarretando na diminuição de transtornos mentais e fortalecimento de culturas locais. O produto é baseado em um sistema já existente,  o [Saskatoon](https://github.com/tiagovaz/saskatoon) utilizado pelo coletivo [LES FRUITS DÉFENDUS](https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/) em Montreal, uma iniciativa da organização [Santropol Roulant](https://santropolroulant.org/en/history/).
+O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas urbanas, fomentando a agricultura urbana e a agroecologia que interfere fortemente em vários aspectos sociais e econômicos. Assim, utilizamos da relação entre proprietários de árvores frutíferas em ambiente urbano, voluntários para colheita e locais que possam receber doações destas frutas, para a diminuição de desperdício de comida, aumento do acesso a comida saudável e colaboração comunitária (socialização) acarretando na diminuição de transtornos mentais e fortalecimento de culturas locais. O produto é baseado em um sistema já existente,  o [Saskatoon](https://github.com/tiagovaz/saskatoon) utilizado pelo coletivo [LES FRUITS DÉFENDUS](https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/) em Montreal, uma iniciativa da organização [Santropol Roulant](https://santropolroulant.org/en/history/).
  
 ### 4.2 Resumo das capacidades
  
@@ -292,48 +294,31 @@ transtornos entre a equipe de desenvolvimento e de gerência.
 Toda da interação com o software deve ocorrer de forma natural, de modo que o usuário não fique com dúvidas sobre como realizar determinada tarefa. Os recursos cujos usuários tem acesso devem ser de fácil entendimento, de modo que o usuário não desista durante alguma ação. Com a finalidade de alcançar um público maior, a aplicação será desenvolvida tanto para usuários web quanto mobile.
 
 ### 6.4 Restrições de Confiabilidade
-Visando uma maior mantenabilidade do projeto pela comunidade open source, 
-esse projeto tem o comprometimento de manter uma cobertura de testes de no 
-mínimo 90%, para assim produzir um produto melhor.
+Visando uma maior mantenabilidade do projeto pela comunidade open source, tem o comprometimento de manter uma cobertura de testes de no mínimo 90%.
 
 ## **8. Requisitos do Produto**
 
-### 8.1 Requisitos do Sistema
+Lista de categorias de prioridades para requisitos
 
-Essa aplicação poderá ser acessada por meio dos principais navegadores web. 
+| Tipo | Descrição |
+| Alta | Requisitos indispensáveis para o funcionamento do sistema |
+| Intermediária | Requisitos importantes para o sistema, mas caso não sejam implementados não resultará em um mal funcionamento do sistema |
+| Útil | Requisitos que não são usados com tanta frequência e não são tão significativos na satisfação que o usuário tem sobre o sistema |
 
-### 8.2 Requisitos de Design
+Lista de requisitos
 
-A aplicação deve ser auto explicativa, de forma que, o usuário não precise 
-recorrer a canais de suporte para realizar alguma ação. Deste modo, toda os 
-fluxos de uso devem ser pensados de modo que o resultado seja intuitivo e 
-fácil de usar.
-
-### 8.3 Requisitos de Portabilidade
-
-O sistema deve ter suporte para principais navegadores web atuais, além de 
-ser compatível com as últimas versões do Android.
-
-### 8.4 Requisitos de Confiabilidade
-
-A aplicação deve ser comprometer com os dados dos usuários cadastrados, de 
-modo que informações sensíveis não seja comprometidas. 
-
-### 8.1 Requisitos de Suportabilidade
-O software desenvolvido deve ser compatível com os principais navegadores e 
-smartphones modernos
-
-### 8.2 Requisitos de Design
-A aplicação deve ter uma interface que seja de fácil uso para pessoas. Dessa 
-forma, será necessário uma interface intuitiva pensando na experiência do 
-usuário.
-
-### 8.3 Requisitos de Segurança
-O sistema deve garantir a integridade dos dados fornecidos pelos usuários
-
-### 8.4 Requisitos de Desempenho
-O sistema deve ser otimizado de forma que usuários com conexões lentas 
-recebam resposta de forma satisfatória.
+| Identificador | Requisito | Depende de | Prioridade |
+| RF01 | Permitir que o usuário faça cadastro e autenticação | --- | Alta |
+| RF02 | Permitir que o voluntário visualize o histórico de colheitas que participou | RF01 | Intermediária |
+| RF03 | Permitir cadastro de árvores, propriedades e colheitas | RF01 | Alta |
+| RF04 | Permitir usuários a se candidatar a ser voluntário em colehita | RF01, RF03 | Alta |
+| RF05 | Habilitar comunicação entre envolvidos em colheita (voluntários, líderes e proprietários) | RF03 | Intermediária |
+| RF06 | Mostrar colheitas registradas, com enfâse às que acontecerão no futuro | RF03 | Alta |
+| RF07 | Mostrar perfis e histórico de usuários | RF01 | Baixa |
+| RF08 | Prover à líderes a possiblidade de escolher voluntários cadastrados em colheita | RF03, RF04 | Alta |
+| RF08 | Suportar para principais navegadores web atuais, com enfâse ao ambiente mobile | --- | Intermediária |
+| RF09 | Mostrar dados à respeito de colheitas realizadas de forma transparente | RF03 | Baixa |
+| RF10 | Prover segurança com os dados dos usuários cadastrados | --- | Baixa |
 
 ## Referências
 - Texto descritivo sobre a estrutura e objetivo dos tópicos do documento de visão. https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html. Acesso em 02 de setembro de 2019
