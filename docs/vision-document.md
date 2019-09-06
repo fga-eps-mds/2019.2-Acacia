@@ -12,6 +12,7 @@
 | 03/09/2019 | 0.7.2 | Revisão gramatical e estrutural de todo o documento | Renato Britto Araujo, Leonardo da Silva Gomes |
 | 04/09/2019 | 0.8 | Adição do escopo do projeto | João Pedro Silva de Carvalho |
 | 05/09/2019 | 0.8.1 | União dos tópicos Introdução e Propósito; Adição das Referências no final do documento; Remoção do termo aplicativo para o termo aplicação web responsiva  | Durval Carvalho e Flavio Vieira |
+| 05/09/2019 | 0.8.2 | Revisão do Escopo | Durval Carvalho |
 
 ## **1. Introdução**
 
@@ -26,15 +27,13 @@ do escopo e diminuir os riscos envolvidos.
 
 ### 1.1 Escopo
 
-Esse projeto tem como objetivo auxiliar os integrantes do projeto 
-Saskatoon que promovem a mobilização de voluntários para ajudarem 
-a donos de plantações frutífera a fazerem suas colheitas. 
-O software, que tem a função de gerenciar essa mobilização fazendo 
-uma comunicação entre os participantes desse projeto, será uma 
-aplicação web responsiva. Com isso o software contribuiria com o 
-Saskatoon para ajudar no não disperdício de comida e promover uma 
-alimentação mais saudável, que são parte dos Objetivos de 
-Desenvolvimento Sustentável (ODS) definidos pela ONU.
+Esse projeto tem como objetivo desenvolver uma aplicaçao web responsiva com a 
+finlidade de conectar donos de árvores e colheitores voluntários, visanddo a 
+disponibilizaçao do resultado das colheitas à projetos caridosos. 
+
+Desse modo, aumentando o consumo de alimentos orgânicos produzidos 
+localmente, assim diminuindo o desperdício de alimentos e fortalecendo a 
+comunidade local.
 
 ### 1.2 Definições, acrônimos e abreviações
 Estarão listadas neste tópico as definições, acrônimos e abreviações dos 
@@ -52,26 +51,7 @@ público interessado no projeto
 | FGA | Faculdade do Gama | 
 | UnB | Universidade de Brasília | 
 
-
-### 1.3 Visão Geral
-
-Este documento visa descrever os detalhes sobre as características 
-do software a ser implementado. 
-O documento é dividido da seguinte maneira: inicialmente, é 
-explorado uma visão geral de todo o documento, exposição do 
-problema que este projeto busca resolver e a descrição da parte 
-interessada.
-
-Logo após, foram expostos os recursos necessários, restrições e a 
-descrição do desempenho do produto. Por fim, foram denominados os 
-requisitos necessários para a realização do projeto.
-
-Desta forma, a ideia principal deste documento de visão é fornecer 
-de maneira objetiva e organizada os assuntos que tangem à 
-problemática inicial.
-
 ## **2. Posicionamento**
-
 
 A organização [Santropol Roulant](https://santropolroulant.org/en/history/) 
 foi criada com a missão de diminuir o isolamento social e econômico entre 
@@ -191,7 +171,7 @@ mobile.
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
-| Entusiastas/interessados em trabalho voluntário | Pessoas com porte físico capaz de auxiliar colheita | Se candidatar a participar de colheita, comparecer ao evento e seguir ordens do líder de colheita | Participar em colheita | Médio |
+| Entusiastas/interessados em trabalho voluntário | Estudantes, estrangeiros de passagem, comunidade local | Se candidatar a participar de colheita, comparecer ao evento e seguir ordens do líder de colheita | Participar em colheita | Médio |
 
 ### 3.8 Alternativas e Concorrências
 
@@ -232,10 +212,6 @@ O projeto está encarregado de ser o conectivo entre os proprietários de árvor
 - A aplicação web responsiva será utilizada por pessoas que desejam se voluntariar e pessoas que querem ajudar na colheita de seus frutos.
  
 - A aplicação web responsiva irá facilitar a comunicação entre proprietário da árvore frutífera e o voluntário.
-
-### 4.5 Custo e precificação
-### 4.6 Licenciamento e instalação
-### 4.7 Instalação
 
 ## **5. Recursos do Produto**
 
