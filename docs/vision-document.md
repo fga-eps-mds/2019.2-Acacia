@@ -301,6 +301,7 @@ Visando uma maior mantenabilidade do projeto pela comunidade open source, tem o 
 Lista de categorias de prioridades para requisitos
 
 | Tipo | Descrição |
+| :- | :- |
 | Alta | Requisitos indispensáveis para o funcionamento do sistema |
 | Intermediária | Requisitos importantes para o sistema, mas caso não sejam implementados não resultará em um mal funcionamento do sistema |
 | Útil | Requisitos que não são usados com tanta frequência e não são tão significativos na satisfação que o usuário tem sobre o sistema |
@@ -308,6 +309,7 @@ Lista de categorias de prioridades para requisitos
 Lista de requisitos
 
 | Identificador | Requisito | Depende de | Prioridade |
+| :- | :- | :- | :- |
 | RF01 | Permitir que o usuário faça cadastro e autenticação | --- | Alta |
 | RF02 | Permitir que o voluntário visualize o histórico de colheitas que participou | RF01 | Intermediária |
 | RF03 | Permitir cadastro de árvores, propriedades e colheitas | RF01 | Alta |
