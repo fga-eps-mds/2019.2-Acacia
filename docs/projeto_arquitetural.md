@@ -7,7 +7,7 @@ Complementar à este autor, [Krafzig, 2004](http://www.scielo.br/scielo.php?scri
 
 ## Metodologia
 
-O primeiro passo dado pela equipe do projeto foi avaliar as potenciais tecnologias a serem usadas no projeto de desenvolvimento do produto proposto. Para cumprir este objetivo, foram feitos estudos que buscaram averiguar a viabilidade em usar as tecnologias previamente selecionadas, por meio de artigos e pesquisas de mercado. As tecnologias selecionadas previamente para o back-end foram Django ou Django-Rest, já para o front-end foram os frameworks Vue.js e React.
+O primeiro passo dado pela equipe do projeto foi avaliar as potenciais tecnologias a serem usadas no projeto de desenvolvimento do produto proposto. Para cumprir este objetivo, foram feitos estudos que buscaram averiguar a viabilidade em usar as tecnologias previamente selecionadas, por meio de artigos e pesquisas de mercado. As tecnologias selecionadas previamente para o back-end foi Django-Rest, já para o front-end foram os frameworks Vue.js e React.
 
 Após a prévia seleção a escolha consistiu na avaliação dos seguintes tópicos:
 - Qual é o nível da curva de aprendizado?
@@ -16,12 +16,12 @@ Após a prévia seleção a escolha consistiu na avaliação dos seguintes tópi
 
 ## Resultados obtidos
 
-Após análise dos tópicos de avaliação de tecnologias, foi possível então averiguar que para o front-end a opção de tecnologia mais viável é a Vue.js. A seguir apresenta-se sua análise.
+Após análise dos tópicos de avaliação de tecnologias, foi possível então averiguar que para o front-end a opção de tecnologia mais viável é a Vue.js e para back-end Django-rest. A seguir apresenta-se suas análises.
 
 #### Resultados obtidos
 
-1. **Curva de aprendizado**: Pelas fontes pesquisadas sobre as tecnologias, Vue mostrou-se com uma curva de aprendizado menor, em relação à React [[1]](https://medium.com/fundbox-engineering/react-vs-vue-vs-angular-163f1ae7be56) e [[2]]((https://deliciousbrains.com/react-vs-vue-2018/)).
-2. **Familiaridade com as tecnologias**: De acordo com o quadro de conhecimentos atual, a equipe tem familiaridade com Python, possibilitando um back-end mais prático. Já no front-end, não há inicialmente conhecimentos consideráveis de Javascript. Apesar disto, será uma grande chance de aprendizado para todos do grupo de trabalhar com uma tecnologia em tendência no mercado de trabalho.
+1. **Curva de aprendizado**: Pelas fontes pesquisadas sobre as tecnologias, Vue mostrou-se com uma curva de aprendizado menor, em relação à React [[1]](https://medium.com/fundbox-engineering/react-vs-vue-vs-angular-163f1ae7be56) e [[2]]((https://deliciousbrains.com/react-vs-vue-2018/)). Em relação ao back-end, Django tem uma curva de aprendizado mais alta em relação a Flask [[3]](https://imasters.com.br/back-end/flask-x-django-como-escolher-o-framework-correto-para-seu-aplicativo-web), por exemplo. Apesar disto, os membros têm noções básicas do framework e de python.
+2. **Familiaridade com as tecnologias**: De acordo com o quadro de conhecimentos atual, a equipe tem familiaridade com Python e pelos membros da equipe já terem conhecimento do padrão arquitetural MVC, possibilitando um back-end mais prático e produtivo. Já no front-end, não há conhecimentos consideráveis de Javascript. Apesar disto, será uma grande chance de aprendizado para todos do grupo de trabalhar com uma tecnologia em tendência no mercado de trabalho.
 3. **Curva de aprendizado x Tempo**: Devido a imprevistos e definição tardia do tema a ser desenvolvido, o deadline está corrido. Logo, é importante que as tecnologias usadas tenham uma curva de aprendizado menor, com o objetivo de trabalhar a produtividade da equipe.
 
 ### Conclusão
@@ -39,3 +39,5 @@ KRAFZIG, Dirk et al. Service-Oriented Architecture Best Practices. Indiana: Pren
 [React vs Vue updated](https://deliciousbrains.com/react-vs-vue-2018/)
 
 [The status of JavaScript libraries & frameworks](https://medium.com/hackernoon/the-status-of-javascript-libraries-frameworks-2018-beyond-3a5a7cae7513)
+
+[Django vs Flask](https://imasters.com.br/back-end/flask-x-django-como-escolher-o-framework-correto-para-seu-aplicativo-web)
