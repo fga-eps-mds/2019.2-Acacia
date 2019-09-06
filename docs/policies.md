@@ -1,131 +1,144 @@
-# Repository Policies
+# Políticas do Repositório
+## Histórico de versão
 
-## Introduction
+| Data | Versão | Modificação | Autor |
+| :- | :- | :- | :- |
+| 23/08/2019 | 1.0 | Criação da primeira versão do documento | Vítor Cardoso |
+| 03/09/2019 | 1.1 | Tradução do documento para português | Vítor Cardoso |
 
-This document is intended to explain the procedures to be performed in order to correctly follow this repository policies.
+## Introdução
 
-Here you can find our:
+Este documento tem como objetivo  explicar os procedimentos a serem feitos para que as políticas deste repositório sejam seguidas adequadamente.
 
-- Branch policies
-- Commit policies
+Aqui se encontram:
 
-## Branch Policies
+- Política de Branch
+- Política de Commits
 
-Branches must follow the rules explained in this section and must be written in English. 
+## Políticas de Branch
 
-Brief work flow explanation:
+Branches devem seguir as seguintes regras explicadas neste tópico:
 
-- The **master** branch represents the stable version of the product, containing tested and versioned code, which is ready to be delivered to the final user or customer. This branch comes from the **develop** branch through pull requests approved at the end of each release.
+Breve explicação sobre o fluxo de trabalho:
 
-  Rules:
+- A branch **master** representa uma versão estável do produto, contendo código já testado e versionado, pronto para ser entregue ao usuário final ou cliente. Essa branch parte da branch **develop** através de pull requests aprovados no fim de cada release.
 
-  1. There is only one **master** branch.
+  Regras:
 
-  2. Commits made **directly** in this branch are **not** allowed.
+  1. Existe apenas uma branch **master**.
+  2. **Não** são permitidos commits feitos diretamente na **master**.
+
+
+- A branch **develop** contém a versão mais atualizada do código que está sendo desenvolvido. Essa branch está sempre sincronizada com a **master** e é base para as branches **feature**.
+
+  Regras:
+
+  1. Existe apenas uma branch **develop**.
+  2. Essa branch está sempre sincronizada com a branch **master**.
+
+
+- As branches **feature** representam as funcionalidades do sistema a serem desenvolvidas, elas devem ter a branch **develop** como sua origem e fim.
+
+  Regras:
+
+  1. Essa branch sempre é criada a partir da branch **develop**.
+  2. Essa branch sempre é mesclada à branch **develop**.
+  
+  Regras de nomenclatura:
+
+  `feature/issueID-titulo-da-issue`
+
+
+- A branch **release** representa o conjunto de funcionalidades provenientes de um ponto específico da branch **develop**. Essa branch contém funcionalidades prontas que, provavelmente, estarão presentes na próxima versão estável do produto. Apenas **bug fixes** são permitidos nessa branch.
+
+  Regras:
+
+  1. Essa branch sempre é criada a partir da branch **develop**.
+  2. Essa branch sempre é mesclada às branches **develop** e **master**.
+  3. Essa branch aceita apenas mesclagens de branches do tipo **bugfix**.
+
+  Regras de nomenclatura:
+
+  `release/vNúmero-da-versão`
+  
+  
+
+
+- As branches do tipo **bugfix** são utilizadas para implementar soluções para bugs, encontrados através de testes realizados em releases específicas, na branch **release**. Isso significa que a branch **bugfix** deve ter a branch **release** como sua origem e fim.
+
+  Regras:
+
+  1. Essa branch sempre é criada a partir da branch **release**.
+  2. Essa branch sempre é mesclada na branch **release**.
+
+  Regras de nomenclatura:
+
+  `bugfix/issueID-titulo-da-issue`
+  
+  
+  
+  A branch **hotfix** é utilizada para implementar soluções para problemas urgentes encontrados no ambiente de produção. Isso significa que essa branch deve ter a branch **master** como sua orgigem e fim.
+
+
+- Regras:
+
+  1. Essa branch sempre é criada a partir da branch **master**.
+2. Essa branch sempre é mesclada à branch **master**.
+  
+  Regras de nomenclatura:
+
+  `hotfix/issueID-titulo-da-issue`
 
   
 
-- The **develop** branch contains the most updated version of the code we are working on. This branch is always synchronized with the **master** branch and is the base of all **feature** branches.
 
-  Rules:
+Observações: O título da issue utilizado no nome das branches deve ser mantido em português.
 
-  1. This branch is always synchronized with the **master** branch.
 
-     
-
-- The **feature** branches represent the system features to be developed, they must have the **develop** branch as both start and end.
-
-  Rules:
-
-  1. This branch always come from the **develop** branch.
-  2. This branch is always merged to the **develop** branch.
-
-  Naming rules:
-
-  `feature/issueID-issue-name`
-
-  
-
-- The **release** branch represents a set of features coming from a specific point of the **develop** branch. This branch contains features that will probably be in the next stable release of the product. Only **bug fixes** are allowed in this branch.
-
-  Rules:
-
-  1. This branch always come from the **develop** branch.
-  2. This branch is always merged to the **develop** and **master** branches.
-  3. This branch only accepts merges from **bugfix** branches.
-
-  Naming rules:
-
-  `release/vVersion-number`
-
-  
-
-- The **bugfix** branches are used to implement solutions to bugs, found through tests applied to specific releases, in the **release** branch. This means that this branch must be started from and merged into a **release** branch.
-
-  Rules:
-
-  1. This branch always come from the **release** branch.
-  2. This branch is always merged to the **release** branch.
-
-  Naming rules:
-
-  `bugfix/issueID-issue-name`
-
-  
-
-- The **hotfix** branch is used to implement solutions to urgent bugs found in the live environment. This means that this branch must be started and merged into the **master** branch. 
-
-  Rules:
-
-  1. This branch always come from the **master** branch.
-2. This branch is always merged to the **master** branch.
-
-  Naming rules:
-
-  `hotfix/issueID-issue-name`
-
-  
-
-  Here are some images   representing this work flow:
+ Imagens para ajudar a visualizar o fluxo de trabalho descrito:
 
   ![](https://fpy.cz/pub/slides/git-workshop/images/gitflow.png)
 
   ![](https://miro.medium.com/max/640/0*FTwKYpFGADX-5Y0O)
 
-  ## Commit Policies
-Commits should be briefly and clearly written, in English, describing what was done.
+## Políticas de Commits
+Commits devem ser escritos de forma clara e breve, em Inglês, descrevendo as alterações feitas.
 
-Commit writing rules:
+Regras para escrita das mensagens nos commits:
 
 ``` 
-#issueID Concise Message up to 50 characters
+#issueID Mensagem breve descrevendo alterações
 	
-Optional and more detailed message
+Mensagem mais detalhada sobre o que foi feito neste commit. (Opcional)
 ```
 
-You can automatically close an issue by adding the keyword "Fix" before the #issueID:
+É possível fechar uma issue automaticamente adicionando a palavra chave "Fix" antes do id da issue:
 
 `Fix #issueID Concise Message`
 
-The commit concise message must uses the imperative, present tense. Here are some examples:
+O caractere "#", por padrão, representa uma linha de comentário no arquivo de mensagem do commit. Para evitar problemas, é necessário alterar o caractere com o seguinte comando:
 
-Bad examples:
+`git config --local core.commentChar auto`
+
+Caso deseje utilizar um outro caractere específico para definir uma linha de comentário, basta substituir a palavra "auto" pelo caractere desejado.
+
+A mensagem principal do commit deve ser escrita no modo imperativo. Aqui estão alguns exemplos:
+
+Maus exemplos:
 
 `Renamed the iVars and removed the common prefix.`
 
 `Creating branch policies document `
 
-Good examples:
+Bons exemplos:
 
 `Rename the iVars to remove the common prefix. `
 
 `Create branch policies document`
 
 
-
-## References
+## Referências
 
 [Git-flow Applied to a Real Project](https://medium.com/empathyco/git-flow-applied-to-a-real-project-c08037e28f88)
 
 [Writing git commit message](https://365git.tumblr.com/post/3308646748/writing-git-commit-messages)
-

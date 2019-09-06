@@ -1,5 +1,5 @@
-<!-- docs/_sidebar.md -->
+﻿<!-- docs/_sidebar.md -->
 
 * [Home](/)
-* [Policies](policies.md)
+* [Políticas do Repositório](policies.md)
 * [Termo de Abertura](project_charter.md)
