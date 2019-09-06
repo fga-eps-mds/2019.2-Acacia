@@ -241,30 +241,44 @@ O projeto está encarregado de ser o conectivo entre os proprietários de árvor
 
 ### 5.1 Recursos de suporte ao voluntário
 
-Os voluntários que tiverem interessados no projeto podem se cadastrar na 
+Os voluntários interessados no projeto podem se cadastrar na 
 plataforma. Quando logados terão acesso aos seguintes recursos: 
+
 * Histórico de colheitas que participaram.
 * Organizações ou pessoas que foram beneficiadas com os alimentos coletados na colheita em que o voluntário estava presente.
 * Próximas colheitas que podem se voluntariar.
-* Vincular-se a uma colheita cadastrada
+* Vincular-se a uma colheita cadastrada.
 
-### 5.2 Recursos de suporte ao proprietário
+Quando um voluntário é escolhido para participar como líder em colheita, terá oportunidade de:
+
+* Comunicar-se de forma eficiente com líderes, proprietários e outros voluntários participantes da mesma colheita.
+* Candidatar-se a líder em colheitas que ainda não possuem um.
+
+### 5.2 Recursos de suporte ao líder
+
+O voluntário que se candidatam à posição de líder e é aceito pelo proprietário podem:
+
+* Escolher voluntários dentre a lista de candidatos para participar da colheita.
+* Coordenar de forma eficiente e concisa os voluntários por meios de chats gerais e sistema de avisos e regras gerais. 
+
+### 5.3 Recursos de suporte ao proprietário
 
 Os proprietários de árvores frutíferas locais que tiverem interesse no 
 projeto podem se cadastrar na plataforma. Quando logados terão acesso ao:
 
-* Cadastro de plantações disponível para colheita
+* Cadastro de plantações disponível para colheita.
 * Histórico de colheitas realizadas em suas propriedades.
 * Organizações ou pessoas que foram beneficiadas com os alimentos coletados em sua propriedade.
+* Escolha do líder de colheita dentre os voluntários (incluindo escolher a si).
 
-### 5.3 Disponibilizar os resultados das últimas colheitas
+### 5.4 Disponibilizar os resultados das últimas colheitas
 
 Qualquer pessoa interessada no projeto terá acesso aos paineis de 
 informação. Nessa parte da aplicação não será necessário autenticação do 
 usuário e qualquer pessoa terá acesso aos dados das últimas colheitas, o 
 destino dos frutos colhidos e informações sobre o projeto.
 
-### 5.4 Enviar email para grupos cadastrados
+### 5.5 Enviar email para grupos cadastrados
  
 A aplicação poderá enviar email para os usuários de acordo com as atividades 
 que estão se aproximando. Esses emails serão enviados automaticamente de 
@@ -299,24 +313,12 @@ inexperiência com o framework Django, além de possíveis
 transtornos entre a equipe de desenvolvimento e de gerência.
 
 ### 6.3 Restrições de Design
-É necessário que os usuários tenham acesso à internet para poder utilizar o 
-software.
+Toda da interação com o software deve ocorrer de forma natural, de modo que o usuário não fique com dúvidas sobre como realizar determinada tarefa. Os recursos cujos usuários tem acesso devem ser de fácil entendimento, de modo que o usuário não desista durante alguma ação. Com a finalidade de alcançar um público maior, a aplicação será desenvolvida tanto para usuários web quanto mobile.
 
 ### 6.4 Restrições de Confiabilidade
 Visando uma maior mantenabilidade do projeto pela comunidade open source, 
 esse projeto tem o comprometimento de manter uma cobertura de testes de no 
 mínimo 90%, para assim produzir um produto melhor.
-
-## **7. Faixas de Qualidade**
-
-Toda da interação com o software deve ocorrer de forma natural, de modo que 
-o usuário não fique com dúvidas sobre como realizar determinada tarefa.
-
-Os recursos que cada usuário tem acesso deve ser fácil entendimento, de modo 
-que o usuário não desista durante alguma ação.
-
-Com a finalidade de alcançar um público maior de usuários, a aplicação será 
-desenvolvida tanto para o ambiente web quanto para smartphones.
 
 ## **8. Requisitos do Produto**
 
