@@ -5,6 +5,7 @@
 |:--:|:--:|:--:|:--:|
 |06/09/2019|0.1|Criação da estrutura do documento|Leonardo da Silva Gomes|
 |07/09/2019|0.2|Adição dos tópicos Introdução e Protótipo de Baixa Fidelidade|Leonardo da Silva Gomes|
+|07/09/2019|0.3|Adição do fluxo de usuário|João Pedro Silva de Carvalho|
 
 ## 1.Introdução
 
@@ -22,6 +23,6 @@ Os protótipos a seguir foram desenvolvidos a partir de várias outros criados p
 - [Versão 3](https://github.com/fga-eps-mds/2019.2-TimeBolinho/issues/18#issuecomment-529049918)
 
 ### 2.1 Fluxo de usuário
-[Fluxo de usuário](LowFidelityPrototype.png)
+![Fluxo de usuário](LowFidelityPrototype.png)
 
 ## 3.Protótipo de Alta Fidelidade
