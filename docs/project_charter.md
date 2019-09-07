@@ -1,5 +1,13 @@
 ﻿# Termo de abertura
 
+# Histórico de Revisão
+
+
+| Data   | Versão | Modificação  | Autor  |
+| :- | :- | :- | :- |
+| 04/09/2019 | 0.1 | Criação da versão inicial do documento | Fabíola |
+| 04/08/2019 | 0.2 | Atualização de custos e oportunidade de negócio | Fabíola |
+
 # 1. Introdução
 
 Este documento inicia formalmente o projeto do Sistema de Colheita Colaborativa. Nas próximas sessões são detalhados: o que este projeto visa realizar, a oportunidade de negócio identificada, o escopo de atuação, os envolvidos (*stakeholders*), características de riscos, restrições e de custos, entregáveis, prazos e as ferramentas utilizadas no processo de desenvolvimento. Tais descrições visam elucidar a viabilidade do projeto.
@@ -16,14 +24,14 @@ Este projeto possui como objetivos:
 -   Auxiliar na diminuição do desperdício de comida
 -   Aumentar o acesso a comida local
 -   Facilitar a disseminação de conhecimento de colheita e plantio de árvores frutíferas urbanas
-- Facilitar o conhecimento de feiras e troca de conhecimento entre produtores de agricultura familiar e urbana
+-   Facilitar o conhecimento de feiras e troca de conhecimento entre produtores de agricultura familiar e urbana
 
 
 # 4. Oportunidade de Negócios
 
 No texto dos Objetivos de Desenvolvimento Sustentável (ODS) da [ONU](https://nacoesunidas.org/pos2015/agenda2030/)  coloca-se a importância da erradicação da pobreza é um grande e importante desafio global para o desenvolvimento sustentável. 
 
-Observa-se ainda, no [ODS 2](https://nacoesunidas.org/pos2015/ods2/) - Fome zero e Agricultura Sustentável a necessidade de: "*Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável* ". 
+Observa-se ainda, no [ODS 2](https://nacoesunidas.org/pos2015/ods2/) - Fome zero e Agricultura Sustentável a necessidade de: "*Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável* ". E, no [ODS 11] - Cidades e Comunidades sustentáveis(https://nacoesunidas.org/pos2015/ods11/), "Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis". 
 
 Desta forma, uma das possíveis soluções é o fomento da agricultura urbana. A agricultura urbana permite a valorização de espaços limitados permitindo a construção de laços de vida comunitário por meio da produção de alimentos voltados para o autoconsumo, assim também diversificando a dieta de famílias. Desta forma, diminui-se os riscos de insegurança alimentar e nutricional e permite a comunidade desenvolver-se de forma sustentável e autogerida [1][2].
 
@@ -32,7 +40,7 @@ O projeto [Saskatoon](https://github.com/tiagovaz/saskatoon) está inserido nest
 
 # 5. Escopo do Projeto
 
-Plataforma web responsiva, troca de informações entre pessoas em relação a agricultura urbana
+A plataforma que será desenvolvida será uma aplicação web responsiva, permitindo o uso assim em computadores e celulares que facilitará as colheitas, por meio de calendários com cadastro de plantios e datas de realização de colheita, bem como o registro de voluntários e seu gerenciamento, por meio de um responsável da colheita. Deve ainda permitir visualizações que sejam adequadas ao uso de coletivos e também facilitar a troca de conhecimento sobre agricultura urbana e a construção de comunidade em relação a tal atividade.
 
 # 6. Equipe e Papéis
 
@@ -76,17 +84,18 @@ O custo do projeto foi calculado utilizando os seguintes valores, em reais:
 
 | Nome | Custo | Quantidade | Custo Mensal | Custo Total |
 | :--: | :---: | :--------: | :----------: | :---------: |
-| Desenvolvedores Júnior | 3500 | 5 | 17.500 | 70.000|
+| Desenvolvedores Júnior | 3500 | 6 | 21.000 | 84.000|
 | Engenheiros de Produto  | 6500 | 4 | 26.000 | 104.000 |
+| ΔRisco  | 5.000 | - | 5.000 | 20.000 |
 | |||| 174.000|
 
-Os valores para os salários foram obtidos a partir de salários de pessoas que exercem cargos semelhantes em Brasília. 
+Os valores para os salários foram obtidos a partir de salários de pessoas que exercem cargos semelhantes em Brasília. O custo do risco é equivalente ao salário médio da equipe. Leva-se consideração ainda, além do custo, uma margem de lucro de 10%, totalizando então em **R$191.400,00** o custo do projeto.
 
 # 9. Estratégia de Comunicação
 
-Para comunicação interna da equipe são utilizados: o aplicativo Telegram, Hangouts, aulas e reuniões presenciais.
+Para comunicação interna da equipe são utilizados: o aplicativo Telegram, discord, aulas e reuniões presenciais.
 
-Para comunicação com outros envolvidos são utilizados e-mails, hangouts e o github.
+Para comunicação com outros envolvidos são utilizados e-mails, o github e telegram.
 
 
 # Referências

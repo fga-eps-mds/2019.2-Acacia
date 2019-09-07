@@ -1,18 +1,20 @@
 ---
-name: US issue
-about: Pattern template for the creation of the User Stories issues
+name: Template de issue comum
+about: Template padrão para criação das issues comuns
 
 ---
 
-## Issue title (if it is a User Story, US X - Issue name) 
+## Título da issue
 
-### Description:
+### Descrição:
+Descrever issue brevemente, inserindo informações necessárias para o entendimento.
 
-### Acceptance standards:
+### Critérios de aceitação:
+Descrever o que a issue precisa cumprir para ser considerada finalizada.
 
 - 
 
-### Tasks:
+### Tarefas:
+Checklist de ações que devem ser realizadas.
 
 - [ ]  
-
