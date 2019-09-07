@@ -14,15 +14,13 @@ Este documento contemplará as informações acerca dos protótipos de baixa e a
 
 O protótipo de baixa fidelidade tem um vies de desenvolver estratégias e sintetizar ideias do grupo, para definir a interação do usuário com o projeto e a base da futura visualização da aplicação.
 
-Os protótipos a seguir foram desenvolvidos a partir de várias outros criados pelo grupo, com o intuito de deliberar ideias entre os membros. Com isso, foram geradas 2 versões preliminares do protótipo de baixa fidelidade:
+Os protótipos a seguir foram desenvolvidos a partir de várias outros criados pelo grupo, com o intuito de deliberar ideias entre os membros. Com isso, foram geradas 2 versões preliminares e uma terceira finalizada do protótipo de baixa fidelidade:
 
 - [Versão 1](https://github.com/fga-eps-mds/2019.2-TimeBolinho/issues/18#issuecomment-527721682)
 - [Versão 2.1](https://github.com/fga-eps-mds/2019.2-TimeBolinho/issues/18#issuecomment-528601858)
 - [Versão 2.2](https://github.com/fga-eps-mds/2019.2-TimeBolinho/issues/18#issuecomment-528914791)
+- [Versão 3](https://github.com/fga-eps-mds/2019.2-TimeBolinho/issues/18#issuecomment-529049918)
 
-### 2.1 Telas
-#### 2.1.1 Dashbord
-#### 2.1.2 Haverst screen
-#### 2.1.3 Haverst data
+### 2.1 Fluxo de usuário
 
 ## 3.Protótipo de Alta Fidelidade
