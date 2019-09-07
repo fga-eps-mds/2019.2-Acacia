@@ -6,7 +6,7 @@
 |06/09/2019|0.1|Criação da estrutura do documento|Leonardo da Silva Gomes|
 |07/09/2019|0.2|Adição dos tópicos Introdução e Protótipo de Baixa Fidelidade|Leonardo da Silva Gomes|
 |07/09/2019|0.3|Adição do fluxo de usuário|João Pedro Silva de Carvalho|
-|07/09/2019|0.4|Revisão|Leonardo da Silva Gomes e João Pedro Silva de Carvalho|
+|07/09/2019|0.4|Revisão da estrutura|Leonardo da Silva Gomes e João Pedro Silva de Carvalho|
 |07/09/2019|0.5|Adição do tópico tela|Leonardo da Silva Gomes|
 |07/09/2019|0.6|Revisão do tópico Tela|João Pedro Silva de Carvalho|
 
@@ -32,7 +32,7 @@ Os protótipos a seguir foram desenvolvidos a partir de vários outros criados p
 
 #### 2.2.1 Dashbord
 
-Essa tela será responsável por conter uma lista de colheitas cadastradas. Os usuários já autenticados poderão ver um calendário semanal mostrará as colheitas que irão ocorrer na semana e uma lista das quais ainda pode ingressar.
+Essa tela será responsável por conter uma lista de colheitas cadastradas. Os usuários já autenticados poderão ver um calendário semanal, que mostrará as colheitas que irão ocorrer na semana e uma lista das quais ainda pode ingressar.
 
 ![dashboard](Images/dashboard.png)
 
@@ -40,12 +40,12 @@ Essa tela será responsável por conter uma lista de colheitas cadastradas. Os u
 
 Ao clicar em uma colheita para saber mais detalhes, essa página será aberta e nela conterá as informações: imagem, data, proprietário e líder. Para pessoas que já se cadastraram na colheita, haverá um chat para voluntários e organizadores e aparecerá as regras e as respectivas necessidades (guidelines). 
 
-![haverst-data](Images/harvest-data.png)
+![haverst-screen](Images/harvest-screen.png)
 
 #### 2.2.3 Harvest data
 
 Nesta página ficará disponível informações gerais sobre as colheitas: dados, scoreboard entre proprietários e líderes, relatos, e um overview do projeto.
 
-![haverst-screen](Images/harvest-screen.png)
+![haverst-data](Images/harvest-data.png)
 
 ## 3.Protótipo de Alta Fidelidade
