@@ -1,3 +1,7 @@
+| Data   | Versão | Modificação  | Autor  |
+| :- | :- | :- | :- |
+| 06/09/2019 | 0.1 | Criação e desenvolvimento do documento | Shayane |
+
 ## Introdução
 A arquitetura de software é uma abordagem usada no desevolvimento do software para auxiliar no direcionamento da equipe de trabalho de um projeto. Ela é uma abstração de um sistema que seleciona alguns detalhes e busca representá-los em um certo nível de abstração. A importância de adotar padrões arquiteturais pode vir a auxiliar em ganhos de eficiência na manutenção, evolução e agilidade. 
 
