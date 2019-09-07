@@ -1,7 +1,7 @@
 ﻿<!-- docs/_sidebar.md -->
 
 * [Home](/)
-* [Políticas do Repositório](policies.md)
+* [Policies](policies.md)
+* [Policies](policies.md)
 * [Termo de Abertura](project_charter.md)
-* [EAP](wbs.md)
-* [Projeto arquitetural](architecture-project.md)
+* [Documento de Visão](vision-document.md)
