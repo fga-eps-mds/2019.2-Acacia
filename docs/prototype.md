@@ -22,5 +22,6 @@ Os protótipos a seguir foram desenvolvidos a partir de várias outros criados p
 - [Versão 3](https://github.com/fga-eps-mds/2019.2-TimeBolinho/issues/18#issuecomment-529049918)
 
 ### 2.1 Fluxo de usuário
+[Fluxo de usuário](LowFidelityPrototype.png)
 
 ## 3.Protótipo de Alta Fidelidade
