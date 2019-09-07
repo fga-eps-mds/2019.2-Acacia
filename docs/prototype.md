@@ -8,6 +8,7 @@
 |07/09/2019|0.3|Adição do fluxo de usuário|João Pedro Silva de Carvalho|
 |07/09/2019|0.4|Revisão|Leonardo da Silva Gomes e João Pedro Silva de Carvalho|
 |07/09/2019|0.5|Adição do tópico tela|Leonardo da Silva Gomes|
+|07/09/2019|0.6|Revisão do tópico Tela|João Pedro Silva de Carvalho|
 
 
 ## 1.Introdução
@@ -31,19 +32,19 @@ Os protótipos a seguir foram desenvolvidos a partir de vários outros criados p
 
 #### 2.2.1 Dashbord
 
-Essa tela será responsável por conter uma lista de colheitas cadastradas, para usuários já autenticados, um calendário semanal que mostrará as colheitas que irão ocorrer na semana, e uma lista de colheitas que você ainda pode ingressar.
+Essa tela será responsável por conter uma lista de colheitas cadastradas. Os usuários já autenticados poderão ver um calendário semanal mostrará as colheitas que irão ocorrer na semana e uma lista das quais ainda pode ingressar.
 
 ![dashboard](Images/dashboard.png)
 
 #### 2.2.2 Harvest screen
 
-Ao clicar em uma colheita para saber mais informações, essa página será aberta, nela conterá todas as informações da colheita: imagem, data, proprietário e lider. Para pessoas que já se cadastraram na colheita, haverá um chat para voluntários e organizadores, e aparecerá as regras e as necessidades da colheita (guidelines). 
+Ao clicar em uma colheita para saber mais detalhes, essa página será aberta e nela conterá as informações: imagem, data, proprietário e líder. Para pessoas que já se cadastraram na colheita, haverá um chat para voluntários e organizadores e aparecerá as regras e as respectivas necessidades (guidelines). 
 
 ![haverst-data](Images/harvest-data.png)
 
 #### 2.2.3 Harvest data
 
-Nesta página ficará dispostos todas as informações gerais sobre as colheitas: dados, scoreboard entre proprietários e lideres, relatos de colheitas, e um overview do projeto.
+Nesta página ficará disponível informações gerais sobre as colheitas: dados, scoreboard entre proprietários e líderes, relatos, e um overview do projeto.
 
 ![haverst-screen](Images/harvest-screen.png)
 
