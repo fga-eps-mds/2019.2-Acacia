@@ -46,3 +46,5 @@
 
 
 ## Referências
+
+Departamento de Informática do SUS. Documento de Arquitetura de Software. Disponível em: <datasus.saude.gov.br/images/MDSF/MDSoftware/Artefatos/Arquitetura/MDS_DAS_Documento_Arquitetura_Software2.docx>. Acesso em: 10 de setembro de 2019.
