@@ -1,10 +1,22 @@
 # Documento de arquitetura
 
 ## Histórico de revisão
+ Data   | Versão | Modificação  | Autor  |
+| :- | :- | :- | :- |
+| 10/09/2019 | 0.1 | Adição do tópico Objetivo |  Durval Carvalho |
 
 ## 1. Introdução
 
 ### 1.1 Objetivo
+Este documento oferece uma visão geral arquitetural do 
+sitema que será implementado, permitindo assim que os 
+envolvidos no projeto conheça como a aplicação será 
+subdivida e quais será a função de cada componente.
+
+Outro objetivo desse documento é elucidar quais foram as 
+motivações que levaram a equipe a tomar decisões à respeito
+dessa arquitetura.
+
 ### 1.2 Escopo
 ### 1.3 Definições, Acrônimos e Abreviações
 
