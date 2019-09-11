@@ -9,6 +9,7 @@
 |07/09/2019|0.4|Revisão da estrutura|Leonardo da Silva Gomes e João Pedro Silva de Carvalho|
 |07/09/2019|0.5|Adição do tópico tela|Leonardo da Silva Gomes|
 |07/09/2019|0.6|Revisão do tópico Tela|João Pedro Silva de Carvalho|
+|10/09/2019|0.7|Atualização do fluxo de usuário| João Pedro Silva de Carvalho|
 
 
 ## 1.Introdução
