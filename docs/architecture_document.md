@@ -5,6 +5,7 @@
 | :- | :- | :- | :- |
 | 10/09/2019 | 0.1 | Adição do tópico Objetivo |  Durval Carvalho |
 | 10/09/2019 | 0.2 | Adição do tópico Escopo e Django REST Framework |  Durval Carvalho |
+| 11/09/2019 | 0.3 | Adição do tópico Metas e Restrições arquiteturais |  Durval Carvalho |
 
 ## 1. Introdução
 
@@ -78,10 +79,45 @@ respeitar o padrão da arquitetura REST, assim não sendo
 necessário escrever todas as 7 rotas do REST (index, new, 
 create, show, edit, update e destroy).
 
+# TODO: Pesquisar sobre o funcionamento do Vue
 ### 2.2 Vue.js
 
-## 3. Restrições e Restrições arquiteturais
-[Esta seção descrever os requisitos de software e restrições que tem um impacto significante na arquitetura.]
+## 3. Metas e Restrições arquiteturais
+
+3.1 **Suportabilidade**
+
+A aplicação poderá ser utilizada sem grandes problemas 
+pelos principais navegadores modernos da atualizada, no 
+entanto o enfoque será para o Google Chrome, tanto sua 
+versão desktop quanto sua versão mobile, e o Safari, 
+navegador padrão dos sistemas da Apple.
+
+3.2 **Usabilidade**
+
+O sistema deverá ser intuitivo e de simples uso, de forma 
+que a curva de aprendizado para utilizar a aplicação não 
+seja um impedimento para usar o sistema.
+
+# TODO: Falar sobre o banco de dados
+3.3 **Ferramentas de Desenvolvimento**
+
+O projeto será desenvolvido em Python (versão 3.7), 
+utilizando o framework Django (versão 2.2), em conjunto 
+com o framework Vue, um framework JavaScript para criação 
+de interfaces e aplicativos. 
+
+Para facilitar a portabilidade do projeto, tanto para o 
+ambiente de deploy quanto para os ambientes de 
+desenvolvimento, será utilizado o <i>Docker</i> para 
+realizar o empacotamento da aplicação.
+
+Para o banco de dados será usado ...
+
+3.4 **Confiabilidade**
+
+O sistema terá uma cobertura mínima de testes de 90%, 
+buscando garantir que suas funcionalidades foram 
+suficientemente testadas.
 
 ## 4. Visão de Casos de Uso
 [Esta seção lista as especificações centrais e significantes para a arquitetura do sistema em relação aos atores da aplicação.]
