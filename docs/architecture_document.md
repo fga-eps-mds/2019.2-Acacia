@@ -4,6 +4,7 @@
  Data   | Versão | Modificação  | Autor  |
 | :- | :- | :- | :- |
 | 10/09/2019 | 0.1 | Adição do tópico Objetivo |  Durval Carvalho |
+| 10/09/2019 | 0.2 | Adição do tópico Escopo e Django REST Framework |  Durval Carvalho |
 
 ## 1. Introdução
 
@@ -18,13 +19,65 @@ motivações que levaram a equipe a tomar decisões à respeito
 dessa arquitetura.
 
 ### 1.2 Escopo
+
+Esse documento aplica-se ao projeto <Nome do Projeto>, um 
+sistema que será desenvolvido pelos alunos das disciplinas 
+Métodos de Desenvolvimento de Software e Engenharia de 
+Produto de Software, da Universidade de Brasília - Campus 
+Gama.
+
 ### 1.3 Definições, Acrônimos e Abreviações
+
+| **Sigla/Termo/Acrônimo** | **Definição** |
+| ------------------------ | ------------- |
+| MDS | Métodos de Desenvolvimento de <i>Software</i> | 
+| EPS | Engenharia de Produto de <i>Software</i> | 
+| FGA | Faculdade do Gama | 
+| UnB | Universidade de Brasília | 
+| DRF | Django Rest Framework |
 
 ## 2. Representação arquitetural
 
-[Resumo conciso da tecnologia e um diagrama de cada subtópico abaixo]
-
 ### 2.1 Django REST Framework
+
+O Django REST Framework é uma biblioteca para o Framework 
+Django que disponibiliza funcionalidades para implementar 
+APIs Rest de forma rápida.
+
+REST é a abreviação do termo <i>Representational State 
+Transfer</i>, isto é, um conjunto de princípios e boas 
+práticas desenvolvido pelo pesquisador Roy Fielding, que 
+quando aplicados permite uma interface concisa que 
+diversas outras aplicações podem utilizar, tanto para 
+consumir dados quanto para renderizar telas.
+
+Como explicado acima o DRF é um framework do framework 
+Django. Então primeiro explicaremos o motivo de termos 
+escolhido Django para o back-end desse projeto.
+
+O Django é o framework web criado com a linguagem Python. 
+Uma linguagem que todos da equipe já tiveram contato e em plena ascensão no meio acadêmico e no mercado de trabalho.
+
+Outro motivo do uso do Django é sua robustez. O framework 
+possui diversos módulos embutidos que aumenta a 
+produtividade da equipe no decorrer do projeto. Os 2 
+principais módulos que pode ser citado é o 
+Mapeador objeto-relacional (OMR) que irá facilitar a vida 
+dos desenvolvedores que não tiverem afinidade em SQL, e o 
+painel administrativo que irá de forma visual criar, 
+deletar, editar e visualizar objetos do banco de dados.
+
+Assim contextualizado, podemos falar sobre o Django REST.
+O Django REST possui diversos módulos embutidos que 
+facilita a implementação dos princípios e boas práticas 
+da arquitetura REST. 
+
+Um exemplo de facilidade é o fato de por padrão as rotas 
+dos recursos selecionados serem codificadas para 
+respeitar o padrão da arquitetura REST, assim não sendo 
+necessário escrever todas as 7 rotas do REST (index, new, 
+create, show, edit, update e destroy).
+
 ### 2.2 Vue.js
 
 ## 3. Restrições e Restrições arquiteturais
