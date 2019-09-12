@@ -9,6 +9,7 @@
 | 12/09/2019 | 0.4 | Adição de tópico Casos de Uso | Renato Britto Araújo |
 | 12/09/2019 | 0.5 | Adição do tópico MTV |  Durval Carvalho |
 | 12/09/2019 | 0.6 | Adição de diagrama de pacotes back-end e informações sobre base de dados | Renato Britto Araujo | 
+| 12/09/2019 | 0.7 | Adição de diagrama de pacotes front-end e referências e comentário sobre MTV | Renato Britto Araujo |
 
 ## 1. Introdução
 
@@ -89,7 +90,9 @@ fazer, e quais páginas eles tem acesso. É através dessa camada
 que as requisições do usuário será gerenciada.
 
 Essa camada implementa algumas funções do Controller do padrão 
-MVC.
+MVC, porém o MTV se diferencia de MVC por ser mais permissivo
+quanto a comunicação entre diferentes partes do software 
+[[1]](##referências).
 
 O **Template** é a camada de apresentação. Os templates são 
 arquivos de texto, que isola os dados do sistema da forma como 
@@ -190,6 +193,7 @@ Esse diagrama expõe os seguintes requisitos:
 
 #### 5.2.2 _Front-end_
 
+![](https://i.imgur.com/2jJa3d1.png)
 
 ## 6. Visão de implementação
 
@@ -201,3 +205,5 @@ Esse diagrama expõe os seguintes requisitos:
 ## Referências
 
 Departamento de Informática do SUS. Documento de Arquitetura de Software. Disponível em: <datasus.saude.gov.br/images/MDSF/MDSoftware/Artefatos/Arquitetura/MDS_DAS_Documento_Arquitetura_Software2.docx>. Acesso em: 10 de setembro de 2019.
+
+[1] - Andrew Pinkham. Livro. Disponível em: <https://django-unleashed.com>. Acesso em: 12 de setembro de 2019.
