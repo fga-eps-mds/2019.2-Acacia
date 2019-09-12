@@ -10,7 +10,9 @@
 |07/09/2019|0.5|Adição do tópico tela|Leonardo da Silva Gomes|
 |07/09/2019|0.6|Revisão do tópico Tela|João Pedro Silva de Carvalho|
 |12/09/2019|0.7|Adição da nova versão das telas para o Protótipo de Baixa Fidelidade|Hugo Sobral de Lima Salomão|
-|12/09/2019|0.7.1|Revisão|Leonardo da Silva Gomes|
+|10/09/2019|0.8|Atualização do fluxo de usuário| João Pedro Silva de Carvalho|
+|12/09/2019|0.8.1|Revisão|Leonardo da Silva Gomes|
+
 
 ## 1.Introdução
 
