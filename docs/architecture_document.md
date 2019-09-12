@@ -7,6 +7,7 @@
 | 10/09/2019 | 0.2 | Adição do tópico Escopo e Django REST Framework |  Durval Carvalho |
 | 11/09/2019 | 0.3 | Adição do tópico Metas e Restrições arquiteturais |  Durval Carvalho |
 | 12/09/2019 | 0.4 | Adição de tópico Casos de Uso | Renato Britto Araújo |
+| 12/09/2019 | 0.5 | Adição do tópico MTV |  Durval Carvalho |
 
 ## 1. Introdução
 
@@ -37,6 +38,8 @@ Gama.
 | FGA | Faculdade do Gama | 
 | UnB | Universidade de Brasília | 
 | DRF | Django Rest Framework |
+| MTV | Model Template View |
+| MVC | Model View Controller |
 
 ## 2. Representação arquitetural
 
@@ -44,21 +47,25 @@ Gama.
 
 O Django REST Framework é uma biblioteca para o Framework 
 Django que disponibiliza funcionalidades para implementar 
-APIs Rest de forma rápida.
+APIs Rest de forma rápida e eficiente.
 
 REST é a abreviação do termo <i>Representational State 
 Transfer</i>, isto é, um conjunto de princípios e boas 
 práticas desenvolvido pelo pesquisador Roy Fielding, que 
-quando aplicados permite uma interface concisa que 
-diversas outras aplicações podem utilizar, tanto para 
-consumir dados quanto para renderizar telas.
+quando aplicados permite uma interface concisa que pode 
+ser utilizado por diversas outras aplicações.
 
 Como explicado acima o DRF é um framework do framework 
 Django. Então primeiro explicaremos o motivo de termos 
 escolhido Django para o back-end desse projeto.
 
-O Django é o framework web criado com a linguagem Python. 
-Uma linguagem que todos da equipe já tiveram contato e em plena ascensão no meio acadêmico e no mercado de trabalho.
+#### 2.2.1 Django
+
+O Django é um framework web criado com a linguagem Python, que 
+utiliza o padrão model-template-view. Esse modelo MTV é basedo 
+no modelo Model-View-Controler, com a diferença que as 
+responsabilidades do módulo de Controller está dispersa no 
+próprio Framework.
 
 Outro motivo do uso do Django é sua robustez. O framework 
 possui diversos módulos embutidos que aumenta a 
@@ -69,6 +76,25 @@ dos desenvolvedores que não tiverem afinidade em SQL, e o
 painel administrativo que irá de forma visual criar, 
 deletar, editar e visualizar objetos do banco de dados.
 
+#### 2.2.2 Modelo MTV
+
+A **Model** é a camada de acesso dos dados. Nessa camada contém 
+as classes que abstraem os dados, as lógicas de validação, de 
+filtro e de acesso.
+
+O **View** é a camada da regras de negócios. Nessa camada será 
+implementada as restrições, o que um usuário pode ou não pode 
+fazer, e quais páginas eles tem acesso. É através dessa camada 
+que as requisições do usuário será gerenciada.
+
+Essa camada implementa algumas funções do Controller do padrão 
+MVC.
+
+O **Template** é a camada de apresentação. Os templates são 
+arquivos de texto, que isola os dados do sistema da forma como 
+esses dados serão apresentados. O formato mais comum é o HTML.
+
+#### 2.2.3 Django REST
 Assim contextualizado, podemos falar sobre o Django REST.
 O Django REST possui diversos módulos embutidos que 
 facilita a implementação dos princípios e boas práticas 
@@ -165,7 +191,6 @@ Esse diagrama expõe os seguintes requisitos:
 
 
 ## 6. Visão de implementação
-
 
 ### 6.1 Diagrama de classes e serviços
 
