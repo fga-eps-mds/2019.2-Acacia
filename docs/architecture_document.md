@@ -6,6 +6,7 @@
 | 10/09/2019 | 0.1 | Adição do tópico Objetivo |  Durval Carvalho |
 | 10/09/2019 | 0.2 | Adição do tópico Escopo e Django REST Framework |  Durval Carvalho |
 | 11/09/2019 | 0.3 | Adição do tópico Metas e Restrições arquiteturais |  Durval Carvalho |
+| 12/09/2019 | 0.4 | Adição de tópico Casos de Uso | Renato Britto Araújo |
 
 ## 1. Introdução
 
@@ -120,10 +121,31 @@ buscando garantir que suas funcionalidades foram
 suficientemente testadas.
 
 ## 4. Visão de Casos de Uso
-[Esta seção lista as especificações centrais e significantes para a arquitetura do sistema em relação aos atores da aplicação.]
+
+Segue a lista de casos de uso:
+
+- Criar colheita
+- Comunicar com time de colheita
+- Registrar árvores
+- Registrar conta
+- Registrar propriedade
+- Selecionar voluntários
+- Ver dados de todas as colheitas
+- Ver lista de colheitas
+- Voluntariar para colheita
 
 ### 4.1 Casos de Uso significantes para a arquitetura
-[Desenhar o diagrama de caso de uso relevante, consultar bibliografia sobre casos de uso.]
+
+![](https://imgur.com/opaclhF)
+
+Esse diagrama expõe os seguintes requisitos: 
+
+- RF01: Permitir que o usuário faça cadastro e autenticação.
+- RF03: Permitir cadastro de árvores, propriedades e colheitas.
+- RF04: Permitir usuários se candidatar a colheita.
+- RF05: Habilitar comunicação entre envolvidos em colheita (voluntários, líderes e proprietários). 
+- RF08: Prover à líderes a possiblidade de escolher voluntários cadastrados em colheita.
+- RF09 Mostrar dados à respeito de colheitas realizadas de forma transparente.
 
 ## 5. Visão Lógica
 [Descrever uma visão lógica da arquitetura. Descrever as classes mais importantes, sua organização em pacotes de serviços e subsistemas. Diagramas de classes e sequência devem ser incluídos para ilustrar os relacionamentos entre as classes significativas na arquitetura, subsistemas, pacotes e camadas. Descrever também a relação de Vue.js com Django Rest no contexto do projeto e descrição breve dos pacotes.]
