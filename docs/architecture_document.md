@@ -8,6 +8,7 @@
 | 11/09/2019 | 0.3 | Adição do tópico Metas e Restrições arquiteturais |  Durval Carvalho |
 | 12/09/2019 | 0.4 | Adição de tópico Casos de Uso | Renato Britto Araújo |
 | 12/09/2019 | 0.5 | Adição do tópico MTV |  Durval Carvalho |
+| 12/09/2019 | 0.6 | Adição de diagrama de pacotes back-end e informações sobre base de dados |
 
 ## 1. Introdução
 
