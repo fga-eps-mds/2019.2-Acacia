@@ -7,6 +7,7 @@
 | Data   | Versão | Modificação  | Autor  |
 | :- | :- | :- | :- |
 | 12/09/2019 | 0.1 | Criação da versão inicial do documento | Fabíola |
+| 12/09/2019 | 0.1.1 | Adição da justificativa do nome da aplicação | Hugo Sobral de Lima Salomão |
 
 # 1. Introdução
 
@@ -17,6 +18,12 @@
 # 3. Detalhamento e Justificativas
 
 ## 3.1. Nome da aplicação
+
+Sobre a escolha do nome da aplicação, teve-se a ideia de utilizar **Acacia**, em português **Acácia**
+
+O nome foi escolhido por conta da história por trás da planta acácia: A acácia é uma árvore que participa de uma relação **__interespecífica__**, **__harmônica__** e **__facultativa__**, com formigas, chamada de **__Protocooperação__**. Isto é, nem a árvore e nem as formigas, espécies diferentes, tem a necessidade de participar deste processo, mas ambas se beneficiam caso optem por cooperar.
+
+Tal conceito se relaciona com o propósito do nosso projeto de colaboração voluntária e estimulação do senso de comunidade.
 
 ## 3.2. Fontes
 
