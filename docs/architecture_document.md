@@ -136,7 +136,7 @@ Segue a lista de casos de uso:
 
 ### 4.1 Casos de Uso significantes para a arquitetura
 
-![](https://imgur.com/opaclhF)
+![](https://user-images.githubusercontent.com/45462822/64752921-bf1efb00-d4f7-11e9-9aa4-01672e9ddee8.png)
 
 Esse diagrama expõe os seguintes requisitos: 
 
