@@ -99,7 +99,6 @@ O sistema deverá ser intuitivo e de simples uso, de forma
 que a curva de aprendizado para utilizar a aplicação não 
 seja um impedimento para usar o sistema.
 
-# TODO: Falar sobre o banco de dados
 3.3 **Ferramentas de Desenvolvimento**
 
 O projeto será desenvolvido em Python (versão 3.7), 
@@ -112,7 +111,11 @@ ambiente de deploy quanto para os ambientes de
 desenvolvimento, será utilizado o <i>Docker</i> para 
 realizar o empacotamento da aplicação.
 
-Para o banco de dados será usado ...
+A tecnologia para o banco de dados está para ser determinada. 
+As informações e relações cujos os bancos de dados tem por 
+responsabilidade persistir são objetos grandes, em sua 
+grande maioria com um intervalo de uso extenso e várias 
+relações com outros objetos.
 
 3.4 **Confiabilidade**
 
@@ -154,8 +157,9 @@ Esse diagrama expõe os seguintes requisitos:
 [Relação macro dos componentes.]
 
 ### 5.2 Diagrama de pacotes
-[Basta uma imagem do diagrama nos tópicos abaixo.]
 #### 5.2.1 _Back-end_
+
+![](https://i.imgur.com/t93zw5t.png)
 
 #### 5.2.2 _Front-end_
 
