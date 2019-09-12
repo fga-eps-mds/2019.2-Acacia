@@ -193,7 +193,7 @@ Esse diagrama expõe os seguintes requisitos:
 
 #### 5.2.2 _Front-end_
 
-![](https://i.imgur.com/2jJa3d1.png)
+![](https://i.imgur.com/XtD2gKR.png)
 
 ## 6. Visão de implementação
 
