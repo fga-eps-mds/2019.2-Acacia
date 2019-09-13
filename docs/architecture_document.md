@@ -13,6 +13,7 @@
 | 12/09/2019 | 0.8 | Adição do tópico Banco de Dados |  Durval Carvalho |
 | 12/09/2019 | 0.9 | Adição do informação sobre o super usuário |  Durval Carvalho |
 | 12/09/2019 | 1.0 | Adição do tópico Vue.js | João Pedro Silva de Carvalho |
+| 12/09/2019 | 1.1 | Adição do tópico Diagrama de classes e serviços | Flavio Vieira |
 
 ## 1. Introdução
 
@@ -197,15 +198,17 @@ Esse diagrama expõe os seguintes requisitos:
 
 ### 6.1 Diagrama de classes e serviços
 
-O diagrama de classe é uma representação estática para descrever a estrutura de
-um projeto, tem como objetivo principal documentar de formar visual, as fases de
-desenvolvimento do software. Com isso, e possível mapear/ilustrar de forma clara
-e objetiva a estrutura do software em nível macro e auxiliar no entendimento do 
+O diagrama de classe é uma representação estática para descrever 
+a estrutura de um projeto, tem como objetivo principal documentar 
+de formar visual, as fases de desenvolvimento do software. Com 
+isso, e possível mapear/ilustrar de forma clara e objetiva a 
+estrutura do software em nível macro e auxiliar no entendimento do 
 escopo do projeto.
 
-Na elaboração do diagrama de classe, foi utilizado a Linguagem de Modelagem Unificada,
-ou UML. Ao analisarmos o problema, foi levantando os principais componentes e 
-comportamentos, para abstrairmos as classes, montar as associações e levantar as
+Na elaboração do diagrama de classe, foi utilizado a Linguagem de 
+Modelagem Unificada, ou UML. Ao analisarmos o problema, foi 
+levantando os principais componentes e comportamentos, para 
+abstrairmos as classes, montar as associações e levantar as
 cardinalidades.
 
 Principais componentes do diagrama de classes:
@@ -274,9 +277,9 @@ Qualquer **USUARIO** da aplicação, e isso inclui os voluntários,
 proprietários e beneficiários, irão ter um **nome**, um **email**, 
 **senhas** e poderão cadastrar telefones para contato.
 
-Um **VOLUNTARIO** deverá cadastrar sua **data de nascimento**, para que 
-assim seja possível gerenciar voluntários menores de idade e seus 
-responsáveis.
+Um **VOLUNTARIO** deverá cadastrar sua **data de nascimento**, 
+para que assim seja possível gerenciar voluntários menores de 
+idade e seus responsáveis.
 
 Um **PROPRIETARIO** deverá cadastrar o seu **cpf**, para que seja 
 possível verificar se a propriedade que está cadastro realmente é 
