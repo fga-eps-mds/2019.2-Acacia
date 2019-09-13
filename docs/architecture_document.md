@@ -11,6 +11,7 @@
 | 12/09/2019 | 0.6 | Adição de diagrama de pacotes back-end e informações sobre base de dados | Renato Britto Araujo | 
 | 12/09/2019 | 0.7 | Adição de diagrama de pacotes front-end e referências e comentário sobre MTV | Renato Britto Araujo |
 | 12/09/2019 | 0.8 | Adição do tópico Banco de Dados |  Durval Carvalho |
+| 12/09/2019 | 0.9 | Adição do informação sobre o super usuário |  Durval Carvalho |
 
 ## 1. Introdução
 
@@ -212,6 +213,7 @@ O resultado desse passos são descritos abaixo.
 	* VOLUNTARIO
 	* PROPRIETARIO
 	* BENEFICIARIO
+	* ADMINISTRADOR
 * PROPRIEDADE
 * COLHEITA
 
@@ -225,6 +227,25 @@ relacionamentos, melhorando assim o entendimento do projeto.
 Vale ressaltar que a especificação da entidade usuário não 
 impossibilita que um perfil de proprietário realize ações do perfil 
 de voluntário, e vice-versa.
+
+O perfil do admnistrador será o usuário responsável por 
+administrar todos os dados do site. Esse será o <i>useruser</i> do 
+Django. Ele poderá criar, editar e apagar qualquer dado que 
+presente na aplicação.
+
+Uma função importante do admnistrador é aprovar os eventos 
+colheitas que os proprietários irão criar. Ele será responsável 
+por não permitir que eventos suspeitos apareçam para os 
+voluntários. 
+
+Como por exemplo, imagine que um proprietário cadastre uma 
+plantação com 10000 árvores e esteja solicitando 10000 voluntários.
+Será função do administrador recusar esse evento.
+
+Outro exemplo, é um proprietário que cadastre 20 árvores e 
+solicite somente 1 voluntário. Será função do admnistrador entrar 
+em contato com o proprietário e verificar os detalhes dessa 
+colheita.
 
 #### 6.2.2 Atributos
 
