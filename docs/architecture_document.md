@@ -12,6 +12,7 @@
 | 12/09/2019 | 0.7 | Adição de diagrama de pacotes front-end e referências e comentário sobre MTV | Renato Britto Araujo |
 | 12/09/2019 | 0.8 | Adição do tópico Banco de Dados |  Durval Carvalho |
 | 12/09/2019 | 0.9 | Adição do informação sobre o super usuário |  Durval Carvalho |
+| 12/09/2019 | 1.0 | Adição do tópico Vue.js | João Pedro Silva de Carvalho |
 
 ## 1. Introdução
 
@@ -112,8 +113,9 @@ respeitar o padrão da arquitetura REST, assim não sendo
 necessário escrever todas as 7 rotas do REST (index, new, 
 create, show, edit, update e destroy).
 
-# TODO: Pesquisar sobre o funcionamento do Vue
 ### 2.2 Vue.js
+O Vue.js se apresenta como uma ótima ferramenta para integrar o front-end. Uma das suas principais características é que a sua curva de aprendizado é uma das menores dentre os frameworks de JavaScript por ser simples e objetivo. Além de funcionalidades muito úteis, como a possibilidade de ligar um elemento de JS em HTML e de ser bastante flexível, o Vue.js tem um desempenho muito eficiente entre os principais frameworks. 
+
 
 ## 3. Metas e Restrições arquiteturais
 
