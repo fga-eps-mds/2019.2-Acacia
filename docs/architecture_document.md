@@ -185,7 +185,7 @@ Esse diagrama expõe os seguintes requisitos:
 ### 5.2 Diagrama de pacotes
 #### 5.2.1 _Back-end_
 
-![](https://i.imgur.com/t93zw5t.png)
+![](https://i.imgur.com/IOVK3p5.png)
 
 #### 5.2.2 _Front-end_
 
