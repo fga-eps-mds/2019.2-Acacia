@@ -142,12 +142,6 @@ ambiente de deploy quanto para os ambientes de
 desenvolvimento, será utilizado o <i>Docker</i> para 
 realizar o empacotamento da aplicação.
 
-A tecnologia para o banco de dados está para ser determinada. 
-As informações e relações cujos os bancos de dados tem por 
-responsabilidade persistir são objetos grandes, em sua 
-grande maioria com um intervalo de uso extenso e várias 
-relações com outros objetos.
-
 3.4 **Confiabilidade**
 
 O sistema terá uma cobertura mínima de testes de 90%, 
