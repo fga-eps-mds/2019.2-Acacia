@@ -10,6 +10,7 @@
 | 12/09/2019 | 0.1 | Criação da versão inicial do documento | Fabíola |
 | 12/09/2019 | 0.1.1 | Adição da justificativa do nome da aplicação | Hugo Sobral de Lima Salomão |
 | 13/09/2019 | 0.2 | Adição de componentes e contraste da paleta de cores | Fabíola |
+| 13/09/2019 | 0.2 | Ajuste slide da apresentação da identidade visual | Leonardo da Silva Gomes |
 
 # 1. Introdução
 
