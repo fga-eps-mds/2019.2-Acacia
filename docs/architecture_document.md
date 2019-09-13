@@ -10,6 +10,7 @@
 | 12/09/2019 | 0.5 | Adição do tópico MTV |  Durval Carvalho |
 | 12/09/2019 | 0.6 | Adição de diagrama de pacotes back-end e informações sobre base de dados | Renato Britto Araujo | 
 | 12/09/2019 | 0.7 | Adição de diagrama de pacotes front-end e referências e comentário sobre MTV | Renato Britto Araujo |
+| 12/09/2019 | 0.8 | Adição do tópico Banco de Dados |  Durval Carvalho |
 
 ## 1. Introdução
 
@@ -199,11 +200,104 @@ Esse diagrama expõe os seguintes requisitos:
 
 ### 6.1 Diagrama de classes e serviços
 
-### 6.2 Diagrama do banco de dados
+### 6.2 Banco de Dados
 
+Para os desenvolvimento do diagrama do banco de dados primeiro foi 
+identificado quais seriam as entidades envolvidas no projeto. Após 
+identificadas, foram analisado qual os atributos necessários para 
+descrever uma instância de cada uma das entidades.
+
+Assim que todas as entidades foram descritas, foi analisado quais 
+seriam as relações entre elas, e suas respectivas cardinalidades.
+
+O resultado desse passos são descritos abaixo.
+
+#### 6.2.1 Entidades
+
+* USUARIO
+	* VOLUNTARIO
+	* PROPRIETARIO
+	* BENEFICIARIO
+* PROPRIEDADE
+* COLHEITA
+
+Um ponto a comentar é a relação especificação da entidade usuário.
+O usuário representa qualquer perfil que tenha acesso as áreas do 
+site que precisa de autenticação.
+
+A especificação foi utilizada para reduzir o número de auto 
+relacionamentos, melhorando assim o entendimento do projeto.
+
+Vale ressaltar que a especificação da entidade usuário não 
+impossibilita que um perfil de proprietário realize ações do perfil 
+de voluntário, e vice-versa.
+
+#### 6.2.2 Atributos
+
+Qualquer **USUARIO** da aplicação, e isso inclui os voluntários, 
+proprietários e beneficiários, irão ter um **nome**, um **email**, 
+**senhas** e poderão cadastrar telefones para contato.
+
+Um **VOLUNTARIO** deverá cadastrar sua **data de nascimento**, para que 
+assim seja possível gerenciar voluntários menores de idade e seus 
+responsáveis.
+
+Um **PROPRIETARIO** deverá cadastrar o seu **cpf**, para que seja 
+possível verificar se a propriedade que está cadastro realmente é 
+de sua posse.
+
+Uma **PROPRIEDADE** deve ter cadastrado o seu **endereço**, 
+especificando o país, **estado**, **cidade**, **bairro**, 
+**quadra**, **numero** e **complemento**, quando aplicável.
+
+Também deverá especificar as **árvores** dessa propriedade, 
+especificando o **fruto**, **mes da colheita**, **se precisa de 
+escada para a colheita**, **se é necessário entrar na propriedade 
+para ter acesso à árvore** (muros, cercas, cachorros, 
+unicórnios alados,...) e também deverá conter **fotos**, tanto da 
+propriedade quanto das árvores.
+
+Uma **COLHEITA** deve ter cadastrado a sua **data agendada**, a 
+**quantidade de voluntários necessários**, a **quantidade de 
+voluntários cadastrados para essa colheita**, a **quantidade 
+arrecadada**, a **descrição** do evento, a **situação** (já 
+finalizada, agendada, cancelada, ...) e se o **proprietário estará 
+presente** no dia.
+
+#### 6.2.2 Relacionamentos
+
+Um **voluntário** pode trabalhar em várias **colheitas**, e em uma 
+**colheita** pode trabalhar vários **voluntários**. 
+**Cardinalidade: N:M**
+
+Um **voluntário** pode liderar vários **voluntários**, mas um 
+**voluntário** só pode ter 1 líder. 
+**Cardinalidade: N:M**
+
+Um **voluntário** pode ser responsável por vários **voluntários**, 
+mas um **voluntário** só pode ter 1 responsável. 
+**Cardinalidade: 1:N**
+
+Um **colheita** ocorre em uma **propriedade** e em uma 
+**propriedade** pode ocorre várias **colheitas**.
+**Cardinalidade: N:1**
+
+Um **proprietário** pode possuir várias **propriedades**, mas uma 
+**propriedade** só pode ser de um **proprietário**.
+**Cardinalidade: 1:N**
+
+Um **colheita** pode ser doada para vários **beneficiários**, e um 
+**beneficiário** pode receber várias **colheitas**.
+**Cardinalidade: N:M**
+
+#### 6.2.3 Diagrama Entidade-Relacionamento
+![](img/diagrama_entidade_relacionamento.png)
+
+#### 6.2.4 Diagrama Lógico de Dados
+![](img/diagrama_logico_de_dados.png)
 
 ## Referências
 
-Departamento de Informática do SUS. Documento de Arquitetura de Software. Disponível em: <datasus.saude.gov.br/images/MDSF/MDSoftware/Artefatos/Arquitetura/MDS_DAS_Documento_Arquitetura_Software2.docx>. Acesso em: 10 de setembro de 2019.
+Departamento de Informática do SUS. Documento de Arquitetura de Software. Disponível em: <https://datasus.saude.gov.br/images/MDSF/MDSoftware/Artefatos/Arquitetura/MDS_DAS_Documento_Arquitetura_Software2.docx>. Acesso em: 10 de setembro de 2019.
 
 [1] - Andrew Pinkham. Livro. Disponível em: <https://django-unleashed.com>. Acesso em: 12 de setembro de 2019.
