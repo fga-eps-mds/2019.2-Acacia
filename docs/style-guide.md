@@ -1,4 +1,5 @@
 ﻿
+
 # Guia de Estilo e Identidade Visual
 
 # Histórico de Revisão
@@ -8,6 +9,7 @@
 | :- | :- | :- | :- |
 | 12/09/2019 | 0.1 | Criação da versão inicial do documento | Fabíola |
 | 12/09/2019 | 0.1.1 | Adição da justificativa do nome da aplicação | Hugo Sobral de Lima Salomão |
+| 13/09/2019 | 0.2 | Adição de componentes e contraste da paleta de cores | Fabíola |
 
 # 1. Introdução
 
@@ -27,7 +29,7 @@ Tal conceito se relaciona com o propósito do nosso projeto de colaboração vol
 
 ## 3.2. Fontes
 
-As fontes utilizadas na aplicação serão: *
+As fontes utilizadas na aplicação serão:
 
  - **Raleway**(SIL OPEN FONT LICENSE Version 1.1), para títulos e 
  - **Roboto**(Apache License), para textos. 
@@ -55,11 +57,52 @@ Coloca-se no css, para a utilização das fontes:
 # 3.2.Paleta de cores
 
 ![paleta de cores](img/paleta.png)
-[aqui](https://coolors.co/376996-56a3a6-364259-ef476f-ffd166a)
+
+As cores foram selecionadas observando características do produto e sua finalidade, bem como a acessibilidade, testando-se o contraste. A ferramenta utilizada para construi-la foi [coolors](https://coolors.co/376996-56a3a6-364259-ef476f-edc841). 
+
+Ainda, em relação ao contraste, foram feitos testes e é recomendado ter estes números em mente para utilização das cores.
+
+<img src="img/contraste1.png" alt="contraste" width="200"/>
+
+<img src="img/contraste2.png" alt="contraste" width="200"/>
+
+<img src="img/contraste3.png" alt="contraste" width="200"/>
+
+<img src="img/contraste4.png" alt="contraste" width="200"/>
+
+<img src="img/contraste5.png" alt="contraste" width="200"/>
+
+<img src="img/contraste6.png" alt="contraste" width="200"/>
 
 # 4. Componentes
 
+## 4.1. Botões
 
-# Referências
+![contraste](img/botoes.png)
+
+## 4.2. Campos de formulários
+
+![contraste](img/campos.png)
+
+## 4.3. Navbar
+
+
+
+### Para celular
+
+![contraste](img/navcelular.png)
+
+
+### Para website
+
+![contraste](img/navwebsite1.png)
+
+![contraste](img/navwebsite2.png)
+
+![contraste](img/navweb.png)
+
+![contraste](img/navweb1.png)
+
+
 
 
