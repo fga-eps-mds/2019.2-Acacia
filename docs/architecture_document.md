@@ -197,6 +197,25 @@ Esse diagrama expõe os seguintes requisitos:
 
 ### 6.1 Diagrama de classes e serviços
 
+O diagrama de classe é uma representação estática para descrever a estrutura de
+um projeto, tem como objetivo principal documentar de formar visual, as fases de
+desenvolvimento do software. Com isso, e possível mapear/ilustrar de forma clara
+e objetiva a estrutura do software em nível macro e auxiliar no entendimento do 
+escopo do projeto.
+
+Na elaboração do diagrama de classe, foi utilizado a Linguagem de Modelagem Unificada,
+ou UML. Ao analisarmos o problema, foi levantando os principais componentes e 
+comportamentos, para abstrairmos as classes, montar as associações e levantar as
+cardinalidades.
+
+Principais componentes do diagrama de classes:
+
+Classes ou entidades; 
+Associações ou relações;
+Atributos ou campos;
+Metodos;
+Multiplicidade ou cadinalidade
+
 ### 6.2 Banco de Dados
 
 Para os desenvolvimento do diagrama do banco de dados primeiro foi 
