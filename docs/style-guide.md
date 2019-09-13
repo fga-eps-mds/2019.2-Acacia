@@ -11,6 +11,7 @@
 | 12/09/2019 | 0.1.1 | Adição da justificativa do nome da aplicação | Hugo Sobral de Lima Salomão |
 | 13/09/2019 | 0.2 | Adição de componentes e contraste da paleta de cores | Fabíola |
 | 13/09/2019 | 0.3 | Ajuste do slide da apresentação da identidade visual | Leonardo da Silva Gomes |
+| 13/09/2019 | 0.4 | Ajuste de texto dos componentes e cores | Fabíola |
 
 # 1. Introdução
 
@@ -61,6 +62,8 @@ Coloca-se no css, para a utilização das fontes:
 
 As cores foram selecionadas observando características do produto e sua finalidade, bem como a acessibilidade, testando-se o contraste. A ferramenta utilizada para construi-la foi [coolors](https://coolors.co/376996-56a3a6-364259-ef476f-edc841). 
 
+A cor primária é a cor #376996, e a cor secundária #56a3a6. A cor #ef476f é acento.
+
 Ainda, em relação ao contraste, foram feitos testes e é recomendado ter estes números em mente para utilização das cores.
 
 <img src="img/contraste1.png" alt="contraste" width="200"/>
@@ -79,15 +82,20 @@ Ainda, em relação ao contraste, foram feitos testes e é recomendado ter estes
 
 ## 4.1. Botões
 
-![contraste](img/botoes.png)
+Existem botões utilizando as diferentes cores da paleta, a depender do uso. O botão comum de confirmação é da cor primária. Os botões são arredondados (raio de 12 px) com texto escrito utilizando a fonte Raleway tamanho 14pt, semibold, todas letras maiúsculas. Observa-se ainda a cor da palavra escrita, a depender da cor do botão, para cumprir o contraste.
+
+![botoes](img/botoes.png)
 
 ## 4.2. Campos de formulários
 
-![contraste](img/campos.png)
+O texto acima do formulário, de label, é na fonte Raleway, tamanho 12 pt, regular, na cor primária,com uma margem de 20px a esquerda, em relação ao campo.
+O campo possui raio de 12px arredondado, e bordas na cor primária.
+
+![campos](img/campos.png)
 
 ## 4.3. Navbar
 
-
+Apresenta-se a seguir algumas opções para serem analizadas e decididas, para navbar.
 
 ### Para celular
 
