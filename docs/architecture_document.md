@@ -185,11 +185,11 @@ Esse diagrama expõe os seguintes requisitos:
 ### 5.2 Diagrama de pacotes
 #### 5.2.1 _Back-end_
 
-![](https://i.imgur.com/IOVK3p5.png)
+![](https://user-images.githubusercontent.com/45462822/64872015-c55ac780-d61c-11e9-90af-f77668dd10f6.png)
 
 #### 5.2.2 _Front-end_
 
-![](https://i.imgur.com/XtD2gKR.png)
+![](https://i.imgur.com/IOVK3p5.png)
 
 ## 6. Visão de implementação
 
