@@ -12,9 +12,10 @@
 | 12/09/2019 | 0.7 | Adição de diagrama de pacotes front-end e referências e comentário sobre MTV | Renato Britto Araujo |
 | 12/09/2019 | 0.8 | Adição do tópico Banco de Dados |  Durval Carvalho |
 | 12/09/2019 | 0.9 | Adição do informação sobre o super usuário |  Durval Carvalho |
-| 12/09/2019 | 1.0 | Adição do tópico Vue.js | João Pedro Silva de Carvalho |
-| 12/09/2019 | 1.1 | Adição do tópico Diagrama de classes e serviços | Flavio Vieira |
-| 12/09/2019 | 1.2 | Adição do link da imagem do diagrama e organização do tópico  | Flavio Vieira |
+| 12/09/2019 | 0.10 | Adição do tópico Vue.js | João Pedro Silva de Carvalho |
+| 12/09/2019 | 0.11 | Adição do tópico Diagrama de classes e serviços | Flavio Vieira |
+| 12/09/2019 | 0.12 | Adição do link da imagem do diagrama e organização do tópico  | Flavio Vieira |
+| 14/09/2019 | 1.0 | Adição do tópico 	 | Durval Carvalho |
 
 
 ## 1. Introdução
@@ -117,11 +118,29 @@ necessário escrever todas as 7 rotas do REST (index, new,
 create, show, edit, update e destroy).
 
 ### 2.2 Vue.js
-O Vue.js é um framework para a criação de interfaces para o usuário. O Vue.js, desde a sua concepção, busca ser simples e objetivo, o que o torna com uma baixa curva de aprendizagem, ou seja, demora-se menos tempo para uma equipe aprender o Vue.js do que outros frameworks. Além disso, o Vue.js, diferentemente do Angular.js (mantido pela Google) e do React.js (mantido pelo Facebook), possui uma comunidade como sua mantenedora o que permite uma maior interação entre as pessoas que usam e as quem desenvolve esse framework que são beneficiados com mais feedbacks possibilitando melhores atualizações.
+O Vue.js é um framework para a criação de interfaces para o 
+usuário. O Vue.js, desde a sua concepção, busca ser simples e 
+objetivo, o que o torna com uma baixa curva de aprendizagem, ou 
+seja, demora-se menos tempo para uma equipe aprender o Vue.js do 
+que outros frameworks. Além disso, o Vue.js, diferentemente do 
+Angular.js (mantido pela Google) e do React.js (mantido pelo 
+Facebook), possui uma comunidade como sua mantenedora o que 
+permite uma maior interação entre as pessoas que usam e as quem 
+desenvolve esse framework que são beneficiados com mais feedbacks 
+possibilitando melhores atualizações.
 
-Os componentes do Vue.js são uma ferramenta importante. O funcionamento dele se baseia que o desenvolvedor pode separar a página em componentes quem possuem, cada um, seu próprio código em JavaScript, HTML e CSS, permitindo assim a reutilização dessas estruturas em outras partes da aplicação.
+Os componentes do Vue.js são uma ferramenta importante. 
+O funcionamento dele se baseia que o desenvolvedor pode separar a 
+página em componentes quem possuem, cada um, seu próprio código em 
+JavaScript, HTML e CSS, permitindo assim a reutilização dessas 
+estruturas em outras partes da aplicação.
 
-Uma das características mais distintas do Vue é seu sistema de reatividade não obstrusivo. Os modelos dados são simplesmente objetos JavaScript puros e quando você os modifica, a camada visual se atualiza. Isto torna o gerenciamento de estado simples e intuitivo. Em comparação com o JavaScript puro ou até mesmo o jQuery, utilizar a reatividade do Vue é bem mais simples.
+Uma das características mais distintas do Vue é seu sistema de 
+reatividade não obstrusivo. Os modelos dados são simplesmente 
+objetos JavaScript puros e quando você os modifica, a camada 
+visual se atualiza. Isto torna o gerenciamento de estado simples e 
+intuitivo. Em comparação com o JavaScript puro ou até mesmo o 
+jQuery, utilizar a reatividade do Vue é bem mais simples.
 
 
 ## 3. Metas e Restrições arquiteturais
@@ -186,10 +205,62 @@ Esse diagrama expõe os seguintes requisitos:
 - RF09 Mostrar dados à respeito de colheitas realizadas de forma transparente.
 
 ## 5. Visão Lógica
-[Descrever uma visão lógica da arquitetura. Descrever as classes mais importantes, sua organização em pacotes de serviços e subsistemas. Diagramas de classes e sequência devem ser incluídos para ilustrar os relacionamentos entre as classes significativas na arquitetura, subsistemas, pacotes e camadas. Descrever também a relação de Vue.js com Django Rest no contexto do projeto e descrição breve dos pacotes.]
 
-### 5.1 Diagrama de relações
-[Relação macro dos componentes.]
+### 5.1 Visão Geral
+
+O sistema será desenvolvido utilizando o framework web Django Rest 
+em conjunto com o Vue.JS. Esses sistemas irão se comunicar através 
+de uma API REST fornecida pelo backend da aplicação.
+
+<p align="center">
+	<img src="img/diagrama_arquitetura.png">
+</p>
+
+As ações do usuário, tanto em um ambiente desktop quanto no mobile, será 
+interpretada pelo Vue.Js como eventos, onde cada evento está associado com 
+um <i>Handler</i> que irá dispará uma ação.
+
+Alguma dessas ações poderão ser tratadas no lado do cliente 
+(<i>client side</i>), como ações de iteratividade que não precisam de 
+comunicação externa.
+
+Já em outras ações será preciso consultar um banco de dados no lado do 
+servidor (<i>server side</i>), assim sendo preciso enviar uma solicitação 
+(<i>request</i>) para o servidor, utilizado o protocolo de comunicação HTTP e 
+respeitando as regras de interface REST.
+
+Uma vez que o servidor receba a solicitação do cliente, será preciso 
+interpretar o request com base na URL e no método HTTP utilizado. Essa 
+conputação é realizada no módulo <i>URL Dispatcher</i>, onde é mapeado 
+para <i>endpoint</i> da aplicação com o módulo que possui as informações 
+solicitadas.
+
+Quando o app do Django REST está integrado com o Django, essa etapa ocorre 
+em duas etapas. Primeiramente o Django verificar se a url requisitada faz 
+parte da API que o Django REST fornece, se fizer parte o Django passa o 
+controle para o Django REST para que finalize de processar e mapear a 
+requisição.
+
+Uma vez que a url já foi mapeada para o módulo que possui as informações 
+requisitadas. Esse módulo, geralmente uma classe dos models.py, será 
+responsável por utilizar o OMR (Mapeamento objeto-relacional) para mapear
+um modelo da aplicação com um modelo do banco de dados. Após o devido 
+mapeamento, o banco de dados irá retornar um conjunto de informações que 
+será tratada pelo Django REST.
+
+O Django REST já com os dados em mãos, poderá serializar as informações no 
+formato padrão da API, geralmente no formato JSON. Essa serialização que é 
+responsável por definir uma interface que vários sistemas poderão consumir.
+
+Uma vez que os dados já foram serializados, o Django REST passa o controle 
+para o Django, que será reponsável por retornar uma resposta 
+(<i>response</i>) para o lado do cliente.
+
+Essa resposta será obtida pelo Vue.js. Agora com os dados requisitados em 
+mãos, ele será responsável por criar e fornecer esse dados para que o 
+usuário da aplicação. O Vue.js irá montar um template, de acordo com o 
+ambiente do usário (mobile ou desktop) e finalmente o usuário irá poder ver 
+os dados requisitados. Tudo isso em questões de microsegundos.
 
 ### 5.2 Diagrama de pacotes
 #### 5.2.1 _Back-end_
@@ -330,7 +401,7 @@ Um **voluntário** pode trabalhar em várias **colheitas**, e em uma
 
 Um **voluntário** pode liderar vários **voluntários**, mas um 
 **voluntário** só pode ter 1 líder. 
-**Cardinalidade: N:M**
+**Cardinalidade: 1:N**
 
 Um **voluntário** pode ser responsável por vários **voluntários**, 
 mas um **voluntário** só pode ter 1 responsável. 
