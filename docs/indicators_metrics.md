@@ -14,24 +14,19 @@ Este documento tem como objetivo detalhar as metricas e indicadores que serão u
 
 Modelo criado por CI&T para mensurar e análisar complexidade. O modelo determina 10 itens de complexidades a serem observados, entretanto em virtude do contexto estudantil e se valendo da cultura de adaptação do Scrum, serão utilizados apenas 3, estes são:
 
-    - Interface Elements - Elementos de UI/UX do projeto. Sua mensuração é feita da seguinte forma:
+- Interface Elements - Elementos de UI/UX do projeto. Sua mensuração é feita da seguinte forma:
+    ![Metrica de UI/UX](img/interface.png)
 
-        ![Metrica de UI/UX](img/interface.png)
-
-    - Roles/Permissions - Número de diferentes permissões, ou seja, níveis de acesso à aplicação. Sua mensuração é feita da seguinte forma:
-
-        ![Metrica de Permissões](img/permissions.png)
-
-    - Solution Variabilities - Soluções que cumprem um mesmo objetuvo de negócio podendo variar por influência de um parâmetro. Sua mensuração é feita da seguinte forma:
-
-        ![Metricas de soluções variadas](img/solutionVariabilities.png)
+- Roles/Permissions - Número de diferentes permissões, ou seja, níveis de acesso à aplicação. Sua mensuração é feita da seguinte forma:
+    ![Metrica de Permissões](img/permissions.png)
+ - Solution Variabilities - Soluções que cumprem um mesmo objetuvo de negócio podendo variar por influência de um parâmetro. Sua mensuração é feita da seguinte forma:
+    ![Metricas de soluções variadas](img/solutionVariabilities.png)
 
 
 ## Squad Health Check Model
 
 Modelo criado por Spotify para mensurar e análisar a saúde de um projeto. Ele elicita 11 itens a serem observados:
-
-    ![Health Check](img/healthCheck.img)
+    ![Health Check](img/healthCheck.png)
 
 ## Práticas Ágeis 
 
