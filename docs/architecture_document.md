@@ -115,7 +115,11 @@ necessário escrever todas as 7 rotas do REST (index, new,
 create, show, edit, update e destroy).
 
 ### 2.2 Vue.js
-O Vue.js se apresenta como uma ótima ferramenta para integrar o front-end. Uma das suas principais características é que a sua curva de aprendizado é uma das menores dentre os frameworks de JavaScript por ser simples e objetivo. Além de funcionalidades muito úteis, como a possibilidade de ligar um elemento de JS em HTML e de ser bastante flexível, o Vue.js tem um desempenho muito eficiente entre os principais frameworks. 
+O Vue.js é um framework para a criação de interfaces para o usuário. O Vue.js, desde a sua concepção, busca ser simples e objetivo, o que o torna com uma baixa curva de aprendizagem, ou seja, demora-se menos tempo para uma equipe aprender o Vue.js do que outros frameworks. Além disso, o Vue.js, diferentemente do Angular.js (mantido pela Google) e do React.js (mantido pelo Facebook), possui uma comunidade como sua mantenedora o que permite uma maior interação entre as pessoas que usam e as quem desenvolve esse framework que são beneficiados com mais feedbacks possibilitando melhores atualizações.
+
+Os componentes do Vue.js são uma ferramenta importante. O funcionamento dele se baseia que o desenvolvedor pode separar a página em componentes quem possuem, cada um, seu próprio código em JavaScript, HTML e CSS, permitindo assim a reutilização dessas estruturas em outras partes da aplicação.
+
+Uma das características mais distintas do Vue é seu sistema de reatividade não obstrusivo. Os modelos dados são simplesmente objetos JavaScript puros e quando você os modifica, a camada visual se atualiza. Isto torna o gerenciamento de estado simples e intuitivo, 
 
 
 ## 3. Metas e Restrições arquiteturais
