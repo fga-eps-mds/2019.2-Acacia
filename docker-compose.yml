@@ -1,0 +1,16 @@
+version: '3'
+services:
+  acacia-back:
+    container_name: acacia-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c "
+      cd src/ &&
+      python manage.py makemigrations &&
+      python manage.py migrate &&
+      python manage.py runserver 0.0.0.0:8080"
+    ports:
+    - "8080:8080"
+    volumes:
+    - .:/code
