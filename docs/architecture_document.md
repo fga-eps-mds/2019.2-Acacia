@@ -14,7 +14,7 @@
 | 12/09/2019 | 0.9 | Adição do informação sobre o super usuário |  Durval Carvalho |
 | 12/09/2019 | 1.0 | Adição do tópico Vue.js | João Pedro Silva de Carvalho |
 | 12/09/2019 | 1.1 | Adição do tópico Diagrama de classes e serviços | Flavio Vieira |
-| 12/09/2019 | 1.1 | Adição do link da imagem do diagrama e organização do tópico  | Flavio Vieira |
+| 12/09/2019 | 1.2 | Adição do link da imagem do diagrama e organização do tópico  | Flavio Vieira |
 
 
 ## 1. Introdução
@@ -51,7 +51,7 @@ Gama.
 
 ## 2. Representação arquitetural
 
-### 2.1 Django REST Frameworka
+### 2.1 Django REST Framework
 
 O Django REST Framework é uma biblioteca para o Framework 
 Django que disponibiliza funcionalidades para implementar 
@@ -255,11 +255,21 @@ O usuário representa qualquer perfil que tenha acesso as áreas do
 site que precisa de autenticação.
 
 A especificação foi utilizada para reduzir o número de auto 
-relacionamentos, melhorando assim o entendimento do projeto.
-
-Vale ressaltar que a especificação da entidade usuário não 
-impossibilita que um perfil de proprietário realize ações do perfil 
-de voluntário, e vice-versa.
+relacionamentos, melhorando assim o entendimento do projeto.at referenced this issue 10 days ago
+@jps12
+#15 Add scope 
+at referenced this issue 10 days ago
+@jps12
+#15 Add scope 
+Vale ressaltar que a especificação da entidade usuário não at referenced this issue 10 days ago
+@jps12
+#15 Add scope 
+impossibilita que um perfil de proprietário realize ações do perfil at referenced this issue 10 days ago
+@jps12
+#15 Add scope 
+de voluntário, e vice-versa.at referenced this issue 10 days ago
+@jps12
+#15 Add scope 
 
 O perfil do admnistrador será o usuário responsável por 
 administrar todos os dados do site. Esse será o <i>useruser</i> do 
