@@ -44,6 +44,6 @@ Modelo que mensura o conhecimento da equipe em diversos aspectos. Tambem útil p
 Pode ser encontrado em : [Quadro de Conhecimento](https://docs.google.com/spreadsheets/d/1RKcA2VR6jS--O1DSd3KZ6vcl8PCMI4f9WJ8x_1HUqek/edit?usp=sharing)
 
 
-# Qualidade em Código 
+## Qualidade em Código 
 
     // será definido posteriormente.
