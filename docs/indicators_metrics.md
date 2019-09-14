@@ -31,7 +31,7 @@ Modelo criado por CI&T para mensurar e análisar complexidade. O modelo determin
 
 Modelo criado por Spotify para mensurar e análisar a saúde de um projeto. Ele elicita 11 itens a serem observados:
 
-    ![Health Check](img/healthCheck.png)
+![Health Check](img/healthCheck.png)
 
 ## Práticas Ágeis 
 
