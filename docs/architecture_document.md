@@ -14,6 +14,8 @@
 | 12/09/2019 | 0.9 | Adição do informação sobre o super usuário |  Durval Carvalho |
 | 12/09/2019 | 1.0 | Adição do tópico Vue.js | João Pedro Silva de Carvalho |
 | 12/09/2019 | 1.1 | Adição do tópico Diagrama de classes e serviços | Flavio Vieira |
+| 12/09/2019 | 1.1 | Adição do link da imagem do diagrama e organização do tópico  | Flavio Vieira |
+
 
 ## 1. Introdução
 
@@ -49,7 +51,7 @@ Gama.
 
 ## 2. Representação arquitetural
 
-### 2.1 Django REST Framework
+### 2.1 Django REST Frameworka
 
 O Django REST Framework é uma biblioteca para o Framework 
 Django que disponibiliza funcionalidades para implementar 
@@ -204,10 +206,12 @@ Esse diagrama expõe os seguintes requisitos:
 
 O diagrama de classe é uma representação estática para descrever 
 a estrutura de um projeto, tem como objetivo principal documentar 
-de formar visual, as fases de desenvolvimento do software. Com 
-isso, e possível mapear/ilustrar de forma clara e objetiva a 
-estrutura do software em nível macro e auxiliar no entendimento do 
-escopo do projeto.
+de formar visual, as fases de desenvolvimento do software. Conforme
+imagem abaixo, e possível mapear/ilustrar de forma clara e objetiva a 
+estrutura do projeto de software em nível macro e auxiliar no entendimento
+do escopo do projeto.
+
+![](img/0.1_diagrama_de_classes.png)
 
 Na elaboração do diagrama de classe, foi utilizado a Linguagem de 
 Modelagem Unificada, ou UML. Ao analisarmos o problema, foi 
@@ -217,11 +221,12 @@ cardinalidades.
 
 Principais componentes do diagrama de classes:
 
-Classes ou entidades; 
-Associações ou relações;
-Atributos ou campos;
-Metodos;
-Multiplicidade ou cadinalidade
+- Classes ou entidades; 
+- Associações ou relações;
+- Atributos ou campos;
+- Metodos;
+- Multiplicidade ou cadinalidade
+
 
 ### 6.2 Banco de Dados
 
