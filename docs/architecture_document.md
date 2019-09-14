@@ -119,7 +119,7 @@ O Vue.js é um framework para a criação de interfaces para o usuário. O Vue.j
 
 Os componentes do Vue.js são uma ferramenta importante. O funcionamento dele se baseia que o desenvolvedor pode separar a página em componentes quem possuem, cada um, seu próprio código em JavaScript, HTML e CSS, permitindo assim a reutilização dessas estruturas em outras partes da aplicação.
 
-Uma das características mais distintas do Vue é seu sistema de reatividade não obstrusivo. Os modelos dados são simplesmente objetos JavaScript puros e quando você os modifica, a camada visual se atualiza. Isto torna o gerenciamento de estado simples e intuitivo, 
+Uma das características mais distintas do Vue é seu sistema de reatividade não obstrusivo. Os modelos dados são simplesmente objetos JavaScript puros e quando você os modifica, a camada visual se atualiza. Isto torna o gerenciamento de estado simples e intuitivo. Em comparação com o JavaScript puro ou até mesmo o jQuery, utilizar a reatividade do Vue é bem mais simples.
 
 
 ## 3. Metas e Restrições arquiteturais
