@@ -16,6 +16,7 @@
 | 12/09/2019 | 0.11 | Adição do tópico Diagrama de classes e serviços | Flavio Vieira |
 | 12/09/2019 | 0.12 | Adição do link da imagem do diagrama e organização do tópico  | Flavio Vieira |
 | 14/09/2019 | 1.0 | Adição do tópico 	 | Durval Carvalho |
+| 17/09/2019 | 1.1 | Ajuste do diagrama de casa de uso | Flavio Vieira e Leonardo da Silva Gomes |
 
 
 ## 1. Introdução
@@ -181,19 +182,50 @@ suficientemente testadas.
 
 Segue a lista de casos de uso:
 
-- Criar colheita
-- Comunicar com time de colheita
-- Registrar árvores
-- Registrar conta
-- Registrar propriedade
+- Autenticar
+- Gerenciar perfil
+- Selecionar líder
+- Acessar chat
+- Voluntariar-se para colheita
+- Ver lista de voluntários
 - Selecionar voluntários
-- Ver dados de todas as colheitas
-- Ver lista de colheitas
-- Voluntariar para colheita
+- Aprovar colheita
+- Registrar colheita
+- Registrar árvore
+- Registrar propriedade
+- Ver listas de colheitas
+- Ver dados de colheitas
+- Registrar conta
+- Visualizar calendário
+- Registrar resultado da colheita
 
-### 4.1 Casos de Uso significantes para a arquitetura
+### 4.1 Atores
 
-![](https://i.imgur.com/V8oJ2z4.png)
+#### 4.1.1 Não logado
+
+Usuário do sistema que tem acesso as informações da plataforma e das colheitas, tendo acesso apenas as visualizações de cada página, não podendo usufruir das funcionalidades que a página disponibiliza, sendo assim, um usuário passivo no fluxo da aplicação.
+
+#### 4.1.2 Voluntário
+
+Usuário do sistema capaz participar de colheitas por meio da plataforma, que também disponibiliza um chat de conversa com seu grupo voluntário, onde o mesmo também pode gerenciar seu perfil.
+
+#### 4.1.3 Proprietário
+
+Usuário do sistema com poder de registrar propriedade, árvore e colheita, para os voluntários poderem participar. O mesmo é um grande pilar no fluxo de funcionamento do site, onde sem suas informações, não haveria colheita. 
+
+#### 4.1.4 Líder
+
+Usuário do sistema capaz de liderar as colheitas e acesso dos voluntários a esse processo, ele é o intermédio entre o proprietário e o voluntário.
+
+#### 4.1.5 Gerente de colheita
+
+Usuário do sistema capaz de gerir e supervisionar as atividades dos líderes nesse processo.
+
+### 4.2 Diagrama de caso de uso
+
+![](img/diagrama_de_caso_de_uso.png)
+
+### 4.3 Prioridade dos casos de uso
 
 Esse diagrama expõe os seguintes requisitos: 
 
