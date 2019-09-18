@@ -7,7 +7,7 @@ Este projeto tem como objetivo o desenvolvimento, a manutenção e a evolução 
 
 Para contribuir com este projeto basta seguir:
 
-- [Código de Conduta]()  
+- [Código de Conduta](https://fga-eps-mds.github.io/2019.2-Acacia/#/code-of-conduct)  
 - [Guia de Instalação](#guia-de-instalação)
 - [Políticas de Contribuição](https://fga-eps-mds.github.io/2019.2-Acacia/#/policies)  
 - [Template para criação de issues](https://github.com/fga-eps-mds/2019.2-Acacia/tree/develop/.github/ISSUE_TEMPLATE)  
