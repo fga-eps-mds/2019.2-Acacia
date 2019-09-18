@@ -12,3 +12,4 @@
 # Gerenciamento
 * [Políticas de Contribuição](policies.md)
 * [Métricas e Indicadores](indicators_metrics.md)
+* [Código de Conduta](code-of-conduct.md)
