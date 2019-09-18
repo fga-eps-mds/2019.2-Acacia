@@ -32,14 +32,4 @@ Após esses passos a aplicação deverá estar acessível em:
 `localhost:8080`
 
 #### Front-end:
-Clonar o repositório:
-
-`git clone https://github.com/fga-eps-mds/2019.2-Acacia-Frontend.git`
-
-Execução do conteiner:
-
-`docker-compose up`
-
-Após esses passos a aplicação deverá estar acessível em:
-
-`localhost:8000`
+Para instalar a camada front-end da aplicação basta seguir os passos de instalação descritos [aqui](https://github.com/fga-eps-mds/2019.2-Acacia-Frontend)
