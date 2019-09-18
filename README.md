@@ -1,4 +1,4 @@
-# 2019.2-TimeBolinho
+# 2019.2-Acácia
 
 ### Instalação
 
@@ -9,7 +9,7 @@ Também é necessário ter o [Git](https://git-scm.com) instalado para clonar o 
 
 Clonar o repositório:
 
-`git clone https://github.com/fga-eps-mds/2019.2-TimeBolinho.git`
+`git clone https://github.com/fga-eps-mds/2019.2-Acacia`
 
 Execução do conteiner:
 
