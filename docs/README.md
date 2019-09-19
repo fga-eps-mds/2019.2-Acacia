@@ -1,7 +1,4 @@
-
-# 2019.2-Acacia
-
-  ![logo](img/logo.svg)
+<p align="center">  <img src="img/wordmark_1.svg" width="400"></p>
 
 ## Visão geral
 
