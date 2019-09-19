@@ -1,69 +1,49 @@
-# Código de Conduta para Colaboradores
+# Código de Conduta
 
-## Nossa promessa
+## Propósito
+O projeto é mantido por estudantes durante a execução das disciplinas
+de Engenharia de Produto de Software e Métodos de Desenvolvimento de Software
+da Universidade de Brasília.
+Sendo assim, frisamos a importância de promover um ambiente aberto e acolhedor,
+nós mantenedores e contribuidores nos comprometemos a fazer participação em nosso
+projeto e nossa comunidade provendo uma experiência livre de assédio para todos.
 
-Com o interesse de fomentar uma comunidade aberta e acolhedora,
-nós, como colaboradores e administradores do Acácia, comprometemo-nos
-a fazer a participação deste projeto uma experiência livre de assédio
-para todos, independentemente da aparência pessoal, deficiência,
-etnia, gênero, idade, identidade ou expressão de gênero, identidade
-ou orientação sexual, nacionalidade, nível de experiência, porte físico,
-raça ou religião.
 
-## Nossos padrões
+## Nossas Responsabilidades
+Os mantenedores desse projeto são responsáveis por prestar esclarecimentos em
+casos de dúvidas relacionadas ao código de conduta e também por ações em resposta
+a comportamentos inadequados.
+No caso de testemunhar comportamentos inadequados,
+estes devem ser reportados imediatamente, sendo os responsáveis do repositório
+obrigados a manter confidencialidade sobre a pessoa que reportar.
 
-Exemplos de comportamentos que contribuem a criar um ambiente positivo incluem:
+## Exemplos de comportamentos esperados e que contribuem com o projeto
 
-* Usar linguagem acolhedora e inclusiva
-* Respeitar pontos de vista e experiências diferentes
+* Uso de linguagem acolhedora e inclusiva
+* Respeito aos diferentes pontos de vista
 * Aceitar críticas construtivas
-* Focar no que é melhor para a comunidade
-* Mostrar empatia com outros membros da comunidade
+* Demonstrar empatia com os membros da comunidade
 
-Exemplos de comportamentos inaceitáveis por parte dos participantes incluem:
+## Exemplos de comportamentos inaceitáveis
 
-* Uso de linguagem ou imagens sexuais e atenção ou avanço sexual indesejada
-* Comentários insultuosos e/ou depreciativos e ataques pessoais ou políticos (*Trolling*)
+* Uso de conotações sexuais
+* Comentários depreciativos que ataquem pessoas ou grupos
 * Assédio público ou privado
-* Publicar informação pessoal de outros sem permissão explícita, como, por exemplo, um endereço eletrônico ou residencial
-* Qualquer outra forma de conduta que pode ser razoavelmente considerada inapropriada num ambiente profissional
+* Publicação de conteúdo privado de terceiro sem prévia autorização
+* Outras condutas consideradas inapropriadas em um ambiente profissional
 
-## Nossas responsibilidades
-
-Os administradores do projeto são responsáveis por esclarecer os padrões de
-comportamento e deverão tomar ação corretiva apropriada e justa em resposta
-a qualquer instância de comportamento inaceitável.
-
-Os administradores do projeto têm o direito e a responsabilidade de
-remover, editar ou rejeitar comentários, commits, código, erros ou outras formas de contribuição que não estejam de
-acordo com este Código de Conduta, bem como banir temporariamente ou
-permanentemente qualquer colaborador por qualquer outro comportamento
-que se considere impróprio, perigoso, ofensivo ou problemático.
 
 ## Escopo
 
-Este Código de Conduta aplica-se dentro dos espaços do projeto ou
-qualquer espaço público onde alguém represente o mesmo ou a sua
-comunidade. Exemplos de representação do projeto ou comunidade incluem
-usar um endereço de email oficial do projeto, postar por uma conta de
-mídia social oficial, ou agir como um representante designado num evento
-online ou offline. A representação de um projeto pode ser ainda definida e
-esclarecida pelos administradores do projeto.
+Esse Código de Conduta é aplicado dentro do projeto e em locais públicos onde
+um indivíduo esteja representando o projeto ou sua comunidade. Exemplos
+são um e-mail oficial sobre o projeto, ou participação em eventos como representante.
 
-## Aplicação
-
-Comportamento abusivo, de assédio ou de outros tipos pode ser
-comunicado contatando a equipe do projeto rocha.carla@gmail.com. Todas as queixas serão revistas e investigadas e
-resultarão numa resposta necessária e apropriada à situação.
-A equipe é obrigada a manter a confidencialidade em relação
-ao elemento que reportou o incidente. Demais detalhes de
-políticas de aplicação podem ser postadas separadamente.
-
-Administradores do projeto que não sigam ou não mantenham o Código
-de Conduta em boa fé podem enfrentar repercussões temporárias ou permanentes
-determinadas por outros membros da liderança do projeto.
 
 ## Atribuição
 
-Este Código de Conduta é adaptado do [Contributor Covenant](https://www.contributor-covenant.org),
-versão 1.4, disponível em https://www.contributor-covenant.org/pt-br
+Esse código de conduta é uma adaptação de [Contributor Covenant][homepage], version 1.4,
+disponível em [http://contributor-covenant.org/version/1/4][version]
+
+[homepage]: http://contributor-covenant.org
+[version]: http://contributor-covenant.org/version/1/4/
