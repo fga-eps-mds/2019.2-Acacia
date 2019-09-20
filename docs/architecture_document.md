@@ -17,7 +17,7 @@
 | 12/09/2019 | 0.12 | Adição do link da imagem do diagrama e organização do tópico  | Flavio Vieira |
 | 14/09/2019 | 1.0 | Adição do tópico 	 | Durval Carvalho |
 | 17/09/2019 | 1.1 | Ajuste do diagrama de casa de uso | Flavio Vieira e Leonardo da Silva Gomes |
-
+| 19/09/2019 | 1.2 | Adição de nova versão do diagrama de pacotes | Durval Carvalho e João Pedro |
 
 ## 1. Introdução
 
@@ -295,13 +295,10 @@ ambiente do usário (mobile ou desktop) e finalmente o usuário irá poder ver
 os dados requisitados. Tudo isso em questões de microsegundos.
 
 ### 5.2 Diagrama de pacotes
-#### 5.2.1 _Back-end_
 
-![](https://user-images.githubusercontent.com/45462822/64872015-c55ac780-d61c-11e9-90af-f77668dd10f6.png)
-
-#### 5.2.2 _Front-end_
-
-![](https://i.imgur.com/IOVK3p5.png)
+<p align="center">
+	<img src="img/diagrama_de_pacotes.jpg">
+</p>
 
 ## 6. Visão de implementação
 
