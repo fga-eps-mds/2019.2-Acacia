@@ -1,7 +1,7 @@
 | Data   | Versão | Modificação  | Autor  |
 | :- | :- | :- | :- |
 | 20/09/2019 | 0.1 | Criação da versão inicial do documento | [Shayane Alcântara](https://github.com/shayanealcantara)|
-| 20/09/2019 | 0.2 | Adição do estudo em backend | Shayane Alcântara](https://github.com/shayanealcantara)|
+| 20/09/2019 | 0.2 | Adição do estudo em backend | [Shayane Alcântara](https://github.com/shayanealcantara)|
 
 
 ## Introdução
@@ -29,11 +29,11 @@ Outra ferramenta abordada foi a [Doctest](https://wiki.python.org.br/DocTest) é
 
 #### Guia de estilo
 
-O propósito de um guia de estilo é manter a consistência. Consistência em relação a padrões de escrita do código. Para cumprir este objetivo, será necessário a adoção do [Guia de estilo](https://wiki.python.org.br/GuiaDeEstilo) definido pela comunidade Python, com diretrizes padronizadas.
+O propósito de um guia de estilo é manter a consistência em relação a padrões de escrita do código. Para cumprir este objetivo, será necessário a adoção do [Guia de estilo](https://wiki.python.org.br/GuiaDeEstilo) definido pela comunidade Python, com diretrizes padronizadas.
 
 ## Resultados
 
-No Back-end, a opção mais viável para desenvolver os teste é a biblioteca **Unnitest**, em que os testes são escritos através de classes e que utiliza-se os esquemas de assertions para garantir o comportamento do código testado, garantindo certa facilidade e praticidade pela familiaridade com a linguagem e a experiência de alguns membros. Além disso, há um grande volume de documentação, o que pode auxiliar no desenvolvimento decorrente do projeto e consequentemente diminuir a complexidade de execução.
+No Back-end, a opção mais viável para desenvolver os teste é a biblioteca **Unnitest**, em que os testes são escritos através de classes e que utiliza-se os esquemas de assertions para garantir o comportamento do código testado, garantindo certa facilidade e praticidade pela familiaridade com a linguagem e a experiência de alguns membros. Além disso, há um grande volume de [documentação](https://django-portuguese.readthedocs.io/en/1.0/topics/testing.html), o que pode auxiliar no desenvolvimento decorrente do projeto e consequentemente diminuir a complexidade de execução.
 
 ## Planos futuros
 
