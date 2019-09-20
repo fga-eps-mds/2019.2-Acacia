@@ -8,6 +8,7 @@
 * [Documento de Visão](vision-document.md)
 * [Guia de Estilo e Identidade Visual](style-guide.md)
 * [Protótipo](prototype.md)
+* [Canvas](canvas.md)
 
 # Gerenciamento
 
