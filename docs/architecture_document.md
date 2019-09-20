@@ -19,7 +19,7 @@
 | 17/09/2019 | 1.1 | Ajuste do diagrama de casa de uso | Flavio Vieira e Leonardo da Silva Gomes |
 | 19/09/2019 | 1.2 | Adição de nova versão do diagrama de pacotes | Durval Carvalho e João Pedro |
 | 19/09/2019 | 1.3 | Ajuste do diagrama de classes | Hugo Sobral e Renato Britto |
-
+| 20/09/2019 | 1.4 | Ajuste dos diagramas de banco  | Flavio Vieira |
 
 ## 1. Introdução
 
@@ -351,13 +351,13 @@ O resultado desse passos são descritos abaixo.
 
 #### 6.2.1 Entidades
 
-* USUARIO
-	* VOLUNTARIO
-	* PROPRIETARIO
-	* BENEFICIARIO
+* USER
+	* VOLUNTEER
+	* OWNER
 	* ADMINISTRADOR
-* PROPRIEDADE
-* COLHEITA
+* PROPERTY
+* HARVERST
+* TREE
 
 Um ponto a comentar é a relação especificação da entidade usuário.
 O usuário representa qualquer perfil que tenha acesso as áreas do 
@@ -458,10 +458,10 @@ Um **colheita** pode ser doada para vários **beneficiários**, e um
 **Cardinalidade: N:M**
 
 #### 6.2.3 Diagrama Entidade-Relacionamento
-![](img/diagrama_entidade_relacionamento.png)
+![](img/diagrama_entidade_relacionamento2.png)
 
 #### 6.2.4 Diagrama Lógico de Dados
-![](img/diagrama_logico_de_dados.png)
+![](img/diagrama_logico_de_dados2.png)
 
 ## Referências
 
