@@ -17,6 +17,7 @@
 | 12/09/2019 | 0.12 | Adição do link da imagem do diagrama e organização do tópico  | Flavio Vieira |
 | 14/09/2019 | 1.0 | Adição do tópico 	 | Durval Carvalho |
 | 17/09/2019 | 1.1 | Ajuste do diagrama de casa de uso | Flavio Vieira e Leonardo da Silva Gomes |
+| 19/09/2019 | 1.2 | Ajuste do diagrama de classes | Hugo Sobral e Renato Britto |
 
 
 ## 1. Introdução
@@ -308,28 +309,35 @@ os dados requisitados. Tudo isso em questões de microsegundos.
 ### 6.1 Diagrama de classes e serviços
 
 O diagrama de classe é uma representação estática para descrever 
-a estrutura de um projeto, tem como objetivo principal documentar 
-de formar visual, as fases de desenvolvimento do software. Conforme
-imagem abaixo, e possível mapear/ilustrar de forma clara e objetiva a 
-estrutura do projeto de software em nível macro e auxiliar no entendimento
-do escopo do projeto.
+a arquitetura de um projeto. Tal documento tem como objetivo principal 
+documentar, de formar visual, as fases de desenvolvimento do software. 
+Ao analisar o diagrama abaixo é possível mapear, de forma clara e objetiva, 
+a estrutura do projeto Acácia em nível macro e auxiliar no entendimento
+do escopo. Durante o processo de desenvolvimento do documento a Linguagem 
+de Modelagem Unificada (UML) foi utilizada. 
 
-![](img/0.1_diagrama_de_classes.png)
+![](img/class_diagram.png)
 
-Na elaboração do diagrama de classe, foi utilizado a Linguagem de 
-Modelagem Unificada, ou UML. Ao analisarmos o problema, foi 
-levantando os principais componentes e comportamentos, para 
-abstrairmos as classes, montar as associações e levantar as
-cardinalidades.
 
-Principais componentes do diagrama de classes:
+Vale ressaltar a existência de dois aspectos que influenciaram diretamente na
+concepção do diagrama de classes, estas são as **relações do framework Django Rest**,
+utilizadas para a serialização dos dados das classes, e o **padrão de design State**,
+usado para designar diferentes comportamentos para o usuário da aplicação.
 
-- Classes ou entidades; 
-- Associações ou relações;
-- Atributos ou campos;
-- Metodos;
-- Multiplicidade ou cadinalidade
+Sobre a classe de usuário da aplicação, o grupo de desenvolvimento do projeto
+observou na model **User**, já implementada dentro do Django Rest Framework, uma 
+oportunidade de utilização de conteúdo pronto e adaptá-lo ao contexto do projeto.
+Portanto, os usuários do aplicativo Acácia herdam da classe User do Django.
 
+O padrão de design **State** surgiu como uma solução para o problema das diferentes
+permissões, baseadas em diferentes papeis, que um usuário pode assumir dentro da 
+aplicação. Considerando que um mesmo usuário pode ser tanto um voluntário, quanto um 
+líder e em outro momento ter o comportamento de proprietário, a equipe passou a 
+enfrentar a problemática das permissões de um mesmo usuário. Desta forma, o State
+soluciona esta problemática.
+
+Os **serializers** presentes dentro do diagrama possuem a função de tratar as informações
+das models e serializá-las, ou desserializá-las.
 
 ### 6.2 Banco de Dados
 
