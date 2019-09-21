@@ -2,6 +2,7 @@
 | :- | :- | :- | :- |
 | 20/09/2019 | 0.1 | Criação da versão inicial do documento | [Shayane Alcântara](https://github.com/shayanealcantara)|
 | 20/09/2019 | 0.2 | Adição do estudo em backend | [Shayane Alcântara](https://github.com/shayanealcantara)|
+| 21/09/2019 | 1.0 | Adição do estudo em frontend e planos futuros | [Vítor Cardoso](https://github.com/vitorcx)|
 
 
 ## Introdução
@@ -48,6 +49,8 @@ No Front-end, a opção mais interessante, levando em conta o prazo e escopo do 
 No caso dos testes *end-to-end* a melhor opção é o **Cypress** por conta de sua boa performance e facilidade de configuração.
 
 ## Planos futuros
+
+Caso seja avaliado um possível retorno positivo da realização de testes *end-to-end*, tanto para o produto quanto para a equipe, este será realizado ao fim de cada release, afim de garantir o bom funcionamento geral da interface de usuário.
 
 ## Referências
 
