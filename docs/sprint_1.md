@@ -32,12 +32,19 @@ Segundo a equipe a qualidade entregue foi de 3,67 considerando a escala de liker
 # Retrospectiva
 
 ## Pontos Positivos
-
+- Comunuicação por issues
+- Bom entendimento da solução a ser desenvolvida
+- Gitflow posto em prática
+- Bom uso do kanban
 
 ## Pontos Negativos
+- Pouca proatividade(MDS)
+- Membro sobrecarregado(Durval- MDS
+- Desevolvedor Thiago não poderá ajudar a equipe
+- Atraso paras as dailys
 
 
-## pontos de Melhoria
+## Pontos de Melhoria
 - Manter foco durante a daily
 - Melhorar a comunicação entre MDS e Product Owner
 - Melhorar as descrições das issues
