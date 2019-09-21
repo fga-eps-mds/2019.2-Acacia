@@ -18,6 +18,12 @@ Após a prévia seleção a escolha consistiu na avaliação dos seguintes tópi
 
 ### Front-end
 
+O código a ser testado no front-end estará em Javascript, logo as ferramentas devem ser compatíveis com a linguagem. Para tal foram abordados alguns frameworks interessantes como o [Jest](https://jestjs.io), [Mocha](https://mochajs.org) e [Jasmine](https://jasmine.github.io).
+
+O Jasmine se destaca por ser um framework de testes unitários orientado à comportamento, ou seja, tenta se aproximar ao máximo do comportamento do usuário. Enquanto isso o Mocha se mostra um framework bastante flexível em suas configurações. Já o Jest é uma ferramenta marcada pela facilidade na configuração inicial.
+
+Para testes realização de *end-to-end*, quando necessário, foram abordadas ferramentas como o [Nightwatch.js](https://nightwatchjs.org) e [Cypress](https://www.cypress.io).
+
 #### Guia de estilo
 
 ### Back-end
@@ -35,6 +41,9 @@ O propósito de um guia de estilo é manter a consistência em relação a padr�
 ## Resultados
 
 No Back-end, a opção mais viável para desenvolver os teste é a biblioteca **Unnitest**, em que os testes são escritos através de classes e que utiliza-se os esquemas de assertions para garantir o comportamento do código testado, garantindo certa facilidade e praticidade pela familiaridade com a linguagem e a experiência de alguns membros. Além disso, há um grande volume de [documentação](https://django-portuguese.readthedocs.io/en/1.0/topics/testing.html), o que pode auxiliar no desenvolvimento decorrente do projeto e consequentemente diminuir a complexidade de execução.
+
+No Front-end, a opção mais interessante, levando em conta o prazo e escopo do projeto, é realizar testes unitários utilizando o **Jest**, pois é uma ferramenta de testes completa e ao mesmo tempo de rápida configuração inicial.  
+No caso dos testes *end-to-end* a melhor opção é o **Cypress** por conta de sua boa performance e facilidade de configuração.
 
 ## Planos futuros
 
