@@ -26,6 +26,8 @@ Para testes realização de *end-to-end*, quando necessário, foram abordadas fe
 
 #### Guia de estilo
 
+Como já mencionado, a camada front-end da aplicação será feita usando o framework Vue.js, que tem seu próprio [Guia de estilo](https://vuejs.org/v2/style-guide/). Esse guia deverá ser seguido com objetivo de evitar erros, perda de tempo e adoção de anti-padrões.
+
 ### Back-end
 
 O código a ser testado no back-end estará em Python, logo as ferramentas devem ser compatíveis com a linguagem. Pela tecnologia ser Django Rest, ela auxilia de certa forma a implementação de testes, visto que descreve em sua documentação oficial uma série de [classes e recursos](https://www.django-rest-framework.org/api-guide/testing/#testing) com este fim, como a APIClient e APITestCase.  
