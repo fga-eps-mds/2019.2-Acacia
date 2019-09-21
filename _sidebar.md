@@ -18,8 +18,11 @@
 # Gerenciamento
 
 * [Métricas e Indicadores](indicators_metrics.md)
+
+## Sprints
 * [Sprint 0](sprints/sprint_0.md)
 * [Sprint 1](sprints/sprint_1.md)
+* [Sprint 2](sprints/sprint_2.md)
 
 # Contribuição
 
