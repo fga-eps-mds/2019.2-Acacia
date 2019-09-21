@@ -5,6 +5,7 @@
 
 
 ## Introdução
+Teste de software é o processo de execução de um produto para determinar se ele atingiu suas especificações e funcionou corretamente no ambiente para o qual foi projetado. O seu objetivo é revelar falhas em um produto, para que as causas dessas  falhas sejam identificadas e possam ser corrigidas pela equipe de desenvolvimento antes da entrega final [[1]](#referencias). 
 
 ## Metodologia
 
@@ -25,7 +26,7 @@ O código a ser testado no back-end estará em Python, logo as ferramentas devem
 
 Além deste recurso anterior, foi abordada a biblioteca [Unnitest](https://docs.python.org/3/library/unittest.html#module-unittest) e o [Pytest](https://docs.pytest.org/en/latest/), ambas nativas do Python. Com elas é possível executar testes unitários em massa ou individuais de forma simples, sem a necessidade de instalação de módulos extras. A saída de execução é prática e concisa, podendo gerar relatórios mais detalhados. 
 
-Outra ferramenta abordada foi a [Doctest](https://wiki.python.org.br/DocTest) é uma biblioteca padrão do Python que procura e interpreta docstrings na aplicação. A sintaxe nesses trechos de docstrings é diferenciada, simulando um interpretador interativo do Python [[1]](https://klauslaube.com.br/2011/07/18/ferramentas-de-testes-em-django-parte-1.html).
+Outra ferramenta abordada foi a [Doctest](https://wiki.python.org.br/DocTest) é uma biblioteca padrão do Python que procura e interpreta docstrings na aplicação. A sintaxe nesses trechos de docstrings é diferenciada, simulando um interpretador interativo do Python [[2]](https://klauslaube.com.br/2011/07/18/ferramentas-de-testes-em-django-parte-1.html).
 
 #### Guia de estilo
 
@@ -39,4 +40,6 @@ No Back-end, a opção mais viável para desenvolver os teste é a biblioteca **
 
 ## Referências
 
-[1] LAUBE, Klaus. Ferramentas de testes em django. Disponível em: <https://klauslaube.com.br/2011/07/18/ferramentas-de-testes-em-django-parte-1.html>. Acesso em: 20/09/19.
+[1] NETO, Arilo. Introdução a Teste de Software. Disponível em: <http://www.garcia.pro.br/EngenhariadeSW/artigos%20engsw/teste/teste%20de%20software%20-%20artigo%201%20-%20rev1%20-%20introducao%20a%20teste%20de%20sw.pdf>. Acesso em: 20/09/2019.
+  
+[2] LAUBE, Klaus. Ferramentas de testes em django. Disponível em: <https://klauslaube.com.br/2011/07/18/ferramentas-de-testes-em-django-parte-1.html>. Acesso em: 20/09/19.
