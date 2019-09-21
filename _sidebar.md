@@ -8,9 +8,12 @@
 * [Documento de Visão](vision_document.md)
 * [Documento de Arquitetura](architecture_document.md)
 * [Guia de Estilo e Identidade Visual](style_guide.md)
-* [Viabilidade das tecnologias](architecture_techonologies.md)
 * [Protótipo](prototype.md)
 * [Canvas](canvas.md)
+
+# Viabilidade técnica
+* [Viabilidade das tecnologias](architecture_techonologies.md)
+* [Ferramentas de testes](tools_testing.md)
 
 # Gerenciamento
 
