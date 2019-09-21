@@ -2,7 +2,7 @@
 
 - Período : 09/09 a 14/09
 
-- Objetivo: 
+- Objetivo: Construir o esboço da solução em software do projeto e preparar o caminho para a implementação dessa solução.
 
 ## Issues
 ID | Descrição | Estimativa | Label
@@ -18,15 +18,15 @@ ID | Descrição | Estimativa | Label
 
 # Review
 
-- Objetivo Alcançado? Sim. Os feedbacks da equipe demonstrou que estavamos alinhados a respeito do objetivo dessa sprint e que conseguimos cumprí - lo.
+- Objetivo Alcançado? Não. A equipe demonstrou dificuldade em entender como se daria a solução em diversos niveis de abstração.
 
 - Estimativa correta? A estimativa das issues não foram condigentes com seu real esforço. Em suma estimamos menos esforço do que foi necessário.
 
-- Tarefas bem distribuidas? Não. As tarefas não foram bem distribuidas em MDS o que gerou um sobrecargo em alguns membros.
+- Tarefas bem distribuidas? Não. Apesar de termos feito uma divisão de trabalho ela se mostrou menos eficiente do que o esperado.
 
 ## Qualidade do Trabalho Entregue
 
-Segundo a equipe a qualidade entregue foi de 3,67 considerando a escala de likert com os valores de 1 a 5.
+Segundo a equipe a qualidade entregue foi de 4,7 considerando a escala de likert com os valores de 1 a 5. Apesar de não termos alcançado nosso objetivo a equipe considerou que o esforço gerou insumos com qualidade para conseguirmos cumprí -lo posteriormente.
 
 # Retrospectiva
 
