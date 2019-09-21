@@ -16,7 +16,7 @@ Para contribuir com este projeto basta seguir:
 
 -  [Guia de Contribuição](https://fga-eps-mds.github.io/2019.2-Acacia/#/contributing) 
 
--  [Código de Conduta](https://fga-eps-mds.github.io/2019.2-Acacia/#/code-of-conduct)
+-  [Código de Conduta](https://fga-eps-mds.github.io/2019.2-Acacia/#/code_of_conduct)
 
 -  [Guia de Instalação](#guia-de-instalação)
 
