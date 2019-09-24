@@ -17,6 +17,8 @@ services:
       cd src/ &&
       python manage.py makemigrations &&
       python manage.py migrate &&
+      chmod +x scripts/create_superuser.sh &&
+      ./scripts/create_superuser.sh &&
       python manage.py runserver 0.0.0.0:8080"
     ports:
       - "8080:8080"
