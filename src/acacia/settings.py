@@ -27,8 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0']
 
-# Application definition
+AUTH_USER_MODEL = 'users.User'
 
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +40,10 @@ INSTALLED_APPS = [
     
     # libs
     'rest_framework',
+    'phonenumber_field',
+
+    # my apps
+    'users',
 ]
 
 MIDDLEWARE = [
