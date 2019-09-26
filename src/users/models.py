@@ -8,9 +8,9 @@ class User(AbstractUser):
 
     email = models.EmailField(_('email address'), blank=False, unique=True)
 
-    phone_number = PhoneNumberField(blank=True) # TODO: Unique Phone Number
+    phone_number = PhoneNumberField(blank=True, null=True)
 
-    bio = models.TextField(blank=True)
+    bio = models.TextField(blank=True, null=True)
 
     birth = models.DateField(blank=True, null=True)
 

@@ -1,21 +1,25 @@
 from .models import User
-
-from .serializers import RegistrationUserSerializer
-from rest_framework.decorators import api_view
+from rest_framework import status
 from rest_framework.response import Response
+from rest_framework.generics import CreateAPIView
+from rest_framework.authtoken.models import Token
+from .serializers import UserRegistrationSerializer
 
-@api_view(['POST'])
-def registration_view(request):
-    serializer = RegistrationUserSerializer(data=request.data)
-    data = {}
+class UserRegistrationAPIView(CreateAPIView):
+    authentication_classes = ()
+    permission_classes = ()
+    serializer_class = UserRegistrationSerializer
 
-    if serializer.is_valid():
-        user = serializer.save()
-        data['response'] = 'Sucessfully registered a new user.'
-        data['email'] = user.email
-        data['username'] = user.username
-    
-    else:
-        data = serializer.errors
-    
-    return Response(data)
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+
+        user = serializer.instance
+        data = serializer.data
+
+        # TODO: ADD TOKEN
+
+        headers = self.get_success_headers(serializer.data)
+
+        return Response(data, status=status.HTTP_201_CREATED, headers=headers)
