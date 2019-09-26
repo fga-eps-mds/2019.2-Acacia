@@ -1,7 +1,7 @@
 # Documento de arquitetura
 
 ## Histórico de revisão
- Data   | Versão | Modificação  | Autor  |
+| Data   | Versão | Modificação  | Autor  |
 | :- | :- | :- | :- |
 | 10/09/2019 | 0.1 | Adição do tópico Objetivo |  Durval Carvalho |
 | 10/09/2019 | 0.2 | Adição do tópico Escopo e Django REST Framework |  Durval Carvalho |
@@ -236,7 +236,7 @@ Esse diagrama expõe os seguintes requisitos:
 - RF04: Permitir usuários se candidatar a colheita.
 - RF05: Habilitar comunicação entre envolvidos em colheita (voluntários, líderes e proprietários). 
 - RF08: Prover à líderes a possiblidade de escolher voluntários cadastrados em colheita.
-- RF09 Mostrar dados à respeito de colheitas realizadas de forma transparente.
+- RF09: Mostrar dados à respeito de colheitas realizadas de forma transparente.
 
 ## 5. Visão Lógica
 
@@ -364,21 +364,7 @@ O usuário representa qualquer perfil que tenha acesso as áreas do
 site que precisa de autenticação.
 
 A especificação foi utilizada para reduzir o número de auto 
-relacionamentos, melhorando assim o entendimento do projeto.at referenced this issue 10 days ago
-@jps12
-#15 Add scope 
-at referenced this issue 10 days ago
-@jps12
-#15 Add scope 
-Vale ressaltar que a especificação da entidade usuário não at referenced this issue 10 days ago
-@jps12
-#15 Add scope 
-impossibilita que um perfil de proprietário realize ações do perfil at referenced this issue 10 days ago
-@jps12
-#15 Add scope 
-de voluntário, e vice-versa.at referenced this issue 10 days ago
-@jps12
-#15 Add scope 
+relacionamentos, melhorando assim o entendimento do projeto. 
 
 O perfil do admnistrador será o usuário responsável por 
 administrar todos os dados do site. Esse será o <i>useruser</i> do 
