@@ -6,6 +6,9 @@ on:
     - master
     - release/*
     - develop
+  push:
+    branches:
+    - feature/47-continuous-integration
 
 jobs:
   test:
