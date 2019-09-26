@@ -12,6 +12,7 @@
 | 07/09/2019 | 0.5 | inclusão do plano de comunicação e revisão dos tópicos ja existentes  | Martha Dantas |
 | 07/09/2019 | 0.6 | Descrição de extreme programming e das tecnicas de gamificação e interação entre a equipe | Martha Dantas |
 | 07/09/2019 | 1.0 | inclusão do plano de Estimativa das issues do projeto | Martha Dantas |
+| 25/09/2019 | 1.2 | Corrigindo erros | Martha Dantas |
 
 ## 1. Introdução
 
@@ -100,12 +101,9 @@ Visando manter a produtividade, o Colaborativismo e a melhoria continua da rela�
 
 Vale lembrar que algumas dessas tecnicas serão intrisicamente aplicadas pela equipe gestora.
 
-## 5. BCP - Business Complexity Point
-
-
 Obs.: As tecnicas foram escolhidas com base no perfil que foi traçado da equipe. Essa informação pode ser encontrada [aqui](https://docs.google.com/spreadsheets/d/1temwG93TrqvCTuy1u52Qbi-JIHFtpjNwILdbRSehMHg/edit?usp=sharing).
 
-## 4. Referências
+## 5. Referências
 
 Manifesto Ágil. Disponível em: https://www.manifestoagil.com.br/
 
