@@ -6,9 +6,6 @@ on:
     - master
     - release/*
     - develop
-  push:
-    branches:
-    - feature/47-continuous-integration
 
 jobs:
   test:
@@ -20,7 +17,7 @@ jobs:
     - name: Setup enviroment
       run: docker-compose up -d --build
     - name: Run tests
-      run: docker exec acacia-backend bash -c "cd src/ && coverage run manage.py test && coverage xml -o cov.xml"
+      run: docker exec acacia_backend bash -c "cd src/ && coverage run manage.py test && coverage xml -o cov.xml"
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v1.0.2
       with:
