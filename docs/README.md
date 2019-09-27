@@ -1,5 +1,7 @@
 <p align="center">  <img src="img/wordmark_1.svg" width="400"></p>
 
+[![codecov](https://codecov.io/gh/fga-eps-mds/2019.2-Acacia/branch/develop/graph/badge.svg)](https://codecov.io/gh/fga-eps-mds/2019.2-Acacia)
+
 ## Visão geral
 
 Acácia propõe-se a facilitar a criação de uma comunidade voluntária em torno da agricultura urbana, diminuindo o desperdício de comida e difundindo conhecimento em plantio e colheita neste ambiente. Para tal, a ferramenta conecta pessoas que possuem plantas frutíferas em local urbano, voluntários de colheita e beneficiários que buscam doações de alimentos, para que estes possam trabalhar juntos, com colheita colaborativa.
