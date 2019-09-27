@@ -4,3 +4,4 @@ psycopg2==2.8
 django-phonenumber-field==3.0
 phonenumbers==8.10
 djangorestframework_simplejwt
+django-cors-headers
