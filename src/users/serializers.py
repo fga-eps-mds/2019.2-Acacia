@@ -19,8 +19,8 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     confirm_password = serializers.CharField(
         write_only=True,
         required=True,
-        label="Confirm Password",
-        style={'input_type': 'password'}
+        label="Confirm Password", 
+        style={'input_type': 'password'} 
     )
 
     class Meta:
@@ -29,7 +29,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
 
     def validate_email(self, email):
         if User.objects.filter(email=email).exists():
-            raise serializers.ValidationError('Email already exists.')
+            raise serializers.ValidationError('Email já cadastrado')
         return email
 
 
@@ -37,7 +37,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         min_length = getattr(settings, 'PASSWORD_MIN_LENGTH', 8)
         if len(password) < min_length:
             raise serializers.ValidationError(
-                'Password should be atleast %s characters long.' % (min_length)
+                'A senha deve ter no mínimo %s caracteres' % (min_length)
             )
         return password
 
@@ -45,12 +45,13 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         data = self.get_initial()
         password = data.get('password')
         if password != password_confirmation:
-            raise serializers.ValidationError('Passwords must match.')
+            raise serializers.ValidationError('As senhas devem corresponder')
         return password_confirmation
 
     def validate_username(self, username):
+        username = property(lambda self: self.name or self.email.replace(" ", "_"))
         if User.objects.filter(username=username).exists():
-            raise serializers.ValidationError('Email already exists.')
+            raise serializers.ValidationError('Usuário com este nome já cadastrado')
         return username
 
     def create(self, validated_data):
