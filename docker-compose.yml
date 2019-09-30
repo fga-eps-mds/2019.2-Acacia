@@ -1,15 +1,12 @@
 version: '3.7'
+
+volumes:
+  pgdata:
+
 services:
 
   db:
-    image: postgres:11.5
-    container_name: acacia_db
-    env_file: 
-      - .env
-    ports:
-      - "5432:5432"
-    networks: 
-      - acacia_network
+    image: postgres
 
   acacia-back:
     container_name: acacia_backend
@@ -20,18 +17,12 @@ services:
       cd src/ &&
       python manage.py makemigrations &&
       python manage.py migrate &&
+      chmod +x scripts/create_superuser.sh &&
+      ./scripts/create_superuser.sh &&
       python manage.py runserver 0.0.0.0:8080"
     ports:
       - "8080:8080"
     volumes:
       - .:/code
-    env_file:
-      - .env
-    networks: 
-      - acacia_network
     depends_on:
       - db
-      
-networks: 
-  acacia_network:
-    name: acacia_network
