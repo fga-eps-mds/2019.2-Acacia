@@ -299,7 +299,7 @@ os dados requisitados. Tudo isso em questões de microsegundos.
 ### 5.2 Diagrama de pacotes
 
 <p align="center">
-	<img src="img/diagrama_de_pacotes.jpg">
+	<img src="img/package-diagram.svg">
 </p>
 
 ## 6. Visão de implementação
@@ -314,7 +314,7 @@ a estrutura do projeto Acácia em nível macro e auxiliar no entendimento
 do escopo. Durante o processo de desenvolvimento do documento a Linguagem 
 de Modelagem Unificada (UML) foi utilizada. 
 
-![](img/class_diagram.png)
+![](img/diagrama_de_classes.svg)
 
 
 Vale ressaltar a existência de dois aspectos que influenciaram diretamente na
