@@ -19,6 +19,7 @@ class UserSignUpSerializer(serializers.Serializer):
 
     email = serializers.EmailField(
         required=True,
+        unique=True,
         label="Email Address",
     )
 
@@ -40,10 +41,10 @@ class UserSignUpSerializer(serializers.Serializer):
         model = User
         fields = ['username', 'email', 'password', 'confirm_password']
 
-    def validate_email(self, email):
-        if User.objects.filter(email=email).exists():
-            raise serializers.ValidationError('Email já cadastrado')
-        return email
+    #def validate_email(self, email):
+    #    if User.objects.filter(email=email).exists():
+    #        raise serializers.ValidationError('Email já cadastrado')
+    #    return email
 
 
     def validate_password(self, password):
