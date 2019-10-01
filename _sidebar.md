@@ -10,6 +10,7 @@
 * [Guia de Estilo e Identidade Visual](style_guide.md)
 * [Protótipo](prototype.md)
 * [Canvas](canvas.md)
+* [Roadmap do Produto](product_roadmap.md)
 
 # Viabilidade técnica
 * [Viabilidade das tecnologias](architecture_techonologies.md)
@@ -22,6 +23,7 @@
 * [Sprint 0](sprints/sprint_0.md)
 * [Sprint 1](sprints/sprint_1.md)
 * [Sprint 2](sprints/sprint_2.md)
+* [Sprint 3](sprints/sprint_3.md)
 
 # Contribuição
 

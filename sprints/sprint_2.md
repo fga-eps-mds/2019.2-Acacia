@@ -48,7 +48,8 @@ Segundo a equipe a qualidade entregue foi de 4,7 considerando a escala de likert
 - Dividir melhoras as tarefas
 
 # Quadro de Conhecimento
-![](https://github.com/fga-eps-mds/2019.2-Acacia/blob/feature/46-sprint2-documentation/img/sprint2.jpg)
+
+<img src="img/sprint2.png" width="400">
 
 
 
