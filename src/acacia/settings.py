@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # libs
-    'rest_framework',
+    'rest_framework.authtoken',
     'phonenumber_field',
     'corsheaders',
 
@@ -142,13 +142,13 @@ STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ]
 }
 
 # CORS headers to responses
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:8080",
-    "http://localhost:8000",
+    "http://0.0.0.0:8080",
+    "http://0.0.0.0:8000",
 ]
