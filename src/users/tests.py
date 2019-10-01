@@ -5,7 +5,7 @@ from django.urls import reverse
 
 
 class UserRegistrationAPIViewTestCase(APITestCase):
-    url = reverse('users:signup')
+    url = reverse('users:register')
 
     def test_different_password_on_password_confirmation(self):
         """
