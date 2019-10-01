@@ -299,7 +299,7 @@ os dados requisitados. Tudo isso em questões de microsegundos.
 ### 5.2 Diagrama de pacotes
 
 <p align="center">
-	<img src="img/package-diagram.svg">
+	<img src="img/diagrama_de_pacotes.svg">
 </p>
 
 ## 6. Visão de implementação
