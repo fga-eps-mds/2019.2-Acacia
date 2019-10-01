@@ -1,25 +1,24 @@
-from .models import User
+
+# Django Rest Framework
 from rest_framework import status
+from rest_framework import permissions
 from rest_framework.response import Response
+from rest_framework.decorators import action
 from rest_framework.generics import CreateAPIView
 from rest_framework.authtoken.models import Token
-from .serializers import UserRegistrationSerializer
+
+# Models
+from .models import User
+
+# Serializers
+from .serializers import UserSignUpSerializer
+
 
 class UserRegistrationAPIView(CreateAPIView):
-    authentication_classes = ()
-    permission_classes = ()
-    serializer_class = UserRegistrationSerializer
+    """
+    Endpoint for user registration
+    """
 
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        self.perform_create(serializer)
-
-        user = serializer.instance
-        data = serializer.data
-
-        # TODO: ADD TOKEN
-
-        headers = self.get_success_headers(serializer.data)
-
-        return Response(data, status=status.HTTP_201_CREATED, headers=headers)
+    permission_classes = (permissions.AllowAny, )
+    serializer_class = UserSignUpSerializer
+    queryset = User.objects.all()

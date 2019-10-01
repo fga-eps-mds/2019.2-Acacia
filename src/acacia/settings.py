@@ -39,10 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     # libs
-    'rest_framework.authtoken',
     'phonenumber_field',
+    'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
 
     # my apps
@@ -149,6 +150,8 @@ REST_FRAMEWORK = {
 # CORS headers to responses
 
 CORS_ORIGIN_WHITELIST = [
-    "http://0.0.0.0:8080",
-    "http://0.0.0.0:8000",
+    "http://localhost:8080",
+    "http://localhost:8000",
+	"http://0.0.0.0:8080",
+	"http://0.0.0.0:8000",
 ]

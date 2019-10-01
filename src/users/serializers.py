@@ -1,19 +1,32 @@
-from .models import User
-from rest_framework import serializers
+
+# Django
 from django.conf import settings
 
-class UserRegistrationSerializer(serializers.ModelSerializer):
+# Models
+from .models import User
+
+# Django Rest Framework
+from rest_framework import serializers
+from rest_framework.validators import UniqueValidator
+
+
+class UserSignUpSerializer(serializers.Serializer):
+
+    username = serializers.CharField(
+        required=True,
+        label="Username",
+    )
 
     email = serializers.EmailField(
         required=True,
-        label="Email Address"
+        label="Email Address",
     )
 
     password = serializers.CharField(
         write_only=True,
         required=True,
         label="Password",
-        style={'input_type': 'password'}
+        style={'input_type': 'password'},
     )
 
     confirm_password = serializers.CharField(
@@ -49,11 +62,33 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         return password_confirmation
 
     def validate_username(self, username):
-        username = property(lambda self: self.name or self.email.replace(" ", "_"))
         if User.objects.filter(username=username).exists():
             raise serializers.ValidationError('Usuário com este nome já cadastrado')
         return username
 
     def create(self, validated_data):
-        del validated_data["confirm_password"]
-        return super(UserRegistrationSerializer, self).create(validated_data)
+
+        # this fields dont belongs to this class
+        validated_data.pop('confirm_password')
+
+        user = User.objects.create_user(**validated_data,
+            is_verified=False
+        )
+
+        # TODO: SEND CONFIRMATION EMAIL
+
+        return user
+
+class UserModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            'username',
+            'email',
+            'password',
+            'phone_number',
+            'bio',
+            'birth',
+            'speaks_french',
+            'speaks_english',
+        ]
