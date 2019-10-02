@@ -2,6 +2,7 @@ import json
 
 from rest_framework.test import APITestCase
 from django.urls import reverse
+from django.db import IntegrityError
 
 
 class UserRegistrationAPIViewTestCase(APITestCase):
@@ -44,25 +45,23 @@ class UserRegistrationAPIViewTestCase(APITestCase):
         Test to try to create a user with a registered email
         """
 
-        user_data = {
+        user1_data = {
             "username": "vitas",
             "email": "vitas@iAmGreat.com",
             "password": "VitasIsAwesome",
             "confirm_password": "VitasIsAwesome"
         }
-
-        response = self.client.post(self.url, user_data)
-        self.assertEqual(201, response.status_code)
-
-        user_data = {
+        user2_data = {
             "username": "Reanu_Reves",
             "email": "vitas@iAmGreat.com",
             "password": "cyberpunk2077",
             "confirm_password": "cyberpunk2077"
         }
-
-        response = self.client.post(self.url, user_data)
-        self.assertEqual(400, response.status_code)
+        response = self.client.post(self.url, user1_data)
+        self.assertEqual(201, response.status_code)
+        with self.assertRaises(IntegrityError):
+            response = self.client.post(self.url, user2_data)
+        
 
     def test_unique_username_validation(self):
         """
