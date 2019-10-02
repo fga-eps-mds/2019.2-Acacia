@@ -21,6 +21,7 @@
 | 19/09/2019 | 1.3 | Ajuste do diagrama de classes | Hugo Sobral e Renato Britto |
 | 20/09/2019 | 1.4 | Ajuste dos diagramas de banco  | Flavio Vieira |
 | 01/10/2019 | 1.5 | Refatoração dos requisitos do projeto  | Durval Carvalho |
+| 02/10/2019 | 1.6 | Revisão | Durval Carvalho |
 
 ## 1. Introdução
 
@@ -36,11 +37,11 @@ dessa arquitetura.
 
 ### 1.2 Escopo
 
-Esse documento aplica-se ao projeto <Nome do Projeto>, um 
-sistema que será desenvolvido pelos alunos das disciplinas 
-Métodos de Desenvolvimento de Software e Engenharia de 
-Produto de Software, da Universidade de Brasília - Campus 
-Gama.
+Esse documento aplica-se ao projeto Acácia, um sistema que incentiva a 
+agricultura urbana e a formação de comunidades de suporte.
+Esse projeto será desenvolvido pelos alunos das disciplinas Métodos de 
+Desenvolvimento de Software e Engenharia de Produto de Software, da 
+Universidade de Brasília - Campus Gama.
 
 ### 1.3 Definições, Acrônimos e Abreviações
 
@@ -265,7 +266,6 @@ Esse diagrama expõe os seguintes requisitos:
 - RF11: Disponibilizar os dados das colheitas para todos os interessados.
 - RF12: Mostrar calendários de colheitas.
 - RF13: Suporte para principais navegadores web modernos, com enfâse ao ambiente mobile.
-
 - RNF15: O ambiente de produção deve ser configurado de modo que sempre contenha uma versão testada e estável
 - RNF16: O ambiente de homologação deve ser configurado de modo que as versões mais recentes sejam testada
 - RNF17: A aplicação deve possuir mecanismos que permitem a acessibilidade de diversos grupos de usuários
@@ -389,7 +389,6 @@ O resultado desse passos são descritos abaixo.
 * USER
 	* VOLUNTEER
 	* OWNER
-	* ADMINISTRADOR
 * PROPERTY
 * HARVERST
 * TREE
@@ -479,10 +478,10 @@ Um **colheita** pode ser doada para vários **beneficiários**, e um
 **Cardinalidade: N:M**
 
 #### 6.2.3 Diagrama Entidade-Relacionamento
-![](img/diagrama_entidade_relacionamento2.png)
+![](img/diagrama_entidade_relacionamento.png)
 
 #### 6.2.4 Diagrama Lógico de Dados
-![](img/diagrama_logico_de_dados2.png)
+![](img/diagrama_logico_de_dados.png)
 
 ## Referências
 
