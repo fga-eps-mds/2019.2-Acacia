@@ -23,6 +23,7 @@
 | 01/10/2019 | 1.5 | Refatoração dos requisitos do projeto  | Durval Carvalho |
 | 02/10/2019 | 1.6 | Revisão | Durval Carvalho |
 
+
 ## 1. Introdução
 
 ### 1.1 Objetivo
@@ -54,8 +55,6 @@ Universidade de Brasília - Campus Gama.
 | DRF | Django Rest Framework |
 | MTV | Model Template View |
 | MVC | Model View Controller |
-| RF  | Requisito Funcional |
-| RNF | Requisito Não Funcional |
 
 ## 2. Representação arquitetural
 
@@ -188,62 +187,44 @@ suficientemente testadas.
 
 Segue a lista de casos de uso:
 
-- Autenticação de usuário
-- Criar conta
-- Apagar conta
-- Atualizar dados da conta
-- Visualizar painel do usuário (colheitas inscritas, total já coletado)
-- Criar colheitas
-- Atualizar dados colheitas
-- Apagar colheitas
-- Visualizar todas as colheitas registradas
-- Selecionar líder para colheitas
+- Autenticar
+- Gerenciar perfil
+- Selecionar líder
+- Acessar chat
 - Voluntariar-se para colheita
-- Ver lista de voluntários de uma colheita
-- Selecionar voluntários para colheita
+- Ver lista de voluntários
+- Selecionar voluntários
 - Aprovar colheita
+- Registrar colheita
+- Registrar árvore
+- Registrar propriedade
 - Ver listas de colheitas
 - Ver dados de colheitas
-- Registrar árvore
-- Atualizar dados da árvore
-- Apagar árvore
-- Registrar propriedade
-- Apagar propriedade
-- Atualizar dados da propriedade
-- Visualizar calendário de eventos
+- Registrar conta
+- Visualizar calendário
 - Registrar resultado da colheita
-- Visualizar dados gerais da plataforma
 
 ### 4.1 Atores
 
 #### 4.1.1 Não logado
 
-Usuário do sistema que tem acesso as informações da plataforma e das colheitas, 
-tendo acesso apenas as visualizações de cada página, não podendo usufruir das 
-funcionalidades que a página disponibiliza, sendo assim, um usuário passivo no 
-fluxo da aplicação.
+Usuário do sistema que tem acesso as informações da plataforma e das colheitas, tendo acesso apenas as visualizações de cada página, não podendo usufruir das funcionalidades que a página disponibiliza, sendo assim, um usuário passivo no fluxo da aplicação.
 
 #### 4.1.2 Voluntário
 
-Usuário do sistema capaz participar de colheitas por meio da plataforma, que 
-também disponibiliza um chat de conversa com seu grupo voluntário, onde o mesmo 
-também pode gerenciar seu perfil.
+Usuário do sistema capaz participar de colheitas por meio da plataforma, que também disponibiliza um chat de conversa com seu grupo voluntário, onde o mesmo também pode gerenciar seu perfil.
 
 #### 4.1.3 Proprietário
 
-Usuário do sistema com poder de registrar propriedade, árvore e colheita, para 
-os voluntários poderem participar. O mesmo é um grande pilar no fluxo de 
-funcionamento do site, onde sem suas informações, não haveria colheita. 
+Usuário do sistema com poder de registrar propriedade, árvore e colheita, para os voluntários poderem participar. O mesmo é um grande pilar no fluxo de funcionamento do site, onde sem suas informações, não haveria colheita. 
 
 #### 4.1.4 Líder
 
-Usuário do sistema capaz de liderar as colheitas e acesso dos voluntários a 
-esse processo, ele é o intermédio entre o proprietário e o voluntário.
+Usuário do sistema capaz de liderar as colheitas e acesso dos voluntários a esse processo, ele é o intermédio entre o proprietário e o voluntário.
 
 #### 4.1.5 Gerente de colheita
 
-Usuário do sistema capaz de gerir e supervisionar as atividades dos líderes 
-nesse processo.
+Usuário do sistema capaz de gerir e supervisionar as atividades dos líderes nesse processo.
 
 ### 4.2 Diagrama de caso de uso
 
@@ -252,6 +233,7 @@ nesse processo.
 ### 4.3 Prioridade dos casos de uso
 
 Esse diagrama expõe os seguintes requisitos: 
+
 
 - RF01: Permitir que o usuário crie, edite, faça login e apague sua conta.
 - RF02: Permitir que o usuário visualize o histórico de colheitas que participou.
@@ -270,6 +252,13 @@ Esse diagrama expõe os seguintes requisitos:
 - RNF16: O ambiente de homologação deve ser configurado de modo que as versões mais recentes sejam testada
 - RNF17: A aplicação deve possuir mecanismos que permitem a acessibilidade de diversos grupos de usuários
 - RNF18: A aplicação deve possuir mecanismos que internacionalização de modo que a linguagem do site possa ser configurado pelo usuário
+- RF01: Permitir que o usuário faça cadastro e autenticação.
+- RF03: Permitir cadastro de árvores, propriedades e colheitas.
+- RF04: Permitir usuários se candidatar a colheita.
+- RF05: Habilitar comunicação entre envolvidos em colheita (voluntários, líderes e proprietários). 
+- RF08: Prover à líderes a possiblidade de escolher voluntários cadastrados em colheita.
+- RF09: Mostrar dados à respeito de colheitas realizadas de forma transparente.
+
 
 ## 5. Visão Lógica
 
@@ -298,7 +287,7 @@ respeitando as regras de interface REST.
 
 Uma vez que o servidor receba a solicitação do cliente, será preciso 
 interpretar o request com base na URL e no método HTTP utilizado. Essa 
-computação é realizada no módulo <i>URL Dispatcher</i>, onde é mapeado 
+conputação é realizada no módulo <i>URL Dispatcher</i>, onde é mapeado 
 para <i>endpoint</i> da aplicação com o módulo que possui as informações 
 solicitadas.
 
@@ -332,7 +321,7 @@ os dados requisitados. Tudo isso em questões de microsegundos.
 ### 5.2 Diagrama de pacotes
 
 <p align="center">
-	<img src="img/diagrama_de_pacotes.jpg">
+	<img src="img/diagrama_de_pacotes.svg">
 </p>
 
 ## 6. Visão de implementação
@@ -347,30 +336,28 @@ a estrutura do projeto Acácia em nível macro e auxiliar no entendimento
 do escopo. Durante o processo de desenvolvimento do documento a Linguagem 
 de Modelagem Unificada (UML) foi utilizada. 
 
-![](img/class_diagram.png)
+![](img/diagrama_de_classes.svg)
 
 
 Vale ressaltar a existência de dois aspectos que influenciaram diretamente na
-concepção do diagrama de classes, estas são as **relações do framework Django 
-Rest**, utilizadas para a serialização dos dados das classes, e o **padrão de 
-design State**, usado para designar diferentes comportamentos para o usuário da 
-aplicação.
+concepção do diagrama de classes, estas são as **relações do framework Django Rest**,
+utilizadas para a serialização dos dados das classes, e o **padrão de design State**,
+usado para designar diferentes comportamentos para o usuário da aplicação.
 
 Sobre a classe de usuário da aplicação, o grupo de desenvolvimento do projeto
-observou na model **User**, já implementada dentro do Django Rest Framework, 
-uma oportunidade de utilização de conteúdo pronto e adaptá-lo ao contexto do 
-projeto.
+observou na model **User**, já implementada dentro do Django Rest Framework, uma 
+oportunidade de utilização de conteúdo pronto e adaptá-lo ao contexto do projeto.
 Portanto, os usuários do aplicativo Acácia herdam da classe User do Django.
 
-O padrão de design **State** surgiu como uma solução para o problema das 
-diferentes permissões, baseadas em diferentes papeis, que um usuário pode 
-assumir dentro da aplicação. Considerando que um mesmo usuário pode ser tanto 
-um voluntário, quanto um líder e em outro momento ter o comportamento de 
-proprietário, a equipe passou a enfrentar a problemática das permissões de um 
-mesmo usuário. Desta forma, o State soluciona esta problemática.
+O padrão de design **State** surgiu como uma solução para o problema das diferentes
+permissões, baseadas em diferentes papeis, que um usuário pode assumir dentro da 
+aplicação. Considerando que um mesmo usuário pode ser tanto um voluntário, quanto um 
+líder e em outro momento ter o comportamento de proprietário, a equipe passou a 
+enfrentar a problemática das permissões de um mesmo usuário. Desta forma, o State
+soluciona esta problemática.
 
-Os **serializers** presentes dentro do diagrama possuem a função de tratar as 
-informações das models e serializá-las, ou desserializá-las.
+Os **serializers** presentes dentro do diagrama possuem a função de tratar as informações
+das models e serializá-las, ou desserializá-las.
 
 ### 6.2 Banco de Dados
 

@@ -10,6 +10,7 @@
 * [Guia de Estilo e Identidade Visual](style_guide.md)
 * [Protótipo](prototype.md)
 * [Canvas](canvas.md)
+* [Roadmap do Produto](product_roadmap.md)
 
 # Viabilidade técnica
 * [Viabilidade das tecnologias](architecture_techonologies.md)
