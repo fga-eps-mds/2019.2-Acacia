@@ -328,7 +328,7 @@ Lista de requisitos
 | Identificador | Requisito                                                                                 | Depende de    | Prioridade        |
 | :-    | :-                                                                                                | :-            | :-                |
 | RF01  | Permitir que o usuário crie, edite, faça login e apague sua conta                                 | ---           | Alta              |
-| RF02  | Permitir que o usuário visualize o histórico de colheitas que participou                          | RF01          | Baixa             |
+| RF02  | Permitir que o usuário visualize o histórico de colheitas que participou                          | RF01, RF08    | Baixa             |
 | RF03  | Permitir usuários se candidate a uma colheita                                                     | RF01, RF08    | Alta              |
 | RF04  | Permitir a seleção de usuários inscritos para uma colheita                                        | RF01, RF08    | Alta              |
 | RF05  | Mostar a lista de voluntários selecionados para uma colheita                                      | RF01, RF08    | Alta              |
@@ -340,7 +340,6 @@ Lista de requisitos
 | RF11  | Disponibilizar os dados das colheitas para todos os interessados                                  | RF08          | Intermediária     |
 | RF12  | Mostrar calendários de colheitas                                                                  | RF08          | Alta              |
 | RF13  | Suporte para principais navegadores web modernos, com enfâse ao ambiente mobile                   | ---           | Alta              |
-
 | RNF14 | O desenvolvimento deve ser em curtos ciclos e a entrega deve ser contínua                                                      | --- | Alta  |
 | RNF15 | O ambiente de produção deve ser configurado de modo que sempre contenha uma versão testada e estável                           | --- | Alta  |
 | RNF16 | O ambiente de homologação deve ser configurado de modo que as versões mais recentes sejam testada                              | --- | Alta  |
