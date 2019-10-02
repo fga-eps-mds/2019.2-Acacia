@@ -16,6 +16,7 @@
 | 05/09/2019 | 0.8.3 | Revisão do escopo | Durval Carvalho |
 | 06/09/2019 | 0.8.4 | Revisão de perspectiva de produto e requisitos | Renato Britto Araujo |
 | 06/09/2019 | 0.8.5 | Revisão de restrições | Leonardo da Silva Gomes |
+| 01/10/2019 | 1.0   | Refatoração dos requisitos do projeto  | Durval Carvalho |
 
 ## **1. Introdução**
 
@@ -53,6 +54,8 @@ público interessado no projeto
 | EPS | Engenharia de Produto de <i>Software</i> | 
 | FGA | Faculdade do Gama | 
 | UnB | Universidade de Brasília | 
+| RF  | Requisito Funcional |
+| RNF  | Requisito Não Funcional |
 
 ## **2. Posicionamento**
 
@@ -194,7 +197,19 @@ serão descontinuadas, como o Python 2.7.
  
 ### 4.1 Perspectiva do Produto
  
-O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas urbanas, fomentando a agricultura urbana e a agroecologia que interfere fortemente em vários aspectos sociais e econômicos. Assim, utilizamos da relação entre proprietários de árvores frutíferas em ambiente urbano, voluntários para colheita e locais que possam receber doações destas frutas, para a diminuição de desperdício de comida, aumento do acesso a comida saudável e colaboração comunitária (socialização) acarretando na diminuição de transtornos mentais e fortalecimento de culturas locais. O produto é baseado em um sistema já existente,  o [Saskatoon](https://github.com/tiagovaz/saskatoon) utilizado pelo coletivo [LES FRUITS DÉFENDUS](https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/) em Montreal, uma iniciativa da organização [Santropol Roulant](https://santropolroulant.org/en/history/).
+O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas 
+urbanas, fomentando a agricultura urbana e a agroecologia que interfere 
+fortemente em vários aspectos sociais e econômicos. Assim, utilizamos da 
+relação entre proprietários de árvores frutíferas em ambiente urbano, 
+voluntários para colheita e locais que possam receber doações destas frutas, 
+para a diminuição de desperdício de comida, aumento do acesso a comida saudável 
+e colaboração comunitária (socialização) acarretando na diminuição de 
+transtornos mentais e fortalecimento de culturas locais. O produto é baseado 
+em um sistema já existente,  o 
+[Saskatoon](https://github.com/tiagovaz/saskatoon) utilizado pelo coletivo 
+[LES FRUITS DÉFENDUS](https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/) 
+em Montreal, uma iniciativa da organização 
+[Santropol Roulant](https://santropolroulant.org/en/history/).
  
 ### 4.2 Resumo das capacidades
  
@@ -206,48 +221,51 @@ O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas
  
 ### 4.3 Funções do Produto
  
-O projeto está encarregado de ser o conectivo entre os proprietários de árvores e os voluntários, facilitando o processo de colaboração. A plataforma agrega diversas funcionalidades como cadastro, gerenciamento,  inscrição no projeto, etc.
+O projeto está encarregado de ser o conectivo entre os proprietários de árvores 
+e os voluntários, facilitando o processo de colaboração. A plataforma agrega 
+diversas funcionalidades como cadastro, gerenciamento,  inscrição no projeto, 
+etc.
  
 ### 4.4 Suposições e dependências
  
-- O usuário deverá possuir um celular ou um computador com acesso à internet para acessar a aplicação.
+- O usuário deverá possuir um celular ou um computador com acesso à internet 
+para acessar a aplicação.
  
-- A aplicação web responsiva será utilizada por pessoas que desejam se voluntariar e pessoas que querem ajudar na colheita de seus frutos.
+- A aplicação web responsiva será utilizada por pessoas que desejam se 
+voluntariar e pessoas que querem ajudar na colheita de seus frutos.
  
-- A aplicação web responsiva irá facilitar a comunicação entre proprietário da árvore frutífera e o voluntário.
+- A aplicação web responsiva irá facilitar a comunicação entre proprietário da 
+árvore frutífera e o voluntário.
 
 ## **5. Recursos do Produto**
 
 ### 5.1 Recursos de suporte ao voluntário
 
 Os voluntários interessados no projeto podem se cadastrar na 
-plataforma. Quando logados terão acesso aos seguintes recursos: 
+plataforma. Quando logados poderão: 
 
-* Histórico de colheitas que participaram.
-* Organizações ou pessoas que foram beneficiadas com os alimentos coletados na colheita em que o voluntário estava presente.
-* Próximas colheitas que podem se voluntariar.
+* Acessar o histórico de colheitas que participaram.
+* Visualizar as organizações ou pessoas que foram beneficiadas com os 
+alimentos coletados na colheita em que o voluntário estava presente.
 * Vincular-se a uma colheita cadastrada.
-
-Quando um voluntário é escolhido para participar como líder em colheita, terá oportunidade de:
-
-* Comunicar-se de forma eficiente com líderes, proprietários e outros voluntários participantes da mesma colheita.
-* Candidatar-se a líder em colheitas que ainda não possuem um.
 
 ### 5.2 Recursos de suporte ao líder
 
-O voluntário que se candidatam à posição de líder e é aceito pelo proprietário podem:
+O voluntário que se candidatam à posição de líder e é aceito pelo 
+proprietário podem:
 
 * Escolher voluntários dentre a lista de candidatos para participar da colheita.
-* Coordenar de forma eficiente e concisa os voluntários por meios de chats gerais e sistema de avisos e regras gerais. 
+* Editar o campo de observação da colheita.
 
 ### 5.3 Recursos de suporte ao proprietário
 
 Os proprietários de árvores frutíferas locais que tiverem interesse no 
 projeto podem se cadastrar na plataforma. Quando logados terão acesso ao:
 
-* Cadastro de plantações disponível para colheita.
+* Cadastro de plantações para colheita.
 * Histórico de colheitas realizadas em suas propriedades.
-* Organizações ou pessoas que foram beneficiadas com os alimentos coletados em sua propriedade.
+* Organizações ou pessoas que foram beneficiadas com os alimentos coletados em 
+sua propriedade.
 * Escolha do líder de colheita dentre os voluntários (incluindo escolher a si).
 
 ### 5.4 Disponibilizar os resultados das últimas colheitas
@@ -307,19 +325,27 @@ Lista de categorias de prioridades para requisitos
 
 Lista de requisitos
 
-| Identificador | Requisito | Depende de | Prioridade |
-| :- | :- | :- | :- |
-| RF01 | Permitir que o usuário faça cadastro e autenticação | --- | Alta |
-| RF02 | Permitir que o voluntário visualize o histórico de colheitas que participou | RF01 | Intermediária |
-| RF03 | Permitir cadastro de árvores, propriedades e colheitas | RF01 | Alta |
-| RF04 | Permitir usuários a se candidatar a ser voluntário em colehita | RF01, RF03 | Alta |
-| RF05 | Habilitar comunicação entre envolvidos em colheita (voluntários, líderes e proprietários) | RF03 | Intermediária |
-| RF06 | Mostrar colheitas registradas, com enfâse às que acontecerão no futuro | RF03 | Alta |
-| RF07 | Mostrar perfis e histórico de usuários | RF01 | Baixa |
-| RF08 | Prover à líderes a possiblidade de escolher voluntários cadastrados em colheita | RF03, RF04 | Alta |
-| RF08 | Suportar para principais navegadores web atuais, com enfâse ao ambiente mobile | --- | Intermediária |
-| RF09 | Mostrar dados à respeito de colheitas realizadas de forma transparente | RF03 | Baixa |
-| RF10 | Prover segurança com os dados dos usuários cadastrados | --- | Baixa |
+| Identificador | Requisito                                                                                 | Depende de    | Prioridade        |
+| :-    | :-                                                                                                | :-            | :-                |
+| RF01  | Permitir que o usuário crie, edite, faça login e apague sua conta                                 | ---           | Alta              |
+| RF02  | Permitir que o usuário visualize o histórico de colheitas que participou                          | RF01          | Baixa             |
+| RF03  | Permitir usuários se candidate a uma colheita                                                     | RF01, RF08    | Alta              |
+| RF04  | Permitir a seleção de usuários inscritos para uma colheita                                        | RF01, RF08    | Alta              |
+| RF05  | Mostar a lista de voluntários selecionados para uma colheita                                      | RF01, RF08    | Alta              |
+| RNF06 | Assegurar a segurança de dados dos usuários                                                       | RF01          | Alta              |
+| RF07  | Exibir notificações sobre atualizações nos eventos inscritos pelos usuários                       | RF01, RF08    | Baixa             |
+| RF08  | Permitir o cadastro, atualizao e exclusão de árvores, propriedades e colheitas                    | RF01          | Alta              |
+| RF09  | Permitir a visualização dos dados das árvores, propriedades e colheitas para todos os usuários    | RF01          | Intermediária     |
+| RF10  | Mostrar colheitas registradas, com enfâse às que acontecerão no futuro                            | RF08          | Alta              |
+| RF11  | Disponibilizar os dados das colheitas para todos os interessados                                  | RF08          | Intermediária     |
+| RF12  | Mostrar calendários de colheitas                                                                  | RF08          | Alta              |
+| RF13  | Suporte para principais navegadores web modernos, com enfâse ao ambiente mobile                   | ---           | Alta              |
+
+| RNF14 | O desenvolvimento deve ser em curtos ciclos e a entrega deve ser contínua                                                      | --- | Alta  |
+| RNF15 | O ambiente de produção deve ser configurado de modo que sempre contenha uma versão testada e estável                           | --- | Alta  |
+| RNF16 | O ambiente de homologação deve ser configurado de modo que as versões mais recentes sejam testada                              | --- | Alta  |
+| RNF17 | A aplicação deve possuir mecanismos que permitem a acessibilidade de diversos grupos de usuários                               | --- | Baixa  |
+| RNF18 | A aplicação deve possuir mecanismos que internacionalização de modo que a linguagem do site possa ser configurado pelo usuário | --- | Baixa  |
 
 ## Referências
 - Texto descritivo sobre a estrutura e objetivo dos tópicos do documento de visão. https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html. Acesso em 02 de setembro de 2019
