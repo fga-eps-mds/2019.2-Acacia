@@ -34,6 +34,8 @@ ID | Descrição | Estimativa | Label
 
 Segundo a equipe a qualidade entregue foi de 3.9 considerando a escala de likert com os valores de 1 a 5.
 
+<img src="img/review_quality4.png">
+
 ## Velocity
 
 ![eap](img/velocity4.png)
@@ -74,6 +76,9 @@ Segundo a equipe a qualidade entregue foi de 3.9 considerando a escala de likert
 # Quadro de Conhecimento
 ![quadro](img/.png)
 
+# Squad Health Check
+
+# da Scrum Master
 
 
  
