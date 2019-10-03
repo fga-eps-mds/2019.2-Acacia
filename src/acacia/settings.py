@@ -14,6 +14,8 @@ import os
 from scripts.wait_for_db import start_services
 from django.utils.translation import ugettext_lazy as _
 
+from .wait_db import start_services
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # libs
+    'phonenumber_field',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
@@ -92,6 +95,7 @@ DATABASES = {
     }
 }
 
+# STARTS SERVICES THAT DJANGO DEPENDS E.G. postgres
 start_services()
 
 LANGUAGES = (
@@ -145,6 +149,8 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ]
 }
+
+# CORS headers to responses
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:8080",
