@@ -33,7 +33,7 @@ do escopo e diminuir os riscos envolvidos.
 ### 1.1 Escopo
 
 Esse projeto tem como objetivo desenvolver uma aplicaçao web responsiva com a 
-finlidade de conectar proprietários de árvores frutíferas em ambiente urbano e 
+finalidade de conectar proprietários de árvores frutíferas em ambiente urbano e 
 colheitores voluntários, visando a disponibilização de parte do resultado das 
 colheitas à instituições e projetos carentes de recursos e fomentar a união 
 comunitária. 
@@ -297,7 +297,7 @@ inexperiência com o framework Django, além de possíveis
 transtornos entre a equipe de desenvolvimento e de gerência.
 
 ### 6.3 Restrições de Design
-Toda da interação com o software deve ocorrer de forma natural, de modo que o 
+Toda a interação com o software deve ocorrer de forma natural, de modo que o 
 usuário não fique com dúvidas sobre como realizar determinada tarefa. Os 
 recursos cujos usuários tem acesso devem ser de fácil entendimento, de modo 
 que o usuário não desista durante alguma ação. Com a finalidade de alcançar um 
