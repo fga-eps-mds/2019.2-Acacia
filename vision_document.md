@@ -16,6 +16,8 @@
 | 05/09/2019 | 0.8.3 | Revisão do escopo | Durval Carvalho |
 | 06/09/2019 | 0.8.4 | Revisão de perspectiva de produto e requisitos | Renato Britto Araujo |
 | 06/09/2019 | 0.8.5 | Revisão de restrições | Leonardo da Silva Gomes |
+| 01/10/2019 | 1.0   | Refatoração dos requisitos do projeto  | Durval Carvalho |
+| 02/10/2019 | 1.1   | Revisão | Durval Carvalho |
 
 ## **1. Introdução**
 
@@ -31,8 +33,10 @@ do escopo e diminuir os riscos envolvidos.
 ### 1.1 Escopo
 
 Esse projeto tem como objetivo desenvolver uma aplicaçao web responsiva com a 
-finlidade de conectar proprietários de árvores frutíferas em ambiente urbano e colheitores voluntários, visando a 
-disponibilização de parte do resultado das colheitas à instituições e projetos carentes de recursos e fomentar a união comunitária. 
+finalidade de conectar proprietários de árvores frutíferas em ambiente urbano e 
+colheitores voluntários, visando a disponibilização de parte do resultado das 
+colheitas à instituições e projetos carentes de recursos e fomentar a união 
+comunitária. 
 
 Desse modo, aumentando o consumo de alimentos orgânicos produzidos 
 localmente, assim diminuindo o desperdício de alimentos e fortalecendo a 
@@ -111,7 +115,7 @@ produto criado.
 
 | Nome | Descrição |
 | :--- | :-------- |
-| Beneficiários | Instituições recebedoras de doações da colheita |
+| Beneficiários | Instituições e pessoas recebedoras de doações da colheita |
 | Líderes de colheita | Escolhe e gerencia voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> |
 | Proprietários de árvores | Cadastram sua(s) proriedade(s) e suas respectivas árvores, candidatam terreno para colheita voluntária com a condição de doar parte dos frutos para a <i>Les Fruits Défendus</i> |
 | Voluntários de colheita | Se candidatam a participar de colheitas |
@@ -223,10 +227,10 @@ O projeto está encarregado de ser o conectivo entre os proprietários de árvor
 Os voluntários interessados no projeto podem se cadastrar na 
 plataforma. Quando logados terão acesso aos seguintes recursos: 
 
-* Histórico de colheitas que participaram.
-* Organizações ou pessoas que foram beneficiadas com os alimentos coletados na colheita em que o voluntário estava presente.
-* Próximas colheitas que podem se voluntariar.
 * Vincular-se a uma colheita cadastrada.
+* Acessar o histórico de colheitas que participaram.
+* Visualizar as organizações ou pessoas que foram beneficiadas com os 
+alimentos coletados na colheita em que o voluntário estava presente.
 
 Quando um voluntário é escolhido para participar como líder em colheita, terá oportunidade de:
 
@@ -257,21 +261,24 @@ informação. Nessa parte da aplicação não será necessário autenticação d
 usuário e qualquer pessoa terá acesso aos dados das últimas colheitas, o 
 destino dos frutos colhidos e informações sobre o projeto.
 
-### 5.5 Enviar email para grupos cadastrados
+### 5.5 Enviar notificações para grupos cadastrados
  
-A aplicação poderá enviar email para os usuários de acordo com as atividades 
-que estão se aproximando. Esses emails serão enviados automaticamente de 
-acordo com o contexto do usuário. Esses emails são:
+A aplicação poderá enviar notificações para os usuários de acordo com as 
+atividades que estão se aproximando. Essas notificações serão enviadas 
+automaticamente de acordo com o contexto do usuário. As notificações são:
 
 5.4.1 Para os proprietários
 * Sua plantação atingiu o número de voluntários necessários
 * Sua plantação não atingiu o número de voluntários necessários
 * A data de colheita está próxima
+* Sua colheita foi bem sucedida
 
 5.4.2 Para os voluntários
+* Você foi aceito para essa colheita
 * A colheita que você está escrito atingiu o número de voluntários necessários
 * A colheita que você está escrito não atingiu o número de voluntários necessários
 * A colheita que você está escrito está próxima
+* Sua colheita foi bem sucedida
 
 ## **6. Restrições**
 
@@ -290,10 +297,17 @@ inexperiência com o framework Django, além de possíveis
 transtornos entre a equipe de desenvolvimento e de gerência.
 
 ### 6.3 Restrições de Design
-Toda da interação com o software deve ocorrer de forma natural, de modo que o usuário não fique com dúvidas sobre como realizar determinada tarefa. Os recursos cujos usuários tem acesso devem ser de fácil entendimento, de modo que o usuário não desista durante alguma ação. Com a finalidade de alcançar um público maior, a aplicação será desenvolvida tanto para usuários web quanto mobile.
+Toda a interação com o software deve ocorrer de forma natural, de modo que o 
+usuário não fique com dúvidas sobre como realizar determinada tarefa. Os 
+recursos cujos usuários tem acesso devem ser de fácil entendimento, de modo 
+que o usuário não desista durante alguma ação. Com a finalidade de alcançar um 
+público maior, a aplicação será desenvolvida tanto para usuários web quanto 
+mobile.
 
 ### 6.4 Restrições de Confiabilidade
-Visando uma maior mantenabilidade do projeto pela comunidade open source, tem o comprometimento de manter uma cobertura de testes de no mínimo 90%.
+Visando uma maior mantenabilidade do projeto pela comunidade, os 
+desenvolvedores tem o comprometimento de manter uma cobertura de testes mínima 
+de 90%.
 
 ## **7. Requisitos do Produto**
 
