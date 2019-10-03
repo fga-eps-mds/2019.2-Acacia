@@ -30,7 +30,7 @@ Os protótipos a seguir foram desenvolvidos a partir de vários outros criados p
 - [Versão 3](https://github.com/fga-eps-mds/2019.2-TimeBolinho/issues/18#issuecomment-530608104)
 
 ### 2.1 Fluxo de usuário
-![Fluxo de usuário](img/LowFidelityPrototype.png)
+![Fluxo de usuário](img/identidade/LowFidelityPrototype.png)
 
 ### 2.2 Telas
 
@@ -54,9 +54,9 @@ Esta é a tela responsável por mostrar ao usuário, as colheitas que foram cada
 
 Os resultados das reuniões e discussões acerca das telas da aplicação estão contidos nos próximos desenhos, feitos em papel.
 
-![LowFidelityScreen1](img/LowFidelityPrototypeScreens_1.png)
+![LowFidelityScreen1](img/identidade/LowFidelityPrototypeScreens_1.png)
 
-![LowFidelityScreen2](img/LowFidelityPrototypeScreens_2.png)
+![LowFidelityScreen2](img/identidade/LowFidelityPrototypeScreens_2.png)
 
 
 

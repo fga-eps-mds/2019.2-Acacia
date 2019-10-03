@@ -1,4 +1,4 @@
-<p align="center">  <img src="img/wordmark_1.svg" width="400"></p>
+<p align="center">  <img src="img/identidade/wordmark_1.svg" width="400"></p>
 
 <h1 class="display-1 sub-title2">Visão geral</h1>
 
@@ -58,7 +58,7 @@ Para instalar a camada front-end da aplicação basta seguir os passos de instal
 <div class="container">
   <div class="row">
     <div class="col-sm container-img">
-        <img src="shay.jpeg" alt="..." class="img-thumbnail image">
+        <img src="img/team/durval.jpg" alt="..." class="img-thumbnail image">
             <div class="middle">
               <div class="text">
                 Durval Carvalho
@@ -66,7 +66,7 @@ Para instalar a camada front-end da aplicação basta seguir os passos de instal
             </div>
     </div>
     <div class="col-sm container-img">
-      <img src="shay.jpeg" alt="..." class="img-thumbnail image">    
+      <img src="img/team/fabiola.jpg" alt="..." class="img-thumbnail image">    
           <div class="middle">
             <div class="text">
               Fabíola Malta
@@ -74,7 +74,7 @@ Para instalar a camada front-end da aplicação basta seguir os passos de instal
           </div>
     </div>
     <div class="col-sm container-img">
-      <img src="shay.jpeg" alt="..." class="img-thumbnail image">
+      <img src="img/team/flavio.jpg" alt="..." class="img-thumbnail image">
         <div class="middle">
           <div class="text">
             Flávio Vieira
@@ -82,7 +82,7 @@ Para instalar a camada front-end da aplicação basta seguir os passos de instal
         </div>
     </div>
     <div class="col-sm container-img">
-      <img src="shay.jpeg" alt="..." class="img-thumbnail image">
+      <img src="img/team/hugo.jpg" alt="..." class="img-thumbnail image">
         <div class="middle">
           <div class="text">
             Hugo Sobral
@@ -90,7 +90,7 @@ Para instalar a camada front-end da aplicação basta seguir os passos de instal
         </div>
     </div>
     <div class="col-sm container-img">
-      <img src="shay.jpeg" alt="..." class="img-thumbnail image">
+      <img src="img/team/joao.jpg" alt="..." class="img-thumbnail image">
         <div class="middle">
           <div class="text">
             João Pedro
@@ -100,7 +100,7 @@ Para instalar a camada front-end da aplicação basta seguir os passos de instal
   </div>
   <div class="row">
     <div class="col-sm container-img">
-        <img src="shay.jpeg" alt="..." class="img-thumbnail image">
+        <img src="img/team/leonardo.jpg" alt="..." class="img-thumbnail image">
             <div class="middle">
               <div class="text">
                 Leonardo Silva
@@ -108,7 +108,7 @@ Para instalar a camada front-end da aplicação basta seguir os passos de instal
             </div>
     </div>
     <div class="col-sm container-img">
-      <img src="shay.jpeg" alt="..." class="img-thumbnail image">    
+      <img src="img/team/martha.jpg" alt="..." class="img-thumbnail image">    
           <div class="middle">
             <div class="text">
               Martha Dantas
@@ -116,7 +116,7 @@ Para instalar a camada front-end da aplicação basta seguir os passos de instal
           </div>
     </div>
     <div class="col-sm container-img">
-      <img src="shay.jpeg" alt="..." class="img-thumbnail image">
+      <img src="img/team/renato.jpg" alt="..." class="img-thumbnail image">
         <div class="middle">
           <div class="text">
             Renato Brito
@@ -124,7 +124,7 @@ Para instalar a camada front-end da aplicação basta seguir os passos de instal
         </div>
     </div>
     <div class="col-sm container-img">
-      <img src="shay.jpeg" alt="..." class="img-thumbnail image">
+      <img src="img/team/shayane.jpeg" alt="..." class="img-thumbnail image">
         <div class="middle">
           <div class="text">
             Shayane Alcântara
@@ -132,7 +132,7 @@ Para instalar a camada front-end da aplicação basta seguir os passos de instal
         </div>
     </div>
     <div class="col-sm container-img">
-      <img src="shay.jpeg" alt="..." class="img-thumbnail image">
+      <img src="img/team/vitor.jpeg" alt="..." class="img-thumbnail image">
         <div class="middle">
           <div class="text">
             Vitor Cardoso

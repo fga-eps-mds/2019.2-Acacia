@@ -2,7 +2,7 @@
 <br>
 <br>
 
-<img src="logo.png" width="400" height="340">
+<img src="img/identidade/gitpages/gitpage_logo.png" width="400" height="340">
 
 <br>
 <br>
@@ -11,4 +11,4 @@
 
 [Conheça o projeto](README.md)
 
-![](background.png)
+![](img/identidade/gitpages/gitpage_background.png)
