@@ -24,10 +24,6 @@
   text-align: center;
 }
 
-.container-img:hover .image {
-  opacity: 0.3;
-}
-
 .container-img:hover .middle {
   opacity: 1;
 }
