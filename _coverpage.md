@@ -9,6 +9,6 @@
 
 <h1 class="title-home fadeIn" color="white"> Colheita colaborativa </h1>
 
-[Conheça o projeto](README.md)
+[Conheça o projeto](home.md)
 
 ![](img/identidade/gitpages/gitpage_background.png)
