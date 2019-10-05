@@ -1,0 +1,33 @@
+version: '3.7'
+
+volumes:
+  pgdata:
+
+services:
+
+  db:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  acacia-back:
+    container_name: acacia_backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c "
+      cd src/ &&
+      python manage.py makemigrations &&
+      python manage.py migrate &&
+      chmod +x scripts/create_superuser.sh &&
+      ./scripts/create_superuser.sh &&
+      python manage.py runserver 0.0.0.0:8080"
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

@@ -1,0 +1,8 @@
+Django==2.2.4
+djangorestframework==3.10
+django-phonenumber-field==3.0
+phonenumbers==8.10
+psycopg2==2.8.3
+django-cors-headers==3.1.0
+djangorestframework-simplejwt
+coverage

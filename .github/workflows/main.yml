@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+    - master
+    - release/*
+    - develop
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: Setup enviroment
+      run: docker-compose up -d --build
+    - name: Run tests
+      run: docker exec acacia_backend bash -c "cd src/ && coverage run manage.py test && coverage xml -o cov.xml"
+    - name: Upload coverage to Codecov  
+      uses: codecov/codecov-action@v1.0.2
+      with:
+        token: ${{secrets.CODECOV_TOKEN}}
+        file: ./src/cov.xml
+        flags: unittests
+        name: codecov-umbrella
