@@ -58,4 +58,3 @@ As principais metricas que utilizaremos em código são:
     - Teste unitário cobertura de 90%
     - CC - complexidade ciclomática 
     - LOC - linhas de código por método
-
