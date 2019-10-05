@@ -5,6 +5,7 @@
 | :- | :- | :- | :- |
 | 02/10/2019 | 0.1 | Adição do planejamento |  Fabíola |
 | 02/10/2019 | 0.2 | Adição da Retrospectiva e Revisão |  Shayane |
+| 05/10/2019 | 1.0 | Finalizando documento e arrumando imagens |  Martha Dantas |
 
 # Planning da Sprint 4
 
@@ -42,7 +43,7 @@ ID | Descrição | Estimativa | Label
 
 Segundo a equipe a qualidade entregue foi de 3.9 considerando a escala de likert com os valores de 1 a 5.
 
-![review e qualidade](../img/review_quality4.png)
+![review e qualidade](../img/review_quality4.jpg)
 
 ## Velocity
 
