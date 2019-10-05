@@ -6,7 +6,7 @@
 | Data   | Versão | Modificação  | Autor  |
 | :- | :- | :- | :- |
 | 04/09/2019 | 0.1 | Criação da versão inicial do documento | Fabíola |
-| 04/08/2019 | 0.2 | Atualização de custos e oportunidade de negócio | Fabíola |
+| 04/09/2019 | 0.2 | Atualização de custos e oportunidade de negócio | Fabíola |
 
 # 1. Introdução
 

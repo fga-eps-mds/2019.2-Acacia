@@ -52,7 +52,7 @@ Segundo a equipe a qualidade entregue foi de 3,67 considerando a escala de liker
 - Não utilizar papel na Review e Retrospectiva
 
 
-## Quadro de Conhecimento
+# Quadro de Conhecimento
 ![](../img/sprint1.jpg)
 
 
