@@ -20,26 +20,29 @@
 | 19/09/2019 | 1.2 | Adição de nova versão do diagrama de pacotes | Durval Carvalho e João Pedro |
 | 19/09/2019 | 1.3 | Ajuste do diagrama de classes | Hugo Sobral e Renato Britto |
 | 20/09/2019 | 1.4 | Ajuste dos diagramas de banco  | Flavio Vieira |
+| 01/10/2019 | 1.5 | Refatoração dos requisitos do projeto  | Durval Carvalho |
+| 02/10/2019 | 1.6 | Revisão | Durval Carvalho e João Pedro Silva de Carvalho|
+
 
 ## 1. Introdução
 
 ### 1.1 Objetivo
 Este documento oferece uma visão geral arquitetural do 
-sitema que será implementado, permitindo assim que os 
-envolvidos no projeto conheça como a aplicação será 
-subdivida e quais será a função de cada componente.
+sistema que será implementado, permitindo assim que os 
+envolvidos no projeto conheçam como a aplicação será 
+subdivida e quais serão as funções de cada componente.
 
 Outro objetivo desse documento é elucidar quais foram as 
-motivações que levaram a equipe a tomar decisões à respeito
+motivações que levaram a equipe a tomar decisões a respeito
 dessa arquitetura.
 
 ### 1.2 Escopo
 
-Esse documento aplica-se ao projeto <Nome do Projeto>, um 
-sistema que será desenvolvido pelos alunos das disciplinas 
-Métodos de Desenvolvimento de Software e Engenharia de 
-Produto de Software, da Universidade de Brasília - Campus 
-Gama.
+Esse documento aplica-se ao projeto Acácia, um sistema que incentiva a 
+agricultura urbana e a formação de comunidades de suporte.
+Esse projeto será desenvolvido pelos alunos das disciplinas Métodos de 
+Desenvolvimento de Software e Engenharia de Produto de Software, da 
+Universidade de Brasília - Campus Gama.
 
 ### 1.3 Definições, Acrônimos e Abreviações
 
@@ -64,8 +67,8 @@ APIs Rest de forma rápida e eficiente.
 REST é a abreviação do termo <i>Representational State 
 Transfer</i>, isto é, um conjunto de princípios e boas 
 práticas desenvolvido pelo pesquisador Roy Fielding, que 
-quando aplicados permite uma interface concisa que pode 
-ser utilizado por diversas outras aplicações.
+quando aplicados permitem uma interface concisa que pode 
+ser utilizada por diversas outras aplicações.
 
 Como explicado acima o DRF é um framework do framework 
 Django. Então primeiro explicaremos o motivo de termos 
@@ -94,10 +97,10 @@ A **Model** é a camada de acesso dos dados. Nessa camada contém
 as classes que abstraem os dados, as lógicas de validação, de 
 filtro e de acesso.
 
-O **View** é a camada da regras de negócios. Nessa camada será 
+O **View** é a camada das regras de negócios. Nessa camada será 
 implementada as restrições, o que um usuário pode ou não pode 
 fazer, e quais páginas eles tem acesso. É através dessa camada 
-que as requisições do usuário será gerenciada.
+que as requisições do usuário serão gerenciadas.
 
 Essa camada implementa algumas funções do Controller do padrão 
 MVC, porém o MTV se diferencia de MVC por ser mais permissivo
@@ -111,10 +114,10 @@ esses dados serão apresentados. O formato mais comum é o HTML.
 #### 2.2.3 Django REST
 Assim contextualizado, podemos falar sobre o Django REST.
 O Django REST possui diversos módulos embutidos que 
-facilita a implementação dos princípios e boas práticas 
+facilitam a implementação dos princípios e boas práticas 
 da arquitetura REST. 
 
-Um exemplo de facilidade é o fato de por padrão as rotas 
+Um exemplo de facilidade é o fato de que por padrão as rotas 
 dos recursos selecionados serem codificadas para 
 respeitar o padrão da arquitetura REST, assim não sendo 
 necessário escrever todas as 7 rotas do REST (index, new, 
@@ -123,7 +126,7 @@ create, show, edit, update e destroy).
 ### 2.2 Vue.js
 O Vue.js é um framework para a criação de interfaces para o 
 usuário. O Vue.js, desde a sua concepção, busca ser simples e 
-objetivo, o que o torna com uma baixa curva de aprendizagem, ou 
+objetivo, o que o deixa com uma baixa curva de aprendizagem, ou 
 seja, demora-se menos tempo para uma equipe aprender o Vue.js do 
 que outros frameworks. Além disso, o Vue.js, diferentemente do 
 Angular.js (mantido pela Google) e do React.js (mantido pelo 
@@ -133,14 +136,14 @@ desenvolve esse framework que são beneficiados com mais feedbacks
 possibilitando melhores atualizações.
 
 Os componentes do Vue.js são uma ferramenta importante. 
-O funcionamento dele se baseia que o desenvolvedor pode separar a 
-página em componentes quem possuem, cada um, seu próprio código em 
+O funcionamento dele se baseia no desenvolvedor poder separar a 
+página em componentes que possuem, cada um, seu próprio código em 
 JavaScript, HTML e CSS, permitindo assim a reutilização dessas 
 estruturas em outras partes da aplicação.
 
 Uma das características mais distintas do Vue é seu sistema de 
 reatividade não obstrusivo. Os modelos dados são simplesmente 
-objetos JavaScript puros e quando você os modifica, a camada 
+objetos JavaScript puros e quando os modificam, a camada 
 visual se atualiza. Isto torna o gerenciamento de estado simples e 
 intuitivo. Em comparação com o JavaScript puro ou até mesmo o 
 jQuery, utilizar a reatividade do Vue é bem mais simples.
@@ -151,7 +154,7 @@ jQuery, utilizar a reatividade do Vue é bem mais simples.
 3.1 **Suportabilidade**
 
 A aplicação poderá ser utilizada sem grandes problemas 
-pelos principais navegadores modernos da atualizada, no 
+pelos principais navegadores modernos da atualidade, no 
 entanto o enfoque será para o Google Chrome, tanto sua 
 versão desktop quanto sua versão mobile, e o Safari, 
 navegador padrão dos sistemas da Apple.
@@ -217,7 +220,7 @@ Usuário do sistema com poder de registrar propriedade, árvore e colheita, para
 
 #### 4.1.4 Líder
 
-Usuário do sistema capaz de liderar as colheitas e acesso dos voluntários a esse processo, ele é o intermédio entre o proprietário e o voluntário.
+Usuário do sistema capaz de liderar as colheitas e o acesso dos voluntários a esse processo, ele é o intermédio entre o proprietário e o voluntário.
 
 #### 4.1.5 Gerente de colheita
 
@@ -231,12 +234,26 @@ Usuário do sistema capaz de gerir e supervisionar as atividades dos líderes ne
 
 Esse diagrama expõe os seguintes requisitos: 
 
-- RF01: Permitir que o usuário faça cadastro e autenticação.
-- RF03: Permitir cadastro de árvores, propriedades e colheitas.
-- RF04: Permitir usuários se candidatar a colheita.
-- RF05: Habilitar comunicação entre envolvidos em colheita (voluntários, líderes e proprietários). 
-- RF08: Prover à líderes a possiblidade de escolher voluntários cadastrados em colheita.
-- RF09: Mostrar dados à respeito de colheitas realizadas de forma transparente.
+
+- RF01: Permitir que o usuário crie, edite, faça login e apague sua conta.
+- RF02: Permitir que o usuário visualize o histórico de colheitas que participou.
+- RF03: Permitir que os usuários se candidatem a uma colheita.
+- RF04: Prover à líderes a possibilidade de escolher voluntários cadastrados na colheita.
+- RF05: Mostrar a lista de voluntários selecionados para uma colheita.
+- RF06: Assegurar a segurança de dados dos usuários.
+- RF07: Exibir notificações sobre atualizações nos eventos inscritos pelos usuários.
+- RF08: Permitir o cadastro, atualização e exclusão de árvores, propriedades e colheitas.
+- RF09: Permitir a visualização dos dados das árvores, propriedades e colheitas para todos os usuários.
+- RF10: Mostrar colheitas registradas, com ênfase às que acontecerão no futuro.
+- RF11: Disponibilizar os dados das colheitas para todos os interessados.
+- RF12: Mostrar calendários de colheitas.
+- RF13: Suporte para principais navegadores web modernos, com ênfase ao ambiente mobile.
+- RNF14: O ambiente de produção deve ser configurado de modo que sempre contenha uma versão testada e estável.
+- RNF15: O ambiente de homologação deve ser configurado de modo que as versões mais recentes sejam testadas.
+- RNF16: A aplicação deve possuir mecanismos que permitam a acessibilidade de diversos grupos de usuários.
+- RNF17: A aplicação deve possuir mecanismos de internacionalização de modo que a linguagem do site possa ser configurado pelo usuário.
+- RF18: Habilitar comunicação entre envolvidos em colheita (voluntários, líderes e proprietários). 
+
 
 ## 5. Visão Lógica
 
@@ -299,7 +316,7 @@ os dados requisitados. Tudo isso em questões de microsegundos.
 ### 5.2 Diagrama de pacotes
 
 <p align="center">
-	<img src="img/diagrama_de_pacotes.jpg">
+	<img src="img/diagrama_de_pacotes.svg">
 </p>
 
 ## 6. Visão de implementação
@@ -314,7 +331,7 @@ a estrutura do projeto Acácia em nível macro e auxiliar no entendimento
 do escopo. Durante o processo de desenvolvimento do documento a Linguagem 
 de Modelagem Unificada (UML) foi utilizada. 
 
-![](img/class_diagram.png)
+![](img/diagrama_de_classes.svg)
 
 
 Vale ressaltar a existência de dois aspectos que influenciaram diretamente na
@@ -354,7 +371,6 @@ O resultado desse passos são descritos abaixo.
 * USER
 	* VOLUNTEER
 	* OWNER
-	* ADMINISTRADOR
 * PROPERTY
 * HARVERST
 * TREE
@@ -444,10 +460,10 @@ Um **colheita** pode ser doada para vários **beneficiários**, e um
 **Cardinalidade: N:M**
 
 #### 6.2.3 Diagrama Entidade-Relacionamento
-![](img/diagrama_entidade_relacionamento2.png)
+![](img/diagrama_entidade_relacionamento.png)
 
 #### 6.2.4 Diagrama Lógico de Dados
-![](img/diagrama_logico_de_dados2.png)
+![](img/diagrama_logico_de_dados.png)
 
 ## Referências
 
