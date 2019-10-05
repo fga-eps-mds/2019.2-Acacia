@@ -29,7 +29,7 @@ Dívidas técnicas repontuadas
 
 # Possíveis riscos mapeados para a sprint
 
-<img src="../img/risks3.png">
+<img src="../img/gerenciamento/risks3.png">
 
 # Review
 Houve perca de resgistros.
@@ -41,7 +41,7 @@ Houve perca de resgistros.
 
 ## Velocity
 
-<img src="../img/velocity3.png">
+<img src="../img/gerenciamento/velocity3.png">
 
 
 # Retrospectiva
@@ -57,7 +57,7 @@ Houve perca de resgistros.
 
 # Quadro de Conhecimento
 
-<img src="../img/sprint3.jpg">
+<img src="../img/gerenciamento/sprint3.jpg">
 
 
 

@@ -53,7 +53,7 @@ Segundo a equipe a qualidade entregue foi de 3,67 considerando a escala de liker
 
 
 # Quadro de Conhecimento
-![](../img/sprint1.jpg)
+![](../img/gerenciamento/sprint1.jpg)
 
 
 ## Análise da Scrum Master

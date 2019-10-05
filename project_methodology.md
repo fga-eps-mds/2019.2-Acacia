@@ -13,6 +13,7 @@
 | 07/09/2019 | 0.6 | Descrição de extreme programming e das tecnicas de gamificação e interação entre a equipe | Martha Dantas |
 | 07/09/2019 | 1.0 | inclusão do plano de Estimativa das issues do projeto | Martha Dantas |
 | 25/09/2019 | 1.2 | Corrigindo erros | Martha Dantas |
+| 05/10/2019 | 1.3 | Adicionando modificaçoes na forma de trabalho | Martha Dantas |
 
 ## 1. Introdução
 
@@ -94,8 +95,6 @@ Serão utilizados pela equipe as seguintes práticas:
 
 Visando manter a produtividade, o Colaborativismo e a melhoria continua da relação entre membros a equipe utilizará de tecnicas de gamificação, tais como:
 
-- Meaning - Deixa explicíto que existe um proposito no projeto.
-- Collect & Trade: Coletar medalhas e poder trocar por algo.
 - Sharing Knowledge: Incentivar compartilhamento de conhecimento.
 - Certificates: Reconhecimento atráves de certificados, medalhas e etc.
 

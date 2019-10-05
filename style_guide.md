@@ -1,6 +1,4 @@
-﻿
-
-# Guia de Estilo e Identidade Visual
+﻿# Guia de Estilo e Identidade Visual
 
 # Histórico de Revisão
 
@@ -58,7 +56,7 @@ Coloca-se no css, para a utilização das fontes:
 
 # 3.2.Paleta de cores
 
-![paleta de cores](img/paleta.png)
+![paleta de cores](img/identidade/paleta.png)
 
 As cores foram selecionadas observando características do produto e sua finalidade, bem como a acessibilidade, testando-se o contraste. A ferramenta utilizada para construi-la foi [coolors](https://coolors.co/376996-56a3a6-364259-ef476f-edc841). 
 
@@ -66,17 +64,17 @@ A cor primária é a cor #376996, e a cor secundária #56a3a6. A cor #ef476f é 
 
 Ainda, em relação ao contraste, foram feitos testes e é recomendado ter estes números em mente para utilização das cores.
 
-<img src="img/contraste1.png" alt="contraste" width="200"/>
+<img src="img/identidade/contraste1.png" alt="contraste" width="200"/>
 
-<img src="img/contraste2.png" alt="contraste" width="200"/>
+<img src="img/identidade/contraste2.png" alt="contraste" width="200"/>
 
-<img src="img/contraste3.png" alt="contraste" width="200"/>
+<img src="img/identidade/contraste3.png" alt="contraste" width="200"/>
 
-<img src="img/contraste4.png" alt="contraste" width="200"/>
+<img src="img/identidade/contraste4.png" alt="contraste" width="200"/>
 
-<img src="img/contraste5.png" alt="contraste" width="200"/>
+<img src="img/identidade/contraste5.png" alt="contraste" width="200"/>
 
-<img src="img/contraste6.png" alt="contraste" width="200"/>
+<img src="img/identidade/contraste6.png" alt="contraste" width="200"/>
 
 # 4. Componentes
 
@@ -84,14 +82,14 @@ Ainda, em relação ao contraste, foram feitos testes e é recomendado ter estes
 
 Existem botões utilizando as diferentes cores da paleta, a depender do uso. O botão comum de confirmação é da cor primária. Os botões são arredondados (raio de 12 px) com texto escrito utilizando a fonte Raleway tamanho 14pt, semibold, todas letras maiúsculas. Observa-se ainda a cor da palavra escrita, a depender da cor do botão, para cumprir o contraste.
 
-![botoes](img/botoes.png)
+![botoes](img/identidade/botoes.png)
 
 ## 4.2. Campos de formulários
 
 O texto acima do formulário, de label, é na fonte Raleway, tamanho 12 pt, regular, na cor primária,com uma margem de 20px a esquerda, em relação ao campo.
 O campo possui raio de 12px arredondado, e bordas na cor primária.
 
-![campos](img/campos.png)
+![campos](img/identidade/campos.png)
 
 ## 4.3. Navbar
 
@@ -99,18 +97,18 @@ Apresenta-se a seguir algumas opções para serem analizadas e decididas, para n
 
 ### Para celular
 
-![contraste](img/navcelular.png)
+![contraste](img/identidade/navcelular.png)
 
 
 ### Para website
 
-![contraste](img/navwebsite1.png)
+![contraste](img/identidade/navwebsite1.png)
 
-![contraste](img/navwebsite2.png)
+![contraste](img/identidade/navwebsite2.png)
 
-![contraste](img/navweb.png)
+![contraste](img/identidade/navweb.png)
 
-![contraste](img/navweb1.png)
+![contraste](img/identidade/navweb1.png)
 
 
 

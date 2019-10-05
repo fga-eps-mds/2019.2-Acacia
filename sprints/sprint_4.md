@@ -31,6 +31,12 @@ ID | Descrição | Estimativa | Label
  - Total de pontos: 93pts.
  - Total de pontos entregues: 35pts.
 
+ # Possíveis riscos mapeados para a sprint
+
+<img src="../img/gerenciamento/risks4.png">
+<img src="../img/gerenciamento/burn4.png">
+
+
 # Review
 
 - Objetivo Alcançado? Não. A equipe demonstrou dificuldade em entender como se daria a solução em diversos niveis de abstração.
@@ -43,11 +49,11 @@ ID | Descrição | Estimativa | Label
 
 Segundo a equipe a qualidade entregue foi de 3.9 considerando a escala de likert com os valores de 1 a 5.
 
-![review e qualidade](../img/review_quality4.jpg)
+![review e qualidade](../img/gerenciamento/review_quality4.jpg)
 
 ## Velocity
 
-![eap](../img/velocity4.png)
+![eap](../img/gerenciamento/velocity4.png)
 
 # Retrospectiva
 
@@ -84,7 +90,7 @@ Segundo a equipe a qualidade entregue foi de 3.9 considerando a escala de likert
 
 # Quadro de Conhecimento
 
-![quadro](../img/quadro4.png)
+![quadro](../img/gerenciamento/quadro4.png)
 
 # Squad Health Check
 
