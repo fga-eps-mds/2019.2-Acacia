@@ -1,3 +1,11 @@
+# Sprint 4
+
+## Histórico de revisão
+| Data   | Versão | Modificação  | Autor  |
+| :- | :- | :- | :- |
+| 02/10/2019 | 0.1 | Adição do planejamento |  Fabíola |
+| 02/10/2019 | 0.2 | Adição da Retrospectiva e Revisão |  Shayane |
+
 # Planning da Sprint 4
 
 - Período : 23/09 a 28/09
@@ -38,7 +46,7 @@ Segundo a equipe a qualidade entregue foi de 3.9 considerando a escala de likert
 
 ## Velocity
 
-![eap](img/velocity4.png)
+![eap](../img/velocity4.png)
 
 # Retrospectiva
 
@@ -74,7 +82,9 @@ Segundo a equipe a qualidade entregue foi de 3.9 considerando a escala de likert
   - Planejamento para o pareamento de MDS.
 
 # Quadro de Conhecimento
-![quadro](img/.png)
+![quadro](img/quadro4.png)
+
+# Análise de Scrum Master
 
 # Squad Health Check
 
