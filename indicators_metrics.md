@@ -59,6 +59,7 @@ As principais metricas que utilizaremos em código são:
     - CC - complexidade ciclomática 
     - LOC - linhas de código por método
     - Duplicidade de código
+    - Complexidade de código
 
 
 ## Burndown de Risco
