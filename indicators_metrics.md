@@ -46,4 +46,17 @@ Pode ser encontrado em : [Quadro de Conhecimento](https://docs.google.com/spread
 
 ## Qualidade em Código 
 
-    // será definido posteriormente.
+As principais metricas que utilizaremos em código são:
+    - Teste unitário cobertura de 90%
+    - CC - complexidade ciclomática 
+    - LOC - linhas de código por método
+    - Duplicidade de código
+    - Complexidade de código
+
+
+## Burndown de Risco
+
+Metrica utilizada para fazer gerenciamento de risco ao longo das sprints do projeto. Serão elencados riscos e dado um peso a estes, o ideal é que um risco nao persista ao longo de várias sprints. 
+
+ - Exemplo de burndown de risco:
+ ![Burndown de Risco](img/burndown-de-riscos-exemplo.png)
