@@ -41,9 +41,9 @@ ID | Descrição | Estimativa | Label
 
 # Gerência de Riscos
 
-![riscos das sprints](../img/risk5.jpg)
+![riscos das sprints](../img/gerenciamento/risk5.jpg)
 
-![burndown de riscos](../img/burndown5.jpg)
+![burndown de riscos](../img/gerenciamento/burndown5.jpg)
 
 Alguns riscos se concretizaram, a equipe não realizou ações para tentar evitá-los:
     - O conhecimento continuou concetrado;
@@ -64,29 +64,29 @@ Alguns membros tinham provas, mas mesmo assim não comprometeu o trabalho da equ
 
 Segundo a equipe a qualidade entregue foi de 3.85 considerando a escala de likert com os valores de 1 a 5.
 
-![review e qualidade](../img/review5.jpg)
+![review e qualidade](../img/gerenciamento/review5.jpg)
 
 ## Velocity
 
-![velocity](../img/velocity5.png)
+![velocity](../img/gerenciamento/velocity5.png)
 
 # Retrospectiva
 
 
-![agil](../img/retro5.png)
+![agil](../img/gerenciamento/retro5.png)
 
 # Práticas ágeis
 
-![agil](../img/agil5.png)
+![agil](../img/gerenciamento/agil5.png)
 
 
 # Quadro de Conhecimento
 
-![quadro](../img/conhecimento5.png)
+![quadro](../img/gerenciamento/conhecimento5.png)
 
 # Squad Health Check
 
-![health](../img/health5.png)
+![health](../img/gerenciamento/health5.png)
 
 # Análise da Scrum Master
 
