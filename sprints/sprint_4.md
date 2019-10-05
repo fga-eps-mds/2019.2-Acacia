@@ -78,7 +78,13 @@ Segundo a equipe a qualidade entregue foi de 3.9 considerando a escala de likert
 
 # Squad Health Check
 
-# da Scrum Master
+Não foi realizado em detrimento de falta de tempo.
+
+# Análise da Scrum Master
+
+Em suma a sprint 4 aponto diversos equivocos em gereciamento de projeto que estamos cometendo, a comunicação entre a equipe de desenvolvimento e a equipe de gerenciamento se mostrou nebulosa. A analisarmos a sprint ficou perceptível que superestimamos o conhecimento do time de desenvolvimento quanto as metodologias de trabalho que estamos usando.
+
+
 
 
  
