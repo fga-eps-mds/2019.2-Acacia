@@ -42,7 +42,7 @@ ID | Descrição | Estimativa | Label
 
 Segundo a equipe a qualidade entregue foi de 3.9 considerando a escala de likert com os valores de 1 a 5.
 
-<img src="img/review_quality4.png">
+![review e qualidade](../img/review_quality4.png)
 
 ## Velocity
 
@@ -82,9 +82,8 @@ Segundo a equipe a qualidade entregue foi de 3.9 considerando a escala de likert
   - Planejamento para o pareamento de MDS.
 
 # Quadro de Conhecimento
-![quadro](img/quadro4.png)
 
-# Análise de Scrum Master
+![quadro](../img/quadro4.png)
 
 # Squad Health Check
 
