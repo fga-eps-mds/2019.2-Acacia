@@ -7,6 +7,7 @@
 | :- | :- | :- | :- |
 | 11/09/2019 | 0.1 | Abertura do documento | Martha Dantas |
 | 14/09/2019 | 0.8 | Descrição das metricas e indicadores de gerenciamento | Martha Dantas |
+| 05/10/2019 | 1.0 | Inclusão da descrição da metrica velocity | Martha Dantas |
 
 Este documento tem como objetivo detalhar as metricas e indicadores que serão usando durante a execução do projeto. Os principais objetivos são manter a cultura das práticas ágeis, mensurar a complexidade das atividades, verificar a "saúde" do projeto  e a qualidade de código entregue.
 
@@ -26,6 +27,13 @@ Modelo criado por CI&T para mensurar e análisar complexidade. O modelo determin
  
     ![Metricas de soluções variadas](img/solutionVariabilities.png)
 
+Obs.: Esse modelo mensura complexidade em código e será utilizado apenas nas issues de história de usuário e historias técnicas.
+
+## Velocity
+
+Mensura a capacidade de entrega de uma equipe. Utilizaremos a escala de fibonacci para estimar, com base em nossa experiência, a capacidade de entrega de nossa equipe.
+
+Obs.: Essa metrica será utilizada para mensurar capacidade de entrega de issues que não sao de desenvolvimento, tais como, documentação, estudo e etc.
 
 ## Squad Health Check Model
 
@@ -46,4 +54,17 @@ Pode ser encontrado em : [Quadro de Conhecimento](https://docs.google.com/spread
 
 ## Qualidade em Código 
 
-    // será definido posteriormente.
+As principais metricas que utilizaremos em código são:
+    - Teste unitário cobertura de 90%
+    - CC - complexidade ciclomática 
+    - LOC - linhas de código por método
+    - Duplicidade de código
+    - Complexidade de código
+
+
+## Burndown de Risco
+
+Metrica utilizada para fazer gerenciamento de risco ao longo das sprints do projeto. Serão elencados riscos e dado um peso a estes, o ideal é que um risco nao persista ao longo de várias sprints. 
+
+ - Exemplo de burndown de risco:
+ ![Burndown de Risco](img/burndown-de-riscos-exemplo.png)
