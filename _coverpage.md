@@ -11,4 +11,4 @@
 
 [Conheça o projeto](home.md)
 
-![](img/identidade/gitpages/gitpage_background.png)
+![](img/identidade/gitpages/gitpage_gradient_background.png)
