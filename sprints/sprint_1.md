@@ -53,7 +53,7 @@ Segundo a equipe a qualidade entregue foi de 3,67 considerando a escala de liker
 
 
 ## Quadro de Conhecimento
-![](https://github.com/fga-eps-mds/2019.2-Acacia/blob/feature/46-sprint2-documentation/img/sprint1.jpg)
+![](../img/sprint1.jpg)
 
 
 ## Análise da Scrum Master
