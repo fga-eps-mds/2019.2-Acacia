@@ -47,6 +47,7 @@ Segundo a equipe a qualidade entregue foi de 4,7 considerando a escala de likert
 - Diminuir o tempo gasto com reunioes
 - Dividir melhoras as tarefas
 
+
 ## Quadro de Conhecimento
 ![](../img/sprint2.jpg)
 
