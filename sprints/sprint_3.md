@@ -29,34 +29,35 @@ Dívidas técnicas repontuadas
 
 # Possíveis riscos mapeados para a sprint
 
-<img src="img/risks3.png">
+<img src="../img/risks3.png">
 
 # Review
-
+Houve perca de resgistros.
 
 
 ## Qualidade do Trabalho Entregue
+Houve perca de resgistros.
+
 
 ## Velocity
 
-<img src="img/velocity3.png">
+<img src="../img/velocity3.png">
 
 
 # Retrospectiva
 
 ## Pontos Positivos
-
+Houve perca de resgistros.
 
 ## Pontos Negativos
+Houve perca de resgistros.
 
-
-## pontos de Melhoria
-
+## Pontos de Melhoria
+Houve perca de resgistros.
 
 # Quadro de Conhecimento
 
-
-<img src="img/sprint3.png">
+<img src="../img/sprint3.jpg">
 
 
 
