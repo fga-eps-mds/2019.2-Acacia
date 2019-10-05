@@ -50,6 +50,9 @@ Segundo a equipe a qualidade entregue foi de 4,7 considerando a escala de likert
 # Quadro de Conhecimento
 ![](../img/gerenciamento/sprint2.jpg)
 
+## Análise da Scrum Master
+
+Essa foi até então a sprint mais pesada para os membros de mds. Eles tiveram que aprofundar seus conhecimentos nas diversas areas que compõem um desenvolvimento, o que causou estranheza e confusão. Entretanto ao fechamento da sprint, apesar de não termos alcançado nosso objetivo, eles se mostram mais orientados quanto a que norte seguir e mais entendidos dos diversos niveis de abstração de um produto de software.
 
 
  

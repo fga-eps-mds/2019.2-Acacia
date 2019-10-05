@@ -20,9 +20,10 @@
     * [Sprint 0](sprints/sprint_0.md)
     * [Sprint 1](sprints/sprint_1.md)
     * [Sprint 2](sprints/sprint_2.md)
+    * [Sprint 3](sprints/sprint_3.md)
+    * [Sprint 4](sprints/sprint_4.md)
 
 - [**Contribuição**](#)
-
     * [Como contribuir](contributing.md)
     * [Código de Conduta](code_of_conduct.md)
     * [Políticas de Contribuição](policies.md)
