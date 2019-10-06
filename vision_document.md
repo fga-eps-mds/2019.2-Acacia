@@ -18,6 +18,7 @@
 | 06/09/2019 | 0.8.5 | Revisão de restrições | Leonardo da Silva Gomes |
 | 01/10/2019 | 1.0   | Refatoração dos requisitos do projeto  | Durval Carvalho |
 | 02/10/2019 | 1.1   | Revisão | Durval Carvalho |
+| 06/10/2019 | 1.2 | Correção da numeração dos requisitos | Durval Carvalho |
 
 ## **1. Introdução**
 
@@ -32,9 +33,9 @@ do escopo e diminuir os riscos envolvidos.
 
 ### 1.1 Escopo
 
-Esse projeto tem como objetivo desenvolver uma aplicaçao web responsiva com a 
+Esse projeto tem como objetivo desenvolver uma aplicação web responsiva com a 
 finalidade de conectar proprietários de árvores frutíferas em ambiente urbano e 
-colheitores voluntários, visando a disponibilização de parte do resultado das 
+coletores voluntários, visando a disponibilização de parte do resultado das 
 colheitas à instituições e projetos carentes de recursos e fomentar a união 
 comunitária. 
 
@@ -65,12 +66,12 @@ foi criada com a missão de diminuir o isolamento social e econômico entre
 jovens e idosos por meio da produção, preparo e distribuição de alimentos.
 
 A partir dessa visão, diversos programas são desenvolvidos e apoiados com o 
-objetivo de  produzir, adquirir, preparar e distribuir alimentos, 
+objetivo de produzir, adquirir, preparar e distribuir alimentos, 
 principalmente orgânicos.
 
-Um dos programa é o Les Fruits Défendus, que tem como objetivo 
-conectar proprietários de árvores frutíferas locais com colheitores 
-voluntarios para garantir que esses alimentos não sejam desperdiçados.
+Um dos programas é o Les Fruits Défendus, que tem como objetivo 
+conectar proprietários de árvores frutíferas locais com coletores 
+voluntários para garantir que esses alimentos não sejam desperdiçados.
 
 ### 2.1 Oportunidade de negócios
 
@@ -81,7 +82,7 @@ frutíferas urbanas e dos voluntários por meio de uma aplicação web
 responsiva, onde usuários podem acessar pode meio de computadores e 
 smartphones.
 
-Essas plataformas digitais se propõe a aumentar a transparência das 
+Essa plataforma digital se propõem a aumentar a transparência das 
 atividades que serão realizadas, a facilitar a difusão das ideias por trás 
 do projeto e facilitar o primeiro contato com o projeto.
 
@@ -92,7 +93,7 @@ do projeto e facilitar o primeiro contato com o projeto.
 | O desperdício de alimentos produzido por árvores frutíferas locais | as pessoas e organizações que não tem acesso à comida orgânica | o consumo de alimentos não nutritivos danosos a saúde | convencer proprietários de árvores frutíferas locais à permitir a colheita e distribuição da produção excedente de frutos entre os voluntários que o ajudam e instituições beneficiárias de doações. |
 
 
-### 2.3 Descrição do posição do produto
+### 2.3 Descrição da posição do produto
 
 O produto uma vez desenvolvido, poderá se posicionar no mercado 
 como uma plataforma online de fácil utilização capaz de engajar 
@@ -117,7 +118,7 @@ produto criado.
 | :--- | :-------- |
 | Beneficiários | Instituições e pessoas recebedoras de doações da colheita |
 | Líderes de colheita | Escolhe e gerencia voluntários, recolhe equipamento necessário para colheita e entrega-o junto à doação para <i>Les Fruits Défendus</i> |
-| Proprietários de árvores | Cadastram sua(s) proriedade(s) e suas respectivas árvores, candidatam terreno para colheita voluntária com a condição de doar parte dos frutos para a <i>Les Fruits Défendus</i> |
+| Proprietários de árvores | Cadastram sua(s) propriedade(s) e suas respectivas árvores, candidatam terreno para colheita voluntária com a condição de doar parte dos frutos para a <i>Les Fruits Défendus</i> |
 | Voluntários de colheita | Se candidatam a participar de colheitas |
 
 ### 3.3 Principais Necessidades dos Usuários e dos Envolvidos
@@ -125,9 +126,9 @@ produto criado.
 | Usuário | Necessidade | Solução Atual | Solução Proposta |
 | :------ | :---------- | :------------ | :--------------- |
 | Beneficiário | Doações de alimentos | Doações de pessoas e de ONGs | Website para se candidatar a receber doação |
-| Líder de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Participação de coletivos, de OGNs e ações de iniciativa individual | Aplicação web responsiva para se candidatar à colheitas requisitadas pela comunidade local. |
-| Proprietário de árvores | Receber ajuda em colheita e/ou interesse em forteceler comunidade local | Ações coletivas organizada pela Les Fruits Défendus | Aplicação web responsiva para cadastrar plantações que podem ser colheitas e doadas para outras organizações |
-| Voluntário de colheita | Interesse em forteceler comunidade local e/ou trabalho voluntário | Participação de coletivos, de OGNs e ações de iniciativa individual | Aplicação web responsiva para se candidatar à trabalho voluntário e receber informações à respeito de suas colheitas |
+| Líder de colheita | Interesse em fortalecer comunidade local e/ou trabalho voluntário | Participação de coletivos, de ONGs e ações de iniciativa individual | Aplicação web responsiva para se candidatar à colheitas requisitadas pela comunidade local. |
+| Proprietário de árvores | Receber ajuda em colheita e/ou interesse em fortalecer comunidade local | Ações coletivas organizada pela Les Fruits Défendus | Aplicação web responsiva para cadastrar plantações que podem ser colheitas e doadas para outras organizações |
+| Voluntário de colheita | Interesse em fortalecer comunidade local e/ou trabalho voluntário | Participação de coletivos, de OGNs e ações de iniciativa individual | Aplicação web responsiva para se candidatar à trabalho voluntário e receber informações a respeito de suas colheitas |
 
 ### 3.4 Ambiente dos Usuários
 
@@ -146,7 +147,7 @@ mobile.
 
 | Representantes | Tipo | Responsabilidade | Critério de sucesso | Envolvimento |
 | -------------- | ---- | ---------------- | ------------------- | ------------ |
-| Fabíola Malta Fleury, Martha Dantas Silva, Shayane Marques Alcântara, Vítor Cardoso Xoteslem | Estudantes de EPS na UnB FGA | Criar e manter documentos; Gerenciar os desenvolvedores; Tomada de decisões a respeito do <i>stack</i> de tecnologias | Completar o projeto proposto dentro do período estipulado e atendendo à todos os requisitos | Alto |
+| Fabíola Malta Fleury, Martha Dantas Silva, Shayane Marques Alcântara, Vítor Cardoso Xoteslem | Estudantes de EPS na UnB FGA | Criar e manter documentos; Gerenciar os desenvolvedores; Tomada de decisões a respeito do <i>stack</i> de tecnologias | Completar o projeto proposto dentro do período estipulado e atendendo a todos os requisitos | Alto |
 
 #### 3.5.3 Avaliadores
 
@@ -198,7 +199,7 @@ serão descontinuadas, como o Python 2.7.
  
 ### 4.1 Perspectiva do Produto
  
-O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas urbanas, fomentando a agricultura urbana e a agroecologia que interfere fortemente em vários aspectos sociais e econômicos. Assim, utilizamos da relação entre proprietários de árvores frutíferas em ambiente urbano, voluntários para colheita e locais que possam receber doações destas frutas, para a diminuição de desperdício de comida, aumento do acesso a comida saudável e colaboração comunitária (socialização) acarretando na diminuição de transtornos mentais e fortalecimento de culturas locais. O produto é baseado em um sistema já existente,  o [Saskatoon](https://github.com/tiagovaz/saskatoon) utilizado pelo coletivo [LES FRUITS DÉFENDUS](https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/) em Montreal, uma iniciativa da organização [Santropol Roulant](https://santropolroulant.org/en/history/).
+O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas urbanas, fomentando a agricultura urbana e a agroecologia que interfere fortemente em vários aspectos sociais e econômicos. Assim, utilizamos da relação entre proprietários de árvores frutíferas em ambiente urbano, voluntários para colheita e locais que possam receber doações destas frutas, para a diminuição de desperdício de comida, aumento do acesso a comida saudável e colaboração comunitária (socialização) acarretando na diminuição de transtornos mentais e fortalecimento de culturas locais. O produto é baseado em um sistema já existente, o [Saskatoon](https://github.com/tiagovaz/saskatoon) utilizado pelo coletivo [LES FRUITS DÉFENDUS](https://santropolroulant.org/en/what-is-the-roulant/collectives/fruits-defendus/) em Montreal, uma iniciativa da organização [Santropol Roulant](https://santropolroulant.org/en/history/).
  
 ### 4.2 Resumo das capacidades
  
@@ -210,7 +211,7 @@ O projeto visa ser um facilitador no processo de Colheita Colaborativa em áreas
  
 ### 4.3 Funções do Produto
  
-O projeto está encarregado de ser o conectivo entre os proprietários de árvores e os voluntários, facilitando o processo de colaboração. A plataforma agrega diversas funcionalidades como cadastro, gerenciamento,  inscrição no projeto, etc.
+O projeto está encarregado de ser o conectivo entre os proprietários de árvores e os voluntários, facilitando o processo de colaboração. A plataforma agrega diversas funcionalidades como cadastro, gerenciamento, inscrição no projeto, etc.
  
 ### 4.4 Suposições e dependências
  
@@ -256,7 +257,7 @@ projeto podem se cadastrar na plataforma. Quando logados terão acesso ao:
 
 ### 5.4 Disponibilizar os resultados das últimas colheitas
 
-Qualquer pessoa interessada no projeto terá acesso aos paineis de 
+Qualquer pessoa interessada no projeto terá acesso aos painéis de 
 informação. Nessa parte da aplicação não será necessário autenticação do 
 usuário e qualquer pessoa terá acesso aos dados das últimas colheitas, o 
 destino dos frutos colhidos e informações sobre o projeto.
@@ -271,14 +272,14 @@ automaticamente de acordo com o contexto do usuário. As notificações são:
 * Sua plantação atingiu o número de voluntários necessários
 * Sua plantação não atingiu o número de voluntários necessários
 * A data de colheita está próxima
-* Sua colheita foi bem sucedida
+* Sua colheita foi bem-sucedida
 
 5.4.2 Para os voluntários
 * Você foi aceito para essa colheita
 * A colheita que você está escrito atingiu o número de voluntários necessários
 * A colheita que você está escrito não atingiu o número de voluntários necessários
 * A colheita que você está escrito está próxima
-* Sua colheita foi bem sucedida
+* Sua colheita foi bem-sucedida
 
 ## **6. Restrições**
 
@@ -305,7 +306,7 @@ público maior, a aplicação será desenvolvida tanto para usuários web quanto
 mobile.
 
 ### 6.4 Restrições de Confiabilidade
-Visando uma maior mantenabilidade do projeto pela comunidade, os 
+Visando uma maior manutenibilidade  do projeto pela comunidade, os 
 desenvolvedores tem o comprometimento de manter uma cobertura de testes mínima 
 de 90%.
 
@@ -322,18 +323,23 @@ Lista de categorias de prioridades para requisitos
 Lista de requisitos
 
 | Identificador | Requisito | Depende de | Prioridade |
-| :- | :- | :- | :- |
-| RF01 | Permitir que o usuário faça cadastro e autenticação | --- | Alta |
-| RF02 | Permitir que o voluntário visualize o histórico de colheitas que participou | RF01 | Intermediária |
-| RF03 | Permitir cadastro de árvores, propriedades e colheitas | RF01 | Alta |
-| RF04 | Permitir usuários a se candidatar a ser voluntário em colehita | RF01, RF03 | Alta |
-| RF05 | Habilitar comunicação entre envolvidos em colheita (voluntários, líderes e proprietários) | RF03 | Intermediária |
-| RF06 | Mostrar colheitas registradas, com enfâse às que acontecerão no futuro | RF03 | Alta |
-| RF07 | Mostrar perfis e histórico de usuários | RF01 | Baixa |
-| RF08 | Prover à líderes a possiblidade de escolher voluntários cadastrados em colheita | RF03, RF04 | Alta |
-| RF08 | Suportar para principais navegadores web atuais, com enfâse ao ambiente mobile | --- | Intermediária |
-| RF09 | Mostrar dados à respeito de colheitas realizadas de forma transparente | RF03 | Baixa |
-| RF10 | Prover segurança com os dados dos usuários cadastrados | --- | Baixa |
+| :-    | :-  | :- | :- |
+| RF01 | Permitir que o usuário crie, edite, faça login e apague sua conta | ---  | Alta |
+| RF02 | Permitir o cadastro, atualização e exclusão de árvores, propriedades e colheitas | RF01 | Alta |
+| RF03 | Mostrar colheitas registradas, com ênfase às que acontecerão no futuro | RF02 | Alta |
+| RF04 | Permitir que os usuários se candidatem a uma colheita | RF01, RF02  | Alta |
+| RF05 | Permitir que líderes possam escolher voluntários cadastrados para uma colheita | RF01, RF04 | Baixa |
+| RF06 | Exibir notificações sobre atualizações nos eventos inscritos pelos usuários | RF01, RF04, RF05 | Baixa |
+| RF07 | Permitir que o usuário visualize o histórico de colheitas que participou | RF01, RF04 | Baixa |
+| RF08 | Mostrar calendários de colheitas | RF02 | Alta |
+| RF09 | Habilitar comunicação entre envolvidos em colheita (voluntários, líderes e proprietários) | RF01 | Intermediária |
+| RF10 | Mostrar dados à respeito do projeto realizadas de forma transparente | RF03 | Baixa |
+| RNF11 | Suportar para principais navegadores web atuais, com ênfase ao ambiente mobile | --- | Intermediária |
+| RNF12 | Assegurar a segurança de dados dos usuários | --- | Alta |
+| RNF13 | O ambiente de produção deve ser configurado de modo que sempre contenha uma versão testada e estável | --- | Alta |
+| RNF14 | O ambiente de homologação deve ser configurado de modo que as versões mais recentes sejam testadas | --- | Alta |
+| RNF15 | A aplicação deve possuir mecanismos que permitam a acessibilidade de diversos grupos de usuários | --- | Intermediária |
+| RNF16 | A aplicação deve possuir mecanismos de internacionalização de modo que a linguagem do site possa ser configurada pelo usuário | --- | Intermediária |
 
 ## Referências
 - Texto descritivo sobre a estrutura e objetivo dos tópicos do documento de visão. https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html. Acesso em 02 de setembro de 2019
