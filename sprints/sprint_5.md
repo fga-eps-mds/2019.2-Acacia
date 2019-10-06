@@ -41,9 +41,9 @@ ID | Descrição | Estimativa | Label
 
 # Gerência de Riscos
 
-![riscos das sprints](../img/gerenciamento/risk5.jpg)
+![riscos das sprints](../img/gerenciamento/risk5.png)
 
-![burndown de riscos](../img/gerenciamento/burndown5.jpg)
+![burndown de riscos](../img/gerenciamento/burnd5.png)
 
 Alguns riscos se concretizaram, a equipe não realizou ações para tentar evitá-los:
     - O conhecimento continuou concetrado;
