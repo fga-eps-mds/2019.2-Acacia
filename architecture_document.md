@@ -22,6 +22,7 @@
 | 20/09/2019 | 1.4 | Ajuste dos diagramas de banco  | Flavio Vieira |
 | 01/10/2019 | 1.5 | Refatoração dos requisitos do projeto  | Durval Carvalho |
 | 02/10/2019 | 1.6 | Revisão | Durval Carvalho e João Pedro Silva de Carvalho|
+| 06/10/2019 | 1.7 | Correção da numeração dos requisitos | Durval Carvalho |
 
 
 ## 1. Introdução
@@ -77,7 +78,7 @@ escolhido Django para o back-end desse projeto.
 #### 2.2.1 Django
 
 O Django é um framework web criado com a linguagem Python, que 
-utiliza o padrão model-template-view. Esse modelo MTV é basedo 
+utiliza o padrão model-template-view. Esse modelo MTV é baseado 
 no modelo Model-View-Controler, com a diferença que as 
 responsabilidades do módulo de Controller está dispersa no 
 próprio Framework.
@@ -99,7 +100,7 @@ filtro e de acesso.
 
 O **View** é a camada das regras de negócios. Nessa camada será 
 implementada as restrições, o que um usuário pode ou não pode 
-fazer, e quais páginas eles tem acesso. É através dessa camada 
+fazer, e quais páginas eles têm acesso. É através dessa camada 
 que as requisições do usuário serão gerenciadas.
 
 Essa camada implementa algumas funções do Controller do padrão 
@@ -142,7 +143,7 @@ JavaScript, HTML e CSS, permitindo assim a reutilização dessas
 estruturas em outras partes da aplicação.
 
 Uma das características mais distintas do Vue é seu sistema de 
-reatividade não obstrusivo. Os modelos dados são simplesmente 
+reatividade não obstrutivo. Os modelos dados são simplesmente 
 objetos JavaScript puros e quando os modificam, a camada 
 visual se atualiza. Isto torna o gerenciamento de estado simples e 
 intuitivo. Em comparação com o JavaScript puro ou até mesmo o 
@@ -234,26 +235,22 @@ Usuário do sistema capaz de gerir e supervisionar as atividades dos líderes ne
 
 Esse diagrama expõe os seguintes requisitos: 
 
-
-- RF01: Permitir que o usuário crie, edite, faça login e apague sua conta.
-- RF02: Permitir que o usuário visualize o histórico de colheitas que participou.
-- RF03: Permitir que os usuários se candidatem a uma colheita.
-- RF04: Prover à líderes a possibilidade de escolher voluntários cadastrados na colheita.
-- RF05: Mostrar a lista de voluntários selecionados para uma colheita.
-- RF06: Assegurar a segurança de dados dos usuários.
-- RF07: Exibir notificações sobre atualizações nos eventos inscritos pelos usuários.
-- RF08: Permitir o cadastro, atualização e exclusão de árvores, propriedades e colheitas.
-- RF09: Permitir a visualização dos dados das árvores, propriedades e colheitas para todos os usuários.
-- RF10: Mostrar colheitas registradas, com ênfase às que acontecerão no futuro.
-- RF11: Disponibilizar os dados das colheitas para todos os interessados.
-- RF12: Mostrar calendários de colheitas.
-- RF13: Suporte para principais navegadores web modernos, com ênfase ao ambiente mobile.
-- RNF14: O ambiente de produção deve ser configurado de modo que sempre contenha uma versão testada e estável.
-- RNF15: O ambiente de homologação deve ser configurado de modo que as versões mais recentes sejam testadas.
-- RNF16: A aplicação deve possuir mecanismos que permitam a acessibilidade de diversos grupos de usuários.
-- RNF17: A aplicação deve possuir mecanismos de internacionalização de modo que a linguagem do site possa ser configurado pelo usuário.
-- RF18: Habilitar comunicação entre envolvidos em colheita (voluntários, líderes e proprietários). 
-
+- RF01: Permitir que o usuário crie, edite, faça login e apague sua conta
+- RF02: Permitir o cadastro, atualização e exclusão de árvores, propriedades e colheitas
+- RF03: Mostrar colheitas registradas, com ênfase às que acontecerão no futuro
+- RF04: Permitir que os usuários se candidatem a uma colheita
+- RF05: Permitir que líderes possam escolher voluntários cadastrados para uma colheita
+- RF06: Exibir notificações sobre atualizações nos eventos inscritos pelos usuários
+- RF07: Permitir que o usuário visualize o histórico de colheitas que participou
+- RF08: Mostrar calendários de colheitas
+- RF09: Habilitar comunicação entre envolvidos em colheita (voluntários, líderes e proprietários)
+- RF10: Mostrar dados à respeito do projeto realizadas de forma transparente
+- RNF11: Suportar para principais navegadores web atuais, com ênfase ao ambiente mobile
+- RNF12: Assegurar a segurança de dados dos usuários
+- RNF13: O ambiente de produção deve ser configurado de modo que sempre contenha uma versão testada e estável
+- RNF14: O ambiente de homologação deve ser configurado de modo que as versões mais recentes sejam testadas
+- RNF15: A aplicação deve possuir mecanismos que permitam a acessibilidade de diversos grupos de usuários
+- RNF16: A aplicação deve possuir mecanismos de internacionalização de modo que a linguagem do site possa ser configurada pelo usuário
 
 ## 5. Visão Lógica
 
@@ -269,7 +266,7 @@ de uma API REST fornecida pelo backend da aplicação.
 
 As ações do usuário, tanto em um ambiente desktop quanto no mobile, será 
 interpretada pelo Vue.Js como eventos, onde cada evento está associado com 
-um <i>Handler</i> que irá dispará uma ação.
+um <i>Handler</i> que irá disparar uma ação.
 
 Alguma dessas ações poderão ser tratadas no lado do cliente 
 (<i>client side</i>), como ações de iteratividade que não precisam de 
@@ -282,7 +279,7 @@ respeitando as regras de interface REST.
 
 Uma vez que o servidor receba a solicitação do cliente, será preciso 
 interpretar o request com base na URL e no método HTTP utilizado. Essa 
-conputação é realizada no módulo <i>URL Dispatcher</i>, onde é mapeado 
+computação é realizada no módulo <i>URL Dispatcher</i>, onde é mapeado 
 para <i>endpoint</i> da aplicação com o módulo que possui as informações 
 solicitadas.
 
@@ -304,14 +301,14 @@ formato padrão da API, geralmente no formato JSON. Essa serialização que é
 responsável por definir uma interface que vários sistemas poderão consumir.
 
 Uma vez que os dados já foram serializados, o Django REST passa o controle 
-para o Django, que será reponsável por retornar uma resposta 
+para o Django, que será responsável por retornar uma resposta 
 (<i>response</i>) para o lado do cliente.
 
 Essa resposta será obtida pelo Vue.js. Agora com os dados requisitados em 
-mãos, ele será responsável por criar e fornecer esse dados para que o 
+mãos, ele será responsável por criar e fornecer esses dados para que o 
 usuário da aplicação. O Vue.js irá montar um template, de acordo com o 
-ambiente do usário (mobile ou desktop) e finalmente o usuário irá poder ver 
-os dados requisitados. Tudo isso em questões de microsegundos.
+ambiente do usuário (mobile ou desktop) e finalmente o usuário irá poder ver 
+os dados requisitados. Tudo isso em questões de microssegundos.
 
 ### 5.2 Diagrama de pacotes
 
@@ -356,15 +353,15 @@ das models e serializá-las, ou desserializá-las.
 
 ### 6.2 Banco de Dados
 
-Para os desenvolvimento do diagrama do banco de dados primeiro foi 
+Para o desenvolvimento do diagrama do banco de dados primeiro foi 
 identificado quais seriam as entidades envolvidas no projeto. Após 
-identificadas, foram analisado qual os atributos necessários para 
+identificadas, foi analisado qual os atributos necessários para 
 descrever uma instância de cada uma das entidades.
 
 Assim que todas as entidades foram descritas, foi analisado quais 
 seriam as relações entre elas, e suas respectivas cardinalidades.
 
-O resultado desse passos são descritos abaixo.
+O resultado desses passos são descritos abaixo.
 
 #### 6.2.1 Entidades
 
@@ -382,12 +379,12 @@ site que precisa de autenticação.
 A especificação foi utilizada para reduzir o número de auto 
 relacionamentos, melhorando assim o entendimento do projeto. 
 
-O perfil do admnistrador será o usuário responsável por 
-administrar todos os dados do site. Esse será o <i>useruser</i> do 
+O perfil do administrador  será o usuário responsável por 
+administrar todos os dados do site. Esse será o <i>superuser</i> do 
 Django. Ele poderá criar, editar e apagar qualquer dado que 
 presente na aplicação.
 
-Uma função importante do admnistrador é aprovar os eventos 
+Uma função importante do administrador é aprovar os eventos 
 colheitas que os proprietários irão criar. Ele será responsável 
 por não permitir que eventos suspeitos apareçam para os 
 voluntários. 
@@ -397,7 +394,7 @@ plantação com 10000 árvores e esteja solicitando 10000 voluntários.
 Será função do administrador recusar esse evento.
 
 Outro exemplo, é um proprietário que cadastre 20 árvores e 
-solicite somente 1 voluntário. Será função do admnistrador entrar 
+solicite somente 1 voluntário. Será função do administrador entrar 
 em contato com o proprietário e verificar os detalhes dessa 
 colheita.
 
@@ -417,13 +414,13 @@ de sua posse.
 
 Uma **PROPRIEDADE** deve ter cadastrado o seu **endereço**, 
 especificando o país, **estado**, **cidade**, **bairro**, 
-**quadra**, **numero** e **complemento**, quando aplicável.
+**quadra**, **número** e **complemento**, quando aplicável.
 
 Também deverá especificar as **árvores** dessa propriedade, 
-especificando o **fruto**, **mes da colheita**, **se precisa de 
+especificando o **fruto**, **mês da colheita**, **se precisa de 
 escada para a colheita**, **se é necessário entrar na propriedade 
-para ter acesso à árvore** (muros, cercas, cachorros, 
-unicórnios alados,...) e também deverá conter **fotos**, tanto da 
+para ter acesso à árvore** (se existe muros, cercas, cachorros, 
+unicórnios alados, ...) e também deverá conter **fotos**, tanto da 
 propriedade quanto das árvores.
 
 Uma **COLHEITA** deve ter cadastrado a sua **data agendada**, a 
