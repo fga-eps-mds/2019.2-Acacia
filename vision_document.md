@@ -28,19 +28,19 @@ escopo do projeto.
 
 Assim, será explicado o problema evidenciado, a oportunidade encontrada, a 
 descrição dos principais envolvidos, uma possível solução, suas principais 
-funcionalidades e seus requisitos. Para assim obter uma melhor compreensão 
+funcionalidades e seus requisitos, para assim obter uma melhor compreensão 
 do escopo e diminuir os riscos envolvidos.
 
 ### 1.1 Escopo
 
-Esse projeto tem como objetivo desenvolver uma aplicação web responsiva com a 
+Esse projeto tem como objetivo desenvolver uma aplicação _web_ responsiva com a 
 finalidade de conectar proprietários de árvores frutíferas em ambiente urbano e 
 coletores voluntários, visando a disponibilização de parte do resultado das 
 colheitas à instituições e projetos carentes de recursos e fomentar a união 
 comunitária. 
 
 Desse modo, aumentando o consumo de alimentos orgânicos produzidos 
-localmente, assim diminuindo o desperdício de alimentos e fortalecendo a 
+localmente e contribuindo na diminuição do desperdício de alimentos e fortalecimento da 
 comunidade local.
 
 ### 1.2 Definições, acrônimos e abreviações
@@ -50,9 +50,9 @@ público interessado no projeto
 
 | **Sigla/Termo/Acrônimo** | **Definição** |
 | ------------------------ | ------------- |
-| Saskatoon | Sistema de gerenciamento de colheita desenvolvido pelo Les Fruits Défendus | 
+| Saskatoon | Sistema de gerenciamento de colheita desenvolvido pelo _Les Fruits Défendus_ | 
 | Santropol Roulant | Centro comunitário de alimentos situado em Montreal| 
-| Les Fruits Défendus | Projeto de colheita urbana voluntária organizada pela Santropol Roulant | 
+| _Les Fruits Défendus_ | Projeto de colheita urbana voluntária organizada pela Santropol Roulant | 
 | ODS | Objetivos de Desenvolvimento Sustentável | 
 | MDS | Métodos de Desenvolvimento de <i>Software</i> | 
 | EPS | Engenharia de Produto de <i>Software</i> | 
@@ -69,20 +69,20 @@ A partir dessa visão, diversos programas são desenvolvidos e apoiados com o
 objetivo de produzir, adquirir, preparar e distribuir alimentos, 
 principalmente orgânicos.
 
-Um dos programas é o Les Fruits Défendus, que tem como objetivo 
+Um dos programas é o _Les Fruits Défendus_, que tem como objetivo 
 conectar proprietários de árvores frutíferas locais com coletores 
 voluntários para garantir que esses alimentos não sejam desperdiçados.
 
 ### 2.1 Oportunidade de negócios
 
-Com base na visão do programa Les Fruits Défendus e na visão da 
+Com base na visão do programa _Les Fruits Défendus_ e na visão da 
 organização mãe Santropol Roulant, foi identificado a oportunidade 
 de aumentar o engajamento dos proprietários de plantações 
-frutíferas urbanas e dos voluntários por meio de uma aplicação web 
+frutíferas urbanas e dos voluntários por meio de uma aplicação _web_ 
 responsiva, onde usuários podem acessar pode meio de computadores e 
 smartphones.
 
-Essa plataforma digital se propõem a aumentar a transparência das 
+Essa plataforma digital se propõe a aumentar a transparência das 
 atividades que serão realizadas, a facilitar a difusão das ideias por trás 
 do projeto e facilitar o primeiro contato com o projeto.
 

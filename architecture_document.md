@@ -266,9 +266,9 @@ de uma API REST fornecida pelo backend da aplicação.
 
 As ações do usuário, tanto em um ambiente desktop quanto no mobile, será 
 interpretada pelo Vue.Js como eventos, onde cada evento está associado com 
-um <i>Handler</i> que vai dispara uma ação.
+um <i>Handler</i> que irá disparar uma ação.
 
-Alguma dessas ações poderá ser tratada no lado do cliente 
+Alguma dessas ações poderão ser tratadas no lado do cliente 
 (<i>client side</i>), como ações de iteratividade que não precisam de 
 comunicação externa.
 
