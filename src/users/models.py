@@ -15,10 +15,6 @@ class User(AbstractUser):
         }
     )
 
-    phone_number = PhoneNumberField(blank=True, null=True)
-    bio = models.TextField(blank=True, null=True)
-    birth = models.DateField(blank=True, null=True)
-
     is_verified = models.BooleanField(
         'verified',
         default=True,
@@ -42,3 +38,27 @@ class User(AbstractUser):
     EMAIL_FIELD = 'email'
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        primary_key=True,
+    )
+    phone_number = PhoneNumberField(blank=True, null=True)
+    bio = models.TextField(blank=True, null=True)
+    birthdate = models.DateField(blank=True, null=True)
+    photo = models.ImageField(upload_to='/media/profile_photo')
+    is_owner = models.BooleanField(
+        default=False,
+        help_text=_('Designates if user has a propriety'),
+    )
+    is_volunteer = models.BooleanField(
+        default=False,
+        help_text=_('Designates if user is a volunteer')
+    )
+    is_leader = models.BooleanField(
+        default=False,
+        help_text=_('Designates if user is haverst leader')
+    )

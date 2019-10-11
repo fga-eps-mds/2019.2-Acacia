@@ -88,9 +88,6 @@ class UserModelSerializer(serializers.ModelSerializer):
             'username',
             'email',
             'password',
-            'phone_number',
-            'bio',
-            'birth',
             'speaks_french',
             'speaks_english',
         ]
