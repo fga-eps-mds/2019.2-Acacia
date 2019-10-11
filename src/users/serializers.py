@@ -3,7 +3,7 @@
 from django.conf import settings
 
 # Models
-from .models import User
+from .models import User, Profile
 
 # Django Rest Framework
 from rest_framework import serializers
@@ -91,3 +91,20 @@ class UserModelSerializer(serializers.ModelSerializer):
             'speaks_french',
             'speaks_english',
         ]
+
+
+class ProfileModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile
+        fields = [
+            'birthdate',
+            'photo',
+            'is_owner',
+            'is_volunteer',
+            'is_leader',
+            'bio',
+            'phone_number',
+        ]
+    
+    def update(self, instance, validated_data):
+        return instance
