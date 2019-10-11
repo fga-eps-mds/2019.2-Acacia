@@ -2,7 +2,7 @@
 from django.urls import path, include
 
 # Viewsets
-from .viewsets import UserRegistrationAPIView
+from .viewsets import UserRegistrationAPIView, GetUserPreferedLanguage
 
 # Simple JWT
 from rest_framework_simplejwt.views import (
@@ -16,4 +16,5 @@ urlpatterns = [
     path('signup/', UserRegistrationAPIView.as_view(), name='register'),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('prefered-language/', GetUserPreferedLanguage.as_view(), name='prefered_language')
 ]

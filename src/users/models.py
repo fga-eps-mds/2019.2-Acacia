@@ -27,6 +27,13 @@ class User(AbstractUser):
         )
     )
 
+    chosen_language = models.CharField(
+       _('language'),
+       max_length=2,
+       default='pt',
+       help_text=_('User selected language for website display LULA LIVRE')
+    )
+
     speaks_french = models.BooleanField(
         _('speaks french'),
         default=False,
