@@ -52,19 +52,25 @@ class Profile(models.Model):
         on_delete=models.CASCADE,
         primary_key=True,
     )
-    phone_number = PhoneNumberField(blank=True, null=True)
+    phone_number = models.CharField(blank=True, null=True, max_length=15)
     bio = models.TextField(blank=True, null=True)
     birthdate = models.DateField(blank=True, null=True)
-    photo = models.ImageField(upload_to='media/profile_photo')
+    photo = models.ImageField(upload_to='media/profile_photo', blank=True, null=True)
     is_owner = models.BooleanField(
         default=False,
-        help_text=_('Designates if user has a propriety')
+        help_text=_('Designates if user has a propriety'),
+        blank=True, 
+        null=True
     )
     is_volunteer = models.BooleanField(
         default=False,
-        help_text=_('Designates if user is a volunteer')
+        help_text=_('Designates if user is a volunteer'),
+        blank=True, 
+        null=True
     )
     is_leader = models.BooleanField(
         default=False,
-        help_text=_('Designates if user is haverst leader')
+        help_text=_('Designates if user is haverst leader'),
+        blank=True, 
+        null=True
     )

@@ -9,6 +9,8 @@ from .models import User, Profile
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
+from datetime import date
+
 
 class UserSignUpSerializer(serializers.Serializer):
 
@@ -94,17 +96,45 @@ class UserModelSerializer(serializers.ModelSerializer):
 
 
 class ProfileModelSerializer(serializers.ModelSerializer):
+    birthdate = serializers.DateField(
+
+    )
     class Meta:
         model = Profile
         fields = [
-            'birthdate',
             'photo',
+            'birthdate',
+            'bio',
+            'phone_number',
             'is_owner',
             'is_volunteer',
             'is_leader',
-            'bio',
-            'phone_number',
         ]
     
+    def validated_phone_number(self, phone_number):
+        if phone_number.isdigit():
+            return phone_number
+        raise serializers.ValidationError('Número de telefone inválido')
+
+    def validated_bio(self, bio):
+        if len(bio) <= 140:
+            return bio
+        raise serializers.ValidationError('A Bio está com mais de 140 caracteres')
+
+    def validated_birthdate(self, birthdate):
+        print(birthdate, date.today())
+        if birthdate < date.today():
+            return birthdate
+        raise serializers.ValidationError('Data inválida')
+
     def update(self, instance, validated_data):
-        return instance
+        self.validated_birthdate(validated_data['birthdate'])
+        if self.is_valid():
+            instance.phone_number = validated_data['phone_number']
+            instance.photo = validated_data['photo']
+            instance.is_leader = validated_data['is_leader']
+            instance.is_owner = validated_data['is_owner']
+            instance.is_volunteer = validated_data['is_volunteer']
+            instance.bio = validated_data['bio']
+            instance.birthdate = validated_data['birthdate']
+            return instance
