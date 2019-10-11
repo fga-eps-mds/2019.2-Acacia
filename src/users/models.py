@@ -40,7 +40,7 @@ class User(AbstractUser):
     REQUIRED_FIELDS = ['username']
 
 class Profile(models.Model):
-    user = models.OnetoOneField(
+    user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
         primary_key=True,
@@ -50,14 +50,14 @@ class Profile(models.Model):
     birthdate = models.DateField(blank=True, null=True)
     photo = models.ImageField(upload_to='/media/profile_photo')
     is_owner = models.BooleanField(
-        default=False
+        default=False,
         help_text=_('Designates if user has a propriety')
     )
     is_volunteer = models.BooleanField(
-        default=False
+        default=False,
         help_text=_('Designates if user is a volunteer')
     )
     is_leader = models.BooleanField(
-        default=False
+        default=False,
         help_text=_('Designates if user is haverst leader')
     )

@@ -4,9 +4,6 @@ from .models import User
 class UserAdmin(admin.ModelAdmin):
     list_display = (
         'email',
-        'phone_number',
-        'birth', 
-        'email',
         'username',
     )
 
