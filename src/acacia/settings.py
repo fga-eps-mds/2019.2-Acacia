@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-# from scripts.wait_for_db import start_services
+from scripts.wait_for_db import start_services
 from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,28 +27,32 @@ SECRET_KEY = 'o8i1rj77rfrpx5x@#6pad8=sn@wl9ri)-uh5#r7f_jrh-ki&mh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost']
 
 AUTH_USER_MODEL = 'users.User'
 
-# Application definition
-INSTALLED_APPS = [
+DEFAULT_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
 
-    # libs
+THIRD_PARTY_APPS = [
     'phonenumber_field',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-
-    # my apps
-    'users',
 ]
+
+LOCAL_APPS = [
+    'users',
+    'property',
+]
+
+INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,22 +88,22 @@ TEMPLATES = [
 WSGI_APPLICATION = 'acacia.wsgi.application'
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'postgres',
-    #     'USER': 'postgres',
-    #     'HOST': 'db',
-    #     'PORT': '5432',
-    # },
-    
     'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PORT': '5432',
+    },
+
+    'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
 # STARTS SERVICES THAT DJANGO DEPENDS E.G. postgres
-# start_services()
+start_services()
 
 LANGUAGES = (
     ('en-us', _('English')),
@@ -150,17 +154,17 @@ STATIC_URL = '/static/'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+    
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
     ]
 }
 
 # CORS headers to responses
-
 CORS_ORIGIN_WHITELIST = [
   "http://localhost:8080",
-  "http://localhost:8080",
 	"http://0.0.0.0:8080",
-	"http://0.0.0.0:8080",
-  "http://localhost:8080"
 ]
 
 from datetime import timedelta
