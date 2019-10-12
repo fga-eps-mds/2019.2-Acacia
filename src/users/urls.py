@@ -43,3 +43,6 @@ urlpatterns = [
         name='token_refresh'
     ),
 ]
+
+from acacia.helpers import list_all_endpoints
+urlpatterns = list_all_endpoints(urlpatterns, app_name=app_name)

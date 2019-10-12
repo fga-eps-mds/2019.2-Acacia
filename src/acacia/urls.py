@@ -6,3 +6,6 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('property/', include('property.urls')),
 ]
+
+from .helpers import list_all_endpoints
+urlpatterns = list_all_endpoints(urlpatterns)
