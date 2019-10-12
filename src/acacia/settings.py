@@ -11,10 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from scripts.wait_for_db import start_services
+# from scripts.wait_for_db import start_services
 from django.utils.translation import ugettext_lazy as _
-
-from .wait_db import start_services
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -86,22 +84,22 @@ TEMPLATES = [
 WSGI_APPLICATION = 'acacia.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
-        'PORT': '5432',
-    },
-    
     # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'postgres',
+    #     'USER': 'postgres',
+    #     'HOST': 'db',
+    #     'PORT': '5432',
+    # },
+    
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 # STARTS SERVICES THAT DJANGO DEPENDS E.G. postgres
-start_services()
+# start_services()
 
 LANGUAGES = (
     ('en-us', _('English')),

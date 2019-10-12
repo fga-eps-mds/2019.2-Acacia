@@ -1,52 +1,67 @@
-
-# Django
 from django.conf import settings
+from django.utils.translation import ugettext as _
 
-# Models
-from .models import User
-
-# Django Rest Framework
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
+from .models import User
 
 class UserSignUpSerializer(serializers.Serializer):
 
     username = serializers.CharField(
-        required=True,
-        label="Username",
+        required = True,
+        label = _("Username"),
+
+        validators = [
+            UniqueValidator(
+                queryset = User.objects.all(),
+                message = _('This username is already registered')
+            ),
+        ],
     )
 
     email = serializers.EmailField(
-        required=True,
-        validators=[UniqueValidator(queryset=User.objects.all())],
-        #unique=True,
-        label="Email Address",
+        required = True,
+        label = _("Email Address"),
+        
+        validators = [
+            UniqueValidator(
+                queryset = User.objects.all(),
+                message = _("This email has already been registered")
+            ),
+        ],
     )
 
     password = serializers.CharField(
-        write_only=True,
-        required=True,
-        label="Password",
-        style={'input_type': 'password'},
+        write_only = True,
+        required = True,
+        label = _("Password"),
+        style = {'input_type': 'password'},
+        min_length = 8,
     )
 
     confirm_password = serializers.CharField(
-        write_only=True,
-        required=True,
-        label="Confirm Password", 
-        style={'input_type': 'password'} 
+        write_only = True,
+        required = True,
+        label = _("Confirm Password"), 
+        style = {'input_type': 'password'},
+        min_length = 8,
     )
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password', 'confirm_password']
+        fields = [
+            'username', 
+            'email', 
+            'password', 
+            'confirm_password'
+        ]
 
     def validate_password(self, password):
         min_length = getattr(settings, 'PASSWORD_MIN_LENGTH', 8)
         if len(password) < min_length:
             raise serializers.ValidationError(
-                'A senha deve ter no mínimo %s caracteres' % (min_length)
+                'Password must be at least %s characters' % (min_length)
             )
         return password
 
@@ -54,20 +69,16 @@ class UserSignUpSerializer(serializers.Serializer):
         data = self.get_initial()
         password = data.get('password')
         if password != password_confirmation:
-            raise serializers.ValidationError('As senhas devem corresponder')
+            raise serializers.ValidationError(_('Passwords must match'))
         return password_confirmation
-
-    def validate_username(self, username):
-        if User.objects.filter(username=username).exists():
-            raise serializers.ValidationError('Usuário com este nome já cadastrado')
-        return username
 
     def create(self, validated_data):
 
-        # this fields dont belongs to this class
+        # this field should not be saved to database
         validated_data.pop('confirm_password')
 
-        user = User.objects.create_user(**validated_data,
+        user = User.objects.create_user(
+            **validated_data,
             is_verified=False
         )
 

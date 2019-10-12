@@ -6,6 +6,8 @@ from .viewsets import (
     UserRegistrationAPIView, 
     CreateAccessToken, 
     RefreshAccessToken,
+    RetrieveUpdatePreferedLanguageAPIView,
+    test_access_token
 )
 
 app_name = 'users'
