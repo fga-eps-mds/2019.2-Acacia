@@ -34,7 +34,7 @@ class CreateAccessToken(TokenObtainPairView):
         """
 
         required_fields = {
-            'meta': 'the following fields are required',
+            'meta': 'The following fields are required in the request body',
             'email': '',
             'password': '',
         }
@@ -49,7 +49,7 @@ class RefreshAccessToken(TokenRefreshView):
         """
 
         required_fields = {
-            'meta': 'the following field are required',
+            'meta': 'Refresh your token by sending your `refresh token` in the request body',
             'refresh': '',
         }
 
