@@ -15,7 +15,7 @@ from localflavor.br.br_states import STATE_CHOICES
 
 class PropertyListCreateAPIView(generics.ListCreateAPIView):
     serializer_class =  PropertySerializer
-    permission_classes = (IsAuthenticatedOrReadOnly, )
+    permission_classes = (IsAuthenticated, )
 
     # only this function is allowed without authentication
     def get(self, request, *args, **kwargs):
