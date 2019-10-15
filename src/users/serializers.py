@@ -96,9 +96,9 @@ class UserModelSerializer(serializers.ModelSerializer):
 
 
 class ProfileModelSerializer(serializers.ModelSerializer):
-    birthdate = serializers.DateField(
-
-    )
+    birthdate = serializers.DateField()
+    phone_number = serializers.CharField()
+    
     class Meta:
         model = Profile
         fields = [
@@ -122,7 +122,6 @@ class ProfileModelSerializer(serializers.ModelSerializer):
         raise serializers.ValidationError('A Bio está com mais de 140 caracteres')
 
     def validated_birthdate(self, birthdate):
-        print(birthdate, date.today())
         if birthdate < date.today():
             return birthdate
         raise serializers.ValidationError('Data inválida')

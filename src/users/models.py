@@ -43,7 +43,6 @@ class User(AbstractUser):
 
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, **kwargs):
-    print(instance, "Taok")
     Profile.objects.create(user=instance)
 
 class Profile(models.Model):
@@ -70,7 +69,7 @@ class Profile(models.Model):
     )
     is_leader = models.BooleanField(
         default=False,
-        help_text=_('Designates if user is haverst leader'),
+        help_text=_('Designates if user is a haverst leader'),
         blank=True, 
         null=True
     )
