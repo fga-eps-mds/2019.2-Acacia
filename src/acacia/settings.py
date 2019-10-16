@@ -153,8 +153,18 @@ REST_FRAMEWORK = {
 # CORS headers to responses
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:8080",
-    "http://localhost:8000",
+  "http://localhost:8080",
+  "http://localhost:8000",
 	"http://0.0.0.0:8080",
 	"http://0.0.0.0:8000",
+  "http://localhost:8081"
 ]
+
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=10),
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': True,
+}

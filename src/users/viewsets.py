@@ -26,14 +26,20 @@ class UserRegistrationAPIView(CreateAPIView):
 
 class GetUserPreferedLanguage(CreateAPIView):
     """
-    A view that returns the count of active users in JSON.
+    Returns a signed in users's prefered language
     """
     renderer_classes = [JSONRenderer]
 
-    def get(self, request, format=None):
+    def post(self, request, format=None):
         return Response({
-          'chosen_language': request.user.chosen_language
+            'chosen_language': request.user.chosen_language
         })
+
+class SetUserPreferedLanguage(CreateAPIView):
+    """
+    Sets a signed in users's prefered language
+    """
+    renderer_classes = [JSONRenderer]
 
     def post(self, request, format=None):
         if not 'chosen_language' in request.data:
@@ -44,4 +50,16 @@ class GetUserPreferedLanguage(CreateAPIView):
         request.user.save()
         return Response({
           'message': 'Language updated to ' + request.user.chosen_language
+        })
+
+class TestAccessToken(CreateAPIView):
+    """
+    A view that returns the count of active users in JSON.
+    """
+    renderer_classes = [JSONRenderer]
+    permission_classes = (permissions.AllowAny, )
+
+    def post(self, request, format=None):
+        return Response({
+            'message': 'valid'
         })
