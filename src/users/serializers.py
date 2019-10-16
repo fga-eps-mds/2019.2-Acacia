@@ -127,13 +127,15 @@ class ProfileModelSerializer(serializers.ModelSerializer):
         raise serializers.ValidationError('Data inválida')
 
     def update(self, instance, validated_data):
-        self.validated_birthdate(validated_data['birthdate'])
+        
+        
         if self.is_valid():
-            instance.phone_number = validated_data['phone_number']
+            instance.phone_number = self.validated_phone_number(validated_data['phone_number'])
             instance.photo = validated_data['photo']
             instance.is_leader = validated_data['is_leader']
             instance.is_owner = validated_data['is_owner']
             instance.is_volunteer = validated_data['is_volunteer']
-            instance.bio = validated_data['bio']
-            instance.birthdate = validated_data['birthdate']
+            instance.bio = self.validated_bio(validated_data['bio'])
+            instance.birthdate = self.validated_birthdate(validated_data['birthdate'])
+            print(instance.phone_number)
             return instance
