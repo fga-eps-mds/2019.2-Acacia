@@ -41,35 +41,57 @@ class User(AbstractUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
 
-@receiver(post_save, sender=User)
-def create_profile(sender, instance, **kwargs):
-    Profile.objects.create(user=instance)
 
 class Profile(models.Model):
+
+    objects = models.Manager()
+
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
-        primary_key=True,
     )
-    phone_number = models.CharField(blank=True, null=True, max_length=15)
-    bio = models.TextField(blank=True, null=True)
-    birthdate = models.DateField(blank=True, null=True)
-    photo = models.ImageField(upload_to='media/profile_photo', blank=True, null=True)
+
+    phone_number = models.CharField(
+        blank=True,
+        null=False,
+        default="",
+        max_length=15
+    )
+
+    bio = models.TextField(
+        blank=True,
+        null=False,
+        default=""
+    )
+
+    birthdate = models.DateField(
+        null=True,
+    )
+
+    photo = models.ImageField(
+        upload_to='media/profile_photo',
+        blank=True,
+        null=True
+    )
+
     is_owner = models.BooleanField(
         default=False,
         help_text=_('Designates if user has a propriety'),
         blank=True, 
-        null=True
+        null=False
     )
+
     is_volunteer = models.BooleanField(
         default=False,
         help_text=_('Designates if user is a volunteer'),
         blank=True, 
-        null=True
+        null=False
     )
+
     is_leader = models.BooleanField(
         default=False,
         help_text=_('Designates if user is a haverst leader'),
         blank=True, 
-        null=True
+        null=False
     )
+

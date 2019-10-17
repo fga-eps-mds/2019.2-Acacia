@@ -79,6 +79,8 @@ class UserSignUpSerializer(serializers.Serializer):
             is_verified=False
         )
 
+        Profile.objects.create(user=user)
+
         # TODO: SEND CONFIRMATION EMAIL
 
         return user
@@ -96,8 +98,6 @@ class UserModelSerializer(serializers.ModelSerializer):
 
 
 class ProfileModelSerializer(serializers.ModelSerializer):
-    birthdate = serializers.DateField()
-    phone_number = serializers.CharField()
     
     class Meta:
         model = Profile
@@ -105,37 +105,21 @@ class ProfileModelSerializer(serializers.ModelSerializer):
             'photo',
             'birthdate',
             'bio',
-            'phone_number',
-            'is_owner',
-            'is_volunteer',
-            'is_leader',
+            'phone_number'
         ]
     
-    def validated_phone_number(self, phone_number):
+    def validate_phone_number(self, phone_number):
         if phone_number.isdigit():
             return phone_number
         raise serializers.ValidationError('Número de telefone inválido')
 
-    def validated_bio(self, bio):
+    def validate_bio(self, bio):
         if len(bio) <= 140:
             return bio
         raise serializers.ValidationError('A Bio está com mais de 140 caracteres')
 
-    def validated_birthdate(self, birthdate):
+    def validate_birthdate(self, birthdate):
         if birthdate < date.today():
             return birthdate
         raise serializers.ValidationError('Data inválida')
 
-    def update(self, instance, validated_data):
-        
-        
-        if self.is_valid():
-            instance.phone_number = self.validated_phone_number(validated_data['phone_number'])
-            instance.photo = validated_data['photo']
-            instance.is_leader = validated_data['is_leader']
-            instance.is_owner = validated_data['is_owner']
-            instance.is_volunteer = validated_data['is_volunteer']
-            instance.bio = self.validated_bio(validated_data['bio'])
-            instance.birthdate = self.validated_birthdate(validated_data['birthdate'])
-            print(instance.phone_number)
-            return instance
