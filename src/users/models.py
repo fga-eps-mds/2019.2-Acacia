@@ -31,7 +31,7 @@ class User(AbstractUser):
        _('language'),
        max_length=2,
        default='pt',
-       help_text=_('User selected language for website display LULA LIVRE')
+       help_text=_('User selected language for website display')
     )
 
     speaks_french = models.BooleanField(
