@@ -3,7 +3,7 @@
 from rest_framework import status
 from rest_framework import permissions
 from rest_framework.response import Response
-from rest_framework.decorators import action
+from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.generics import CreateAPIView, RetrieveUpdateAPIView
 from rest_framework.authtoken.models import Token
 from rest_framework.renderers import JSONRenderer
@@ -16,6 +16,12 @@ from .models import User
 # Serializers
 from .serializers import UserSignUpSerializer, UserPreferedLanguage
 
+from rest_framework.decorators import api_view
+
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticated, ])
+def test_access_token(request):
+    return Response({'token_status': 'OK'})
 
 class UserRegistrationAPIView(CreateAPIView):
     """

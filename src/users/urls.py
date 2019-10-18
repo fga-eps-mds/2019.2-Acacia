@@ -5,6 +5,7 @@ from django.urls import path, include
 from .viewsets import (
     UserRegistrationAPIView, 
     RetrieveUpdatePreferedLanguageAPIView,
+    test_access_token
 )
 
 # Simple JWT
@@ -26,5 +27,10 @@ urlpatterns = [
         name='set_prefered_language'
     ),
 
+    path(
+        'token/test-access-token/',
+        test_access_token,
+        name='test_access_token'
+    ),
     
 ]
