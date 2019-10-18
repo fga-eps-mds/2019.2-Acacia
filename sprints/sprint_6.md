@@ -71,7 +71,7 @@ Segue imagem com todos as questões levantadas durante a retrospectiva.
 
 Como um ponto que foi discutido e trazido diversas vezes, a "Motivação para o projeto indefinida" a equipe questionou a falta de entendimento do contexto dos usuários e o distanciamento em relação a ele. Para amenizar o problema e ter uma discussão mais direcionada, foi construído um mapa de empatia em equipe, traçando o perfil de um proprietário de uma colheita, tendo como resultado a imagem a seguir.
 
-![retrospectiva](../img/gerenciamento/empatia.png)
+![empatia](../img/gerenciamento/empatia.png)
 
 
 # Práticas ágeis 
