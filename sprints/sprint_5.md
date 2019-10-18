@@ -6,6 +6,7 @@
 | :- | :- | :- | :- |
 | 05/10/2019 | 0.1 | Criação do documento |  Fabíola |
 | 18/10/2019 | 0.2 | Correções e adição da análise |  Fabíola |
+| 18/10/2019 | 0.3 | Adição da análise do scrum master | Shayane |
 
 # Planning da Sprint 5
 
@@ -91,6 +92,7 @@ Segundo a equipe a qualidade entregue foi de 3.85 considerando a escala de liker
 
 # Análise da Scrum Master
 
+Esta sprint foi prioritariamente de refatoração para preparação para a Release 1. Alguns riscos se concretizaram, como dependência entre atividades, envio de PR em cima da hora e concentração do conhecimento, porém sem ação suficiente para tratá-los. Sobre a qualidade de entrega das issues, notou-se um aumento do índice. Sobre a produtividade, alguns membros se sentiram ociosos durante a semana. Pode-se aliar essa afirmação ao fato de ser uma sprint de refatoração, então o esforço não pareceu ser considerado tão alto para a equipe. Em relação a um ponto crucial que afeta a equipe, está na concentração de conhecimento e más práticas no pareamento que mostrou ser um fator de grande estresse entre os membros do grupo e ações corretivas estão sendo pensadas para contornar isso.
 
 
 
