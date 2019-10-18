@@ -5,6 +5,7 @@
 | Data   | Versão | Modificação  | Autor  |
 | :- | :- | :- | :- |
 | 05/10/2019 | 0.1 | Criação do documento |  Fabíola |
+| 18/10/2019 | 0.2 | Correções e adição da análise |  Fabíola |
 
 # Planning da Sprint 5
 
@@ -24,7 +25,7 @@ ID | Descrição | Estimativa | Label
 #92 | Refatorar documentação das sprints passadas| 3| EPS
 #91 | Melhoria do github pages | 8 | EPS |
 #64 | Treinar apresentação para R1 | 5 | EPS e MDS|
-#93 | Refatorar requisitos no documento de visão| 5 | MDS|
+#93 | Refatorar requisitos no documento de visão | 5 | MDS|
 #85 | Melhoria do diagrama de classes| 5 | MDS|
 
 
@@ -43,7 +44,7 @@ ID | Descrição | Estimativa | Label
 
 ![riscos das sprints](../img/gerenciamento/risk5.png)
 
-![burndown de riscos](../img/gerenciamento/burnd5.png)
+![burndown de riscos](../img/gerenciamento/burn5.png)
 
 Alguns riscos se concretizaram, a equipe não realizou ações para tentar evitá-los:
     - O conhecimento continuou concetrado;
