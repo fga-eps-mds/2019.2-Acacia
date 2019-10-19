@@ -3,7 +3,7 @@
 ## Histórico de revisão
 | Data   | Versão | Modificação  | Autor  |
 | :- | :- | :- | :- |
-| 19/10/2019 | 0.1 | Adição do planejamento  |  Fabíola |
+| 19/10/2019 | 0.1 | Adição do planejamento e imagens da revisão e retrospectiva |  Fabíola |
 
 # Planning da Sprint 6
 
