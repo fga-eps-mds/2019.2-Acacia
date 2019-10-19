@@ -39,9 +39,8 @@ ID | Descrição | Estimativa | Label|
 
  # Possíveis riscos mapeados para a sprint
 
-<img src="../img/gerenciamento/risks6.png">
-<img src="../img/gerenciamento/burn6.png">
-
+![risk](../img/gerenciamento/risks6.png)
+![burn](../img/gerenciamento/burn6.png")
 
 # Review
 
@@ -84,7 +83,7 @@ Como um ponto que foi discutido e trazido diversas vezes, a "Motivação para o 
 
 # Squad Health Check
 
-<img src="../img/gerenciamento/health6.png">
+![health](../img/gerenciamento/health6.png)>
 
 # Análise da Scrum Master
 
