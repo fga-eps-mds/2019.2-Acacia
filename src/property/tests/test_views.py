@@ -90,4 +90,5 @@ class PropertyListCreateAPIViewTestCase(APITestCase):
         force_authenticate(request, user=self.user)
         response = self.view_detail(request, pk=self.property.id)
         self.assertEqual(200, response.status_code)
+        self.assertEqual(response.data['state'], self.data['state'])
         self.assertDictContainsSubset(self.data, response.data)
