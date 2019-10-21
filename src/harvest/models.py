@@ -4,17 +4,13 @@ from django.db import models
 
 class Harvest(models.Model):
 
+    def __str__ (self):
+        return str(self.date)
+
     objects = models.Manager()
 
     date = models.DateField(
         null=True
-    )
-
-    rules = models.CharField(
-        blank=True,
-        null=False,
-        default="",
-        max_length=2000 
     )
 
     description = models.TextField(
@@ -46,4 +42,18 @@ class Harvest(models.Model):
         null=False,
         default="",
         max_length=2000 
+    )
+
+class RulesHarvest(models.Model):
+
+    def __str__ (self):
+        return self.description
+
+    harvest = models.ForeignKey(Harvest, models.CASCADE)
+
+    description = models.CharField(
+        blank=True,
+        null=False,
+        default="",
+        max_length=280 
     )

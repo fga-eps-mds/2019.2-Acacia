@@ -3,7 +3,7 @@
 from django.conf import settings
 
 # Models
-from .models import Harvest
+from harvest.models import Harvest
 
 # Django Rest Framework
 from rest_framework import serializers
@@ -14,11 +14,6 @@ class HarvestCreateSerializer(serializers.Serializer):
     date = serializers.DateField(
         required=True,
         label="Harvest Date",
-    )
-
-    rules = serializers.CharField(
-        required=False,
-        label="Harvest Rules",
     )
 
     description = serializers.CharField(
@@ -38,7 +33,7 @@ class HarvestCreateSerializer(serializers.Serializer):
 
     class Meta:
         model = Harvest
-        fields = ['date', 'rules', 'description', 'max_volunteers', 'equipment']
+        fields = ['date', 'description', 'max_volunteers', 'equipment']
 
     def create(self, validated_data):
         harvest = Harvest(**validated_data)
@@ -50,7 +45,6 @@ class HarverstModelSerializer(serializers.ModelSerializer):
         model = Harvest
         fields = [
             'date', 
-            'rules',
             'status',
             'neighbor_access', 
             'description', 
