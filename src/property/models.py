@@ -1,6 +1,10 @@
 from django.db import models
+from django.shortcuts import reverse
 from django.utils.translation import ugettext as _
 from localflavor.br.br_states import STATE_CHOICES
+
+from functools import reduce
+from operator import add
 
 from users.models import User
 
@@ -62,12 +66,16 @@ class Property(models.Model):
 
     complement = models.CharField(
         max_length = 100,
-        verbose_name = _('Address complement')
+        verbose_name = _('Address complement'),
+        null=True,
+        blank=True,
     )
 
     reference_point = models.CharField(
         max_length = 100,
         verbose_name = _('Reference point'),
+        null=True,
+        blank=True,
     )
 
     owner = models.ForeignKey(
@@ -81,3 +89,18 @@ class Property(models.Model):
 
     def __str__(self):
         return f"{self.state}, {self.city}, {self.address}"
+
+    @staticmethod
+    def valid_address():
+        """
+        This class method returns a list of valid address 
+        types
+        """
+        return [k for k, v in Property.TYPE_OF_ADDRESS]
+    
+    @staticmethod
+    def valid_states():
+        """
+        This class method returns a list of valid states 
+        """
+        return [k for k, v in STATE_CHOICES]
