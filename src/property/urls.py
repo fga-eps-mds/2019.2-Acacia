@@ -1,18 +1,13 @@
 from django.urls import path, include
-from .viewsets import PropertyListCreateAPIView, PropertyDetailAPIView
+from .viewsets import PropertyViewSet
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'', PropertyViewSet, base_name='property')
 
 app_name = 'property'
 
 urlpatterns = [
-    path(
-        '', 
-        PropertyListCreateAPIView.as_view(), 
-        name='list'
-        ),
-
-    path(
-        '<int:pk>/', 
-        PropertyDetailAPIView.as_view(), 
-        name='detail'
-    ),
 ]
+
+urlpatterns += router.urls
