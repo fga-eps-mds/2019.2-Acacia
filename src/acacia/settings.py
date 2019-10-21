@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
     # my apps
     'users',
+    'harvest',
 ]
 
 MIDDLEWARE = [
