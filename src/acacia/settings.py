@@ -29,7 +29,7 @@ SECRET_KEY = 'o8i1rj77rfrpx5x@#6pad8=sn@wl9ri)-uh5#r7f_jrh-ki&mh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -92,7 +92,12 @@ DATABASES = {
         'USER': 'postgres',
         'HOST': 'db',
         'PORT': '5432',
-    }
+    },
+    
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 }
 
 # STARTS SERVICES THAT DJANGO DEPENDS E.G. postgres
@@ -153,8 +158,18 @@ REST_FRAMEWORK = {
 # CORS headers to responses
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:8080",
-    "http://localhost:8000",
+  "http://localhost:8080",
+  "http://localhost:8080",
 	"http://0.0.0.0:8080",
-	"http://0.0.0.0:8000",
+	"http://0.0.0.0:8080",
+  "http://localhost:8080"
 ]
+
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=10),
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': True,
+}
