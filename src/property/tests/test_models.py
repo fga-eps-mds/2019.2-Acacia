@@ -1,4 +1,5 @@
 from django.utils.translation import ugettext as _
+from localflavor.br.br_states import STATE_CHOICES
 from django.test import TestCase
 from ..models import Property
 from users.models import User
@@ -40,3 +41,24 @@ class PropertyModelTest(TestCase):
             f'{self.obj.city}, {self.obj.address}')
         
         self.assertEqual(str(self.obj), expected)
+
+    def test_valid_address(self):
+        expected = [
+            'Apartment',
+            'House',
+            'Farm',
+            'Other',
+        ]
+
+        self.assertEquals(
+            expected, 
+            Property.valid_address()
+        )
+    
+    def test_valid_states(self):
+        expected = [k for k, v in STATE_CHOICES]
+
+        self.assertEquals(
+            expected, 
+            Property.valid_states()
+        )
