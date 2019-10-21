@@ -42,12 +42,6 @@ class UserSignUpSerializer(serializers.Serializer):
         model = User
         fields = ['username', 'email', 'password', 'confirm_password']
 
-    #def validate_email(self, email):
-    #    if User.objects.filter(email=email).exists():
-    #        raise serializers.ValidationError('Email já cadastrado')
-    #    return email
-
-
     def validate_password(self, password):
         min_length = getattr(settings, 'PASSWORD_MIN_LENGTH', 8)
         if len(password) < min_length:
@@ -94,3 +88,9 @@ class UserModelSerializer(serializers.ModelSerializer):
             'speaks_french',
             'speaks_english',
         ]
+
+class UserPreferedLanguage(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ['chosen_language']
