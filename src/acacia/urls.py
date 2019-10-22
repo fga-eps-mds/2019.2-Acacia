@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
+from .helpers import list_all_endpoints
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -7,5 +8,4 @@ urlpatterns = [
     path('properties/', include('property.urls')),
 ]
 
-from .helpers import list_all_endpoints
 urlpatterns = list_all_endpoints(urlpatterns)

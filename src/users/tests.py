@@ -1,5 +1,3 @@
-import json
-
 from rest_framework.test import APITestCase
 from django.urls import reverse
 from django.db import IntegrityError
@@ -23,7 +21,6 @@ class UserRegistrationAPIViewTestCase(APITestCase):
         response = self.client.post(self.url, user_data)
         self.assertEqual(400, response.status_code)
 
-
     def test_password_less_than_8_characters(self):
         """
         Test to try to create a user with a password less than 8 characters
@@ -38,7 +35,6 @@ class UserRegistrationAPIViewTestCase(APITestCase):
 
         response = self.client.post(self.url, user_data)
         self.assertEqual(400, response.status_code)
-
 
     def test_unique_email_validation(self):
         """
@@ -61,7 +57,6 @@ class UserRegistrationAPIViewTestCase(APITestCase):
         self.assertEqual(201, response.status_code)
         with self.assertRaises(IntegrityError):
             response = self.client.post(self.url, user2_data)
-        
 
     def test_unique_username_validation(self):
         """
@@ -88,7 +83,6 @@ class UserRegistrationAPIViewTestCase(APITestCase):
         response = self.client.post(self.url, user_data)
         self.assertEqual(400, response.status_code)
 
-
     def test_user_registration(self):
         """
         Test to create a user with valid data
@@ -104,11 +98,10 @@ class UserRegistrationAPIViewTestCase(APITestCase):
         response = self.client.post(self.url, user_data)
         self.assertEqual(201, response.status_code)
 
-        
+
 class UserAuthenticationAPIViewTestCase(APITestCase):
 
     # SETUP
-
 
     signup_url = reverse('users:register')
     token_url = reverse('users:token_obtain_pair')
@@ -121,7 +114,6 @@ class UserAuthenticationAPIViewTestCase(APITestCase):
         "confirm_password": "cleber123"
     }
 
-
     def create_user(self, user=user_cleber):
         """
         Set's up user in database.
@@ -130,19 +122,22 @@ class UserAuthenticationAPIViewTestCase(APITestCase):
         self.assertEqual(201, self.client.post(
             self.signup_url, user).status_code, msg='User setup failed')
 
-
     def authenticate_user(self, user=user_cleber):
         """
         Authenticates a set up user and returns it's tokens
         """
 
         response = self.client.post(
-            self.token_url, {"email": user['email'], "password": user['password']})
-        self.assertEqual(200, response.status_code, msg='User authentication failed')
+            self.token_url,
+            {"email": user['email'], "password": user['password']})
+        self.assertEqual(
+            200,
+            response.status_code,
+            msg='User authentication failed'
+        )
         return response.data
 
     # TESTS
-
 
     def test_authenticate_valid_user(self):
         """
@@ -157,11 +152,19 @@ class UserAuthenticationAPIViewTestCase(APITestCase):
         }
 
         response = self.client.post(self.token_url, authentication_data)
-        self.assertEqual(200, response.status_code,
-                        msg='Response not 200 (' + str(response.status_code) + ')')
-        self.assertIsNotNone(response.data['access'], msg='No access token found')
-        self.assertIsNotNone(response.data['refresh'], msg='No refresh token found')
-
+        self.assertEqual(
+            200,
+            response.status_code,
+            msg='Response not 200 (' + str(response.status_code) + ')'
+        )
+        self.assertIsNotNone(
+            response.data['access'],
+            msg='No access token found'
+        )
+        self.assertIsNotNone(
+            response.data['refresh'],
+            msg='No refresh token found'
+        )
 
     def test_failed_password_authentication(self):
         """
@@ -176,9 +179,11 @@ class UserAuthenticationAPIViewTestCase(APITestCase):
         }
 
         response = self.client.post(self.token_url, authentication_data)
-        self.assertEqual(401, response.status_code, msg='Unexpected response code (' +
-                        str(response.status_code) + '), expecting 401')
-
+        self.assertEqual(
+            401,
+            response.status_code,
+            msg='Unexpected response code (' +
+                str(response.status_code) + '), expecting 401')
 
     def test_failed_email_authentication(self):
         """
@@ -193,9 +198,12 @@ class UserAuthenticationAPIViewTestCase(APITestCase):
         }
 
         response = self.client.post(self.token_url, authentication_data)
-        self.assertEqual(401, response.status_code, msg='Unexpected response code (' +
-                        str(response.status_code) + '), expecting 401')
-
+        self.assertEqual(
+            401,
+            response.status_code,
+            msg='Unexpected response code (' +
+                str(response.status_code) + '), expecting 401'
+        )
 
     def test_get_access_token_from_valid_refresh_token(self):
         """
@@ -205,6 +213,12 @@ class UserAuthenticationAPIViewTestCase(APITestCase):
         self.create_user(self.user_cleber)
         tokens = self.authenticate_user(self.user_cleber)
 
-        response = self.client.post(self.refresh_url, {"refresh": tokens['refresh']})
+        response = self.client.post(
+            self.refresh_url,
+            {"refresh": tokens['refresh']}
+        )
         self.assertEqual(200, response.status_code)
-        self.assertIsNotNone(response.data['access'], msg='No access token found')
+        self.assertIsNotNone(
+            response.data['access'],
+            msg='No access token found'
+        )

@@ -1,27 +1,25 @@
-# Django
-from django.urls import path, include
-
-# Viewsets
+from acacia.helpers import list_all_endpoints
+from django.urls import path
 from .viewsets import (
-    UserRegistrationAPIView, 
-    CreateAccessToken, 
+    UserRegistrationAPIView,
+    CreateAccessToken,
     RefreshAccessToken,
     RetrieveUpdatePreferedLanguageAPIView,
     test_access_token
 )
-
 app_name = 'users'
+
 
 urlpatterns = [
     path(
-        'signup/', 
-        UserRegistrationAPIView.as_view(), 
+        'signup/',
+        UserRegistrationAPIView.as_view(),
         name='register'
     ),
 
     path(
-        'prefered-language/', 
-        RetrieveUpdatePreferedLanguageAPIView.as_view(), 
+        'prefered-language/',
+        RetrieveUpdatePreferedLanguageAPIView.as_view(),
         name='set_prefered_language'
     ),
 
@@ -30,22 +28,22 @@ urlpatterns = [
         test_access_token,
         name='test_access_token'
     ),
-    
+
     path(
-        'token/', 
-        CreateAccessToken.as_view(), 
+        'token/',
+        CreateAccessToken.as_view(),
         name='token_obtain_pair'
     ),
 
     path(
-        'token/refresh/', 
-        RefreshAccessToken.as_view(), 
+        'token/refresh/',
+        RefreshAccessToken.as_view(),
         name='token_refresh'
     ),
 ]
 
-from acacia.helpers import list_all_endpoints
+
 urlpatterns = list_all_endpoints(
-    urlpatterns, 
+    urlpatterns,
     app_name=app_name
 )

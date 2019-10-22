@@ -20,7 +20,6 @@ def start_services():
     SERVICES_STARTED = True
 
 
-
 log = logging.getLogger('ej')
 
 
@@ -56,5 +55,5 @@ def can_connect(dbname, user, host):
 
     except psycopg2.OperationalError:
         return False
-        
+
     return True

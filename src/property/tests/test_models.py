@@ -4,6 +4,7 @@ from django.test import TestCase
 from ..models import Property
 from users.models import User
 
+
 class PropertyModelTest(TestCase):
 
     def setUp(self):
@@ -20,7 +21,7 @@ class PropertyModelTest(TestCase):
             district='Setor Leste',
             address='Quadra 4',
             complement='Casa 7B',
-            owner = user
+            owner=user
         )
 
     def test_verbose_name_plural(self):
@@ -28,7 +29,7 @@ class PropertyModelTest(TestCase):
             str(Property._meta.verbose_name_plural),
             _('Properties')
         )
-    
+
     def test_property_creation(self):
         self.assertEqual(
             Property.objects.last(),
@@ -38,8 +39,8 @@ class PropertyModelTest(TestCase):
 
     def test_string_representation(self):
         expected = (f'{self.obj.state}, ' +
-            f'{self.obj.city}, {self.obj.address}')
-        
+                    f'{self.obj.city}, {self.obj.address}')
+
         self.assertEqual(str(self.obj), expected)
 
     def test_valid_address(self):
@@ -51,14 +52,14 @@ class PropertyModelTest(TestCase):
         ]
 
         self.assertEquals(
-            expected, 
+            expected,
             Property.valid_address()
         )
-    
+
     def test_valid_states(self):
         expected = [k for k, v in STATE_CHOICES]
 
         self.assertEquals(
-            expected, 
+            expected,
             Property.valid_states()
         )
