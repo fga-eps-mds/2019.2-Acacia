@@ -2,13 +2,17 @@
 from django.urls import path, include
 
 # Viewsets
-from .viewsets import (
-    HarvestCreateAPIView
-)
+from .viewsets import HarvestViewSet
+
+# Django rest framework
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'', HarvestViewSet, base_name='harvest')
 
 app_name = 'harvest'
 
 urlpatterns = [
-    path('', HarvestCreateAPIView.as_view(), name='harvestcreate'),
-   # path(':id/', HarvestRegistrationAPIView.as_view(), name='harvestcrud'),
 ]
+
+urlpatterns += router.urls

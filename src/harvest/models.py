@@ -4,6 +4,8 @@ from django.db import models
 
 class Harvest(models.Model):
 
+    # TODO A Harvest belongs to a property
+
     def __str__ (self):
         return str(self.date)
 
@@ -21,25 +23,25 @@ class Harvest(models.Model):
 
     status = models.CharField(
         blank=True,
-        null=False,
+        null=True,
         default="",
         max_length=280
     )
 
     max_volunteers = models.PositiveSmallIntegerField(
         blank=True,
-        null=False,
+        null=True,
     )
 
     neighbor_access = models.BooleanField(
         default=False,
         blank=True, 
-        null=False
+        null=True
     )
 
-    equipament = models.CharField(
+    equipment = models.CharField(
         blank=True,
-        null=False,
+        null=True,
         default="",
         max_length=2000 
     )

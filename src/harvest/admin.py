@@ -6,7 +6,7 @@ class HarvestAdmin(admin.ModelAdmin):
         'date',
         'description',
         'status',
-        'equipament', 
+        'equipment', 
     )
 
     
