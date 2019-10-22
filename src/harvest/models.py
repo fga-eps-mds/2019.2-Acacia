@@ -33,17 +33,17 @@ class Harvest(models.Model):
         null=True,
     )
 
-    neighbor_access = models.BooleanField(
-        default=False,
-        blank=True, 
-        null=True
-    )
-
     equipment = models.CharField(
         blank=True,
         null=True,
         default="",
         max_length=2000 
+    )
+
+    neighbor_access = models.BooleanField(
+        default=False,
+        blank=True, 
+        null=True
     )
 
 class RulesHarvest(models.Model):

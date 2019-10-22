@@ -31,21 +31,3 @@ class HarvestViewSet(ModelViewSet):
     
     def perform_create(self, serializers):
         serializers.save()
-
-# class HarvestViewSet(CreateAPIView):
-#     """
-#     Endpoint for harvest creation
-#     """
-
-#     permission_classes = (permissions.IsAuthenticated, )
-#     serializer_class = HarvestCreateSerializer
-#     queryset = Harvest.objects.all()
-
-# class HarvertInteract(RetrieveUpdateDestroyAPIView):
-#     """
-#     Endpoint for harvest update, delete or get
-#     """
-
-#     permission_classes = (permissions.IsAuthenticated, )
-#     serializer_class = HarvestCreateSerializer
-#     queryset = Harvest.objects.all()
