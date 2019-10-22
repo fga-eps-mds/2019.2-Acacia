@@ -16,7 +16,7 @@ class UserSignUpSerializer(serializers.Serializer):
     email = serializers.EmailField(
         required=True,
         validators=[UniqueValidator(queryset=User.objects.all())],
-        unique=True,
+        # unique=True,
         label="Email Address",
     )
 
