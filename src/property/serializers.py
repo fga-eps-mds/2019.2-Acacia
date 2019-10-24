@@ -1,10 +1,8 @@
-from rest_framework.serializers import (
-    ModelSerializer,
-    ReadOnlyField,
-)
+from rest_framework.serializers import ModelSerializer
 
 from django.utils.translation import ugettext as _
 from .models import Property
+
 
 class PropertySerializer(ModelSerializer):
 
@@ -27,26 +25,26 @@ class PropertySerializer(ModelSerializer):
             "type_of_address": {
                 "error_messages": {
                     "required": _("Choose one of the "
-                        "following types: ") + str(
-                            Property.valid_address()),
+                                  "following types: ") + str(
+                                   Property.valid_address()),
 
                     "invalid_choice":  _("Invalid type. "
-                        "Choose one of the following "
-                            "types: ") + str(
-                                Property.valid_address()),
+                                         "Choose one of the following "
+                                         "types: ") + str(
+                                         Property.valid_address()),
                 }
             },
 
             "state": {
                 "error_messages": {
                     "required": _("Choose one of the "
-                        "following types: ") + str(
-                            Property.valid_states()),
-                    
+                                  "following types: ") + str(
+                                  Property.valid_states()),
+
                     "invalid_choice":  _("Invalid type. "
-                        "Choose one of the following "
-                            "types: ") + str(
-                                Property.valid_states()),
+                                         "Choose one of the following "
+                                         "types: ") + str(
+                                         Property.valid_states()),
                 }
             },
         }
