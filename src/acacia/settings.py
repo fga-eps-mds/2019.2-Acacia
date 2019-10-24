@@ -27,7 +27,7 @@ SECRET_KEY = 'o8i1rj77rfrpx5x@#6pad8=sn@wl9ri)-uh5#r7f_jrh-ki&mh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'acacia-backend-staging.herokuapp.com']
 
 AUTH_USER_MODEL = 'users.User'
 
