@@ -9,7 +9,5 @@ class HarvestAdmin(admin.ModelAdmin):
         'equipment', 
     )
 
-    
-
 admin.site.register(Harvest)
 admin.site.register(RulesHarvest)

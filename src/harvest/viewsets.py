@@ -28,6 +28,3 @@ class HarvestViewSet(ModelViewSet):
     permission_classes = (
         permissions.AllowAny, 
     )
-    
-    def perform_create(self, serializers):
-        serializers.save()
