@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.utils.translation import ugettext as _
 
+from .models import User
+
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
@@ -21,15 +23,10 @@ class UserSignUpSerializer(serializers.Serializer):
     )
 
     email = serializers.EmailField(
-        required = True,
-        label = _("Email Address"),
-        
-        validators = [
-            UniqueValidator(
-                queryset = User.objects.all(),
-                message = _("This email has already been registered")
-            ),
-        ],
+        required=True,
+        validators=[UniqueValidator(queryset=User.objects.all())],
+        # unique=True,
+        label="Email Address",
     )
 
     password = serializers.CharField(
@@ -41,11 +38,10 @@ class UserSignUpSerializer(serializers.Serializer):
     )
 
     confirm_password = serializers.CharField(
-        write_only = True,
-        required = True,
-        label = _("Confirm Password"), 
-        style = {'input_type': 'password'},
-        min_length = 8,
+        write_only=True,
+        required=True,
+        label="Confirm Password",
+        style={'input_type': 'password'}
     )
 
     class Meta:
@@ -72,6 +68,13 @@ class UserSignUpSerializer(serializers.Serializer):
             raise serializers.ValidationError(_('Passwords must match'))
         return password_confirmation
 
+    def validate_username(self, username):
+        if User.objects.filter(username=username).exists():
+            raise serializers.ValidationError(
+                'Usuário com este nome já cadastrado'
+            )
+        return username
+
     def create(self, validated_data):
 
         # this field should not be saved to database
@@ -86,6 +89,7 @@ class UserSignUpSerializer(serializers.Serializer):
 
         return user
 
+
 class UserModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -99,6 +103,7 @@ class UserModelSerializer(serializers.ModelSerializer):
             'speaks_french',
             'speaks_english',
         ]
+
 
 class UserPreferedLanguage(serializers.ModelSerializer):
 
