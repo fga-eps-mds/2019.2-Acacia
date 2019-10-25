@@ -50,6 +50,8 @@ INSTALLED_APPS = [
 
     # my apps
     'users',
+    # 'property',
+    'tree',
 ]
 
 MIDDLEWARE = [
