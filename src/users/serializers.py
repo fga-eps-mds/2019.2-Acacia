@@ -1,11 +1,8 @@
-
-# Django
 from django.conf import settings
 
 # Models
 from .models import User, Profile
 
-# Django Rest Framework
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
@@ -22,7 +19,7 @@ class UserSignUpSerializer(serializers.Serializer):
     email = serializers.EmailField(
         required=True,
         validators=[UniqueValidator(queryset=User.objects.all())],
-        #unique=True,
+        # unique=True,
         label="Email Address",
     )
 
@@ -36,19 +33,13 @@ class UserSignUpSerializer(serializers.Serializer):
     confirm_password = serializers.CharField(
         write_only=True,
         required=True,
-        label="Confirm Password", 
-        style={'input_type': 'password'} 
+        label="Confirm Password",
+        style={'input_type': 'password'}
     )
 
     class Meta:
         model = User
         fields = ['username', 'email', 'password', 'confirm_password']
-
-    #def validate_email(self, email):
-    #    if User.objects.filter(email=email).exists():
-    #        raise serializers.ValidationError('Email já cadastrado')
-    #    return email
-
 
     def validate_password(self, password):
         min_length = getattr(settings, 'PASSWORD_MIN_LENGTH', 8)
@@ -67,7 +58,9 @@ class UserSignUpSerializer(serializers.Serializer):
 
     def validate_username(self, username):
         if User.objects.filter(username=username).exists():
-            raise serializers.ValidationError('Usuário com este nome já cadastrado')
+            raise serializers.ValidationError(
+                'Usuário com este nome já cadastrado'
+            )
         return username
 
     def create(self, validated_data):
@@ -75,7 +68,8 @@ class UserSignUpSerializer(serializers.Serializer):
         # this fields dont belongs to this class
         validated_data.pop('confirm_password')
 
-        user = User.objects.create_user(**validated_data,
+        user = User.objects.create_user(
+            **validated_data,
             is_verified=False
         )
 
@@ -84,6 +78,7 @@ class UserSignUpSerializer(serializers.Serializer):
         # TODO: SEND CONFIRMATION EMAIL
 
         return user
+
 
 class UserModelSerializer(serializers.ModelSerializer):
     class Meta:
@@ -123,3 +118,8 @@ class ProfileModelSerializer(serializers.ModelSerializer):
             return birthdate
         raise serializers.ValidationError('Data inválida')
 
+class UserPreferedLanguage(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ['chosen_language']
