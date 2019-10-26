@@ -93,30 +93,42 @@ class UserModelSerializer(serializers.ModelSerializer):
 
 
 class ProfileModelSerializer(serializers.ModelSerializer):
-    
+
+    email = serializers.ModelField(
+        model_field=User()._meta.get_field('email'),
+    )
+
+    username = serializers.ModelField(
+        model_field=User()._meta.get_field('username'),
+    )
+
     class Meta:
         model = Profile
         fields = [
             'photo',
             'birthdate',
             'bio',
-            'phone_number'
+            'phone_number',
+            'email',
+            'username',
         ]
     
     def validate_phone_number(self, phone_number):
         if phone_number.isdigit():
             return phone_number
-        raise serializers.ValidationError('Número de telefone inválido')
+        raise serializers.ValidationError('Invalid phone number')
 
     def validate_bio(self, bio):
         if len(bio) <= 140:
             return bio
-        raise serializers.ValidationError('A Bio está com mais de 140 caracteres')
+        raise serializers.ValidationError(
+            'Bio field is longer than 140 characters'
+        )
 
     def validate_birthdate(self, birthdate):
         if birthdate < date.today():
             return birthdate
-        raise serializers.ValidationError('Data inválida')
+        raise serializers.ValidationError('Invalid Date')
 
 class UserPreferedLanguage(serializers.ModelSerializer):
 

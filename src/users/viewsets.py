@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.generics import CreateAPIView, RetrieveUpdateAPIView
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.exceptions import ValidationError
 
 from .models import User, Profile
 
@@ -31,23 +32,25 @@ class UserRegistrationAPIView(CreateAPIView):
 
 class ProfileUpdateAPIView(RetrieveUpdateAPIView):
     """
-    Endpoint for profile updated
+    Endpoint for update profile info
     """
     permission_classes = (IsAuthenticated, )
     serializer_class = ProfileModelSerializer
 
     def get_queryset(self):
-        
         return Profile.objects.get(user=self.request.user.id)
     
     def get_object(self):
         queryset = self.get_queryset()
-
         return queryset
+    
+    def perform_update(self, serializer):
+        user = self.request.user
+        email = self.request.data.get('email', None)
+        username = self.request.data.get('username', None)
+        instance = self.get_object()
+        serializer.save()
 
-    def perform_update(self, serializers):
-        user = User.objects.get(pk = self.request.user.id)
-        serializers.save(user = user)
 
 class RetrieveUpdatePreferedLanguageAPIView(RetrieveUpdateAPIView):
     """
