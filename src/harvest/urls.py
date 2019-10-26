@@ -1,6 +1,3 @@
-# Django
-from django.urls import path, include
-
 # Viewsets
 from .viewsets import HarvestViewSet
 

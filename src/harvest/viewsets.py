@@ -1,13 +1,8 @@
 
 # Django Rest Framework
-from rest_framework import status
 from rest_framework import permissions
 from rest_framework.response import Response
-from rest_framework.decorators import action, api_view, permission_classes
-from rest_framework.generics import CreateAPIView, RetrieveUpdateAPIView
-from rest_framework.authtoken.models import Token
-from rest_framework.permissions import IsAuthenticated
-from rest_framework import mixins
+from rest_framework.decorators import api_view
 from rest_framework.viewsets import ModelViewSet
 
 # Models
@@ -16,7 +11,6 @@ from .models import Harvest
 # Serializers
 from .serializers import HarvestSerializer
 
-from rest_framework.decorators import api_view
 
 class HarvestViewSet(ModelViewSet):
 
@@ -26,5 +20,10 @@ class HarvestViewSet(ModelViewSet):
     queryset = Harvest.objects.all()
     
     permission_classes = (
-        permissions.AllowAny, 
+        permissions.AllowAny,
     )
+
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        return Response(serializer.data)

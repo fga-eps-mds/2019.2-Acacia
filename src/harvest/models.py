@@ -1,11 +1,11 @@
 from django.db import models
-from django.utils.translation import ugettext as _
+
 
 class Harvest(models.Model):
 
     # TODO A Harvest belongs to a property
 
-    def __str__ (self):
+    def __str__(self):
         return str(self.date)
 
     objects = models.Manager()
@@ -44,15 +44,15 @@ class Harvest(models.Model):
     #     ('Restrict Access', 'Restrict Access'),
     #     ('Free Access', 'Free Access'),
     # )
-
     # access = models.CharField(
     #     choices=ACCESS_TYPES,
     #     max_length=15
     # )
 
+
 class RulesHarvest(models.Model):
 
-    def __str__ (self):
+    def __str__(self):
         return self.description
 
     harvest = models.ForeignKey(Harvest, models.CASCADE)

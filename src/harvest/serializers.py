@@ -1,12 +1,9 @@
-# Django
-from django.conf import settings
-from django.utils.translation import ugettext as _
-
 # Models
 from .models import Harvest, RulesHarvest
 
 # Django Rest Framework
-from rest_framework.serializers import ModelSerializer, ReadOnlyField
+from rest_framework.serializers import ModelSerializer
+
 
 class RulesHarvestSerializer(ModelSerializer):
     class Meta:
@@ -14,6 +11,7 @@ class RulesHarvestSerializer(ModelSerializer):
         fields = (
             'description',
         )
+
 
 class HarvestSerializer(ModelSerializer):
 
@@ -25,23 +23,22 @@ class HarvestSerializer(ModelSerializer):
     class Meta:
         model = Harvest
         fields = (
-            'date', 
+            'date',
             'status',
             'equipment',
-            'description', 
-            'max_volunteers', 
-            'min_volunteers', 
+            'description',
+            'max_volunteers',
+            'min_volunteers',
             'rules',
         )
 
     def create(self, validated_data):
         rules = validated_data.pop('rules')
-        harvest = Harvest.objects.create(**validated_data)
+        harvests = Harvest.objects.create(**validated_data)
 
         for rule in rules:
             RulesHarvest.objects.create(
-                harvest = harvest,
+                harvest = harvests,
                 **rule
             )
-        
-        return harvest
+        return harvests
