@@ -8,11 +8,10 @@ from rest_framework.exceptions import ValidationError
 from .models import User, Profile
 
 from .serializers import (
-    UserSignUpSerializer, 
+    UserSignUpSerializer,
     UserPreferedLanguage,
     ProfileModelSerializer
 )
-    
 
 
 @api_view(['GET', 'POST'])
@@ -39,16 +38,22 @@ class ProfileUpdateAPIView(RetrieveUpdateAPIView):
 
     def get_queryset(self):
         return Profile.objects.get(user=self.request.user.id)
-    
+
     def get_object(self):
         queryset = self.get_queryset()
         return queryset
-    
+
     def perform_update(self, serializer):
+
+        user_data = serializer.validated_data.pop('user', None)
+        username = user_data.get('username', None)
+        email = user_data.get('email', None)
+
         user = self.request.user
-        email = self.request.data.get('email', None)
-        username = self.request.data.get('username', None)
-        instance = self.get_object()
+        user.username = username if username else user.username
+        user.email = email if email else user.email
+
+        user.save()
         serializer.save()
 
 
