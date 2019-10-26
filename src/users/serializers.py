@@ -94,13 +94,8 @@ class UserModelSerializer(serializers.ModelSerializer):
 
 class ProfileModelSerializer(serializers.ModelSerializer):
 
-    email = serializers.ModelField(
-        model_field=User()._meta.get_field('email'),
-    )
-
-    username = serializers.ModelField(
-        model_field=User()._meta.get_field('username'),
-    )
+    email = serializers.EmailField(source='user.email')
+    username = serializers.CharField(source='user.username')
 
     class Meta:
         model = Profile
@@ -112,7 +107,52 @@ class ProfileModelSerializer(serializers.ModelSerializer):
             'email',
             'username',
         ]
-    
+
+    def check_if_is_unique(self, field, field_name):
+        """
+        This method uses class meta data to
+        checks if the field is unique on database
+
+        Args:
+            field (string): field value from Profile Serializer
+            field_name (string): field name from Profile model
+
+        Raises:
+            ValidationError: this field is already in use
+
+        Returns:
+            string: same field passed as argument
+        """
+
+        current_field = self.instance.user.__dict__.get(field_name)
+
+        filter_params = {
+            (field_name + '__iexact'): field
+        }
+
+        exclude_params = {
+            (field_name + '__iexact'): current_field
+        }
+
+        # lookin if there is any user registered
+        # with the new field
+        user = User.objects.filter(
+            **filter_params
+        ).exclude(**exclude_params)
+
+        if user:
+            raise serializers.ValidationError(
+                f'This {field_name} is already in use.'
+            )
+
+        return field
+
+    def validate_email(self, email):
+        return self.check_if_is_unique(email, 'email')
+
+    def validate_username(self, username):
+        return self.check_if_is_unique(username, 'username')
+
     def validate_phone_number(self, phone_number):
         if phone_number.isdigit():
             return phone_number
