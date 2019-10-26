@@ -4,7 +4,9 @@ from django.urls import path
 from .viewsets import (
     UserRegistrationAPIView,
     RetrieveUpdatePreferedLanguageAPIView,
-    test_access_token
+    test_access_token,
+    CreateAccessToken, 
+    RefreshAccessToken,
 )
 
 
@@ -19,13 +21,13 @@ urlpatterns = [
 
     path(
         'token/',
-        TokenObtainPairView.as_view(),
+        CreateAccessToken.as_view(),
         name='token_obtain_pair'
     ),
 
     path(
         'token/refresh/',
-        TokenRefreshView.as_view(),
+        RefreshAccessToken.as_view(),
         name='token_refresh'
     ),
 

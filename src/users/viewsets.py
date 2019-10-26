@@ -1,18 +1,56 @@
+from rest_framework import status
 from rest_framework import permissions
 from rest_framework.response import Response
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.generics import CreateAPIView, RetrieveUpdateAPIView
+from rest_framework.authtoken.models import Token
+from rest_framework.renderers import JSONRenderer
 from rest_framework.permissions import IsAuthenticated
+from rest_framework import mixins
 
 from .models import User
 
 from .serializers import UserSignUpSerializer, UserPreferedLanguage
+
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated, ])
 def test_access_token(request):
     return Response({'token_status': 'OK'})
+
+class CreateAccessToken(TokenObtainPairView):
+    def get(self, request, *args, **kwargs):
+        """
+        This endpoint returns an empty json with the
+        parameters needed to create a new user
+        """
+
+        required_fields = {
+            'meta': 'The following fields are required in the request body',
+            'email': '',
+            'password': '',
+        }
+
+        return Response(required_fields)
+
+class RefreshAccessToken(TokenRefreshView):
+    def get(self, request, *args, **kwargs):
+        """
+        This endpoint returns an empty json with the 
+        parameters needed to create a new user
+        """
+
+        required_fields = {
+            'meta': 'Refresh your token by sending your `refresh token` in the request body',
+            'refresh': '',
+        }
+
+        return Response(required_fields)
 
 class UserRegistrationAPIView(CreateAPIView):
     """

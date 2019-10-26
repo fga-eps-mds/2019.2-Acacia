@@ -20,7 +20,7 @@ class Property(models.Model):
 
     type_of_address = models.CharField(
         choices=TYPE_OF_ADDRESS,
-        max_ength=9,
+        max_length=9,
         verbose_name=_('Type of address'),
         null=False,
         blank=False,

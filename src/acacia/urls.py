@@ -9,4 +9,4 @@ urlpatterns = [
 
 from .helpers import list_all_endpoints
 urlpatterns = list_all_endpoints(urlpatterns)
-]
+
