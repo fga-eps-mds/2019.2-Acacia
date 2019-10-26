@@ -4,7 +4,7 @@ from django.db import models
 
 class Tree(models.Model):
     class Meta:
-        verbose_name_plural = ('Treeses')
+        verbose_name_plural = ('Trees')
     
     tree_type = models.CharField(
        verbose_name=('Tree of type'),
@@ -39,7 +39,7 @@ class Tree(models.Model):
   
     tree_picture = models.ImageField(
         verbose_name=('Tree Picture'),
-        upload_to='@tree/picturesTree',
+        upload_to='tree/picturesTree',
         blank=True,
         null=True,
     )
