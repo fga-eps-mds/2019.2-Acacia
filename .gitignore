@@ -9,3 +9,4 @@ media
 .vscode/
 env/
 migrations/
+.env-staging
