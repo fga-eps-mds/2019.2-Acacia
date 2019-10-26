@@ -2,7 +2,6 @@
 # Django Rest Framework
 from rest_framework import permissions
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
 from rest_framework.viewsets import ModelViewSet
 
 # Models
@@ -18,7 +17,7 @@ class HarvestViewSet(ModelViewSet):
 
     serializer_class = HarvestSerializer
     queryset = Harvest.objects.all()
-    
+   
     permission_classes = (
         permissions.AllowAny,
     )

@@ -34,11 +34,11 @@ class HarvestSerializer(ModelSerializer):
 
     def create(self, validated_data):
         rules = validated_data.pop('rules')
-        harvests = Harvest.objects.create(**validated_data)
+        harvest = Harvest.objects.create(**validated_data)
 
         for rule in rules:
             RulesHarvest.objects.create(
-                harvest = harvests,
+                harvest=harvest,
                 **rule
             )
-        return harvests
+        return harvest
