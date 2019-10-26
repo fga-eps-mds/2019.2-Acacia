@@ -4,9 +4,14 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.generics import CreateAPIView, RetrieveUpdateAPIView
 from rest_framework.permissions import IsAuthenticated
 
-from .models import User
+from .models import User, Profile
 
-from .serializers import UserSignUpSerializer, UserPreferedLanguage
+from .serializers import (
+    UserSignUpSerializer, 
+    UserPreferedLanguage,
+    ProfileModelSerializer
+)
+    
 
 
 @api_view(['GET', 'POST'])
