@@ -17,7 +17,7 @@ class HarvestViewSet(ModelViewSet):
 
     serializer_class = HarvestSerializer
     queryset = Harvest.objects.all()
-   
+
     permission_classes = (
         permissions.AllowAny,
     )
