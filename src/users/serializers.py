@@ -6,14 +6,12 @@ from .models import User
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
-from .models import User
 
 class UserSignUpSerializer(serializers.Serializer):
 
     username = serializers.CharField(
         required = True,
         label = _("Username"),
-
         validators = [
             UniqueValidator(
                 queryset = User.objects.all(),
@@ -21,14 +19,12 @@ class UserSignUpSerializer(serializers.Serializer):
             ),
         ],
     )
-
     email = serializers.EmailField(
         required=True,
         validators=[UniqueValidator(queryset=User.objects.all())],
         # unique=True,
         label="Email Address",
     )
-
     password = serializers.CharField(
         write_only = True,
         required = True,
@@ -36,7 +32,6 @@ class UserSignUpSerializer(serializers.Serializer):
         style = {'input_type': 'password'},
         min_length = 8,
     )
-
     confirm_password = serializers.CharField(
         write_only=True,
         required=True,
