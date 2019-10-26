@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from .helpers import list_all_endpoints 
+from .helpers import list_all_endpoints
 
 urlpatterns = [
     path('admin/', admin.site.urls),

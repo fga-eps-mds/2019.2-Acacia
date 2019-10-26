@@ -10,12 +10,12 @@ from rest_framework.validators import UniqueValidator
 class UserSignUpSerializer(serializers.Serializer):
 
     username = serializers.CharField(
-        required = True,
-        label = _("Username"),
-        validators = [
+        required=True,
+        label=_("Username"),
+        validators=[
             UniqueValidator(
-                queryset = User.objects.all(),
-                message = _('This username is already registered')
+                queryset=User.objects.all(),
+                message=_('This username is already registered')
             ),
         ],
     )
@@ -26,11 +26,11 @@ class UserSignUpSerializer(serializers.Serializer):
         label="Email Address",
     )
     password = serializers.CharField(
-        write_only = True,
-        required = True,
-        label = _("Password"),
-        style = {'input_type': 'password'},
-        min_length = 8,
+        write_only=True,
+        required=True,
+        label=_("Password"),
+        style={'input_type': 'password'},
+        min_length=8,
     )
     confirm_password = serializers.CharField(
         write_only=True,
@@ -42,9 +42,9 @@ class UserSignUpSerializer(serializers.Serializer):
     class Meta:
         model = User
         fields = [
-            'username', 
-            'email', 
-            'password', 
+            'username',
+            'email',
+            'password',
             'confirm_password'
         ]
 

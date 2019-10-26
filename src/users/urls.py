@@ -5,7 +5,7 @@ from .viewsets import (
     UserRegistrationAPIView,
     RetrieveUpdatePreferedLanguageAPIView,
     test_access_token,
-    CreateAccessToken, 
+    CreateAccessToken,
     RefreshAccessToken,
 )
 

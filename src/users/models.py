@@ -16,17 +16,17 @@ class User(AbstractUser):
     )
 
     phone_number = PhoneNumberField(
-        blank=True, 
+        blank=True,
         null=True
     )
 
     bio = models.TextField(
-        blank=True, 
+        blank=True,
         null=True
     )
 
     birth = models.DateField(
-        blank=True, 
+        blank=True,
         null=True
     )
 
