@@ -150,6 +150,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Folder and URL default to pictures (pillow) 
+MEDIA_ROOT = 'pictures'
+MEDIA_URL = '/media/'
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
