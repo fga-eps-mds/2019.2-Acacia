@@ -15,9 +15,20 @@ class User(AbstractUser):
         }
     )
 
-    phone_number = PhoneNumberField(blank=True, null=True)
-    bio = models.TextField(blank=True, null=True)
-    birth = models.DateField(blank=True, null=True)
+    phone_number = PhoneNumberField(
+        blank=True,
+        null=True
+    )
+
+    bio = models.TextField(
+        blank=True,
+        null=True
+    )
+
+    birth = models.DateField(
+        blank=True,
+        null=True
+    )
 
     is_verified = models.BooleanField(
         'verified',

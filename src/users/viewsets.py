@@ -8,6 +8,11 @@ from .models import User
 
 from .serializers import UserSignUpSerializer, UserPreferedLanguage
 
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated, ])
@@ -15,12 +20,44 @@ def test_access_token(request):
     return Response({'token_status': 'OK'})
 
 
+class CreateAccessToken(TokenObtainPairView):
+    def get(self, request, *args, **kwargs):
+        """
+        This endpoint returns an empty json with the
+        parameters needed to create a new user
+        """
+
+        required_fields = {
+            'meta': 'The following fields are required in the request body',
+            'email': '',
+            'password': '',
+        }
+
+        return Response(required_fields)
+
+
+class RefreshAccessToken(TokenRefreshView):
+    def get(self, request, *args, **kwargs):
+        """
+        This endpoint returns an empty json with the
+        parameters needed to create a new user
+        """
+
+        required_fields = {
+            'meta': 'Refresh token sending`refresh token` in the request body',
+            'refresh': '',
+        }
+
+        return Response(required_fields)
+
+
 class UserRegistrationAPIView(CreateAPIView):
     """
     Endpoint for user registration
     """
-
+    # by default all routes needs authentication
     permission_classes = (permissions.AllowAny, )
+
     serializer_class = UserSignUpSerializer
     queryset = User.objects.all()
 
