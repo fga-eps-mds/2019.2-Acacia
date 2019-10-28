@@ -4,6 +4,7 @@
 | Data   | Versão | Modificação  | Autor  |
 | :- | :- | :- | :- |
 | 28/10/2019 | 0.1 | Adição do planejamento, review, retrospectiva, health, práticas ágeis e quadro de conhecimento  |  Shayane |
+| 28/10/2019 | 0.2 | Ajuste da pontuação e adição do velocity | Shayane |
 
 # Planning da Sprint 8
 
@@ -15,25 +16,25 @@
 
 | ID | Descrição | Estimativa | Label |
 | ---|-----------|------------|-------|
-| #126 | Atualizar o canvas do projeto | x | EPS |
-| #124 | Configuração do github actions para preparação para o deploy contínuo no frontend  | x | EPS |
-| #123 | Comunicação backend e frontend em ambiente de homologação | x | EPS |
-| #121 | Configuração de variáveis de ambiente | x | EPS | 
-| #119 | Correção de erros de análise estática | x | MDS |
-| #116 | Visualização do dashboard do usuário | x | MDS |
-| #67  | Cadastro de árvore    | x | MDS |
-| #68  | Cadastro de colheita  | x | MDS |
-| #105 | Documentação da Sprint 7 | x | EPS |
+| #126 | Atualizar o canvas do projeto | 3 | EPS |
+| #124 | Configuração do github actions para preparação para o deploy contínuo no frontend  | 13 | EPS |
+| #123 | Comunicação backend e frontend em ambiente de homologação | 5 | EPS |
+| #121 | Configuração de variáveis de ambiente | 5 | EPS | 
+| #119 | Correção de erros de análise estática | 5 | MDS |
+| #116 | Visualização do dashboard do usuário | 13 | MDS |
+| #67  | Cadastro de árvore    | 8 | MDS |
+| #68  | Cadastro de colheita  | 8 | MDS |
+| #105 | Documentação da Sprint 7 | 3 | EPS |
 
 # Dívida alocada
 
 ID | Descrição | Estimativa | Label|
 ---|-----------|------------|-------|
-| #66  | Cadastrar propriedade | x | MDS |
-| #119 | Atualizar Perfil do Usuário | x | MDS |
+| #66  | Cadastrar propriedade | 56 | MDS |
+| #119 | Atualizar Perfil do Usuário | 38 | MDS |
 
- - Total de pontos planejados: xpts.
- - Total de pontos entregues: ypts.
+ - Total de pontos planejados: 119pts (mais 38 de issue não planejada).
+ - Total de pontos entregues: 31pts.
 
  # Possíveis riscos mapeados para a sprint
 
@@ -44,7 +45,7 @@ ID | Descrição | Estimativa | Label|
 
 - Objetivo Alcançado? Não. Apesar da equipe ter entendido como se daria a solução, algumas issues core não puderam ser finalizadas no time-box.
 
-- Estimativa correta? A estimativa das issues foi realizada baseando-se na métrica adaptada de alguns tópicos como 1. Nível de experiência e mais 3 tópicos (add aqui o resto). A estimativa pareceu refletir o nível de esforço entre os membros do grupo, pois eles mostraram-se mais concientes dela nas discussões.
+- Estimativa correta? A estimativa das issues foi realizada baseando-se na métrica adaptada de alguns tópicos. A estimativa pareceu refletir o nível de esforço entre os membros do grupo, pois eles mostraram-se mais concientes dela nas discussões. 
 
 - Tarefas bem distribuidas? Parcialmente. Em relação às escolhas de pareamentos, o foco deu-se no nível de conhecimento entre os membros. Houve a tentativa de modificação do processo de pareamento, em relação a melhorar a autonomia de um membro da equipe, logo, foi dada a chance dele trabalhar sozinho em uma issue. Dois membros ficaram ociosos na sprint e por isso, alocaram issues de bugs conhecidos. Apesar disso, houve o rotacionamento de papéis entre MDS e EPS nos cargos de time de desenvolvimento e devops, incrementando no aprendizado mútuo. 
 
@@ -57,7 +58,7 @@ Segundo a equipe a qualidade entregue foi de **3.72** considerando a escala de l
 
 ## Velocity
 
-![velocity](../img/gerenciamento/velocity6)
+![velocity](../img/gerenciamento/velocity8.png)
 
 # Retrospectiva
 
