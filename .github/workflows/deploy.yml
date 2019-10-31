@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - develop
-      - release/*
-      - feature/141-relationship-heroku-actions
 
 jobs:
   deploy:
