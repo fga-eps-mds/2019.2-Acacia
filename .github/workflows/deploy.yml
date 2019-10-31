@@ -17,8 +17,12 @@ jobs:
     - name: setup environment
       run: docker build -t acacia-back-heroku .
     - name: Run container
-      run: docker run -d -p 8000:8000 acacia-back-heroku
-    - name: heroku login
+      run: docker run -d -p 8000:8000 --env-file .env-staging acacia-back-heroku
+    - name: heroku container push
+      uses: actions/heroku@master
+      with: 
+        args: "container:push web -a acacia-backend-staging"
+    - name: heroku container release
       uses: actions/heroku@master
       with:
-        args: "apps"
+        args: "container:release web -a acacia-backend-staging"
