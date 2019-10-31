@@ -10,3 +10,4 @@ media
 env/
 migrations/
 pictures/
+.env-staging

@@ -15,6 +15,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    env_file: .env-dev
     command: bash -c "
       cd src/ &&
       python manage.py makemigrations &&

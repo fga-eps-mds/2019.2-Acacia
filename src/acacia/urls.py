@@ -11,10 +11,14 @@ router = routers.DefaultRouter()
 router.register(r'tree', TreeViewSet)
 # router.register(r'tree', TreeViewSet, base_name='Tree')
 
+from .helpers import list_all_endpoints
 
 urlpatterns = [
     path('', include(router.urls)), 
-
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
+    path('properties/', include('property.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+urlpatterns = list_all_endpoints(urlpatterns)
