@@ -22,7 +22,7 @@ jobs:
       uses: actions/heroku@master
       with: 
         args: "container:login"
-      - name: heroku container push
+    - name: heroku container push
       uses: actions/heroku@master
       with: 
         args: "container:push web -a acacia-backend-staging"
