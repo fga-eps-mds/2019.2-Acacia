@@ -8,10 +8,10 @@ on:
       - feature/141-relationship-heroku-actions
 
 jobs:
-  env:
-    HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
   deploy:
     runs-on: ubuntu-latest
+    env:
+      HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
     steps:
     - uses: actions/checkout@master
     - name: setup environment
