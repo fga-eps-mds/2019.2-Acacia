@@ -12,35 +12,35 @@ class Tree(models.Model):
         on_delete=models.CASCADE,
         verbose_name=('Tree owner'),
         related_name=('Tree'),
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
     )
     
     tree_type = models.CharField(
        verbose_name=('Tree of type'),
        max_length=30,
-       null=False,
-        blank=False,
+       null=True,
+        blank=True,
     )
     
     number_of_tree = models.IntegerField(
         verbose_name=('Number of tree'),
         default=1,
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
     )
     
     height_fruit = models.DecimalField(
         verbose_name=('Average height of fruits '),
         max_digits=3,
         decimal_places=2,
-        null=False,
+        null=True,
         blank=True,
     )
     
     matury_date = models.DateField(
         verbose_name=('Matury date '),
-        null=False,
+        null=True,
         blank=True,
     )
     

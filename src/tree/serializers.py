@@ -1,12 +1,12 @@
 from rest_framework.serializers import ModelSerializer
 from tree.models import Tree
-from users.serializers import UserSignUpSerializer
+# from users.serializers import UserSignUpSerializer
 
 # from property.model import Property
 
 class TreeSerializer(ModelSerializer):
     
-    owner = UserSignUpSerializer()
+    # owner = UserSignUpSerializer()
     
     class Meta:
         model = Tree
@@ -17,6 +17,6 @@ class TreeSerializer(ModelSerializer):
             'height_fruit',
             'matury_date',
             'haverst_for_year',
-            'owner',
+            # 'owner',
             'tree_picture',
         )
