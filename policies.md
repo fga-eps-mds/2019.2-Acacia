@@ -5,6 +5,7 @@
 | :- | :- | :- | :- |
 | 23/08/2019 | 1.0 | Criação da primeira versão do documento | Vítor Cardoso |
 | 03/09/2019 | 1.1 | Tradução do documento para português | Vítor Cardoso |
+| 01/11/2019 | 1.2 | Adição das políticas de migrações do django | Fabíola |
 
 ## Introdução
 
@@ -136,6 +137,10 @@ Bons exemplos:
 
 `Create branch policies document`
 
+
+# Política de migrações
+
+As migrações criadas automaticamente pelo Django devem ser adicionadas nos commits dos desenvolvedores, exceto quando possuirem "_auto_" ou "_merge_" em seu nome.
 
 ## Referências
 
