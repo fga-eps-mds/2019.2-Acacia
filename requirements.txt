@@ -8,4 +8,3 @@ djangorestframework-simplejwt
 coverage
 flake8
 whitenoise
-gunicorn
