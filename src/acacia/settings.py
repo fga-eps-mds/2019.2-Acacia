@@ -40,15 +40,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
 
-    # libs
+THIRD_PARTY_APPS = [
     'phonenumber_field',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-
-    # my apps
 ]
+
+LOCAL_APPS = [
+    'users',
+    'property',
+]
+
+INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -95,11 +101,11 @@ DATABASES = {
         'HOST': os.environ.get('DATABASE_HOST'),
         'PORT': os.environ.get('DATABASE_PORT'),
     },
-    
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
+
+    'sqlite': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 # STARTS SERVICES THAT DJANGO DEPENDS E.G. postgres
@@ -156,15 +162,16 @@ STATICFILES_DIRS = (
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+    
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
     ]
 }
 
 # CORS headers to responses
-
 CORS_ORIGIN_WHITELIST = [
   "http://localhost:8080",
-  "http://localhost:8080",
-	"http://0.0.0.0:8080",
 	"http://0.0.0.0:8080",
   "http://localhost:8080",
   "https://acacia-staging.herokuapp.com",
