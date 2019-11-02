@@ -33,6 +33,7 @@ AUTH_USER_MODEL = 'users.User'
 
 # Application definition
 INSTALLED_APPS = [
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,7 +48,6 @@ INSTALLED_APPS = [
     'corsheaders',
 
     # my apps
-    'users',
 ]
 
 MIDDLEWARE = [
@@ -166,7 +166,8 @@ CORS_ORIGIN_WHITELIST = [
   "http://localhost:8080",
 	"http://0.0.0.0:8080",
 	"http://0.0.0.0:8080",
-  "http://localhost:8080"
+  "http://localhost:8080",
+  "https://acacia-staging.herokuapp.com",
 ]
 
 from datetime import timedelta
