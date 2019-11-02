@@ -53,8 +53,8 @@ Segundo a equipe a qualidade entregue foi de **3.35** considerando a escala de l
 ![review e qualidade](../img/gerenciamento/review7.jpg)
 
 ## Velocity
-
 ![velocity](../img/gerenciamento/velocity7.png)
+
 
 # Retrospectiva
 
