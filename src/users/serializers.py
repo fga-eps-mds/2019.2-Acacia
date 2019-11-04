@@ -170,6 +170,7 @@ class ProfileModelSerializer(serializers.ModelSerializer):
             return birthdate
         raise serializers.ValidationError('Invalid Date')
 
+
 class UserPreferedLanguage(serializers.ModelSerializer):
 
     class Meta:

@@ -1,9 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
-from phonenumber_field.modelfields import PhoneNumberField
-from django.db.models.signals import post_save
-from django.dispatch import receiver
 
 
 class User(AbstractUser):
@@ -84,21 +81,20 @@ class Profile(models.Model):
     is_owner = models.BooleanField(
         default=False,
         help_text=_('Designates if user has a propriety'),
-        blank=True, 
+        blank=True,
         null=False
     )
 
     is_volunteer = models.BooleanField(
         default=False,
         help_text=_('Designates if user is a volunteer'),
-        blank=True, 
+        blank=True,
         null=False
     )
 
     is_leader = models.BooleanField(
         default=False,
         help_text=_('Designates if user is a haverst leader'),
-        blank=True, 
+        blank=True,
         null=False
     )
-
