@@ -1,22 +1,38 @@
 from rest_framework.serializers import ModelSerializer
-from tree.models import Tree
-# from users.serializers import UserSignUpSerializer
+from tree.models import Tree, HarvestMonth
 
-# from property.model import Property
+
+class HarvestMonthSerializer(ModelSerializer):
+    class Meta:
+        model = HarvestMonth
+        fields = (
+            'harvest_month',
+        )
+
 
 class TreeSerializer(ModelSerializer):
-    
-    # owner = UserSignUpSerializer()
-    
+
+    harvest_months = HarvestMonthSerializer(many=True)
+
     class Meta:
         model = Tree
-        fields = ( 
+        fields = (
             'id',
             'tree_type',
             'number_of_tree',
             'height_fruit',
-            'matury_date',
-            'haverst_for_year',
-            # 'owner',
-            'tree_picture',
+            'harvest_months',
         )
+
+
+    # def create(self, validated_data):
+    #     harvest_months = validated_data.pop('harvest_months')
+    #     tree = Tree.objects.create(**validated_data)
+
+    #     for harvest_month in harvest_months:
+    #         HarvestMonth.objects.create(
+    #             property=tree,
+    #             **harvest_month
+    #         )
+
+    #     return tree
