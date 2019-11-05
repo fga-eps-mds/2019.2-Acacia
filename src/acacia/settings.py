@@ -32,8 +32,7 @@ ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'acacia-backend-staging.herokuapp.com']
 AUTH_USER_MODEL = 'users.User'
 
 # Application definition
-INSTALLED_APPS = [
-    'users',
+DEFAULT_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
