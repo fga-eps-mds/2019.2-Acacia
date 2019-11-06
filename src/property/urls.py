@@ -1,28 +1,12 @@
 from django.urls import path, include
 from .viewsets import PropertyViewSet
-from rest_framework.routers import DefaultRouter
-
+from rest_framework import routers
 
 app_name = 'property'
 
+router = routers.SimpleRouter()
+router.register(r'', PropertyViewSet, basename='property')
+
 urlpatterns = [
-    path(
-        '',
-        PropertyViewSet.as_view({
-            'get': 'list',
-            'post':'create'
-        })
-    ),
-
-    path('<int:pk>/trees/', include('tree.urls')),
-
-    path(
-        '<int:pk>/',
-        PropertyViewSet.as_view({
-            'delete': 'destroy',
-            'get': 'retrieve',
-            'patch': 'partial_update',
-            'put': 'update',
-        })
-    ),
-]
+    path('<int:pk_property>/trees/', include('tree.urls')),
+] + router.urls
