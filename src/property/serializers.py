@@ -3,13 +3,20 @@ from rest_framework.serializers import ModelSerializer
 from django.utils.translation import ugettext as _
 from .models import Property
 
+from tree.serializers import TreeSerializer
+
 
 class PropertySerializer(ModelSerializer):
+
+    trees = TreeSerializer(
+        many=True,
+        read_only=True
+    )
 
     class Meta:
         model = Property
         fields = (
-            'id',
+            'pk_property',
             'type_of_address',
             'BRZipCode',
             'state',
@@ -18,6 +25,7 @@ class PropertySerializer(ModelSerializer):
             'address',
             'complement',
             'reference_point',
+            'trees',
         )
 
         # Customizing error messages
