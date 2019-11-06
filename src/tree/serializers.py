@@ -1,38 +1,97 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import (
+    ModelSerializer,
+    ValidationError
+)
+
 from tree.models import Tree, HarvestMonth
+from django.utils.translation import ugettext as _
 
 
 class HarvestMonthSerializer(ModelSerializer):
     class Meta:
         model = HarvestMonth
         fields = (
+            'pk_harvest_month',
             'harvest_month',
         )
+
+        extra_kwargs = {
+            "harvest_month": {
+                "error_messages": {
+                    "required": _("Choose one of the "
+                                  "following types: ") + str(
+                                   HarvestMonth.valid_months()),
+
+                    "invalid_choice":  _("Invalid type. "
+                                         "Choose one of the following "
+                                         "types: ") + str(
+                                         HarvestMonth.valid_months()),
+                }
+            },
+        }
+
+    def validate_harvest_month(self, harvest_month):
+        "Validates if this tree already has this month registered"
+
+        pk_tree = self.context['view'].kwargs['pk_tree']
+
+        month_queryset = HarvestMonth.objects.filter(
+            pk_tree=pk_tree,
+            harvest_month=harvest_month
+        )
+
+        if month_queryset:
+            raise ValidationError(
+                'This tree already has this month registered'
+            )
+
+        return harvest_month
 
 
 class TreeSerializer(ModelSerializer):
 
-    harvest_months = HarvestMonthSerializer(many=True)
+    harvest_months = HarvestMonthSerializer(
+        many=True,
+        read_only=True
+    )
 
     class Meta:
         model = Tree
         fields = (
-            'id',
+            'pk_tree',
             'tree_type',
             'number_of_tree',
-            'height_fruit',
+            'tree_height',
             'harvest_months',
         )
 
+        extra_kwargs = {
+            "tree_type": {
+                "error_messages": {
+                    "required": _("Choose one of the "
+                                  "following types: ") + str(
+                                   Tree.valid_tree_types()),
 
-    # def create(self, validated_data):
-    #     harvest_months = validated_data.pop('harvest_months')
-    #     tree = Tree.objects.create(**validated_data)
+                    "invalid_choice":  _("Invalid type. "
+                                         "Choose one of the following "
+                                         "types: ") + str(
+                                         Tree.valid_tree_types()),
+                }
+            },
+        }
 
-    #     for harvest_month in harvest_months:
-    #         HarvestMonth.objects.create(
-    #             property=tree,
-    #             **harvest_month
-    #         )
+    def validate_tree_type(self, tree_type):
+        "Validates if this property already has this tree type registered"
 
-    #     return tree
+        pk_property = self.context['view'].kwargs['pk_property']
+        tree_queryset = Tree.objects.filter(
+            pk_property=pk_property,
+            tree_type=tree_type
+        )
+
+        if tree_queryset:
+            raise ValidationError(
+                'This property already has a tree of this type registered'
+            )
+
+        return tree_type
