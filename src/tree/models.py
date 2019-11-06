@@ -1,12 +1,18 @@
 from django.db import models
-from users.models import User
 from django.utils.translation import ugettext as _
-
 from property.models import Property
+
 
 class Tree(models.Model):
 
-    property = models.ForeignKey(
+    class Meta:
+        unique_together = ('pk_property', 'tree_type')
+
+    pk_tree = models.AutoField(
+        primary_key=True,
+    )
+
+    pk_property = models.ForeignKey(
         Property,
         on_delete=models.CASCADE,
         verbose_name=_('Property trees'),
@@ -49,42 +55,68 @@ class Tree(models.Model):
         default=1,
     )
 
-    height_fruit = models.DecimalField(
+    tree_height = models.DecimalField(
         verbose_name=_('Average tree height'),
         max_digits=3,
         decimal_places=1,
     )
 
     def __str__(self):
-        return f"{self.tree_type}, {self.number_of_tree}"
+        return f"{self.pk_tree}, {self.tree_type}, \
+            {self.number_of_tree}"
+
+    @staticmethod
+    def valid_tree_types():
+        """
+        This class method returns a list of valid address
+        types
+        """
+        return [k for k, v in Tree.TYPE_OF_TREES]
 
 
 class HarvestMonth(models.Model):
     class Meta:
         verbose_name_plural = _('Harvest Months')
+        unique_together = ('pk_tree', 'harvest_month')
 
-    tree = models.ForeignKey(
+    pk_harvest_month = models.AutoField(
+        primary_key=True,
+    )
+
+    pk_tree = models.ForeignKey(
         Tree,
         models.CASCADE,
         related_name=_('harvest_months'),
     )
 
     MONTHS = (
-            (1, _('January')),
-            (2, _('February')),
-            (3, _('March')),
-            (4, _('April')),
-            (5, _('May')),
-            (6, _('June')),
-            (7, _('July')),
-            (8, _('August')),
-            (9, _('September')),
-            (10, _('October')),
-            (11, _('November')),
-            (12, _('December')),
+            (_('January'), _('January')),
+            (_('February'), _('February')),
+            (_('March'), _('March')),
+            (_('April'), _('April')),
+            (_('May'), _('May')),
+            (_('June'), _('June')),
+            (_('July'), _('July')),
+            (_('August'), _('August')),
+            (_('September'), _('September')),
+            (_('October'), _('October')),
+            (_('November'), _('November')),
+            (_('December'), _('December')),
         )
 
-    harvest_month = models.IntegerField(
+    harvest_month = models.CharField(
         choices=MONTHS,
         verbose_name=_('Harvest month'),
+        max_length=9,
     )
+
+    def __str__(self):
+        return f'{self.harvest_month}'
+
+    @staticmethod
+    def valid_months():
+        """
+        This class method returns a list of valid address
+        types
+        """
+        return [k for k, v in HarvestMonth.MONTHS]
