@@ -1,16 +1,15 @@
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
-
-from users.models import User
-
-from .serializers import PropertySerializer
 from .permissions import UserIsPropertyOwner
+from .serializers import PropertySerializer
+from users.models import User
 from .models import Property
 
 
 class PropertyViewSet(ModelViewSet):
     serializer_class = PropertySerializer
     queryset = Property.objects.all()
+    lookup_field = 'pk_property'
 
     permission_classes = (
         IsAuthenticated,
