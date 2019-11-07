@@ -8,7 +8,11 @@ from tree import serializers
 class TreeViewSet(ModelViewSet):
     queryset = Tree.objects.all()
     serializer_class = serializers.TreeSerializer
+
+    # TODO: if not authenticate, readonly
     permission_class = (IsAuthenticated,)
+
+    # override default pk model attribute
     lookup_field = 'pk_tree'
 
     def perform_create(self, serializer):
@@ -28,7 +32,11 @@ class TreeViewSet(ModelViewSet):
 class HarvestMonthViewSet(ModelViewSet):
     queryset = HarvestMonth.objects.all()
     serializer_class = serializers.HarvestMonthSerializer
+
+    # TODO: if not authenticate, readonly
     permission_class = (IsAuthenticated,)
+
+    # override default pk model attribute
     lookup_field = 'pk_harvest_month'
 
     def perform_create(self, serializer):

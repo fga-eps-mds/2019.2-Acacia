@@ -57,13 +57,14 @@ class Tree(models.Model):
 
     tree_height = models.DecimalField(
         verbose_name=_('Average tree height'),
-        max_digits=3,
         decimal_places=1,
+        max_digits=3,
     )
 
     def __str__(self):
-        return f"{self.pk_tree}, {self.tree_type}, \
-            {self.number_of_tree}"
+        return (f"{self.pk_tree}, " +
+                f"{self.tree_type}, " +
+                f"{self.number_of_tree}")
 
     @staticmethod
     def valid_tree_types():

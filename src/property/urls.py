@@ -2,6 +2,7 @@ from django.urls import path, include
 from .viewsets import PropertyViewSet
 from rest_framework import routers
 
+
 app_name = 'property'
 
 router = routers.SimpleRouter()
