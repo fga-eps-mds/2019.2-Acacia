@@ -1,4 +1,3 @@
-from django.utils.translation import ugettext as _
 from django.test import TestCase
 
 from tree.models import HarvestMonth, Tree
@@ -77,7 +76,6 @@ class TreeModelTest(TestCase):
 
         self.assertEqual(str(self.tree), expected)
 
-
     def test_unique_together(self):
 
         self.assertEqual(
@@ -149,7 +147,6 @@ class HarvestMonthModelTest(TestCase):
         expected = f'{self.harvest_month}'
 
         self.assertEqual(str(self.harvest_month), expected)
-
 
     def test_unique_together(self):
 

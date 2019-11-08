@@ -1,47 +1,59 @@
-from rest_framework.test import force_authenticate
-from rest_framework.test import APIRequestFactory
 from rest_framework.test import APITestCase
-
 from django.urls import reverse
-
-from tree import viewsets
-from tree.models import Tree, HarvestMonth
+from tree.models import Tree
 from property.models import Property
 
-from users.models import User
 
+class TreeAPIViewTestCase(APITestCase):
 
-class PropertyListCreateAPIViewTestCase(APITestCase):
+    def create_authentication_tokens(self, user_credentials):
+        url_token = reverse('users:token_obtain_pair')
 
-    def setUp(self):
+        response = self.client.post(
+            url_token,
+            user_credentials,
+            format='json'
+        )
 
-        self.tree_view_detail = viewsets.TreeViewSet.as_view({
-            'delete': 'destroy',
-            'get': 'retrieve',
-            'patch': 'partial_update',
-            'put': 'update',
-        })
+        self.assertEqual(
+            response.status_code,
+            200,
+            msg='Failed to create user tokens credentials'
+        )
 
-        self.tree_view_list = viewsets.TreeViewSet.as_view({
-            'post': 'create',
-            'get': 'list',
-        })
+        self.credentials = {
+            'HTTP_AUTHORIZATION': 'Bearer ' + response.data['access']
+        }
 
-        self.harvest_month_view_detail = viewsets.HarvestMonthViewSet.as_view({
-            'delete': 'destroy',
-            'get': 'retrieve',
-            'patch': 'partial_update',
-            'put': 'update',
-        })
+    def create_user(self):
+        user_data = {
+            "username": 'vitas',
+            'email': 'vitas@vitas.com',
+            'password': 'vitasIsNice',
+            'confirm_password': 'vitasIsNice'
+        }
 
-        self.harvest_month_view_list = viewsets.HarvestMonthViewSet.as_view({
-            'post': 'create',
-            'get': 'list',
-        })
+        url_user_signup = reverse('users:register')
 
-        self.factory = APIRequestFactory()
+        response = self.client.post(
+            url_user_signup,
+            user_data,
+            format='json'
+        )
 
-        self.property_data = {
+        self.assertEqual(
+            response.status_code,
+            201,
+            msg='Failed during user creation'
+        )
+
+        user_data.pop('username')
+        user_data.pop('confirm_password')
+
+        self.create_authentication_tokens(user_data)
+
+    def create_property(self):
+        property_data = {
             'type_of_address': 'House',
             'BRZipCode': '73021498',
             'state': 'DF',
@@ -50,67 +62,200 @@ class PropertyListCreateAPIViewTestCase(APITestCase):
             'address': "Quadra 4",
         }
 
+        url_property_creation = reverse(
+            'property:property-list',
+        )
+
+        response = self.client.post(
+            path=url_property_creation,
+            data=property_data,
+            format='json',
+            **self.credentials,
+        )
+
+        self.assertEqual(
+            response.status_code,
+            201,
+            msg='Failed to create property'
+        )
+
+        self.property = Property.objects.last()
+
+    def setUp(self):
+
+        self.create_user()
+        self.create_property()
+
         self.tree_data = {
             'tree_type': 'Pequizeiro',
             'number_of_tree': 3,
             'tree_height': 20.5,
         }
 
-        self.harvest_month_data = {
-            'harvest_month': 'September'
-        }
-
-        self.user = User.objects.create(
-            username='vitas',
-            email='vitas@vitas.com',
-            password='vitasIsNice'
-        )
-
-        self.property = Property.objects.create(
-            owner=self.user,
-            **self.property_data,
-        )
-
-        self.tree = Tree.objects.create(
-            pk_property=self.property,
-            **self.tree_data
-        )
-
-        self.harvest_month = HarvestMonth.objects.create(
-            pk_tree=self.tree,
-            **self.harvest_month_data,
-        )
-
-        self.url_detail = reverse(
-            'property:tree:tree-detail',
-            kwargs={
-                'pk_property': 1,
-                'pk_tree': self.tree.pk_tree
-            }
-        )
-
         self.url_list = reverse(
             'property:tree:tree-list',
             kwargs={'pk_property': 1}
         )
 
-    # BUG -> Da maneira que o validação do serializer da
-    # árvore foi feita não é testável pela request que o
-    # APIRequestFactory gera.
+        self.url_detail = reverse(
+            'property:tree:tree-detail',
+            kwargs={'pk_property': 1, 'pk_tree': 1}
+        )
 
-    # Esse request não está "levando" o pk_property dentro do
-    # kargs, e lá no serializer precisamos dele.
+    def test_create_tree(self):
+        response = self.client.post(
+            path=self.url_list,
+            data=self.tree_data,
+            format='json',
+            **self.credentials,
+        )
 
-    # Já quando a requisição é feita pelo navegador, esse
-    # parâmetro aparece no kwargs.
+        self.assertEqual(
+            response.status_code,
+            201,
+            msg='Failed to create a tree'
+        )
 
-    # Eu desconfio que exista uma maneira melhor de validar
-    # esse serializer
+        self.tree = Tree.objects.last()
 
-    def test_create_property(self):
-        # changing zip code to create a unique property
-        self.tree_data['tree_type'] = 'Papaya'
-        request = self.factory.post(self.url_list, self.tree_data)
-        force_authenticate(request, user=self.user)
-        response = self.tree_view_list(request)
-        self.assertEqual(201, response.status_code)
+    def test_list_all_trees(self):
+
+        self.test_create_tree()
+
+        response = self.client.get(
+            path=self.url_list,
+            format='json',
+            **self.credentials,
+        )
+
+        self.assertEqual(
+            len(response.data),
+            1,
+            msg='More than one tree was created'
+        )
+
+        response_data = dict(response.data[0])
+        tree_data = self.tree.__dict__
+
+        self.assertEqual(
+            str(tree_data['tree_height']),
+            str(response_data['tree_height']),
+        )
+
+        self.assertEqual(
+            tree_data['pk_tree'],
+            response_data['pk_tree'],
+        )
+
+        self.assertEqual(
+            tree_data['tree_type'],
+            response_data['tree_type'],
+        )
+
+        self.assertEqual(
+            tree_data['number_of_tree'],
+            response_data['number_of_tree'],
+        )
+
+    def test_patch_update_tree(self):
+        self.test_create_tree()
+
+        # partial update
+        tree_update = {
+            'tree_type': 'Banana'
+        }
+
+        response = self.client.patch(
+            path=self.url_detail,
+            data=tree_update,
+            format='json',
+            **self.credentials,
+        )
+
+        self.assertEqual(
+            response.status_code,
+            200,
+            msg='Failed to patch updade the tree'
+        )
+
+        self.tree = Tree.objects.last()
+
+    def test_put_update_tree(self):
+        self.test_create_tree()
+
+        # complete update (all fields)
+        self.tree_data['tree_type'] = 'Banana'
+
+        response = self.client.put(
+            path=self.url_detail,
+            data=self.tree_data,
+            format='json',
+            **self.credentials,
+        )
+
+        self.assertEqual(
+            response.status_code,
+            200,
+            msg='Failed to update the tree'
+        )
+
+        self.tree = Tree.objects.last()
+
+    def test_get_tree(self):
+        self.test_create_tree()
+
+        response = self.client.get(
+            path=self.url_detail,
+            format='json',
+            **self.credentials,
+        )
+
+        self.assertEqual(
+            response.status_code,
+            200,
+            msg='Failed to get the tree'
+        )
+
+        self.assertEqual(
+            str(self.tree_data['tree_height']),
+            response.data['tree_height'],
+        )
+
+        self.assertEqual(
+            str(self.tree_data['tree_type']),
+            response.data['tree_type'],
+        )
+
+        self.assertEqual(
+            response.data['pk_tree'],
+            1,
+        )
+
+        self.assertEqual(
+            self.tree_data['number_of_tree'],
+            response.data['number_of_tree'],
+        )
+
+    def test_delete_tree(self):
+        self.test_create_tree()
+
+        response = self.client.delete(
+            path=self.url_detail,
+            format='json',
+            **self.credentials,
+        )
+
+        self.assertEqual(
+            response.status_code,
+            204,
+            msg='Failed to delete the tree'
+        )
+
+        trees = Tree.objects.all()
+        qnt_trees = len(trees)
+
+        self.assertEqual(
+            qnt_trees,
+            0,
+            msg='Failed to delete the tree'
+        )
