@@ -9,3 +9,4 @@ djangorestframework-simplejwt==4.3.0
 coverage==4.5.4
 django-localflavor==2.2
 pillow
+whitenoise

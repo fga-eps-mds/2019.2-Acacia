@@ -1,5 +1,6 @@
+import importlib
 import time
-
+import os
 import logging
 
 SERVICES_STARTED = False
@@ -19,14 +20,14 @@ def start_services():
 
 
 def start_postgres():
-    # settings_path = os.environ['DJANGO_SETTINGS_MODULE']
-    # settings = importlib.import_module(settings_path)
+    settings_path = os.environ['DJANGO_SETTINGS_MODULE']
+    settings = importlib.import_module(settings_path)
 
-    # db = settings.DATABASES['default']
-    dbname = 'postgres'  # db['NAME']
-    user = 'postgres'  # db['USER']
-    password = ''  # db['PASSWORD']
-    host = 'db'  # db['HOST']
+    db = settings.DATABASES['default']
+    dbname = db['NAME']
+    user = db['USER']
+    password = db['PASSWORD']
+    host = db['HOST']
 
     for _ in range(100):
         if can_connect(dbname, user, password, host):

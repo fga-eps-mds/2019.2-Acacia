@@ -1,0 +1,30 @@
+name: CD
+
+on: 
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+    steps:
+    - uses: actions/checkout@master
+    - name: setup environment
+      run: docker build -t acacia-back-heroku .
+    - name: Run container
+      run: docker run -d -p 8000:8000 --env-file .env-staging acacia-back-heroku
+    - name: heroku container push
+      uses: actions/heroku@master
+      with: 
+        args: "container:login"
+    - name: heroku container push
+      uses: actions/heroku@master
+      with: 
+        args: "container:push web -a acacia-backend-staging"
+    - name: heroku container release
+      uses: actions/heroku@master
+      with:
+        args: "container:release web -a acacia-backend-staging"
