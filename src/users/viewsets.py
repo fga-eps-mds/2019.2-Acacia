@@ -11,6 +11,11 @@ from .serializers import (
     ProfileModelSerializer
 )
 
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated, ])
@@ -18,12 +23,44 @@ def test_access_token(request):
     return Response({'token_status': 'OK'})
 
 
+class CreateAccessToken(TokenObtainPairView):
+    def get(self, request, *args, **kwargs):
+        """
+        This endpoint returns an empty json with the
+        parameters needed to create a new user
+        """
+
+        required_fields = {
+            'meta': 'The following fields are required in the request body',
+            'email': '',
+            'password': '',
+        }
+
+        return Response(required_fields)
+
+
+class RefreshAccessToken(TokenRefreshView):
+    def get(self, request, *args, **kwargs):
+        """
+        This endpoint returns an empty json with the
+        parameters needed to create a new user
+        """
+
+        required_fields = {
+            'meta': 'Refresh token sending`refresh token` in the request body',
+            'refresh': '',
+        }
+
+        return Response(required_fields)
+
+
 class UserRegistrationAPIView(CreateAPIView):
     """
     Endpoint for user registration
     """
-
+    # by default all routes needs authentication
     permission_classes = (permissions.AllowAny, )
+
     serializer_class = UserSignUpSerializer
     queryset = User.objects.all()
 
@@ -34,6 +71,16 @@ class ProfileUpdateAPIView(RetrieveUpdateAPIView):
     """
     permission_classes = (IsAuthenticated, )
     serializer_class = ProfileModelSerializer
+
+    def patch(self, request, *args, **kwargs):
+        
+        print('\n'*10)
+        print('LEOLINDO')
+        for k, v in request.__dict__.items():
+            print(k, v)
+        print('\n'*10)
+
+        return self.partial_update(request, *args, **kwargs)
 
     def get_queryset(self):
         return Profile.objects.get(user=self.request.user.id)

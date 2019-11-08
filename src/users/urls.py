@@ -5,14 +5,11 @@ from .viewsets import (
     UserRegistrationAPIView,
     RetrieveUpdatePreferedLanguageAPIView,
     test_access_token,
-    ProfileUpdateAPIView
+    ProfileUpdateAPIView,
+    CreateAccessToken,
+    RefreshAccessToken,
 )
 
-# Simple JWT
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
 
 app_name = 'users'
 
@@ -25,13 +22,13 @@ urlpatterns = [
 
     path(
         'token/',
-        TokenObtainPairView.as_view(),
+        CreateAccessToken.as_view(),
         name='token_obtain_pair'
     ),
 
     path(
         'token/refresh/',
-        TokenRefreshView.as_view(),
+        RefreshAccessToken.as_view(),
         name='token_refresh'
     ),
 

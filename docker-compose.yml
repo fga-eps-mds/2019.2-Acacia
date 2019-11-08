@@ -12,8 +12,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    env_file: .env-dev
     command: bash -c "
-      cd src/ &&
       python manage.py makemigrations &&
       python manage.py migrate &&
       chmod +x scripts/create_superuser.sh &&
