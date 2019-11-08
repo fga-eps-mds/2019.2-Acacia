@@ -10,10 +10,6 @@ class Property(models.Model):
         unique_together = ('BRZipCode', 'type_of_address', 'address')
         verbose_name_plural = _('Properties')
 
-    pk_property = models.AutoField(
-        primary_key=True,
-    )
-
     TYPE_OF_ADDRESS = (
         (_('Apartment'), _('Apartment')),
         (_('House'),     _('House')),
