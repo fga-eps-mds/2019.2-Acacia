@@ -1,5 +1,6 @@
 ﻿﻿<!-- docs/_sidebar.md -->
 - [**Home**](home.md)
+- [**Post Mortem**](postmortem.md)
 - [**Visão de Produto**](#)
     * [Termo de Abertura](project_charter.md)
     * [Estrutura Analítica do Projeto](wbs.md)
