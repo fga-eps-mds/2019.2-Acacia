@@ -8,6 +8,5 @@ db.sqlite3
 media
 .vscode/
 env/
-migrations/
 pictures/
 .env-staging
