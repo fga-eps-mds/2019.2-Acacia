@@ -1,6 +1,6 @@
 from rest_framework.test import APITestCase
 from django.urls import reverse
-from tree.models import Tree
+from tree.models import Tree, HarvestMonth
 from property.models import Property
 
 
@@ -81,30 +81,20 @@ class TreeAPIViewTestCase(APITestCase):
 
         self.property = Property.objects.last()
 
-    def setUp(self):
-
-        self.create_user()
-        self.create_property()
-
+    def create_tree(self):
         self.tree_data = {
             'tree_type': 'Pequizeiro',
             'number_of_tree': 3,
             'tree_height': 20.5,
         }
 
-        self.url_list = reverse(
+        self.url_tree_list = reverse(
             'property:tree:tree-list',
             kwargs={'pk_property': 1}
         )
 
-        self.url_detail = reverse(
-            'property:tree:tree-detail',
-            kwargs={'pk_property': 1, 'pk_tree': 1}
-        )
-
-    def test_create_tree(self):
         response = self.client.post(
-            path=self.url_list,
+            path=self.url_tree_list,
             data=self.tree_data,
             format='json',
             **self.credentials,
@@ -118,12 +108,52 @@ class TreeAPIViewTestCase(APITestCase):
 
         self.tree = Tree.objects.last()
 
-    def test_list_all_trees(self):
+    def setUp(self):
+        self.create_user()
+        self.create_property()
+        self.create_tree()
 
-        self.test_create_tree()
+        self.url_month_list = reverse(
+            'property:tree:harvest_months-list',
+            kwargs={'pk_property': 1, 'pk_tree': 1}
+        )
+
+        self.url_month_detail = reverse(
+            'property:tree:harvest_months-detail',
+            kwargs={
+                'pk_property': 1,
+                'pk_tree': 1,
+                'pk_harvest_month': 1,
+            }
+        )
+
+    def test_create_harvest_month(self):
+
+        response = self.client.post(
+            path=self.url_month_list,
+            data={'harvest_month': 'May'},
+            format='json',
+            **self.credentials,
+        )
+
+        self.assertEqual(
+            response.status_code,
+            201,
+            msg='Failed to create a haverst month'
+        )
+
+        self.harvest_month = HarvestMonth.objects.last()
+
+    def test_create_harvest_months_of_the_same(self):
+        self.test_create_harvest_month()
+        with self.assertRaises(AssertionError):
+            self.test_create_harvest_month()
+
+    def test_list_all_harvest_months(self):
+        self.test_create_harvest_month()
 
         response = self.client.get(
-            path=self.url_list,
+            path=self.url_month_list,
             format='json',
             **self.credentials,
         )
@@ -131,43 +161,25 @@ class TreeAPIViewTestCase(APITestCase):
         self.assertEqual(
             len(response.data),
             1,
-            msg='More than one tree was created'
+            msg='More than one haverst month was created'
         )
 
         response_data = dict(response.data[0])
-        tree_data = self.tree.__dict__
+        harvest_month_data = { 'harvest_month': 'May' }
 
         self.assertEqual(
-            str(tree_data['tree_height']),
-            str(response_data['tree_height']),
+            harvest_month_data['harvest_month'],
+            response_data['harvest_month'],
+            msg=('The month registered is different from ' +
+                'the month of the request')
         )
 
-        self.assertEqual(
-            tree_data['pk_tree'],
-            response_data['pk_tree'],
-        )
-
-        self.assertEqual(
-            tree_data['tree_type'],
-            response_data['tree_type'],
-        )
-
-        self.assertEqual(
-            tree_data['number_of_tree'],
-            response_data['number_of_tree'],
-        )
-
-    def test_patch_update_tree(self):
-        self.test_create_tree()
-
-        # partial update
-        tree_update = {
-            'tree_type': 'Banana'
-        }
+    def test_patch_update_harvest_months(self):
+        self.test_create_harvest_month()
 
         response = self.client.patch(
-            path=self.url_detail,
-            data=tree_update,
+            path=self.url_month_detail,
+            data={'harvest_month': 'April'},
             format='json',
             **self.credentials,
         )
@@ -175,20 +187,17 @@ class TreeAPIViewTestCase(APITestCase):
         self.assertEqual(
             response.status_code,
             200,
-            msg='Failed to patch updade the tree'
+            msg='Failed to patch update the haverst month'
         )
 
-        self.tree = Tree.objects.last()
+        self.harvest_month = Tree.objects.last()
 
-    def test_put_update_tree(self):
-        self.test_create_tree()
-
-        # complete update (all fields)
-        self.tree_data['tree_type'] = 'Banana'
+    def test_put_update_harvest_months(self):
+        self.test_create_harvest_month()
 
         response = self.client.put(
-            path=self.url_detail,
-            data=self.tree_data,
+            path=self.url_month_detail,
+            data={'harvest_month': 'April'},
             format='json',
             **self.credentials,
         )
@@ -196,16 +205,17 @@ class TreeAPIViewTestCase(APITestCase):
         self.assertEqual(
             response.status_code,
             200,
-            msg='Failed to update the tree'
+            msg='Failed to put update the haverst month'
         )
 
-        self.tree = Tree.objects.last()
+        self.harvest_month = Tree.objects.last()
 
-    def test_get_tree(self):
-        self.test_create_tree()
+
+    def test_get_harvest_months(self):
+        self.test_create_harvest_month()
 
         response = self.client.get(
-            path=self.url_detail,
+            path=self.url_month_detail,
             format='json',
             **self.credentials,
         )
@@ -213,34 +223,19 @@ class TreeAPIViewTestCase(APITestCase):
         self.assertEqual(
             response.status_code,
             200,
-            msg='Failed to get the tree'
+            msg='Failed to get the harvest months'
         )
 
         self.assertEqual(
-            str(self.tree_data['tree_height']),
-            response.data['tree_height'],
+            response.data['harvest_month'],
+            'May'
         )
 
-        self.assertEqual(
-            str(self.tree_data['tree_type']),
-            response.data['tree_type'],
-        )
-
-        self.assertEqual(
-            response.data['pk_tree'],
-            1,
-        )
-
-        self.assertEqual(
-            self.tree_data['number_of_tree'],
-            response.data['number_of_tree'],
-        )
-
-    def test_delete_tree(self):
-        self.test_create_tree()
+    def test_delete_harvest_months(self):
+        self.test_create_harvest_month()
 
         response = self.client.delete(
-            path=self.url_detail,
+            path=self.url_month_detail,
             format='json',
             **self.credentials,
         )
@@ -248,14 +243,14 @@ class TreeAPIViewTestCase(APITestCase):
         self.assertEqual(
             response.status_code,
             204,
-            msg='Failed to delete the tree'
+            msg='Failed to delete the harvest months'
         )
 
-        trees = Tree.objects.all()
+        trees = HarvestMonth.objects.all()
         qnt_trees = len(trees)
 
         self.assertEqual(
             qnt_trees,
             0,
-            msg='Failed to delete the tree'
+            msg='Failed to delete the harvest months'
         )
