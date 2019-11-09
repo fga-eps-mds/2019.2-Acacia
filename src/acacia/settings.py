@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 from django.utils.translation import ugettext_lazy as _
 from .wait_db import start_services
+from datetime import timedelta
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -177,8 +178,6 @@ CORS_ORIGIN_WHITELIST = [
   "http://localhost:8080",
   "https://acacia-staging.herokuapp.com",
 ]
-
-from datetime import timedelta
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=5),
