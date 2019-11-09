@@ -5,6 +5,31 @@ from property.models import Property
 
 
 class TreeAPIViewTestCase(APITestCase):
+    def setUp(self):
+
+        self.create_user()
+        self.create_property()
+
+        self.tree_data = {
+            'tree_type': 'Pequizeiro',
+            'number_of_tree': 3,
+            'tree_height': 20.5,
+        }
+
+        self.url_list = reverse(
+            'property:tree:tree-list',
+            kwargs={'property_pk': self.property.pk}
+        )
+
+        self.url_detail = reverse(
+            'property:tree:tree-detail',
+            kwargs={'property_pk': self.property.pk,
+                    'pk': '1'}
+        )
+
+    def tearDown(self):
+        Tree.objects.all().delete()
+        Property.objects.all().delete()
 
     def create_authentication_tokens(self, user_credentials):
         url_token = reverse('users:token_obtain_pair')
@@ -79,28 +104,7 @@ class TreeAPIViewTestCase(APITestCase):
             msg='Failed to create property'
         )
 
-        self.property = Property.objects.last()
-
-    def setUp(self):
-
-        self.create_user()
-        self.create_property()
-
-        self.tree_data = {
-            'tree_type': 'Pequizeiro',
-            'number_of_tree': 3,
-            'tree_height': 20.5,
-        }
-
-        self.url_list = reverse(
-            'property:tree:tree-list',
-            kwargs={'pk_property': 1}
-        )
-
-        self.url_detail = reverse(
-            'property:tree:tree-detail',
-            kwargs={'pk_property': 1, 'pk_tree': 1}
-        )
+        self.property = Property.objects.filter(**property_data)[0]
 
     def test_create_tree(self):
         response = self.client.post(
@@ -145,10 +149,9 @@ class TreeAPIViewTestCase(APITestCase):
             str(tree_data['tree_height']),
             str(response_data['tree_height']),
         )
-
         self.assertEqual(
-            tree_data['pk_tree'],
-            response_data['pk_tree'],
+            tree_data['id'],
+            response_data['pk'],
         )
 
         self.assertEqual(
@@ -162,7 +165,12 @@ class TreeAPIViewTestCase(APITestCase):
         )
 
     def test_patch_update_tree(self):
-        self.test_create_tree()
+        tree = Tree.objects.create(**self.tree_data, property=self.property)
+        url_detail = reverse(
+            'property:tree:tree-detail',
+            kwargs={'property_pk': self.property.pk,
+                    'pk': tree.pk}
+        )
 
         # partial update
         tree_update = {
@@ -170,7 +178,7 @@ class TreeAPIViewTestCase(APITestCase):
         }
 
         response = self.client.patch(
-            path=self.url_detail,
+            path=url_detail,
             data=tree_update,
             format='json',
             **self.credentials,
@@ -185,13 +193,17 @@ class TreeAPIViewTestCase(APITestCase):
         self.tree = Tree.objects.last()
 
     def test_put_update_tree(self):
-        self.test_create_tree()
-
+        tree = Tree.objects.create(**self.tree_data, property=self.property)
+        url_detail = reverse(
+            'property:tree:tree-detail',
+            kwargs={'property_pk': self.property.pk,
+                    'pk': tree.pk}
+        )
         # complete update (all fields)
         self.tree_data['tree_type'] = 'Banana'
 
         response = self.client.put(
-            path=self.url_detail,
+            path=url_detail,
             data=self.tree_data,
             format='json',
             **self.credentials,
@@ -206,10 +218,14 @@ class TreeAPIViewTestCase(APITestCase):
         self.tree = Tree.objects.last()
 
     def test_get_tree(self):
-        self.test_create_tree()
-
+        tree = Tree.objects.create(**self.tree_data, property=self.property)
+        url_detail = reverse(
+            'property:tree:tree-detail',
+            kwargs={'property_pk': self.property.pk,
+                    'pk': tree.pk}
+        )
         response = self.client.get(
-            path=self.url_detail,
+            path=url_detail,
             format='json',
             **self.credentials,
         )
@@ -231,8 +247,8 @@ class TreeAPIViewTestCase(APITestCase):
         )
 
         self.assertEqual(
-            response.data['pk_tree'],
-            1,
+            response.data['pk'],
+            tree.pk,
         )
 
         self.assertEqual(
@@ -241,10 +257,14 @@ class TreeAPIViewTestCase(APITestCase):
         )
 
     def test_delete_tree(self):
-        self.test_create_tree()
-
+        tree = Tree.objects.create(**self.tree_data, property=self.property)
+        url_detail = reverse(
+            'property:tree:tree-detail',
+            kwargs={'property_pk': self.property.pk,
+                    'pk': tree.pk}
+        )
         response = self.client.delete(
-            path=self.url_detail,
+            path=url_detail,
             format='json',
             **self.credentials,
         )

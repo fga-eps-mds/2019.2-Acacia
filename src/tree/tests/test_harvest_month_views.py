@@ -1,10 +1,35 @@
 from rest_framework.test import APITestCase
 from django.urls import reverse
 from tree.models import Tree, HarvestMonth
+from users.models import User
 from property.models import Property
 
 
 class TreeAPIViewTestCase(APITestCase):
+    def setUp(self):
+        self.create_user()
+        self.create_property()
+        self.create_tree()
+
+        self.url_month_list = reverse(
+            'property:tree:harvest_months-list',
+            kwargs={'property_pk': self.property.pk,
+                    'tree_pk': self.tree.pk}
+        )
+
+        self.url_month_detail = reverse(
+            'property:tree:harvest_months-detail',
+            kwargs={
+                'property_pk': self.property.pk,
+                'tree_pk': self.tree.pk,
+                'pk': 1,
+            }
+        )
+
+    def tearDown(self):
+        self.property.delete()
+        self.tree.delete()
+        User.objects.all().delete()
 
     def create_authentication_tokens(self, user_credentials):
         url_token = reverse('users:token_obtain_pair')
@@ -90,7 +115,7 @@ class TreeAPIViewTestCase(APITestCase):
 
         self.url_tree_list = reverse(
             'property:tree:tree-list',
-            kwargs={'pk_property': 1}
+            kwargs={'property_pk': self.property.pk}
         )
 
         response = self.client.post(
@@ -108,27 +133,7 @@ class TreeAPIViewTestCase(APITestCase):
 
         self.tree = Tree.objects.last()
 
-    def setUp(self):
-        self.create_user()
-        self.create_property()
-        self.create_tree()
-
-        self.url_month_list = reverse(
-            'property:tree:harvest_months-list',
-            kwargs={'pk_property': 1, 'pk_tree': 1}
-        )
-
-        self.url_month_detail = reverse(
-            'property:tree:harvest_months-detail',
-            kwargs={
-                'pk_property': 1,
-                'pk_tree': 1,
-                'pk_harvest_month': 1,
-            }
-        )
-
     def test_create_harvest_month(self):
-
         response = self.client.post(
             path=self.url_month_list,
             data={'harvest_month': 'May'},
@@ -165,20 +170,30 @@ class TreeAPIViewTestCase(APITestCase):
         )
 
         response_data = dict(response.data[0])
-        harvest_month_data = { 'harvest_month': 'May' }
+        harvest_month_data = {'harvest_month': 'May'}
 
         self.assertEqual(
             harvest_month_data['harvest_month'],
             response_data['harvest_month'],
             msg=('The month registered is different from ' +
-                'the month of the request')
+                 'the month of the request')
         )
 
     def test_patch_update_harvest_months(self):
-        self.test_create_harvest_month()
+        harvest_month = (HarvestMonth
+                         .objects.create(tree=self.tree,
+                                         harvest_month='May'))
+        url_month_detail = reverse(
+            'property:tree:harvest_months-detail',
+            kwargs={
+                'property_pk': self.property.pk,
+                'tree_pk': self.tree.pk,
+                'pk': harvest_month.pk,
+            }
+        )
 
         response = self.client.patch(
-            path=self.url_month_detail,
+            path=url_month_detail,
             data={'harvest_month': 'April'},
             format='json',
             **self.credentials,
@@ -193,10 +208,20 @@ class TreeAPIViewTestCase(APITestCase):
         self.harvest_month = Tree.objects.last()
 
     def test_put_update_harvest_months(self):
-        self.test_create_harvest_month()
+        harvest_month = (HarvestMonth
+                         .objects.create(tree=self.tree,
+                                         harvest_month='June'))
+        url_month_detail = reverse(
+            'property:tree:harvest_months-detail',
+            kwargs={
+                'property_pk': self.property.pk,
+                'tree_pk': self.tree.pk,
+                'pk': harvest_month.pk,
+            }
+        )
 
         response = self.client.put(
-            path=self.url_month_detail,
+            path=url_month_detail,
             data={'harvest_month': 'April'},
             format='json',
             **self.credentials,
@@ -207,15 +232,23 @@ class TreeAPIViewTestCase(APITestCase):
             200,
             msg='Failed to put update the haverst month'
         )
-
         self.harvest_month = Tree.objects.last()
 
-
     def test_get_harvest_months(self):
-        self.test_create_harvest_month()
+        harvest_month = (HarvestMonth
+                         .objects.create(tree=self.tree,
+                                         harvest_month='May'))
+        url_month_detail = reverse(
+            'property:tree:harvest_months-detail',
+            kwargs={
+                'property_pk': self.property.pk,
+                'tree_pk': self.tree.pk,
+                'pk': harvest_month.pk,
+            }
+        )
 
         response = self.client.get(
-            path=self.url_month_detail,
+            path=url_month_detail,
             format='json',
             **self.credentials,
         )
@@ -232,10 +265,19 @@ class TreeAPIViewTestCase(APITestCase):
         )
 
     def test_delete_harvest_months(self):
-        self.test_create_harvest_month()
-
+        harvest_month = (HarvestMonth
+                         .objects.create(tree=self.tree,
+                                         harvest_month='January'))
+        url_month_detail = reverse(
+            'property:tree:harvest_months-detail',
+            kwargs={
+                'property_pk': self.property.pk,
+                'tree_pk': self.tree.pk,
+                'pk': harvest_month.pk,
+            }
+        )
         response = self.client.delete(
-            path=self.url_month_detail,
+            path=url_month_detail,
             format='json',
             **self.credentials,
         )

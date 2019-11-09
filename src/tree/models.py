@@ -6,13 +6,9 @@ from property.models import Property
 class Tree(models.Model):
 
     class Meta:
-        unique_together = ('pk_property', 'tree_type')
+        unique_together = ('property', 'tree_type')
 
-    pk_tree = models.AutoField(
-        primary_key=True,
-    )
-
-    pk_property = models.ForeignKey(
+    property = models.ForeignKey(
         Property,
         on_delete=models.CASCADE,
         verbose_name=_('Property trees'),
@@ -62,7 +58,7 @@ class Tree(models.Model):
     )
 
     def __str__(self):
-        return (f"{self.pk_tree}, " +
+        return (f"{self.pk}, " +
                 f"{self.tree_type}, " +
                 f"{self.number_of_tree}")
 
@@ -78,13 +74,9 @@ class Tree(models.Model):
 class HarvestMonth(models.Model):
     class Meta:
         verbose_name_plural = _('Harvest Months')
-        unique_together = ('pk_tree', 'harvest_month')
+        unique_together = ('tree', 'harvest_month')
 
-    pk_harvest_month = models.AutoField(
-        primary_key=True,
-    )
-
-    pk_tree = models.ForeignKey(
+    tree = models.ForeignKey(
         Tree,
         models.CASCADE,
         related_name=_('harvest_months'),

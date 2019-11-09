@@ -9,5 +9,5 @@ router = routers.SimpleRouter()
 router.register(r'', PropertyViewSet, basename='property')
 
 urlpatterns = [
-    path('<int:pk_property>/trees/', include('tree.urls')),
+    path('<int:property_pk>/trees/', include('tree.urls')),
 ] + router.urls

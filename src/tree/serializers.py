@@ -7,7 +7,7 @@ class HarvestMonthSerializer(ModelSerializer):
     class Meta:
         model = HarvestMonth
         fields = (
-            'pk_harvest_month',
+            'pk',
             'harvest_month',
         )
 
@@ -29,10 +29,10 @@ class HarvestMonthSerializer(ModelSerializer):
     def validate_harvest_month(self, harvest_month):
         "Validates if this tree already has this month registered"
 
-        pk_tree = self.context['view'].kwargs['pk_tree']
+        pk_tree = self.context['view'].kwargs['tree_pk']
 
         month_queryset = HarvestMonth.objects.filter(
-            pk_tree=pk_tree,
+            tree=pk_tree,
             harvest_month=harvest_month
         )
 
@@ -54,7 +54,7 @@ class TreeSerializer(ModelSerializer):
     class Meta:
         model = Tree
         fields = (
-            'pk_tree',
+            'pk',
             'tree_type',
             'number_of_tree',
             'tree_height',
@@ -78,10 +78,9 @@ class TreeSerializer(ModelSerializer):
 
     def validate_tree_type(self, tree_type):
         "Validates if this property already has this tree type registered"
-
-        pk_property = self.context['view'].kwargs['pk_property']
+        pk_property = self.context['view'].kwargs['property_pk']
         tree_queryset = Tree.objects.filter(
-            pk_property=pk_property,
+            property=pk_property,
             tree_type=tree_type
         )
 

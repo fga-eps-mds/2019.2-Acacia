@@ -9,7 +9,7 @@ from .models import Property
 class PropertyViewSet(ModelViewSet):
     serializer_class = PropertySerializer
     queryset = Property.objects.all()
-    lookup_field = 'pk_property'
+    pk_url_kwarg = 'property_pk'
 
     permission_classes = (
         IsAuthenticated,

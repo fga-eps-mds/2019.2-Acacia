@@ -13,19 +13,18 @@ class TreeViewSet(ModelViewSet):
     permission_class = (IsAuthenticated,)
 
     # override default pk model attribute
-    lookup_field = 'pk_tree'
+    pk_url_kwarg = 'tree_pk'
 
     def perform_create(self, serializer):
-
         property = Property.objects.get(
-            pk_property=self.kwargs['pk_property']
+            id=self.kwargs['property_pk']
         )
 
-        serializer.save(pk_property=property)
+        serializer.save(property=property)
 
     def get_queryset(self):
         return Tree.objects.filter(
-            pk_property=self.kwargs['pk_property']
+            property=self.kwargs['property_pk']
         )
 
 
@@ -37,17 +36,17 @@ class HarvestMonthViewSet(ModelViewSet):
     permission_class = (IsAuthenticated,)
 
     # override default pk model attribute
-    lookup_field = 'pk_harvest_month'
+    lookup_field = 'pk'
 
     def perform_create(self, serializer):
 
         tree = Tree.objects.get(
-            pk_tree=self.kwargs['pk_tree']
+            pk=self.kwargs['tree_pk']
         )
 
-        serializer.save(pk_tree=tree)
+        serializer.save(tree=tree)
 
     def get_queryset(self):
         return HarvestMonth.objects.filter(
-            pk_tree=self.kwargs['pk_tree']
+            tree=self.kwargs['tree_pk']
         )

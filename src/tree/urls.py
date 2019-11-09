@@ -17,7 +17,7 @@ harvest_month_router.register(
 
 urlpatterns = [
     path(
-        '<int:pk_tree>/harvest_months/',
+        '<int:tree_pk>/harvest_months/',
         include(harvest_month_router.urls),
     ),
 

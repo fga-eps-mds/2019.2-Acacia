@@ -16,7 +16,7 @@ class PropertySerializer(ModelSerializer):
     class Meta:
         model = Property
         fields = (
-            'pk_property',
+            'pk',
             'type_of_address',
             'BRZipCode',
             'state',

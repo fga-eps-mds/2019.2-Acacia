@@ -8,7 +8,7 @@ from users.models import User
 class TreeModelTest(TestCase):
 
     def setUp(self):
-        user = User.objects.create(
+        self.user = User.objects.create(
             email='vitas@vitas.com',
             password='vitas'
         )
@@ -21,15 +21,20 @@ class TreeModelTest(TestCase):
             district='Setor Leste',
             address='Quadra 4',
             complement='Casa 7B',
-            owner=user
+            owner=self.user
         )
 
         self.tree = Tree.objects.create(
-            pk_property=self.property,
+            property=self.property,
             tree_type='Pequizeiro',
             number_of_tree=3,
             tree_height=20.5,
         )
+
+    def tearDown(self):
+        self.property.delete()
+        self.tree.delete()
+        self.user.delete()
 
     def test_tree_creation(self):
         self.assertEqual(
@@ -70,7 +75,7 @@ class TreeModelTest(TestCase):
         )
 
     def test_string_representation(self):
-        expected = (f"{self.tree.pk_tree}, " +
+        expected = (f"{self.tree.pk}, " +
                     f"{self.tree.tree_type}, " +
                     f"{self.tree.number_of_tree}")
 
@@ -80,14 +85,14 @@ class TreeModelTest(TestCase):
 
         self.assertEqual(
             Tree._meta.unique_together,
-            (('pk_property', 'tree_type'),)
+            (('property', 'tree_type'),)
         )
 
 
 class HarvestMonthModelTest(TestCase):
 
     def setUp(self):
-        user = User.objects.create(
+        self.user = User.objects.create(
             email='vitas@vitas.com',
             password='vitas'
         )
@@ -100,20 +105,26 @@ class HarvestMonthModelTest(TestCase):
             district='Setor Leste',
             address='Quadra 4',
             complement='Casa 7B',
-            owner=user
+            owner=self.user
         )
 
         self.tree = Tree.objects.create(
-            pk_property=self.property,
+            property=self.property,
             tree_type='Pequizeiro',
             number_of_tree=3,
             tree_height=20.5,
         )
 
         self.harvest_month = HarvestMonth.objects.create(
-            pk_tree=self.tree,
+            tree=self.tree,
             harvest_month='September'
         )
+
+    def tearDown(self):
+        self.property.delete()
+        self.tree.delete()
+        self.user.delete()
+        self.harvest_month.delete()
 
     def test_tree_creation(self):
         self.assertEqual(
@@ -152,5 +163,5 @@ class HarvestMonthModelTest(TestCase):
 
         self.assertEqual(
             HarvestMonth._meta.unique_together,
-            (('pk_tree', 'harvest_month'),)
+            (('tree', 'harvest_month'),)
         )
