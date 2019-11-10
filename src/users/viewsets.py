@@ -72,34 +72,22 @@ class ProfileUpdateAPIView(RetrieveUpdateAPIView):
     permission_classes = (IsAuthenticated, )
     serializer_class = ProfileModelSerializer
 
-    def patch(self, request, *args, **kwargs):
-        
-        print('\n'*10)
-        print('LEOLINDO')
-        for k, v in request.__dict__.items():
-            print(k, v)
-        print('\n'*10)
-
-        return self.partial_update(request, *args, **kwargs)
-
-    def get_queryset(self):
+    def get_object(self):
         return Profile.objects.get(user=self.request.user.id)
 
-    def get_object(self):
-        queryset = self.get_queryset()
-        return queryset
-
     def perform_update(self, serializer):
-
         user_data = serializer.validated_data.pop('user', None)
-        username = user_data.get('username', None)
-        email = user_data.get('email', None)
 
-        user = self.request.user
-        user.username = username if username else user.username
-        user.email = email if email else user.email
+        if user_data:
+            username = user_data.get('username', None)
+            email = user_data.get('email', None)
 
-        user.save()
+            user = self.request.user
+
+            user.username = username if username else user.username
+            user.email = email if email else user.email
+            user.save()
+
         serializer.save()
 
 
