@@ -1,11 +1,14 @@
 version: '3.7'
 
+volumes:
+  pgdata:
+
 services:
 
   db:
     image: postgres
     volumes:
-      - "./data/postgres:/var/lib/postgresql/data"
+      - postgres_data:/var/lib/postgresql/data
 
   acacia-back:
     container_name: acacia_backend
@@ -25,3 +28,6 @@ services:
       - .:/code
     depends_on:
       - db
+
+volumes:
+  postgres_data:
