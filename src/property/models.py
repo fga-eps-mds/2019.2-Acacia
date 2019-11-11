@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext as _
 from localflavor.br.br_states import STATE_CHOICES
-
 from users.models import User
 
 

@@ -9,7 +9,7 @@ media
 .vscode/
 env/
 .env-staging
-
+pictures/
 # Ignore automatic migrations
 src/*/migrations/*_auto_*.py
 src/*/migrations/*_merge_*.py
