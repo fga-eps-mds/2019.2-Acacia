@@ -1,5 +1,6 @@
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from tree.models import Tree, HarvestMonth
 from property.models import Property
 from tree import serializers
@@ -8,6 +9,7 @@ from tree import serializers
 class TreeViewSet(ModelViewSet):
     queryset = Tree.objects.all()
     serializer_class = serializers.TreeSerializer
+    parser_classes = (MultiPartParser, FormParser, JSONParser)
 
     # TODO: if not authenticate, readonly
     permission_class = (IsAuthenticated,)

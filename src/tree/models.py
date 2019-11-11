@@ -57,6 +57,9 @@ class Tree(models.Model):
         max_digits=3,
     )
 
+    picture = models.ImageField(upload_to='static/trees', blank=True,
+                                null=True)
+
     def __str__(self):
         return (f"{self.pk}, " +
                 f"{self.tree_type}, " +
