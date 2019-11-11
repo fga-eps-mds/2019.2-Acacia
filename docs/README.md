@@ -10,7 +10,7 @@ Este repositório tem como objetivo o desenvolvimento, a manutenção e a evolu�
 
   
 
-## Como contribuir
+## Como contrib
 
   
 
