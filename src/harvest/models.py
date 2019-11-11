@@ -1,20 +1,22 @@
 from django.db import models
+from property.models import Property
+from django.utils.translation import ugettext as _
 
 
 class Harvest(models.Model):
 
-    # TODO A Harvest belongs to a property
+    property = models.ForeignKey(
+        Property,
+        on_delete=models.CASCADE,
+        verbose_name=_('Property harvests'),
+        related_name=_('harvests'),
+    )
 
-    def __str__(self):
-        return str(self.date)
-
-    objects = models.Manager()
+    # objects = models.Manager()
 
     date = models.DateField()
 
     description = models.TextField(
-        blank=True,
-        null=True,
         default=""
     )
 
@@ -34,11 +36,11 @@ class Harvest(models.Model):
     min_volunteers = models.PositiveSmallIntegerField()
 
     # probabily this field will become a new model
-    equipment = models.CharField(
-        blank=True,
-        null=True,
-        max_length=2000
-    )
+    # equipment = models.CharField(
+    #     blank=True,
+    #     null=True,
+    #     max_length=2000
+    # )
 
     # ACCESS_TYPES = (
     #     ('Restrict Access', 'Restrict Access'),
@@ -49,14 +51,17 @@ class Harvest(models.Model):
     #     max_length=15
     # )
 
+    def __str__(self):
+        return str(self.date)
+
 
 class RulesHarvest(models.Model):
-
-    def __str__(self):
-        return self.description
 
     harvest = models.ForeignKey(Harvest, models.CASCADE)
 
     description = models.CharField(
         max_length=280
     )
+
+    def __str__(self):
+        return self.description
