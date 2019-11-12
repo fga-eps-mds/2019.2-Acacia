@@ -1,15 +1,30 @@
+from django.contrib.auth.admin import UserAdmin
 from django.contrib import admin
 from .models import User
 
-class UserAdmin(admin.ModelAdmin):
+
+class MyUserAdmin(UserAdmin):
     list_display = (
         'email',
-        'phone_number',
-        'birth', 
-        'email',
         'username',
+        'phone_number',
+        'birth',
     )
 
-    search_fields = ('email',)
+    # required fields to create a new user on SU admin page
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': (
+                'email',
+                'username',
+                'password1',
+                'password2'
+            ),
+        }),
+    )
 
-admin.site.register(User, UserAdmin)
+    search_fields = ('email', 'username')
+
+
+admin.site.register(User, MyUserAdmin)
