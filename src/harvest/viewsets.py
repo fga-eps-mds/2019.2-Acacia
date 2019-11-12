@@ -1,15 +1,10 @@
 
 from rest_framework import permissions
-from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
 from .models import Harvest
 from .serializers import HarvestSerializer
 from property.models import Property
-
-from rest_framework import status
-from rest_framework.response import Response
-from rest_framework.settings import api_settings
 
 
 class HarvestViewSet(ModelViewSet):

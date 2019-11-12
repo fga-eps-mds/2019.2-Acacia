@@ -43,7 +43,7 @@ class HarvestSerializer(ModelSerializer):
         if max_volunteers < min_volunteers:
             raise ValidationError(
                 ("Minimum number of volunteers must be " +
-                "less than maximum number of volunteers")
+                 "less than maximum number of volunteers")
             )
 
         return data
