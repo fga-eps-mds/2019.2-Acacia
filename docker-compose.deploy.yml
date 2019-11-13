@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: postgres
+    env_file: .env.staging
+    volumes:
+      - ./data/postgres/pgdata:/var/lib/postgresql/data
+
+  acacia-back:
+    container_name: acacia_backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env.staging
+    command: bash -c "
+      python manage.py makemigrations &&
+      python manage.py migrate &&
+      chmod +x scripts/create_superuser.sh &&
+      ./scripts/create_superuser.sh &&
+      python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+
