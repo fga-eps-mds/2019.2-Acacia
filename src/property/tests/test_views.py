@@ -49,7 +49,7 @@ class PropertyListCreateAPIViewTestCase(APITestCase):
 
         self.url_detail = reverse(
             'property:property-detail',
-            kwargs={'pk': self.property.id}
+            kwargs={'pk': self.property.pk}
         )
 
         self.url_list = reverse(
@@ -74,13 +74,19 @@ class PropertyListCreateAPIViewTestCase(APITestCase):
     def test_delete_property(self):
         request = self.factory.delete(self.url_detail)
         force_authenticate(request, user=self.user)
-        response = self.view_detail(request, pk=self.property.id)
+        response = self.view_detail(
+            request,
+            pk=self.property.pk
+        )
         self.assertEqual(204, response.status_code)
 
     def test_retrieve_property(self):
         request = self.factory.get(self.url_detail)
         force_authenticate(request, user=self.user)
-        response = self.view_detail(request, pk=self.property.id)
+        response = self.view_detail(
+            request,
+            pk=self.property.pk
+        )
         self.assertEqual(200, response.status_code)
         self.assertDictContainsSubset(self.data, response.data)
 
@@ -88,7 +94,10 @@ class PropertyListCreateAPIViewTestCase(APITestCase):
         self.data['state'] = 'GO'
         request = self.factory.patch(self.url_detail, self.data)
         force_authenticate(request, user=self.user)
-        response = self.view_detail(request, pk=self.property.id)
+        response = self.view_detail(
+            request,
+            pk=self.property.pk
+        )
         self.assertEqual(200, response.status_code)
         self.assertEqual(response.data['state'], self.data['state'])
         self.assertDictContainsSubset(self.data, response.data)
