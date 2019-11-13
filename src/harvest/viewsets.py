@@ -25,4 +25,10 @@ class HarvestViewSet(ModelViewSet):
     def retrieve(self, request, *args, **kwargs):
         instance = self.get_object()
         serializer = self.get_serializer(instance)
-        return Response(serializer.data)
+        rulelist = []
+        rulequeryset = instance.rulesharvest_set.all()
+        for rule in rulequeryset:
+            rulelist.append(rule.description)
+        data = serializer.data
+        data['rules'] = rulelist
+        return Response(data)
