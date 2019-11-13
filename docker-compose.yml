@@ -1,8 +1,5 @@
 version: '3.7'
 
-volumes:
-  pgdata:
-
 services:
 
   db:
@@ -15,7 +12,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    env_file: .env-dev
+    env_file: .env.dev
     command: bash -c "
       python manage.py makemigrations &&
       python manage.py migrate &&
