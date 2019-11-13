@@ -1,34 +1,55 @@
 
-# Django Rest Framework
 from rest_framework import permissions
-from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
-# Models
-from .models import Harvest
-
-# Serializers
-from .serializers import HarvestSerializer
+from .models import Harvest, HarvestRules
+from . import serializers
+from property.models import Property
 
 
 class HarvestViewSet(ModelViewSet):
-
-    # TODO A Harvest belongs to a property
-
-    serializer_class = HarvestSerializer
     queryset = Harvest.objects.all()
+    serializer_class = serializers.HarvestSerializer
 
     permission_classes = (
-        permissions.AllowAny,
+        permissions.IsAuthenticated,
     )
 
-    def retrieve(self, request, *args, **kwargs):
-        instance = self.get_object()
-        serializer = self.get_serializer(instance)
-        rulelist = []
-        rulequeryset = instance.rulesharvest_set.all()
-        for rule in rulequeryset:
-            rulelist.append(rule.description)
-        data = serializer.data
-        data['rules'] = rulelist
-        return Response(data)
+    pk_url_kwarg = 'haverst_pk'
+
+    def perform_create(self, serializer):
+
+        property = Property.objects.get(
+            id=self.kwargs['property_pk']
+        )
+
+        serializer.save(property=property)
+
+    def get_queryset(self):
+        return Harvest.objects.filter(
+            property=self.kwargs['property_pk']
+        )
+
+
+class HarvestRulesViewSet(ModelViewSet):
+
+    queryset = HarvestRules.objects.all()
+
+    serializer_class = serializers.RulesHarvestSerializer
+
+    permission_classes = (
+        permissions.IsAuthenticated,
+    )
+
+    def perform_create(self, serializer):
+
+        harvest = Harvest.objects.get(
+            pk=self.kwargs['harvest_pk']
+        )
+
+        serializer.save(harvest=harvest)
+
+    def get_queryset(self):
+        return HarvestRules.objects.filter(
+            harvest=self.kwargs['harvest_pk']
+        )

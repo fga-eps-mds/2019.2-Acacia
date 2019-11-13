@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Harvest, RulesHarvest
+from .models import Harvest, HarvestRules
 
 
 class HarvestAdmin(admin.ModelAdmin):
@@ -12,4 +12,4 @@ class HarvestAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Harvest)
-admin.site.register(RulesHarvest)
+admin.site.register(HarvestRules)

@@ -1,15 +1,28 @@
-# Viewsets
-from .viewsets import HarvestViewSet
+from django.urls import path, include
+from rest_framework import routers
+from . import viewsets
 
-# Django rest framework
-from rest_framework.routers import DefaultRouter
-
-router = DefaultRouter()
-router.register(r'', HarvestViewSet, base_name='harvest')
 
 app_name = 'harvest'
 
-urlpatterns = [
-]
+router = routers.SimpleRouter()
+router.register(
+    r'',
+    viewsets.HarvestViewSet,
+    base_name='harvest'
+)
 
-urlpatterns += router.urls
+harvest_rules_router = routers.SimpleRouter()
+harvest_rules_router.register(
+    r'',
+    viewsets.HarvestRulesViewSet,
+    basename='harvest_rules'
+)
+
+urlpatterns = [
+    path(
+        '<int:harvest_pk>/rules/',
+        include(harvest_rules_router.urls),
+    ),
+
+] + router.urls
