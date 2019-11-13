@@ -1,44 +1,81 @@
 # Models
-from .models import Harvest, RulesHarvest
+from django.utils.translation import ugettext as _
+from . import models
+from rest_framework import serializers
 
-# Django Rest Framework
-from rest_framework.serializers import ModelSerializer
 
-
-class RulesHarvestSerializer(ModelSerializer):
+class RulesHarvestSerializer(serializers.ModelSerializer):
     class Meta:
-        model = RulesHarvest
+        model = models.HarvestRules
         fields = (
+            'pk',
             'description',
         )
 
+    def validate_description(self, description):
+        """
+        Validates if this harvest already has
+        this rule description
+        """
 
-class HarvestSerializer(ModelSerializer):
+        pk_harvest = self.context['view'].kwargs['harvest_pk']
+
+        rule_queryset = models.HarvestRules.objects.filter(
+            harvest=pk_harvest,
+            description=description
+        )
+
+        if rule_queryset:
+            raise serializers.ValidationError(
+                'This harvest already has this rule description registered'
+            )
+
+        return description
+
+
+class HarvestSerializer(serializers.ModelSerializer):
 
     rules = RulesHarvestSerializer(
         many=True,
-        write_only=True
+        read_only=True
     )
 
     class Meta:
-        model = Harvest
+        model = models.Harvest
         fields = (
+            'pk',
             'date',
             'status',
-            'equipment',
             'description',
             'max_volunteers',
             'min_volunteers',
             'rules',
         )
 
-    def create(self, validated_data):
-        rules = validated_data.pop('rules')
-        harvest = Harvest.objects.create(**validated_data)
+        extra_kwargs = {
+            "status": {
+                "error_messages": {
+                    "required": _("Choose one of the "
+                                  "following status: ") + str(
+                                   models.Harvest.valid_status()),
 
-        for rule in rules:
-            RulesHarvest.objects.create(
-                harvest=harvest,
-                **rule
+                    "invalid_choice":  _("Invalid status. "
+                                         "Choose one of the following "
+                                         "types: ") + str(
+                                         models.Harvest.valid_status()),
+                }
+            },
+        }
+
+    def validate(self, data):
+
+        min_volunteers = data['min_volunteers']
+        max_volunteers = data['max_volunteers']
+
+        if max_volunteers < min_volunteers:
+            raise serializers.ValidationError(
+                ("Minimum number of volunteers must be " +
+                 "less than maximum number of volunteers")
             )
-        return harvest
+
+        return data
