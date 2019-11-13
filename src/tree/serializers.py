@@ -1,4 +1,7 @@
-from rest_framework.serializers import ModelSerializer, ValidationError
+from rest_framework.serializers import (
+    ModelSerializer,
+    ValidationError
+)
 from tree.models import Tree, HarvestMonth
 from django.utils.translation import ugettext as _
 
