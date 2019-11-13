@@ -7,9 +7,9 @@ app_name = 'tree'
 
 tree_router = routers.SimpleRouter()
 tree_router.register(
-	r'',
-	viewsets.TreeViewSet,
-	basename='tree'
+    r'',
+    viewsets.TreeViewSet,
+    basename='tree'
 )
 
 harvest_month_router = routers.SimpleRouter()
