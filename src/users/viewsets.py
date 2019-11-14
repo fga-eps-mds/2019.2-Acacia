@@ -47,7 +47,7 @@ class RefreshAccessToken(TokenRefreshView):
         """
 
         required_fields = {
-            'meta': 'Refresh token sending`refresh token` in the request body',
+            'meta': 'Send the `refresh token` in the request body',
             'refresh': '',
         }
 
