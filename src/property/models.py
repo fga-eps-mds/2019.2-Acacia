@@ -21,57 +21,43 @@ class Property(models.Model):
         choices=TYPE_OF_ADDRESS,
         max_length=9,
         verbose_name=_('Type of address'),
-        null=False,
-        blank=False,
     )
 
     BRZipCode = models.CharField(
         max_length=8,
         verbose_name=_('Brazilian ZIP code'),
-        null=False,
-        blank=False,
     )
 
     state = models.CharField(
         max_length=2,
         choices=STATE_CHOICES,
-        null=False,
-        blank=False
     )
 
     city = models.CharField(
         max_length=100,
         verbose_name=_('City'),
-        null=False,
-        blank=False,
     )
 
     district = models.CharField(
         max_length=100,
         verbose_name=_('District'),
-        null=False,
-        blank=False,
     )
 
     address = models.CharField(
         max_length=100,
         verbose_name=_('Address'),
-        null=False,
-        blank=False,
     )
 
     complement = models.CharField(
         max_length=100,
         verbose_name=_('Address complement'),
-        null=True,
-        blank=True,
+        default=""
     )
 
     reference_point = models.CharField(
         max_length=100,
         verbose_name=_('Reference point'),
-        null=True,
-        blank=True,
+        default=""
     )
 
     owner = models.ForeignKey(
@@ -79,8 +65,6 @@ class Property(models.Model):
         on_delete=models.CASCADE,
         verbose_name=_('Property owner'),
         related_name=_('properties'),
-        null=False,
-        blank=False,
     )
 
     def __str__(self):

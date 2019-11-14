@@ -62,6 +62,7 @@ class TreeSerializer(ModelSerializer):
             'number_of_tree',
             'tree_height',
             'harvest_months',
+            'picture',
         )
 
         extra_kwargs = {

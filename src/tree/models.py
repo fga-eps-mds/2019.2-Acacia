@@ -48,13 +48,18 @@ class Tree(models.Model):
 
     number_of_tree = models.IntegerField(
         verbose_name=_('Number of tree'),
-        default=1,
     )
 
     tree_height = models.DecimalField(
         verbose_name=_('Average tree height'),
         decimal_places=1,
         max_digits=3,
+    )
+
+    picture = models.ImageField(
+        upload_to='static/trees',
+        blank=True,
+        null=True
     )
 
     def __str__(self):
