@@ -4,11 +4,17 @@ from django.utils.translation import ugettext as _
 from .models import Property
 
 from tree.serializers import TreeSerializer
+from harvest.serializers import HarvestSerializer
 
 
 class PropertySerializer(ModelSerializer):
 
     trees = TreeSerializer(
+        many=True,
+        read_only=True
+    )
+
+    harvests = HarvestSerializer(
         many=True,
         read_only=True
     )
@@ -26,6 +32,7 @@ class PropertySerializer(ModelSerializer):
             'complement',
             'reference_point',
             'trees',
+            'harvests',
         )
 
         # Customizing error messages
