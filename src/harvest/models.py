@@ -34,11 +34,11 @@ class Harvest(models.Model):
     min_volunteers = models.PositiveSmallIntegerField()
 
     # probabily this field will become a new model
-    equipment = models.CharField(
-        blank=True,
-        null=True,
-        max_length=2000
-    )
+    # equipment = models.CharField(
+    #     blank=True,
+    #     null=True,
+    #     max_length=2000
+    # )
 
     # ACCESS_TYPES = (
     #     ('Restrict Access', 'Restrict Access'),
