@@ -2,28 +2,26 @@ version: '3.7'
 
 services:
 
-  db:
+  postgres-staging:
     image: postgres
-    env_file: .env.staging
+    env_file: ./.enviroments/.staging.deploy
     volumes:
-      - ./data/postgres/pgdata:/var/lib/postgresql/data
+      - ./staging-data/postgres/pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
 
-  acacia-back:
-    container_name: acacia_backend
-    build:
-      context: .
-      dockerfile: Dockerfile
-    env_file: .env.staging
+  django-staging:
+    container_name: django-staging
+    image: acaciaelis/acacia:django-staging
+    env_file: ./.enviroments/.staging.deploy
     command: bash -c "
       python manage.py makemigrations &&
       python manage.py migrate &&
-      chmod +x scripts/create_superuser.sh &&
-      ./scripts/create_superuser.sh &&
+      python manage.py collectstatic --noinput &&
       python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
     volumes:
       - .:/code
     depends_on:
-      - db
-
+      - postgres-staging
