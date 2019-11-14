@@ -2,7 +2,6 @@ from django.urls import path, include
 from rest_framework import routers
 from . import viewsets
 
-
 app_name = 'harvest'
 
 router = routers.SimpleRouter()
@@ -24,5 +23,4 @@ urlpatterns = [
         '<int:harvest_pk>/rules/',
         include(harvest_rules_router.urls),
     ),
-
 ] + router.urls

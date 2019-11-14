@@ -1,13 +1,14 @@
-
+from rest_framework.mixins import ListModelMixin
 from rest_framework import permissions
-from rest_framework.viewsets import ModelViewSet
+from rest_framework import viewsets
 
 from .models import Harvest, HarvestRules
-from . import serializers
 from property.models import Property
+from . import serializers
 
+import datetime
 
-class HarvestViewSet(ModelViewSet):
+class HarvestViewSet(viewsets.ModelViewSet):
     queryset = Harvest.objects.all()
     serializer_class = serializers.HarvestSerializer
 
@@ -31,7 +32,7 @@ class HarvestViewSet(ModelViewSet):
         )
 
 
-class HarvestRulesViewSet(ModelViewSet):
+class HarvestRulesViewSet(viewsets.ModelViewSet):
 
     queryset = HarvestRules.objects.all()
 
@@ -53,3 +54,22 @@ class HarvestRulesViewSet(ModelViewSet):
         return HarvestRules.objects.filter(
             harvest=self.kwargs['harvest_pk']
         )
+
+
+class WeekHarvests(ListModelMixin, viewsets.GenericViewSet):
+
+    queryset = Harvest.objects.all()
+    serializer_class = serializers.HarvestSerializer
+
+    permission_classes = (permissions.AllowAny,)
+
+    def get_queryset(self):
+
+        end_date = datetime.datetime.now()
+        start_date = end_date - datetime.timedelta(weeks=1)
+
+        queryset = Harvest.objects.filter(
+            date__range=(start_date, end_date)
+        )
+
+        return queryset
