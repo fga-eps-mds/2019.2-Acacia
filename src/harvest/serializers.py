@@ -50,6 +50,7 @@ class HarvestSerializer(serializers.ModelSerializer):
             'max_volunteers',
             'min_volunteers',
             'rules',
+            'property_id'
         )
 
         extra_kwargs = {
