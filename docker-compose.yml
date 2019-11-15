@@ -4,6 +4,7 @@ services:
 
   db:
     image: postgres
+    env_file: ./.enviroments/.dev
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -12,7 +13,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    env_file: .env.dev
+    env_file: ./.enviroments/.dev
     command: bash -c "
       python manage.py makemigrations &&
       python manage.py migrate &&
