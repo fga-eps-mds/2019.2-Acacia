@@ -11,6 +11,15 @@ urlpatterns = [
 
     path('properties/', include('property.urls')),
 
+    # TODO: We could create a dynamic route that
+    # creates different queries according to the
+    # parameter passed in the url.
+
+    # path(
+    #     'harvests/<int:timedelta>/',
+    #     WeekHarvests.as_view({'get': 'list'})
+    # ),
+
     path(
         'harvests/',
         WeekHarvests.as_view({'get': 'list'})

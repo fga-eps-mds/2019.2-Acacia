@@ -8,6 +8,7 @@ from . import serializers
 
 import datetime
 
+
 class HarvestViewSet(viewsets.ModelViewSet):
     queryset = Harvest.objects.all()
     serializer_class = serializers.HarvestSerializer
@@ -69,10 +70,13 @@ class WeekHarvests(ListModelMixin, viewsets.GenericViewSet):
         end_date = start_date + datetime.timedelta(weeks=1)
 
         queryset = Harvest.objects.filter(
-            date__range=(start_date, end_date)
+            date__range=(end_date, start_date)
         )
 
+<<<<<<< HEAD
         for harvest in queryset:
           harvest.property_id = harvest.property.pk
 
+=======
+>>>>>>> e408110740decf5de230d14de608abe9bc32bd66
         return queryset
