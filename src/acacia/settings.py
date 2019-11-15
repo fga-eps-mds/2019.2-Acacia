@@ -28,7 +28,7 @@ SECRET_KEY = 'o8i1rj77rfrpx5x@#6pad8=sn@wl9ri)-uh5#r7f_jrh-ki&mh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'acacia-backend-staging.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '45.55.46.19']
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -176,7 +176,8 @@ CORS_ORIGIN_WHITELIST = [
   "http://localhost:8080",
 	"http://0.0.0.0:8080",
   "http://localhost:8080",
-  "https://acacia-staging.herokuapp.com",
+  "http://45.55.46.19:8080"
+
 ]
 
 SIMPLE_JWT = {
