@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-
+  
   postgres-staging:
     image: postgres
     env_file: ./.enviroments/.staging.deploy
@@ -28,7 +28,7 @@ services:
 
 # Prod -----------------------------------------------------
 
-    postgres-production:
+  postgres-production:
     image: postgres
     env_file: ./.enviroments/.production.deploy
     volumes:
