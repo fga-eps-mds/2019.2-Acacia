@@ -6,6 +6,7 @@
 | :- | :- | :- | :- |
 | 08/11/2019 | 0.1 | Criação da estrutura do documento |  Fabíola |
 | 14/11/2019 | 0.2 | Adição do tópico de capacitação do time | Shayane |
+| 15/11/2019 | 0.3 | Adição dos sentimentos | Shayane e Renato |
 
 
 # Introdução
@@ -65,5 +66,15 @@ Aprendi muito sobre desenvolvimento de software, muito além do código. O traba
 Sobre um aspecto mais técnico, o projeto também me ensinou a ter uma postura de engenheiro: em pensar nas decisões, levando em conta as alternativas e pesos, balanceando tempo, viabilidade técnica, qualidade de código, mantenabilidade entre outros fatores. Também aumentei minha proficiência em Git e Github, aprendendo o workflow usado para se fazer softwares modernos, e a utilizar Docker. Aprendi a fazer testes embora ainda sinta que falta muito mais, foi um ótimo começo.
 
 No geral, já via MDS como uma matéria essencial para quem quer ser um engenheiro de software de verdade, mas pelos motivos errados. Hoje, por causa dela, enxergo que software vai além de projetos e envolve muito mais do que antes imaginei.
+
+### Shayane
+
+O começo da disciplina foi um desafio para todos os membros, principalmente na aplicação da metodologia alvo. Foi complicado para o time de MDS reconhecer as utilidades da correta adoção das métricas e isso acabou causando um estresse. No entanto, com o passar do tempo e com discussões construtivas, o grupo todo amadureceu bastante essas questões e pode se preocupar com outras questões mais importantes. Notamos desde o começo alguns membros que não se sentiam muito confortáveis em trabalhar com pareamento ou que se sentiam inseguros em relação aos outros membros, em questões de conhecimento. Percebemos que isso seria um problema se não tratado rápido e não deixamos de tentar resolver isso, seja na escolha do pareamento, supervisão do repositório e discussões nas dailies e retrospectivas. 
+
+Sobre o matéria em si, foram imensas as oportunidades de aprendizado. Houve uma alta alternância/rotatividade dos papéis de arquiteto e devops, permitindo que ambos pudessem aprender termos e práticas antes não desenvolvidas por eles mesmo. Além disso, os membros de MDS tiveram bastante crescimento, indicado no quadro de conhecimento e no andamento das sprints.
+
+O que chamou bastante atenção também foi o trabalho em equipe e a contribuição de alguns membros para ajudar outros em suas issues. Em relação à metodologia, houveram algumas dívidas técnicas em algumas sprints e senti que o grupo de EPS tinha dúvidas em relação a como agir para contornar e planejar melhor as sprints. Além disso, com a release 2, foi notória a maior participação dos membros de MDS nas discussões e questionamentos de certas demandas, apesar do estresse em relação ao curto tempo para entregar um escopo. Foi notória também a necessidade de acompanhar a saúde mental dos membros, que com muitas demandas da faculdade se sentiam sobrecarregados por todos os lados.  
+
+A matéria por si só já vem com uma pressão grande em todos e é difícil controlar esse medo ao longo do semestre, eu mesma tinha medo de não me adaptar ao grupo ou não conseguir fazer as demandas, mas eu não poderia ter uma equipe melhor, com todo o suporte que recebi, apesar de todos os altos e baixos. :rosette:
 
 # Conclusão
