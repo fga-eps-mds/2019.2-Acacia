@@ -25,3 +25,29 @@ services:
       - .:/code
     depends_on:
       - postgres-staging
+
+# Prod -----------------------------------------------------
+
+    postgres-production:
+    image: postgres
+    env_file: ./.enviroments/.production.deploy
+    volumes:
+      - ./production-data/postgres/pgdata:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  django-production:
+    container_name: django-production
+    image: acaciaelis/acacia:django-prod
+    env_file: ./.enviroments/.production.deploy
+    command: bash -c "
+      python manage.py makemigrations &&
+      python manage.py migrate &&
+      python manage.py collectstatic --noinput &&
+      python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8001:8000"
+    volumes:
+      - .:/code
+    depends_on:
+      - postgres-production
