@@ -96,7 +96,10 @@ class UserAuthenticationAPIViewTestCase(APITestCase):
         Set's up user in database.
         """
 
-        response = self.client.post(self.signup_url,user)
+        response = self.client.post(
+            self.signup_url,
+            user
+        )
 
         self.assertEqual(
             response.status_code,
@@ -319,9 +322,9 @@ class ProfileUpdateAPIViewTestCase(APITestCase):
         data = {
             'birthdate': '1990-01-01',
             'bio': ('Vitaliy Vladasovich Grachyov, better ' +
-                     'known by his stage name Vitas, is a ' +
-                     'Russian singer, author, composer and' +
-                     ' actor.')
+                    'known by his stage name Vitas, is a ' +
+                    'Russian singer, author, composer and' +
+                    ' actor.')
         }
 
         response = self.client.patch(
@@ -360,8 +363,9 @@ class ProfileUpdateAPIViewTestCase(APITestCase):
 
         self.create_user(data=user_data)
 
+        # that username is already in use
         update_data = {
-            'username': 'vitas' # that name is already in use
+            'username': 'vitas'
         }
 
         response = self.client.patch(
@@ -460,8 +464,9 @@ class ProfileUpdateAPIViewTestCase(APITestCase):
 
         self.create_user(data=user_data)
 
+        # that email is already in use
         update_data = {
-            'email': 'vitas@vitas.com', # that name is already in use
+            'email': 'vitas@vitas.com',
         }
 
         response = self.client.patch(
