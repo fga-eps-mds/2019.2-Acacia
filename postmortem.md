@@ -11,6 +11,7 @@
 | 15/11/2019 | 0.5 | Adição do tópico Arquitetura | Flavio e Durval |
 | 15/11/2019 | 0.6 | Adição dos sentimentos | Durval |
 | 15/11/2019 | 0.7 | Revisão e Alteração no tópico de arquitetura  | Durval e Flavio |
+| 15/11/2019 | 0.8 | Adição dos sentimentos | Flavio |
 
 
 # Introdução
@@ -167,5 +168,57 @@ com a visão que eu tinha. Por mais que eu não me arrependa
 de ter me preparado para a disciplina, eu vejo que poderia
 tranquilamente ter me inscrito na matéria ainda calouro que
 o meu grupo estava preparado e disposto a guiar alguém assim.
+
+### Flavio
+
+Eu era aluno de engenharia eletrônica e tinha mudado recentemente para 
+engenharia de software. Devido a não conhecer muito a grade de engenharia de 
+software, eu sempre escutava algumas frases do tipo: MDS é bem pesado, MDS 
+demanda muito tempo, e por aí vai. Mas, até então, a maioria das disciplinas 
+que fiz na faculdade tinha uma fama parecida.
+
+Porém MDS é diferente é muito mais complicado do que tinha imaginado. Foi a 
+primeira disciplina que vi que o pré-requisito da disciplina significa muito 
+pouco. Os quatro créditos da disciplina passa muito longe de refletir o número 
+de horas necessário para fazer a disciplina com bom aproveitamentop. Um aluno 
+que fez somente as disciplinas do fluxo normal não tem bagagem suficiente para 
+fazer MDS.
+
+Na minha primeira reunião, onde encontrei o grupo completo, percebi que não 
+tinha os requisitos mínimos. O primeiro sentimento foi de frustração e 
+desespero. Com isso, estava praticamente decidido a trancar a disciplina, por 
+temer não conseguir acompanhar o grupo, ou pior atrapalhar o bom andamento dos 
+trabalhos. Mas, devido à importância da disciplina e o incentivo de alguns dos 
+membros do time, decidi por lutar pela disciplina, mesmo sabendo que não tinha 
+base suficiente.
+
+Sempre tive receio de trabalho em grupo, pois todas as experienciais anteriores 
+foram fracassadas. Contudo, o grupo como um todo estava muito engajado e com um 
+projeto caminhando a todo vapor.
+
+Na forma que a disciplina está organizada é uma excelente oportunidade para 
+trabalhar em grupo com projeto real. Porém, fui levado a aprender uma grande 
+demanda de conteúdos de forma independente. E o estudo independente requer 
+muito esforço, pesquisa e prática. 
+
+Apesar de gastar muito tempo estudando, às vezes tenho uma sensação de 
+frustração com a minha improdutividade. Parece que a cada novo problema eu era 
+jogado para a estava zero.
+
+Devido a grande exigência da disciplina e número de tecnologias e frameworks 
+que é necessário aprender sozinho, ainda é preciso dedicar tempo a reuniões 
+semanais. Com isso, a disciplina consome muito mais tempo de estudo que 
+qualquer disciplina de 4 créditos até mais tempo que disciplinas de 6 créditos. 
+Assim, obrigando o aluno a abrir mão de boa parte do tempo de outras 
+disciplinas para dedicar a MDS e/ou reduzir o número de disciplinas do período 
+e por consequência tirando o aluno do fluxo normal do curso.
+
+Apesar das grandes dificuldades e inexperiência, trabalhar em projeto grande 
+me possibilitou ampliar muito o conhecimento em diversas tecnologias e também 
+favorece melhoras no relacionamento interpessoal e melhorar a visão de como 
+trabalhar em equipe. 
+
+Por último, a minha sensação é que a disciplina não deveria estar no 4°período 
+e poderia ter mais créditos.
 
 # Conclusão
