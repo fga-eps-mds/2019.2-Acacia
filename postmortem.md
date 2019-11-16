@@ -7,6 +7,7 @@
 | 08/11/2019 | 0.1 | Criação da estrutura do documento |  Fabíola |
 | 14/11/2019 | 0.2 | Adição do tópico de capacitação do time | Shayane |
 | 15/11/2019 | 0.3 | Adição dos sentimentos | Shayane e Renato |
+| 15/11/2019 | 0.4 | Adição do tópico Arquitetura | Flavo e Durval |
 
 
 # Introdução
@@ -18,6 +19,26 @@ Este documento é uma reflexão do time, realizada na fase de finalização do p
 # Tecnologias utilizadas
 
 # Arquitetura
+
+    No início do projeto, foi feito uma verificação da viabilidade para iniciar
+o projeto utilizando uma arquitetura de microsserviços, porém após alguns 
+estudos foi visto que escopo, tamanho e complexidade do nosso projeto não 
+justificava se iniciar utilizando arquitetura orientada a microsserviços. Com 
+isso, produziria uma otimização prematura e ainda teríamos muitos mais pontos
+negativos do que positivos. 
+Iniciar a aplicação utilizando microsserviços, apesar de ter a sua concepção
+de simplicidade, teríamos alguns desafios que poderia colocar o projeto em risco.
+Como a o time de desenvolvedor tinha pouca experiencia e ainda não tinha a
+cultura de devops , seria adicionado uma maior complexidade no projeto como um
+todo e a curva de aprendizado seria muito maior.
+Então ficou decidido iniciar o projeto com uma arquitetura monolítica e fazer a
+aplicação funcionar e se mostrar viável para depois considerar mudar para
+microsserviços. 
+Apesar de não ter iniciado com a arquitetura de microsserviços toda as
+tecnologias foram pensadas para termos API como o mínimo acoplamento possível,
+com comunicação padronizada utilizando chamadas (HTTP) usando uma API REST e
+estamos utilizando a melhores práticas na área de desenvolvimento como: 
+integração continua, contêineres e devops.
 
 # Capacitação do Time
 
