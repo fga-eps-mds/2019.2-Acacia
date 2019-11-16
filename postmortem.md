@@ -10,6 +10,7 @@
 | 15/11/2019 | 0.4 | Adição dos sentimentos e revisão | Hugo |
 | 15/11/2019 | 0.5 | Adição do tópico Arquitetura | Flavio e Durval |
 | 15/11/2019 | 0.6 | Adição dos sentimentos | Durval |
+| 15/11/2019 | 0.7 | Revisão e Alteração no tópico de arquitetura  | Durval e Flavio |
 
 
 # Introdução
@@ -22,25 +23,35 @@ Este documento é uma reflexão do time, realizada na fase de finalização do p
 
 # Arquitetura
 
-    No início do projeto, foi feito uma verificação da viabilidade para iniciar
-o projeto utilizando uma arquitetura de microsserviços, porém após alguns
-estudos foi visto que escopo, tamanho e complexidade do nosso projeto não
-justificava se iniciar utilizando arquitetura orientada a microsserviços. Com
-isso, produziria uma otimização prematura e ainda teríamos muitos mais pontos
-negativos do que positivos.
-Iniciar a aplicação utilizando microsserviços, apesar de ter a sua concepção
-de simplicidade, teríamos alguns desafios que poderia colocar o projeto em risco.
-Como a o time de desenvolvedor tinha pouca experiencia e ainda não tinha a
-cultura de devops , seria adicionado uma maior complexidade no projeto como um
-todo e a curva de aprendizado seria muito maior.
-Então ficou decidido iniciar o projeto com uma arquitetura monolítica e fazer a
-aplicação funcionar e se mostrar viável para depois considerar mudar para
-microsserviços.
-Apesar de não ter iniciado com a arquitetura de microsserviços toda as
-tecnologias foram pensadas para termos API como o mínimo acoplamento possível,
-com comunicação padronizada utilizando chamadas (HTTP) usando uma API REST e
-estamos utilizando a melhores práticas na área de desenvolvimento como:
-integração continua, contêineres e devops.
+No início do projeto, foi analisado a possibilidade da
+utilização da arquitetura de microsserviços no projeto.
+
+Porém após alguns debates em grupo ficou claro que essa
+abordagem não iria agregar muito valor no nosso projeto e
+iria aumentar significativamente a complexidade da
+arquitetura do projeto.
+
+Dessa maneira, ficou decidido que iriamos dividir o projeto
+em dois repositórios, onde ficaria o backend e frontend da
+aplicação.
+
+Esses subprojetos, por mais que estejam intimamente
+conectados, ambos possuem sua própria arquitetura, herdada
+do framework que adotamos, o Django e o Vue.Js.
+
+O subprojeto do backend implementa a API que irá comunicar
+com a parte visual da aplicação. Essa API foi implementada
+com base nas regras de uma API REST.
+
+Essa API foi implementada utilizando o Django e o app
+Django Rest Framework, assim a arquitetura nativa desse
+framework foi respeitada durante a criação das
+funcionalidades.
+
+Já o frontend... [EXPLICAR O QUE TÁ PEGANDO AQUI]
+
+Nesse projetos implantamos a cultura de DEVOPS, isso é
+... [EXPLICAR O QUE TÁ PEGANDO AQUI]
 
 # Capacitação do Time
 
