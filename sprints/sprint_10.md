@@ -48,7 +48,7 @@ Sim. Apesar
 
 - Estimativa correta? 
 
- Não.Algumas issues foram criadas durante a sprint o que afetou a assertividade de nossa estimativa.
+ Não. Algumas issues foram criadas durante a sprint o que afetou a assertividade de nossa estimativa.
 
 - Tarefas bem distribuidas? 
 
@@ -85,4 +85,6 @@ Segue imagem com todos as questões levantadas durante a retrospectiva.
 
 # Análise da Scrum Master
 
-Na ultima sprint onde a equipe parecia ter perdido seu entusiamo pelo projeto o que me preocupou bastante ja que temos alguns problemas já citados em evoluir nossa maturidade nas metodologias. Uma das medidas da equipe e que se mostrou bastante acertiva foi o retorno ao foco no objetivo da sprint, deixar explicito o que queriamos com o trabalho no decorrer do timebox da equipe fez com que por si so voltassemos a nos entusiasmar. Mesmo com alguns tropeços estamos diminuido nosso gargalo em numero de atividades x tempo disponível. Nessa sprint tb houve uma evidente aproximação dos membros da equipe o que torna o trabalho mais harmonioso. Em minha visão apenas dois individuos mantem se distante na equipe, eu mesma e o membro Flavio. No caso do segundo isso não influência no seu esforço, pois este tem se dedicado muito a estudar as tecnologias para agregar valor ao time, entretanto influência negativamente nas entregas pois falta comunição com a equipe. No meu caso acredito que me afastamento trouxe dificuldade em entregar e desmotivação a equipe e apesar de não ter sido um risco mapeado acredito que daqui para frente devemos levar em consideração ess ponto.
+Na ultima sprint a equipe parecia ter perdido seu entusiamo pelo projeto, o que me preocupou bastante já que temos alguns problemas já citados em evoluir nossa maturidade nas metodologias. Uma das medidas da equipe e que se mostrou bastante assertiva foi o retorno ao foco no objetivo da sprint, deixar explicito o que queríamos com o trabalho no decorrer do timebox da equipe fez com que por si só voltássemos a nos entusiasmar. 
+
+Mesmo com alguns tropeços estamos diminuindo nosso gargalo em número de atividades x tempo disponível. Nessa sprint também houve uma evidente aproximação dos membros da equipe, o que torna o trabalho mais harmonioso. Em minha visão, apenas dois individuos se mantêm distante na equipe, eu mesma e o membro Flávio. No caso do segundo, isso não influencia no seu esforço, pois este tem-se dedicado muito a estudar as tecnologias para agregar valor ao time, entretanto influencia negativamente nas entregas, pois falta comunição com a equipe. No meu caso, acredito que meu afastamento trouxe dificuldade em entregar e desmotivação da equipe. E apesar de não ter sido um risco mapeado, acredito que daqui para frente devemos levar em consideração esse ponto.
