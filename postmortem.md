@@ -7,11 +7,12 @@
 | 08/11/2019 | 0.1 | Criação da estrutura do documento |  Fabíola |
 | 14/11/2019 | 0.2 | Adição do tópico de capacitação do time | Shayane |
 | 15/11/2019 | 0.3 | Adição dos sentimentos | Shayane e Renato |
+| 15/11/2019 | 0.4 | Adição dos sentimentos e revisão | Hugo |
 
 
 # Introdução
 
-Este documento é uma reflexão do time, realizada na fase de finalização do projeto, para concretizar as lições aprendidas e permitir que em projetos futuros similares possam ser facilitados.
+Este documento é uma reflexão do time, realizada na fase de finalização do projeto, para concretizar as lições aprendidas e permitir que projetos futuros similares possam ser facilitados.
 
 # Metodologia e Processo
 
@@ -31,7 +32,7 @@ No início do semestre, percebemos a importância de planejar treinamentos com a
 
 O primeiro treinamento foi o de Git, Github e metodologia ágil: Scrum, todos ministrados pelos membros de EPS. Sobre o treinamento de Git, alguns membros de MDS já possuiam conhecimento prévio, portanto não foi uma tecnologia muito nova. Apesar disso, foi uma dinâmica completamente nova para outros e por isso, pode haver o compartilhamento do conhecimento desde antes do início do desenvolvimento. 
 
-O treinamento de Scrum, adaptado ao XP era essencial porque era com ele que iríamos trabalhar durante todo o projeto, então foi explicado todos os métodos necessários para o bom funcionamento da metodologia. A forma que a Scrum master ministrou o treinamento, em que havia uma simulação entre os membros com seus respectivos papéis, possibilitou uma grande absorção do processo.
+O treinamento de Scrum, adaptado ao XP era essencial porque era com ele que iríamos trabalhar durante todo o projeto, então foram explicados todos os métodos necessários para o bom funcionamento da metodologia. A forma que a Scrum Master ministrou o treinamento, em que havia uma simulação entre os membros com seus respectivos papéis, possibilitou uma grande absorção do processo.
 
 #### Docker
 
@@ -41,11 +42,11 @@ Houve também o treinamento de Docker, que mostrou-se necessário para os membro
 
 O treinamento de HTML e CSS foi realizado np período de agosto porque até então a equipe não possuía os temas definidos, ou seja, aproveitamos o tempo para permitir um maior vivenciamento com os elementos de estilização que provavelmente iríamos utilizar.
 
-Após as escolhas de tecnologia, Vue.js para o frontend e o Django rest para o backend, procuramos um voluntário para ministrar o treinamento de Vue, já que ninguém da equipe tinha conhecimentos suficientes. O treinamento, realizado no horário do almoço, permitiu que os membros pudessem ter uma noção básica das funcionalidades do framework. Por questões de disponibilidade dos membros e da grande quantidade de conteúdo, optamos por realizar o treinamento apenas de Vue.js.
+Após as escolhas de tecnologia, Vue.js para o frontend e o Django Rest para o backend, procuramos um voluntário para ministrar o treinamento de Vue, já que ninguém da equipe tinha conhecimentos suficientes. O treinamento, realizado no horário do almoço, permitiu que os membros pudessem ter uma noção básica das funcionalidades do framework. Por questões de disponibilidade dos membros e da grande quantidade de conteúdo, optamos por realizar o treinamento apenas de Vue.js.
 
 #### Django Rest
 
-Já o treinamento de Django rest não foi realizado por falta de disponibilidade dos membros e pelo acúmulo de tarefas em diversas matérias. Além disso, os membros mostravam no começo uma maior confiança com python, o que deu uma pseudo sensação de que a equipe teria mais dificuldades no front. No decorrer do tempo, percebemos que essa primeira impressão não condizia com a realidade dos membros, pela constante dificuldade nas issues ou pelo próprio depoimento nas retrospectivas em relação ao django. No fim, a maioria dos membros possuiam mais crescimento no frontend. 
+Já o treinamento de Django Rest não foi realizado por falta de disponibilidade dos membros e pelo acúmulo de tarefas em diversas matérias. Além disso, os membros mostravam no começo uma maior confiança com python, o que deu uma pseudo sensação de que a equipe teria mais dificuldades no front. No decorrer do tempo, percebemos que essa primeira impressão não condizia com a realidade dos membros, pela constante dificuldade nas issues ou pelo próprio depoimento nas retrospectivas em relação ao django. No fim, a maioria dos membros possuiam mais crescimento no frontend. 
 
 #### Pontos de melhoria
 
@@ -76,5 +77,18 @@ Sobre o matéria em si, foram imensas as oportunidades de aprendizado. Houve uma
 O que chamou bastante atenção também foi o trabalho em equipe e a contribuição de alguns membros para ajudar outros em suas issues. Em relação à metodologia, houveram algumas dívidas técnicas em algumas sprints e senti que o grupo de EPS tinha dúvidas em relação a como agir para contornar e planejar melhor as sprints. Além disso, com a release 2, foi notória a maior participação dos membros de MDS nas discussões e questionamentos de certas demandas, apesar do estresse em relação ao curto tempo para entregar um escopo. Foi notória também a necessidade de acompanhar a saúde mental dos membros, que com muitas demandas da faculdade se sentiam sobrecarregados por todos os lados.  
 
 A matéria por si só já vem com uma pressão grande em todos e é difícil controlar esse medo ao longo do semestre, eu mesma tinha medo de não me adaptar ao grupo ou não conseguir fazer as demandas, mas eu não poderia ter uma equipe melhor, com todo o suporte que recebi, apesar de todos os altos e baixos. :rosette:
+
+### Hugo 
+
+Minhas primeiras impressões sobre a matéria de MDS foram as mais esperançosas possíveis. Eu tinha uma grande curiosidade sobre como funcionavam as metodologias e cargas de trabalho que rondeavam a matéria, que é conhecida dentro da faculdade como "divisora de águas" para o curso de engenharia de software, e não demorou muito para essa curiosidade ser sanada, já que a demanda por tarefas foi grande desde o começo do semestre e vem se mantendo constante desde então.
+
+Poder trabalhar como um time, alinhado por uma causa e propósito, tem sido maravilhoso. Entretanto, esta nem sempre foi a situação da equipe da Acácia, o começo do projeto foi uma fase dura e confusa (às vezes até mesmo desmotivadora), em que alguns dos membros se encontravam perdidos em meio ao andamento do projeto e dos porquês de estarmos trabalhando da forma como estávamos (e ainda estamos) trabalhando.
+Ainda assim, com o passar do tempo a equipe foi se unindo cada vez mais, e cada vez mais eu consegui me sentir pertencente a um time de trabalho.
+
+Além disso, o contato com um projeto grande me possibilitou o aprendizado sobre metodologias de desenvolvimento e a especialização em algumas das tecnologias que estamos usando para a construção da Acácia. Pude também aprender bastante sobre como funciona o andamento de um projeto e como trabalhar com um time ágil. A Ácácia me possibilitou ter contato também com contribuições em repositórios no GitHub, o que me motivou a conhecer mais sobre o mundo de Software Livre.
+
+Em relação às entregas, restam alguns traços de preocupação em volta do tempo restante de trabalho, já que a matéria de MDS/EPS possui um ritmo acelerado quando comparado à quantidade de trabalho necessária. 
+
+Por fim, me sinto grato de todas as formas possíveis por ter trabalhado com o time da Acácia, pude criar e reforçar laços de proximidade com pessoas incríveis dentro do projeto, além de receber, sempre que preciso, suporte dos membros da equipe. :heart:
 
 # Conclusão
