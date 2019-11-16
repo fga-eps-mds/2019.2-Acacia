@@ -8,6 +8,7 @@
 | 14/11/2019 | 0.2 | Adição do tópico de capacitação do time | Shayane |
 | 15/11/2019 | 0.3 | Adição dos sentimentos | Shayane e Renato |
 | 15/11/2019 | 0.4 | Adição dos sentimentos e revisão | Hugo |
+| 16/11/2019 | 0.5 | Adição das tecnologias utilizadas no frontend e DevOps | Hugo | 
 
 
 # Introdução
@@ -17,6 +18,24 @@ Este documento é uma reflexão do time, realizada na fase de finalização do p
 # Metodologia e Processo
 
 # Tecnologias utilizadas
+
+## Tecnologias utilizadas no backend
+
+## Tecnologias utilizadas no frontend
+### Vue.js
+Vue.js é um framework progressivo de JavaScript, de código aberto, para o desenvolvimento. As vantagens desta opção de ferramenta estão sintetizadas em sua acessibilidade simplificada, ecossistema com adoção incremental e versátil, desempenho performático e arquitetura reativa.  
+
+Uma das mais importantes ressalvas acerca da utilização deste framework dentro do projeto é a sua baixa curva de crescimento quando comparado a outros ferramentas de desenvolvimento web, como *React JS* ou *Angular*. Isto é, o ***Vue.js*** exigiu uma carga de tempo relativamente pequena para que os membros conseguissem compreender a arquitetura do framework e o seu respectivo fluxo de eventos.
+
+Durante as fases iniciais do projeto a falta de conhecimento de Vue.js, por parte da equipe, teve um grande peso negativo em cima da velocidade des entregas. Não obstante, o time ao entrar em contato direto com a tecnologia, por consequência, ganhou familiaridade e domínio sobre a tecnologia, o que fez com que a velocidade das entregas fosse incrementada depois de um longo período de lentidão. 
+
+## Tecnologias utilizadas na configuração dos ambientes
+### Docker e docker-compose
+Docker é um software contêiner que fornece uma camada de abstração e automação para virtualização. o Docker utiliza isolamento em camadas de núcleo de sistemas operacionais e melhora o desempenho da comunicação entre a imagem virtualizada e os recursos de hardware.
+
+Já o docker-compose funciona como um orquestrador de contêiners Docker.
+
+Os recursos disponíveis dentros das tecnologias Docker possibilitaram ao time uma facilidade na configuração e preparação dos ambientes. 
 
 # Arquitetura
 
