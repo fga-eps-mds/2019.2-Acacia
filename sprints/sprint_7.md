@@ -5,7 +5,7 @@
 | :- | :- | :- | :- |
 | 19/10/2019 | 0.1 | Adição do planejamento e imagens da revisão e retrospectiva |  Fabíola |
 
-# Planning da Sprint 6
+# Planning da Sprint 7
 
 - Período : 14/10 a 19/10
 
