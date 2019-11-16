@@ -70,13 +70,7 @@ class WeekHarvests(ListModelMixin, viewsets.GenericViewSet):
         end_date = start_date + datetime.timedelta(weeks=1)
 
         queryset = Harvest.objects.filter(
-            date__range=(end_date, start_date)
+            date__range=(start_date, end_date)
         )
 
-<<<<<<< HEAD
-        for harvest in queryset:
-          harvest.property_id = harvest.property.pk
-
-=======
->>>>>>> e408110740decf5de230d14de608abe9bc32bd66
         return queryset
