@@ -52,26 +52,19 @@ iria aumentar significativamente a complexidade da
 arquitetura do projeto.
 
 Dessa maneira, ficou decidido que iriamos dividir o projeto
-em dois repositórios, onde ficaria o backend e frontend da
+em dois repositórios, obedecendo um padrão de projeto
+semelhante ao (Backend for Frontend)[https://samnewman.io/patterns/architectural/bff/].
+Nesse padrão, temos um backend dedicado à nossa aplicação,
+com uma interface RESTful, para suportar as requisições da
 aplicação.
+
+<p align="center">
+	<img src="img/backend_for_frontend.jpg">
+</p>
 
 Esses subprojetos, por mais que estejam intimamente
 conectados, ambos possuem sua própria arquitetura, herdada
 do framework que adotamos, o Django e o Vue.Js.
-
-O subprojeto do backend implementa a API que irá comunicar
-com a parte visual da aplicação. Essa API foi implementada
-com base nas regras de uma API REST.
-
-Essa API foi implementada utilizando o Django e o app
-Django Rest Framework, assim a arquitetura nativa desse
-framework foi respeitada durante a criação das
-funcionalidades.
-
-Já o frontend... [EXPLICAR O QUE TÁ PEGANDO AQUI]
-
-Nesse projetos implantamos a cultura de DEVOPS, isso é
-... [EXPLICAR O QUE TÁ PEGANDO AQUI]
 
 # Capacitação do Time
 
