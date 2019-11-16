@@ -1,4 +1,4 @@
-# Sprint 8
+# Sprint 10
 
 ## Histórico de revisão
 | Data   | Versão | Modificação  | Autor  |
@@ -6,7 +6,7 @@
 | 16/11/2019 | 0.1 | Criação do documento | Martha Dantas |
 | 16/11/2019 | 1.0 | Escrita dos tópicos do documento | Martha Dantas |
 
-# Planning da Sprint 9
+# Planning da Sprint 
 
 - Período : 04/11 a 09/11
 
@@ -37,7 +37,7 @@ ID | Descrição | Estimativa | Label|
 
  # Possíveis riscos mapeados para a sprint
 
-![risk](../img/gerenciamento/risks10.png)
+![risk](../img/gerenciamento/risk10.png)
 ![burn](../img/gerenciamento/burn10.png)
 
 # Review
@@ -59,7 +59,7 @@ Sim. Apesar
 
 Segundo a equipe a qualidade entregue foi de **3,6** considerando a escala de likert com os valores de 1 a 5.
 
-![review e qualidade](../img/gerenciamento/review10.jpg)
+![review e qualidade](../img/gerenciamento/review10.png)
 
 ## Velocity
 
@@ -69,7 +69,7 @@ Segundo a equipe a qualidade entregue foi de **3,6** considerando a escala de li
 
 Segue imagem com todos as questões levantadas durante a retrospectiva.
 
-![retrospectiva](../img/gerenciamento/retrospectiva10.png)
+![retrospectiva](../img/gerenciamento/retrospective10.png)
 
 # Práticas ágeis 
 
@@ -85,4 +85,4 @@ Segue imagem com todos as questões levantadas durante a retrospectiva.
 
 # Análise da Scrum Master
 
-
+Na ultima sprint onde a equipe parecia ter perdido seu entusiamo pelo projeto o que me preocupou bastante ja que temos alguns problemas já citados em evoluir nossa maturidade nas metodologias. Uma das medidas da equipe e que se mostrou bastante acertiva foi o retorno ao foco no objetivo da sprint, deixar explicito o que queriamos com o trabalho no decorrer do timebox da equipe fez com que por si so voltassemos a nos entusiasmar. Mesmo com alguns tropeços estamos diminuido nosso gargalo em numero de atividades x tempo disponível. Nessa sprint tb houve uma evidente aproximação dos membros da equipe o que torna o trabalho mais harmonioso. Em minha visão apenas dois individuos mantem se distante na equipe, eu mesma e o membro Flavio. No caso do segundo isso não influência no seu esforço, pois este tem se dedicado muito a estudar as tecnologias para agregar valor ao time, entretanto influência negativamente nas entregas pois falta comunição com a equipe. No meu caso acredito que me afastamento trouxe dificuldade em entregar e desmotivação a equipe e apesar de não ter sido um risco mapeado acredito que daqui para frente devemos levar em consideração ess ponto.
