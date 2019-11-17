@@ -13,8 +13,8 @@
 | 15/11/2019 | 0.7 | Revisão e Alteração no tópico de arquitetura  | Durval e Flavio |
 | 15/11/2019 | 0.8 | Adição dos sentimentos | Flavio |
 | 16/11/2019 | 0.9 | Escrita das tecnologias utilizadas no frontend e DevOps | Hugo |
-| 16/11/2019 | 0.10 | Adição do tópico Django, Django REST Framework e Postgres | Durval |
-
+| 16/11/2019 | 1.0 | Adição do tópico Django, Django REST Framework e Postgres | Durval |
+| 17/11/2019 | 1.1 | Adição do tópico entrega da R1, entrega da R2 e sentimentos | Fabíola |
 
 # Introdução
 
@@ -111,6 +111,21 @@ Após discussões com os membros de MDS, foi notória a necessidade de treinamen
 
 
 # Entrega da R1
+
+A entrega intermediária do semestre foi um marco importante para equipe. Teve como objetivo principal a validação de documentos e artefatos que preparavam para o andamento do projeto e concretização do produto. Foi exposta a viabilidade técnica do produto e a visão da equipe quanto a ele, e o feedback realizado pelos professores foi documentado na issue [115](https://github.com/fga-eps-mds/2019.2-Acacia/issues/115). Em preparação para essa entrega, foram feitas diversas discussões e percebido algum desalinhamento entre membros da equipe. Inicialmente, a equipe teria contato com um mantenedor de um projeto de software livre, Saskatoon, para mapear as necessidades dos usuários e auxiliar no entendimento do produto. Porém, o mantenedor não possuia disponibilidade e a equipe então criou um produto mais independente, porém ainda alinhado com o que já tinha sido estudado e explorado na ferramenta Saskatoon.
+
+Nesse período entre o início do semestre até a entrega da Release 1 foram muitos os aprendizados e decisões realizadas pela equipe. Mudanças foram constantes, e observaram alguns pontos principais de melhorias, sendo eles:
+
+- O escopo do projeto até então, era muito grande para ser realizado durante o tempo do semestre;
+- Falta de alinhamento na equipe em relação aos objetivos do projeto e visão de produto, pois os membros estavam focados em atividades de forma individualizada;
+- Tarefas muito grandes, resultando em poucas entregas e dificuldade de entender o que estava sendo feito;
+- Problemas no processo e em documentação das sprints, dificultando o entendimento dele e possíveis melhorias.
+
+
+# Entrega da R2
+
+Durante o período pós Release 1, a equipe discutiu o feedback e realizou adaptações para prosseguir com o projeto. Apesar de dificuldades, observou-se que o conhecimento nas tecnologias foi aumentando com o tempo, bem como a confiança e produtividade, embora que no início desse período ainda existia muita insegurança de MDS e medo de colocar a "mão na massa". Alguns pontos porém, também causaram dificuldades, membros resistindo à utilização de bibliotecas e ferramentas dos framework, quebrando a arquitetura definida e a falta de conhecimento em relação à técnicas de programação, dificultaram entendimento do código e evolução do produto, pois existiram partes que eram entendidas por alguns membros e outras partes que por mais que tinham que ser replicadas em outros lugares, a reutilização do código era dificultada. Um problema que permaneceu foi o planejamento e documentação das sprints, a equipe não foi orientada pelas métricas e pouco se fez para gerenciar os riscos e melhorar a gerência e planejamento das sprints, o que acarretou na concretização de vários riscos e dívidas técnicas, tendo ainda ao final do projeto, outro desafio, o cansaço do semestre.
+
 
 # Escopo do projeto
 
@@ -243,5 +258,11 @@ trabalhar em equipe.
 
 Por último, a minha sensação é que a disciplina não deveria estar no 4°período
 e poderia ter mais créditos.
+
+
+### Fabíola
+
+Essa foi a minha segunda tentativa de EPS, e é a única matéria de projeto que falta para concluir o curso, depois de PI2 e outras várias matérias de projeto acredito já ter chegado na matéria com certo cansaço de fim de curso. Com isso em mente, tive como postura a tentativa, que se provou nada fácil, de tentar equilibrar a realização de um projeto que fosse interessante e que mantivesse a equipe motivada, mas ao mesmo tempo sempre com o cuidado em relação a saúde dos membros. Os integrantes de MDS estavam desde o início muito animados e empolgados, então foi complicado tentar entender como não sobrecarregá-los e ao mesmo tempo não "matar" essa motivação, desacelerando eles. O trabalho realizado pela equipe foi importante e existiu um grande apoio entre os membros de EPS, que não se restringiram cada um ao seu papel, o que foi reconfortante, e também MDS foi, desde o início, muito proativo. A equipe não hesitou também a procurar ajuda externa, sendo de colegas ou professores do curso, o que propiciou ainda mais aprendizado.
+
 
 # Conclusão
