@@ -1,0 +1,5 @@
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=
+POSTGRES_DB=postgres
+POSTGRES_HOST=db
+HOST=http://localhost:8000/
