@@ -18,12 +18,15 @@
 | 17/11/2019 | 1.2 | Adição dos sentimentos do João Pedro | João Pedro |
 | 17/11/2019 | 1.2 | Adição dos sentimentos do Leonardo | Leonardo Gomes |
 | 18/11/2019 | 1.3 | Adição dos sentimentos do Vítor e escopo do projeto | Vítor e Leonardo Gomes |
+| 18/11/2019 | 1.4 | Adição das visões de MDS à respeito da metodologia e processo | Renato Britto |
 
 # Introdução
 
 Este documento é uma reflexão do time, realizada na fase de finalização do projeto, para concretizar as lições aprendidas e permitir que projetos futuros similares possam ser facilitados.
 
 # Metodologia e Processo
+
+Na perspectiva dos integrantes de MDS, o processo utilizado foi elucidador. O método foi seguido corretamente, em grande parte, e dele foi compreendido como um projeto grande é feito, fazendo a união do trabalho conjunto de várias pessoa de forma coesa e eficiente. O Scrum mostrou seu poder de adaptabilidade e flexibilidade diante às dificuldades encontradas durante o projeto, sendo que a cada sprint, o time melhorava como um todo de acordo com os indicadores, as dailies deixaram de ser diárias devido ao decorrer complicado da semana que impedia contribuições diárias ao projeto, mas não perderam seu valor. A comunicação se mostrou fluída e o suporte e trabalho em equipe aconteceram durante todo o período, porém houveram falhas em informar as tarefas feitas mas essas foram ficando mais infrequentes ao longo do tempo. Quanto ao Extreme Programming, houveram falhas nas entregas pequenas por falta de compreensão de escopo porém isso foi corrigido com experiência e o pareamento foi conduzido por todo o projeto de forma a espalhar os conhecimentos entre os integrantes de MDS, inicialmente o pareamento não foi conduzido corretamente mas a cada sprint nova a qualidade deste foi aumentado. Houveram integrantes que não seguiram o pareamento durante as sprints iniciais e isto foi um detrimento à equipe e os integrantes de EPS corrigiram a situação. As reviews e plannings foram de grande auxílio a gerar uma visão conjunta, e os integrantes de MDS foram amadurecendo durante o processo após encontrar várias crises de missão durante projeto que foram superadas durante as reviews.
 
 # Tecnologias utilizadas
 
