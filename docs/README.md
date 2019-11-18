@@ -62,7 +62,7 @@ Após esses passos a aplicação deverá estar acessível em:
 
   
 
-`localhost:8080`
+`localhost:8000`
 
   
 
