@@ -17,6 +17,7 @@
 | 17/11/2019 | 1.1 | Adição do tópico entrega da R1, entrega da R2 e sentimentos | Fabíola |
 | 17/11/2019 | 1.2 | Adição dos sentimentos do João Pedro | João Pedro |
 | 17/11/2019 | 1.2 | Adição dos sentimentos do Leonardo | Leonardo Gomes |
+| 18/11/2019 | 1.3 | Adição dos sentimentos do Vítor e escopo do projeto | Vítor e Leonardo Gomes |
 
 # Introdução
 
@@ -131,6 +132,15 @@ Durante o período pós Release 1, a equipe discutiu o feedback e realizou adapt
 
 # Escopo do projeto
 
+Após a definição do tema para cada grupo, tínhamos um cliente que nos ajudaria na consolidação e guiaria as decisões. Entretanto, logo no início, o cliente nos informou que não iria prosseguir com o projeto juntamente conosco. Dessa forma, nossa PO propôs formas de evolução do saskatoon, projeto já existente apresentado pela professora, e criar um novo projeto, em que o escopo seria definido por nós. A partir de algumas discussões entre o grupo e riscos apresentados pelos EPS, decidimos tomar nosso próprio rumo no projeto, desvinculando-nos do saskatoon.
+
+A partir daí, acolhemos os conceitos e filosofia de agricultura familiar, iniciada do projeto base, para construir uma plataforma, que além de ir contra o desperdício de comida, visa a criação de um ambiente comunitário, onde criamos sensos de civilização e de humanidade ao nosso redor, onde podemos ressaltar muitos dos acontecimentos mediantes a desumanização de determinados grupos sociais. Por isso, apresentamos a Acácia, um aplicativo web mobile, que vincula proprietários de arvores e voluntários para a colheita dessas árvores frutíferas, um modelo já aplicado no Canadá, que partilha do mesmo viés, mas que não necessariamente se aplica a nossa realidade.  
+
+No contexto da disciplina, surgiram algumas complicações geradas pela decisão de iniciarmos um projeto desvinculado do saskatoon. Dentre elas estão: definição de uma arquitetura, tecnologias de configuração, desenvolvimento e testes. Cada uma dessas tecnologias definidas carregava consigo riscos relacionados à adaptação da equipe - em relação às tecnologias empregadas - e à possibilidade da não adequação das tecnologias escolhidas aos requisitos do projeto.
+
+Assim como a definição das tecnologias, a elicitação e a priorização dos requisitos exigiram uma atenção especial, visto que teríamos cerca de 4 meses para construir, do início, uma aplicação que conseguisse solucionar, minimamente, o nosso problema. Aplicação essa que surgiu a partir da ideia de solução já implementada parcialmente pelo saskatoon. A partir disso, vimos necessidade de uma redução considerável no escopo do que seria entregue até a Release 2, sinalizada pela professora após a apresentação da Release 1.
+
+Foram priorizadas funcionalidades chaves da aplicação que permitissem ao proprietário cadastrar uma propriedade, colheita e árvores frutíferas. Além das necessidades básicas de um proprietário na aplicação, foram eleitas também funcionalidades básicas de visualização de dados para usuários de todos os papéis, como o dashboard e o calendário, para visualização de colheitas e propriedades existentes. Assim, nossa plataforma reduzida, propõe, de uma forma mais simplificada, a exposição das propriedades cadastradas e uma forma de expor as propriedades dos demais usuários cadastrados. 
 
 # Sentimentos da Equipe
 
@@ -284,7 +294,13 @@ O intuito da plataforma, trouxe muito interesse e empatia sobre âmbito que est�
 
 Conseguimos aplicar mais no que era de interesse próprio, o contato com a equipe foi maravilhoso, principalmente a ajuda que tivemos dos EPS's e entre MDS's, onde cada um se especializou em uma tecnologia de interesse. No final do projeto entrou o desespero para a entrega da R2, assim comecei a ficar desesperado e tentar terminar/ajudar nas issues que não estava assigned. Claro que tivemos nossos desvios para não surtamos de vez, mas senti que não iria dar tempo (Não sei se vai dar ainda). Wasted! :heart:
 
+### Vítor
 
+No inicio do projeto fizemos decisões relacionadas ao tema, cliente, escopo e tecnologias. Apesar da maioria dos membros estarem animados com o tema, a escolha de se desvincular do cliente original trouxe consequências que resultaram, em parte da equipe, o sentimento de que não possuíamos um objetivo claro com o tema escolhido. Isso acabou gerando desmotivação e certo "desperdício" de tempo em reuniões. Apesar disso o comprometimento da equipe como um todo não chegou a ser um problema em nenhum momento. 
+
+Na maioria das vezes em que íamos começar a desenvolver uma nova área do projeto fazíamos um estudo para justificar as ferramentas, o que foi muito positivo, pois no momento que esse estudo não foi feito (escolha da tecnologia para hospedar o app) houve muito desperdício de tempo em tentativas de configuração desnecessárias, o que afetou drasticamente o andamento das issues de devops.
+
+Ao meu ver o papel de devops era, por questões pessoais, o mais desafiador que eu poderia assumir, apesar das dificuldades, foi uma das melhores oportunidades de aprendizado, levando em conta o suporte que tive de outros membros sempre que precisei :heart: 
 
 
 # Conclusão
