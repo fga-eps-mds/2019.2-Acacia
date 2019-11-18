@@ -16,6 +16,7 @@
 | 16/11/2019 | 1.0 | Adição do tópico Django, Django REST Framework e Postgres | Durval |
 | 17/11/2019 | 1.1 | Adição do tópico entrega da R1, entrega da R2 e sentimentos | Fabíola |
 | 17/11/2019 | 1.2 | Adição dos sentimentos do João Pedro | João Pedro |
+| 17/11/2019 | 1.2 | Adição dos sentimentos do Leonardo | Leonardo Gomes |
 
 # Introdução
 
@@ -276,6 +277,14 @@ Diversas coisas aconteceram e infelizmente não pude dar meu melhor mas a verdad
 Eu não sabia o que esperar de MDS. Muito se falava dessa matéria como a mais importante do curso, e agora entendo o porquê. No começo tive muito medo de não conseguir dominar as tecnologias e ser um fardo para a equipe e além disso seria a primeira vez que eu estaria realmente em um lugar mais próximo de um trabalho de engenharia de software. Por outro lado seria a primeira vez que eu ia realmente trabalhar em uma equipe de software, algo que era realmente novo para mim.
 Acho que a maior dificuldade que eu encontrei na matéria, não foi propriamente a matéria e sim conseguir conciliar ela com as demais e com a vida no geral. No começo não consegui fazer isso direito mas depois eu tudo se ajeitou naturalmente. A partir dai comecei a aprender cada vez mais as tecnologias usadas, naturalmente encontrei mais facilidade em uma e em outra sinto uma dificuldade maior.
 Acho que o maior ganho que eu levo de MDS, mais que propriamente as tecnologias, é aprender como é o processo de criação de um software saudável de modo que esse processo seja mais rápido e mais econômico alem de levar uma participação maior dos clientes.
+
+### Leonardo
+
+O intuito da plataforma, trouxe muito interesse e empatia sobre âmbito que estávamos atacando, trazendo mais para perto, visões que não eram do meu cotidiano. Entretanto, esse sentimento foi se esvaziando ao decorrer de quando a equipe se mostrou confusa acerca do que se tratava o produto, principalmente porque não tínhamos um cliente e o escopo deveria ser definido por nós. Dessa forma, mesmo que ao início do projeto eu estivesse muito animado com tudo que estava ocorrendo, durante a execução, esse sentimento foi diminuindo até a R1, onde posteriormente tivemos um melhor esclarecimento das coisas como equipe. Ahazamos!
+
+Conseguimos aplicar mais no que era de interesse próprio, o contato com a equipe foi maravilhoso, principalmente a ajuda que tivemos dos EPS's e entre MDS's, onde cada um se especializou em uma tecnologia de interesse. No final do projeto entrou o desespero para a entrega da R2, assim comecei a ficar desesperado e tentar terminar/ajudar nas issues que não estava assigned. Claro que tivemos nossos desvios para não surtamos de vez, mas senti que não iria dar tempo (Não sei se vai dar ainda). Wasted! :heart:
+
+
 
 
 # Conclusão
