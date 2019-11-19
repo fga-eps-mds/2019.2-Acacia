@@ -1,4 +1,4 @@
-# Sprint 8
+# Sprint 9
 
 ## Histórico de revisão
 | Data   | Versão | Modificação  | Autor  |
@@ -9,7 +9,7 @@
 
 # Planning da Sprint 9
 
-- Período : 04/11 a 09/11
+- Período : 28/10 a 02/11
 
 - Objetivo: ---
 
