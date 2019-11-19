@@ -1,0 +1,4 @@
+POSTGRES_USER=acaciaelis
+POSTGRES_PASSWORD=acacia
+POSTGRES_DB=acacia
+POSTGRES_HOST=postgres-staging
