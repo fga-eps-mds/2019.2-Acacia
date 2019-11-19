@@ -48,7 +48,6 @@ class Tree(models.Model):
 
     number_of_tree = models.IntegerField(
         verbose_name=_('Number of tree'),
-        default=1,
     )
 
     tree_height = models.DecimalField(
@@ -57,8 +56,11 @@ class Tree(models.Model):
         max_digits=3,
     )
 
-    picture = models.ImageField(upload_to='static/trees', blank=True,
-                                null=True)
+    picture = models.ImageField(
+        upload_to='static/trees',
+        blank=True,
+        null=True
+    )
 
     def __str__(self):
         return (f"{self.pk}, " +

@@ -1,0 +1,1 @@
+find . -path "*/migrations/0*" -exec rm -f {} \;
