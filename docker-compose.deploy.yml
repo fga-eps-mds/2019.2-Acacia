@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+
+  postgres-staging:
+    image: postgres
+    env_file: ./.enviroments/.staging.deploy
+    volumes:
+      - ./staging-data/postgres/pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  django-staging:
+    container_name: django-staging
+    image: acaciaelis/acacia:django-staging
+    env_file: ./.enviroments/.staging.deploy
+    command: bash -c "
+      python manage.py makemigrations &&
+      python manage.py migrate &&
+      python manage.py collectstatic --noinput &&
+      python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+    depends_on:
+      - postgres-staging
