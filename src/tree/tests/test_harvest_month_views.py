@@ -12,13 +12,13 @@ class TreeAPIViewTestCase(APITestCase):
         self.create_tree()
 
         self.url_month_list = reverse(
-            'property:tree:harvest_months-list',
+            'property:tree:months-list',
             kwargs={'property_pk': self.property.pk,
                     'tree_pk': self.tree.pk}
         )
 
         self.url_month_detail = reverse(
-            'property:tree:harvest_months-detail',
+            'property:tree:months-detail',
             kwargs={
                 'property_pk': self.property.pk,
                 'tree_pk': self.tree.pk,
@@ -184,7 +184,7 @@ class TreeAPIViewTestCase(APITestCase):
                          .objects.create(tree=self.tree,
                                          harvest_month='May'))
         url_month_detail = reverse(
-            'property:tree:harvest_months-detail',
+            'property:tree:months-detail',
             kwargs={
                 'property_pk': self.property.pk,
                 'tree_pk': self.tree.pk,
@@ -212,7 +212,7 @@ class TreeAPIViewTestCase(APITestCase):
                          .objects.create(tree=self.tree,
                                          harvest_month='June'))
         url_month_detail = reverse(
-            'property:tree:harvest_months-detail',
+            'property:tree:months-detail',
             kwargs={
                 'property_pk': self.property.pk,
                 'tree_pk': self.tree.pk,
@@ -239,7 +239,7 @@ class TreeAPIViewTestCase(APITestCase):
                          .objects.create(tree=self.tree,
                                          harvest_month='May'))
         url_month_detail = reverse(
-            'property:tree:harvest_months-detail',
+            'property:tree:months-detail',
             kwargs={
                 'property_pk': self.property.pk,
                 'tree_pk': self.tree.pk,
@@ -269,7 +269,7 @@ class TreeAPIViewTestCase(APITestCase):
                          .objects.create(tree=self.tree,
                                          harvest_month='January'))
         url_month_detail = reverse(
-            'property:tree:harvest_months-detail',
+            'property:tree:months-detail',
             kwargs={
                 'property_pk': self.property.pk,
                 'tree_pk': self.tree.pk,
