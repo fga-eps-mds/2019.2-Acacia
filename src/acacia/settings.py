@@ -175,11 +175,11 @@ REST_FRAMEWORK = {
 
 # CORS headers to responses
 CORS_ORIGIN_WHITELIST = [
-  "http://localhost:8080",
+    "http://localhost:8080",
 	"http://0.0.0.0:8080",
-  "http://localhost:8080",
-  "http://45.55.46.19:8080"
-
+    "http://localhost:8080",
+    "http://45.55.46.19:8080",
+    "http://45.55.46.19:8081",
 ]
 
 SIMPLE_JWT = {

@@ -66,8 +66,8 @@ class WeekHarvests(ListModelMixin, viewsets.GenericViewSet):
 
     def get_queryset(self):
 
-        end_date = datetime.datetime.now()
-        start_date = end_date - datetime.timedelta(weeks=1)
+        start_date = datetime.datetime.now()
+        end_date = start_date + datetime.timedelta(weeks=1)
 
         queryset = Harvest.objects.filter(
             date__range=(start_date, end_date)

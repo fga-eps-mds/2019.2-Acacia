@@ -50,6 +50,7 @@ class HarvestSerializer(serializers.ModelSerializer):
             'max_volunteers',
             'min_volunteers',
             'rules',
+            'property_id'
         )
 
         extra_kwargs = {
@@ -68,9 +69,31 @@ class HarvestSerializer(serializers.ModelSerializer):
         }
 
     def validate(self, data):
+        """
+        This validation occurs on both update and create
+        requests, so you need to verify that the crop in
+        question already exists before purchasing the number
+        of volunteers.
+        """
 
-        min_volunteers = data['min_volunteers']
-        max_volunteers = data['max_volunteers']
+        min_volunteers = data.get('min_volunteers', None)
+        max_volunteers = data.get('max_volunteers', None)
+
+        # patch request that doesn't update this field
+        if min_volunteers is None and max_volunteers is None:
+            return data
+
+        harvest_pk = self.context['view'].kwargs.get('pk', None)
+
+        # patch or put request
+        if harvest_pk:
+            harvest = models.Harvest.objects.get(pk=harvest_pk)
+
+            if not min_volunteers:
+                min_volunteers = harvest.min_volunteers
+
+            if not max_volunteers:
+                max_volunteers = harvest.max_volunteers
 
         if max_volunteers < min_volunteers:
             raise serializers.ValidationError(
