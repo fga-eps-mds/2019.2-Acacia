@@ -22,7 +22,8 @@ urlpatterns = [
 
     path(
         'harvests/',
-        WeekHarvests.as_view({'get': 'list'})
+        WeekHarvests.as_view({'get': 'list'}),
+        name='weekly_harvests'
     ),
 ]
 
