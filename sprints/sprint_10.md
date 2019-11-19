@@ -44,7 +44,7 @@ ID | Descrição | Estimativa | Label|
 
 -  Objetivo Alcançado?
 
-Sim. Apesar
+Sim.
 
 - Estimativa correta? 
 
