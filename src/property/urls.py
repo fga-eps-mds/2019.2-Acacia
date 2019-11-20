@@ -15,4 +15,15 @@ urlpatterns = [
     path('<int:property_pk>/trees/', include('tree.urls')),
     path('<int:property_pk>/trees', include('tree.urls')),
 
+
+    path(
+        '<int:property_pk>/trees/',
+        include('tree.urls')
+    ),
+
+    path(
+        '<int:property_pk>/harvests/',
+        include('harvest.urls')
+    ),
+
 ] + router.urls + slashless_router.urls

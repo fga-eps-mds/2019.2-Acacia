@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from .helpers import list_all_endpoints
+from harvest.viewsets import WeekHarvests
 
 
 urlpatterns = [
@@ -10,7 +11,11 @@ urlpatterns = [
     path('harvests', include('harvest.urls')),
     path('properties/', include('property.urls')),
     path('properties', include('property.urls')),
+    path(
+        'harvests/',
+        WeekHarvests.as_view({'get': 'list'}),
+        name='weekly_harvests'
+    ),
 ]
-
 
 urlpatterns = list_all_endpoints(urlpatterns)
