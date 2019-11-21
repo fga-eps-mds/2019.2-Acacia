@@ -4,9 +4,12 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.generics import CreateAPIView, RetrieveUpdateAPIView
 from rest_framework.permissions import IsAuthenticated
 
-from .models import User
-
-from .serializers import UserSignUpSerializer, UserPreferedLanguage
+from .models import User, Profile
+from .serializers import (
+    UserSignUpSerializer,
+    UserPreferedLanguage,
+    ProfileModelSerializer
+)
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -44,7 +47,7 @@ class RefreshAccessToken(TokenRefreshView):
         """
 
         required_fields = {
-            'meta': 'Refresh token sending`refresh token` in the request body',
+            'meta': 'Send the `refresh token` in the request body',
             'refresh': '',
         }
 
@@ -60,6 +63,32 @@ class UserRegistrationAPIView(CreateAPIView):
 
     serializer_class = UserSignUpSerializer
     queryset = User.objects.all()
+
+
+class ProfileUpdateAPIView(RetrieveUpdateAPIView):
+    """
+    Endpoint for update profile info
+    """
+    permission_classes = (IsAuthenticated, )
+    serializer_class = ProfileModelSerializer
+
+    def get_object(self):
+        return Profile.objects.get(user=self.request.user.id)
+
+    def perform_update(self, serializer):
+        user_data = serializer.validated_data.pop('user', None)
+
+        if user_data:
+            username = user_data.get('username', None)
+            email = user_data.get('email', None)
+
+            user = self.request.user
+
+            user.username = username if username else user.username
+            user.email = email if email else user.email
+            user.save()
+
+        serializer.save()
 
 
 class RetrieveUpdatePreferedLanguageAPIView(RetrieveUpdateAPIView):

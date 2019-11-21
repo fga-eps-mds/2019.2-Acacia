@@ -7,7 +7,7 @@ class UserIsPropertyOwner(permissions.BasePermission):
     Assumes the model instance has an `user` attribute.
     """
 
-    def has_object_permition(self, request, view, property):
+    def has_object_permission(self, request, view, property):
         return bool(
             request.method in permissions.SAFE_METHODS or
             request.user and
