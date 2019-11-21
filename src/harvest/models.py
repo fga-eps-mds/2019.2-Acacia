@@ -33,17 +33,6 @@ class Harvest(models.Model):
     max_volunteers = models.PositiveSmallIntegerField()
     min_volunteers = models.PositiveSmallIntegerField()
 
-    #  TODO: check if this field will continue in this model
-    # ACCESS_TYPES = (
-    #     ('Restrict Access', 'Restrict Access'),
-    #     ('Free Access', 'Free Access'),
-    # )
-
-    # access = models.CharField(
-    #     choices=ACCESS_TYPES,
-    #     max_length=15
-    # )
-
     def __str__(self):
         return str(self.date)
 

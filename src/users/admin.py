@@ -1,6 +1,6 @@
 from django.contrib.auth.admin import UserAdmin
 from django.contrib import admin
-from .models import User
+from .models import User, Profile
 
 
 class MyUserAdmin(UserAdmin):
@@ -27,4 +27,5 @@ class MyUserAdmin(UserAdmin):
     search_fields = ('email', 'username')
 
 
-admin.site.register(User, MyUserAdmin)
+admin.site.register(User, UserAdmin)
+admin.site.register(Profile)
