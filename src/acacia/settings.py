@@ -119,6 +119,8 @@ LANGUAGES = (
     ('fr-CA', _('French Canadian')),
 )
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -173,11 +175,11 @@ REST_FRAMEWORK = {
 
 # CORS headers to responses
 CORS_ORIGIN_WHITELIST = [
-  "http://localhost:8080",
+    "http://localhost:8080",
 	"http://0.0.0.0:8080",
-  "http://localhost:8080",
-  "http://45.55.46.19:8080"
-
+    "http://localhost:8080",
+    "http://45.55.46.19:8080",
+    "http://45.55.46.19:8081",
 ]
 
 SIMPLE_JWT = {

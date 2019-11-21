@@ -5,6 +5,7 @@ from .viewsets import (
     UserRegistrationAPIView,
     RetrieveUpdatePreferedLanguageAPIView,
     test_access_token,
+    ProfileUpdateAPIView,
     CreateAccessToken,
     RefreshAccessToken,
 )
@@ -41,5 +42,10 @@ urlpatterns = [
         'token/test-access-token/',
         test_access_token,
         name='test_access_token'
+    ),
+    path(
+        'profile/',
+        ProfileUpdateAPIView.as_view(),
+        name='profile_update'
     ),
 ]

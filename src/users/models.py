@@ -14,7 +14,6 @@ class User(AbstractUser):
             'unique': 'A user with that email already exists.',
         }
     )
-
     phone_number = PhoneNumberField(
         blank=True,
         null=True
@@ -60,3 +59,57 @@ class User(AbstractUser):
     EMAIL_FIELD = 'email'
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
+
+
+class Profile(models.Model):
+
+    objects = models.Manager()
+
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+    )
+
+    phone_number = models.CharField(
+        blank=True,
+        null=False,
+        default="",
+        max_length=15
+    )
+
+    bio = models.TextField(
+        blank=True,
+        null=False,
+        default=""
+    )
+
+    birthdate = models.DateField(
+        null=True,
+    )
+
+    photo = models.ImageField(
+        upload_to='media/profile_photo',
+        blank=True,
+        null=True
+    )
+
+    is_owner = models.BooleanField(
+        default=False,
+        help_text=_('Designates if user has a propriety'),
+        blank=True,
+        null=False
+    )
+
+    is_volunteer = models.BooleanField(
+        default=False,
+        help_text=_('Designates if user is a volunteer'),
+        blank=True,
+        null=False
+    )
+
+    is_leader = models.BooleanField(
+        default=False,
+        help_text=_('Designates if user is a haverst leader'),
+        blank=True,
+        null=False
+    )

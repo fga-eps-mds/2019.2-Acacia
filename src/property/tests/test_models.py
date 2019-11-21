@@ -30,6 +30,13 @@ class PropertyModelTest(TestCase):
             _('Properties')
         )
 
+    def test_unique_together(self):
+        self.assertEqual(
+            Property._meta.unique_together,
+            (('BRZipCode', 'type_of_address', 'address'),),
+            msg='Property unique key is not being set properly'
+        )
+
     def test_property_creation(self):
         self.assertEqual(
             Property.objects.last(),
