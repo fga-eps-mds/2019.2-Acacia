@@ -394,3 +394,152 @@ class HarvestViewSetTestCase(APITestCase):
             0,
             msg='Failed to delete the harvest'
         )
+
+
+class MonthlyHarvestsTestCase(APITestCase):
+
+    def create_authentication_tokens(self, user_credentials):
+        url_token = reverse('users:token_obtain_pair')
+
+        response = self.client.post(
+            url_token,
+            user_credentials,
+            format='json'
+        )
+
+        self.assertEqual(
+            response.status_code,
+            200,
+            msg='Failed to create user tokens credentials'
+        )
+
+        self.credentials = {
+            'HTTP_AUTHORIZATION': 'Bearer ' + response.data['access']
+        }
+
+    def create_user(self):
+        user_data = {
+            "username": 'vitas',
+            'email': 'vitas@vitas.com',
+            'password': 'vitasIsNice',
+            'confirm_password': 'vitasIsNice'
+        }
+
+        url_user_signup = reverse('users:register')
+
+        response = self.client.post(
+            url_user_signup,
+            user_data,
+            format='json'
+        )
+
+        self.assertEqual(
+            response.status_code,
+            201,
+            msg='Failed during user creation'
+        )
+
+        user_data.pop('username')
+        user_data.pop('confirm_password')
+
+        self.create_authentication_tokens(user_data)
+
+    def create_property(self):
+        property_data = {
+            'type_of_address': 'House',
+            'BRZipCode': '73021498',
+            'state': 'DF',
+            'city': 'Gama',
+            'district': 'Leste',
+            'address': "Quadra 4",
+        }
+
+        url_property_creation = reverse(
+            'property:property-list',
+        )
+
+        response = self.client.post(
+            path=url_property_creation,
+            data=property_data,
+            format='json',
+            **self.credentials,
+        )
+
+        self.assertEqual(
+            response.status_code,
+            201,
+            msg='Failed to create property'
+        )
+
+        self.property = Property.objects.get(pk=1)
+
+    def setUp(self):
+        self.create_user()
+        self.create_property()
+
+        self.harvest_data = {
+            'date': '2019-11-21',
+            'description': 'Apple Harvest',
+            'status': 'Open',
+            'max_volunteers': 10,
+            'min_volunteers': 5,
+        }
+
+        self.url_list = reverse(
+            'property:harvest:harvest-list',
+            kwargs={'property_pk': self.property.pk}
+        )
+
+        self.url_detail = reverse(
+            'property:harvest:harvest-detail',
+            kwargs={
+                'property_pk': self.property.pk,
+                'pk': '1'
+            }
+        )
+
+    def tearDown(self):
+        Property.objects.all().delete()
+        User.objects.all().delete()
+        Harvest.objects.all().delete()
+
+    def test_get_harvests_of_the_week(self):
+
+        today = datetime.date(datetime(2020, 1, 1))
+
+        for i in range(0, 12):
+            date = today + timedelta(days=i*31)
+
+            self.harvest_data['date'] = date
+
+            response = self.client.post(
+                path=self.url_list,
+                data=self.harvest_data,
+                format='json',
+                **self.credentials,
+            )
+
+            self.assertEqual(
+                response.status_code,
+                201,
+                msg='Failed to create a harvest'
+            )
+
+        for month in range(1, 13):
+            weekly_harvests_url = reverse(
+                'monthly_harvest',
+                kwargs={
+                    'year': date.year,
+                    'month': month
+                }
+            )
+
+            response = self.client.get(
+                path=weekly_harvests_url,
+            )
+
+            self.assertEqual(
+                len(response.data),
+                1,
+                msg='Failed return only 1 harvest'
+            )
