@@ -1,6 +1,7 @@
 <p align="center">  <img src="img/wordmark_1.svg" width="400"></p>
 
 [![codecov](https://codecov.io/gh/fga-eps-mds/2019.2-Acacia/branch/develop/graph/badge.svg)](https://codecov.io/gh/fga-eps-mds/2019.2-Acacia)
+[![Maintainability](https://api.codeclimate.com/v1/badges/9ceab9b0533182362c16/maintainability)](https://codeclimate.com/github/fga-eps-mds/2019.2-Acacia/maintainability)
 
 ## Visão geral
 
