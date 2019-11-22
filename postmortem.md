@@ -19,6 +19,8 @@
 | 17/11/2019 | 1.2 | Adição dos sentimentos do Leonardo | Leonardo Gomes |
 | 18/11/2019 | 1.3 | Adição dos sentimentos do Vítor e escopo do projeto | Vítor e Leonardo Gomes |
 | 18/11/2019 | 1.4 | Adição das visões de MDS à respeito da metodologia e processo | Renato Britto |
+| 22/11/2019 | 1.5 | Adição da conclusão e complementação da metodologia| Fabíola |
+
 
 # Introdução
 
@@ -27,6 +29,8 @@ Este documento é uma reflexão do time, realizada na fase de finalização do p
 # Metodologia e Processo
 
 Na perspectiva dos integrantes de MDS, o processo utilizado foi elucidador. O método foi seguido corretamente, em grande parte, e dele foi compreendido como um projeto grande é feito, fazendo a união do trabalho conjunto de várias pessoa de forma coesa e eficiente. O Scrum mostrou seu poder de adaptabilidade e flexibilidade diante às dificuldades encontradas durante o projeto, sendo que a cada sprint, o time melhorava como um todo de acordo com os indicadores, as dailies deixaram de ser diárias devido ao decorrer complicado da semana que impedia contribuições diárias ao projeto, mas não perderam seu valor. A comunicação se mostrou fluída e o suporte e trabalho em equipe aconteceram durante todo o período, porém houveram falhas em informar as tarefas feitas mas essas foram ficando mais infrequentes ao longo do tempo. Quanto ao Extreme Programming, houveram falhas nas entregas pequenas por falta de compreensão de escopo porém isso foi corrigido com experiência e o pareamento foi conduzido por todo o projeto de forma a espalhar os conhecimentos entre os integrantes de MDS, inicialmente o pareamento não foi conduzido corretamente mas a cada sprint nova a qualidade deste foi aumentado. Houveram integrantes que não seguiram o pareamento durante as sprints iniciais e isto foi um detrimento à equipe e os integrantes de EPS corrigiram a situação. As reviews e plannings foram de grande auxílio a gerar uma visão conjunta, e os integrantes de MDS foram amadurecendo durante o processo após encontrar várias crises de missão durante projeto que foram superadas durante as reviews.
+
+Um dos principais pontos de comunicação que puderam ser observados, foram as **issues**. Com a política de commits que definiu como necessário o commit linkar a issue que ele estava ligado ("#issueID Mensagem breve descrevendo alterações") a partir da issue conseguia-se acompanhar o andamento dela. Além disso, os membros tiraram dúvidas e se comunicavam por elas, sendo reforçado por EPS, desde o início, que por mais que uma dúvida parecesse simples, não coloca-la no telegram, mas sim perguntar diretamente na issue, e usar o grupo do telegram apenas para notificar os outros membros a visualizarem essa dúvida já no repositório.
 
 # Tecnologias utilizadas
 
@@ -307,3 +311,5 @@ Ao meu ver o papel de devops era, por questões pessoais, o mais desafiador que 
 
 
 # Conclusão
+
+A imersão da equipe em um projeto ágil, durante o semestre, proporcionou vários aprendizados. Houve mudança de cliente, escopo do projeto e necessidade de várias adaptações e embora o time tenha resistido inicialmente, aos poucos reagia cada vez mais rápido frente  necessidade de mudança. Aos principais pontos de melhoria, a utilização de métricas e um projeto orientado à dados poderia assegurar tanto uma qualidade de código melhor quanto uma melhor predição de riscos e planejamento de volume de trabalho da equipe, evitando atrasos. Percebeu-se como fundamental o engajamento da equipe, proatividade e a troca de conhecimento, que não se limitou aos integrantes do grupo e os professores das disciplina, mas também deu-se com colegas de curso e outras pessoas. Como equipe, embora o produto entregue esteja bem diferente do que o inicialmente idealizado, temos a sensação de dever cumprido, com o amadurecimento de todos os membros.
