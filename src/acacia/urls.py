@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from .helpers import list_all_endpoints
-from harvest.viewsets import WeekHarvests
+from harvest.viewsets import WeekHarvests, MonthlyHarvests
 
 
 urlpatterns = [
@@ -15,6 +15,12 @@ urlpatterns = [
         'harvests/',
         WeekHarvests.as_view({'get': 'list'}),
         name='weekly_harvests'
+    ),
+
+    path(
+        'monthly_harvest/<int:year>/<int:month>/',
+        MonthlyHarvests.as_view({'get': 'list'}),
+        name='monthly_harvest'
     ),
 ]
 
