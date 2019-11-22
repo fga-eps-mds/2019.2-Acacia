@@ -49,7 +49,7 @@ ID | Descrição | Estimativa | Label
 
 Segundo a equipe a qualidade entregue foi de 3.9 considerando a escala de likert com os valores de 1 a 5.
 
-![review e qualidade](../img/gerenciamento/review_quality4.jpg)
+![review e qualidade](../img/gerenciamento/review4.jpg)
 
 ## Velocity
 
