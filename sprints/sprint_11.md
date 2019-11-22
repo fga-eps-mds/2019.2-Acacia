@@ -4,7 +4,8 @@
 | Data   | Versão | Modificação  | Autor  |
 | :- | :- | :- | :- |
 | 21/11/2019 | 0.1 | Criação do documento | Martha Dantas |
-| 21/11/2019 | 1.0 | Escrita dos tópicos do documento | Martha Dantas |
+| 21/11/2019 | 0.9 | Escrita dos tópicos do documento | Martha Dantas |
+| 22/11/2019 | 1.0 | Escrita da análise da Scrum Master | Martha Dantas |
 
 # Planning da Sprint 
 
@@ -46,7 +47,7 @@ dados perdidos
 
 -  Objetivo Alcançado?
 
-Sim.
+Sim. A equipe conseguiu determinar as issues necessárias para finalizar o fluxo que nos propusemos a entregar. 
 
 - Estimativa correta? 
 
@@ -87,5 +88,5 @@ Segue imagem com todos as questões levantadas durante a retrospectiva.
 
 # Análise da Scrum Master
 
-
+Foi uma semana de análise e tomada de decisão a respeito do produto final que entregaremos na release 2. Como não poderia ser diferente usamos de mais tempo para avaliar o que foi entregue e como isso ajudou ou não nosso objetivo final. A equipe demonstrou sentir a tensão do final do semestre. Entretanto nossos indicadores demonstram que mesmo com essa tensão nos continuamos evoluindo. O conhecimento da equipe e principalmente nossa capacidade de entrega constinua aumentando de maneira a nao sobrecarregar membros. Nossa qualidade,numa análise pessoal da equipe, obteve uma leve melhora. Acredito que entregaremos um bom trabalho e que a sprint 12 que está por vir mostrar indicadores ainda melhores que estes aqui presentes.
 
