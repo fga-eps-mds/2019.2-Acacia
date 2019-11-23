@@ -68,7 +68,7 @@ Segundo a equipe a qualidade entregue foi de **3,7** considerando a escala de li
 
 ## Velocity
 
-![velocity](../img/gerenciamento/velocity11.png)
+![velocity](../img/gerenciamento/velocity11_right.png)
 
 # Retrospectiva
 
