@@ -70,3 +70,9 @@ Após esses passos a aplicação deverá estar acessível em:
 #### Front-end:
 
 Para instalar a camada front-end da aplicação basta seguir os passos de instalação descritos [aqui](https://github.com/fga-eps-mds/2019.2-Acacia-Frontend)
+
+### Ambiente de Homologação: 
+http://45.55.46.19:8080
+
+### Ambiente de Produção: 
+http://45.55.46.19:8081
