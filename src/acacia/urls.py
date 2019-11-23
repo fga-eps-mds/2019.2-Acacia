@@ -6,20 +6,11 @@ from harvest.viewsets import WeekHarvests, MonthlyHarvests
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     path('users/', include('users.urls')),
-
+    path('harvests/', include('harvest.urls')),
+    path('harvests', include('harvest.urls')),
     path('properties/', include('property.urls')),
-
-    # TODO: We could create a dynamic route that
-    # creates different queries according to the
-    # parameter passed in the url.
-
-    # path(
-    #     'harvests/<int:timedelta>/',
-    #     WeekHarvests.as_view({'get': 'list'})
-    # ),
-
+    path('properties', include('property.urls')),
     path(
         'harvests/',
         WeekHarvests.as_view({'get': 'list'}),

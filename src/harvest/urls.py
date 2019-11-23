@@ -11,6 +11,9 @@ router.register(
     base_name='harvest'
 )
 
+slashless_router = routers.DefaultRouter(trailing_slash=False)
+slashless_router.registry = router.registry[:]
+
 harvest_rules_router = routers.SimpleRouter()
 harvest_rules_router.register(
     r'',
@@ -23,4 +26,7 @@ urlpatterns = [
         '<int:harvest_pk>/rules/',
         include(harvest_rules_router.urls),
     ),
-] + router.urls
+]
+
+urlpatterns += router.urls
+urlpatterns += slashless_router.urls
