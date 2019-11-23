@@ -96,7 +96,10 @@ class UserAuthenticationAPIViewTestCase(APITestCase):
         Set's up user in database.
         """
 
-        response = self.client.post(self.signup_url, user)
+        response = self.client.post(
+            self.signup_url,
+            user
+        )
 
         self.assertEqual(
             response.status_code,
@@ -360,7 +363,7 @@ class ProfileUpdateAPIViewTestCase(APITestCase):
 
         self.create_user(data=user_data)
 
-        # that name is already in use
+        # that username is already in use
         update_data = {
             'username': 'vitas'
         }

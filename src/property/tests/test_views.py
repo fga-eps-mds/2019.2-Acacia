@@ -6,6 +6,7 @@ from django.urls import reverse
 
 from property import viewsets
 from property.models import Property
+from property.permissions import UserIsPropertyOwner
 
 from users.models import User
 
@@ -64,6 +65,13 @@ class PropertyListCreateAPIViewTestCase(APITestCase):
         response = self.view_list(request)
         self.assertEqual(201, response.status_code)
 
+    def test_create_property_with_same_unique_key(self):
+        # changing zip code to create a unique property
+        request = self.factory.post(self.url_list, self.data)
+        force_authenticate(request, user=self.user)
+        response = self.view_list(request)
+        self.assertEqual(400, response.status_code)
+
     def test_list_property(self):
         request = self.factory.get(self.url_list)
         force_authenticate(request, user=self.user)
@@ -80,6 +88,14 @@ class PropertyListCreateAPIViewTestCase(APITestCase):
         )
         self.assertEqual(204, response.status_code)
 
+    def test_delete_property_without_authentication(self):
+        request = self.factory.delete(self.url_detail)
+        response = self.view_detail(
+            request,
+            pk=self.property.pk
+        )
+        self.assertEqual(401, response.status_code)
+
     def test_retrieve_property(self):
         request = self.factory.get(self.url_detail)
         force_authenticate(request, user=self.user)
@@ -90,14 +106,65 @@ class PropertyListCreateAPIViewTestCase(APITestCase):
         self.assertEqual(200, response.status_code)
         self.assertDictContainsSubset(self.data, response.data)
 
-    def test_update_property(self):
-        self.data['state'] = 'GO'
-        request = self.factory.patch(self.url_detail, self.data)
+    def test_patch_update_property(self):
+        request = self.factory.patch(
+            self.url_detail,
+            {'state': 'GO'}
+        )
         force_authenticate(request, user=self.user)
         response = self.view_detail(
             request,
             pk=self.property.pk
         )
         self.assertEqual(200, response.status_code)
-        self.assertEqual(response.data['state'], self.data['state'])
+
+        self.data['state'] = 'GO'
+
+        self.assertEqual(
+            response.data['state'],
+            self.data['state']
+        )
+
         self.assertDictContainsSubset(self.data, response.data)
+
+    def test_put_update_property(self):
+        self.data['state'] = 'GO'
+        self.data['city'] = 'Damianópolis'
+        request = self.factory.put(self.url_detail, self.data)
+        force_authenticate(request, user=self.user)
+
+        response = self.view_detail(
+            request,
+            pk=self.property.pk
+        )
+
+        self.assertEqual(200, response.status_code)
+
+        self.assertEqual(
+            response.data['state'],
+            self.data['state']
+        )
+
+        self.assertDictContainsSubset(self.data, response.data)
+
+    def test_read_only_permission(self):
+
+        another_user = User.objects.create(
+            username='MrRobot',
+            email='robot@mr.com',
+            password='hackerman'
+        )
+
+        request = self.factory.get(self.url_detail)
+        force_authenticate(request, user=another_user)
+
+        permission = UserIsPropertyOwner()
+        ans = permission.has_object_permission(
+            request,
+            self.view_detail,
+            self.property
+        )
+
+        self.assertTrue(
+            ans
+        )

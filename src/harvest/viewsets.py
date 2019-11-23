@@ -7,6 +7,7 @@ from property.models import Property
 from . import serializers
 
 import datetime
+import calendar
 
 
 class HarvestViewSet(viewsets.ModelViewSet):
@@ -66,8 +67,31 @@ class WeekHarvests(ListModelMixin, viewsets.GenericViewSet):
 
     def get_queryset(self):
 
-        end_date = datetime.datetime.now()
-        start_date = end_date - datetime.timedelta(weeks=1)
+        start_date = datetime.datetime.now()
+        end_date = start_date + datetime.timedelta(weeks=1)
+
+        queryset = Harvest.objects.filter(
+            date__range=(start_date, end_date)
+        )
+
+        return queryset
+
+
+class MonthlyHarvests(ListModelMixin, viewsets.GenericViewSet):
+
+    queryset = Harvest.objects.all()
+    serializer_class = serializers.HarvestSerializer
+    permission_classes = (permissions.AllowAny,)
+
+    def get_queryset(self):
+
+        month = self.kwargs['month']
+        year = self.kwargs['year']
+
+        _, last_day = calendar.monthrange(year, month)
+
+        start_date = datetime.datetime(year, month, 1)
+        end_date = datetime.datetime(year, month, last_day)
 
         queryset = Harvest.objects.filter(
             date__range=(start_date, end_date)
