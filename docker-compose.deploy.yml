@@ -9,6 +9,8 @@ services:
       - ./staging-data/postgres/pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false" 
 
   django-staging:
     container_name: django-staging
@@ -23,6 +25,8 @@ services:
       - "8000:8000"
     depends_on:
       - postgres-staging
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true" 
 
 # Prod -----------------------------------------------------
 
@@ -33,6 +37,8 @@ services:
       - ./production-data/postgres/pgdata:/var/lib/postgresql/data
     ports:
       - "5433:5432"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false" 
 
   django-production:
     container_name: django-production
@@ -47,3 +53,13 @@ services:
       - "8001:8000"
     depends_on:
       - postgres-production
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true" 
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
