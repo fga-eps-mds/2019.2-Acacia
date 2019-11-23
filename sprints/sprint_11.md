@@ -6,6 +6,7 @@
 | 21/11/2019 | 0.1 | Criação do documento | Martha Dantas |
 | 21/11/2019 | 0.9 | Escrita dos tópicos do documento | Martha Dantas |
 | 22/11/2019 | 1.0 | Escrita da análise da Scrum Master | Martha Dantas |
+| 23/11/2019 | 1.1 | Corrigindo equívocos com dívidadas técnicas | Martha Dantas |
 
 # Planning da Sprint 
 
@@ -26,18 +27,19 @@
 | #176 | Criar máquina no digitalOcean | 1 | EPS |
 | #177 | Configurar o ambiente de homologação no docker-compose para o deploy | 5 | EPS |
 | #178 | Configurar o ambiente de produção no docker-compose para o deplo | 5 | MDS/EPS |
+| #80 | Configurar ambiente de produção do backend | 13 | EPS/MDS |
 
 
 # Dívida alocada
 
 ID | Descrição | Estimativa | Label|
 ---|-----------|------------|-------|
-| #80 | Configurar ambiente de produção do backend | 13 | EPS/MDS |
-| #158 | Automatizar migrações no github actions | 8 | EPS |
+| #158 | Automatizar migrações no github actions | 8 | EPS | --> Descartada por mudanças na ferramenta de migraçao ver em issue [#178](https://github.com/fga-eps-mds/2019.2-Acacia/issues/178) e [#177](https://github.com/fga-eps-mds/2019.2-Acacia/issues/177)
 | #168 | Desenvolver a escrita do post mortem | 8 | EPS/MDS |
 
+
  - Total de pontos planejados: 92pts.
- - Total de pontos entregues: 84pts.
+ - Total de pontos entregues: 76pts.
 
  # Possíveis riscos mapeados para a sprint
 
