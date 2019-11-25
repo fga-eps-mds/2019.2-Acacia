@@ -12,7 +12,7 @@ urlpatterns = [
     path('properties/', include('property.urls')),
     path('properties', include('property.urls')),
     path(
-        'harvests/',
+        'weekly_harvests/',
         WeekHarvests.as_view({'get': 'list'}),
         name='weekly_harvests'
     ),
