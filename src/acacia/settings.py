@@ -28,7 +28,7 @@ SECRET_KEY = 'o8i1rj77rfrpx5x@#6pad8=sn@wl9ri)-uh5#r7f_jrh-ki&mh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'acacia-backend-staging.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -97,11 +97,11 @@ WSGI_APPLICATION = 'acacia.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('DATABASE_NAME'),
-        'USER': os.environ.get('DATABASE_USER'),
-        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
-        'HOST': os.environ.get('DATABASE_HOST'),
-        'PORT': os.environ.get('DATABASE_PORT'),
+        'NAME': os.environ.get('POSTGRES_DB'),
+        'USER': os.environ.get('POSTGRES_USER'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+        'HOST': os.environ.get('POSTGRES_HOST'),
+        'PORT': '5432',
     },
 
     'sqlite': {
@@ -119,6 +119,8 @@ LANGUAGES = (
     ('fr-CA', _('French Canadian')),
 )
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -173,10 +175,11 @@ REST_FRAMEWORK = {
 
 # CORS headers to responses
 CORS_ORIGIN_WHITELIST = [
-  "http://localhost:8080",
+    "http://localhost:8080",
 	"http://0.0.0.0:8080",
-  "http://localhost:8080",
-  "https://acacia-staging.herokuapp.com",
+    "http://localhost:8080",
+    "http://45.55.46.19:8080",
+    "http://45.55.46.19:8081",
 ]
 
 SIMPLE_JWT = {

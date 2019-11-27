@@ -1,6 +1,7 @@
 <p align="center">  <img src="img/wordmark_1.svg" width="400"></p>
 
 [![codecov](https://codecov.io/gh/fga-eps-mds/2019.2-Acacia/branch/develop/graph/badge.svg)](https://codecov.io/gh/fga-eps-mds/2019.2-Acacia)
+[![Maintainability](https://api.codeclimate.com/v1/badges/9ceab9b0533182362c16/maintainability)](https://codeclimate.com/github/fga-eps-mds/2019.2-Acacia/maintainability)
 
 ## Visão geral
 
@@ -62,10 +63,16 @@ Após esses passos a aplicação deverá estar acessível em:
 
   
 
-`localhost:8080`
+`localhost:8000`
 
   
 
 #### Front-end:
 
 Para instalar a camada front-end da aplicação basta seguir os passos de instalação descritos [aqui](https://github.com/fga-eps-mds/2019.2-Acacia-Frontend)
+
+### Ambiente de Homologação: 
+http://45.55.46.19:8080
+
+### Ambiente de Produção: 
+http://45.55.46.19:8081

@@ -1,21 +1,19 @@
 version: '3.7'
 
-volumes:
-  pgdata:
-
 services:
 
   db:
     image: postgres
+    env_file: ./.enviroments/.dev
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - "./data/postgres:/var/lib/postgresql/data"
 
   acacia-back:
     container_name: acacia_backend
     build:
       context: .
       dockerfile: Dockerfile
-    env_file: .env-dev
+    env_file: ./.enviroments/.dev
     command: bash -c "
       python manage.py makemigrations &&
       python manage.py migrate &&
@@ -28,6 +26,3 @@ services:
       - .:/code
     depends_on:
       - db
-
-volumes:
-  postgres_data:

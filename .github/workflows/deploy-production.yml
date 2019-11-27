@@ -1,0 +1,18 @@
+name: deploy-production
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Docker login
+      run: docker login --username=${{secrets.DOCKER_USER}} --password=${{secrets.DOCKER_PASS}}
+    - name: Docker build
+      run: docker build -t acaciaelis/acacia:django-prod .
+    - name: Docker push
+      run: docker push acaciaelis/acacia:django-prod
