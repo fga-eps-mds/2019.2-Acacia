@@ -8,7 +8,7 @@
 | 12/09/2019 | 0.1 | Criação da versão inicial do documento | Fabíola |
 | 12/09/2019 | 0.1.1 | Adição da justificativa do nome da aplicação | Hugo Sobral de Lima Salomão |
 | 13/09/2019 | 0.2 | Adição de componentes e contraste da paleta de cores | Fabíola |
-| 13/09/2019 | 0.3 | Ajuste do slide da apresentação da identidade visual | Leonardo da Silva Gomes |
+| 13/09/2019 | 0.3 | Ajuste do slide da apresentação da identidade visual | Leonardo Gomes |
 | 13/09/2019 | 0.4 | Ajuste de texto dos componentes e cores | Fabíola |
 
 # 1. Introdução
@@ -80,7 +80,7 @@ Ainda, em relação ao contraste, foram feitos testes e é recomendado ter estes
 
 ## 4.1. Botões
 
-Existem botões utilizando as diferentes cores da paleta, a depender do uso. O botão comum de confirmação é da cor primária. Os botões são arredondados (raio de 12 px) com texto escrito utilizando a fonte Raleway tamanho 14pt, semibold, todas letras maiúsculas. Observa-se ainda a cor da palavra escrita, a depender da cor do botão, para cumprir o contraste.
+Existem botões utilizando as diferentes cores da paleta, a depender do uso. O botão comum de confirmação é da cor primária. Os botões são arredondados (border-radius de 12 px) com texto escrito utilizando a fonte Raleway tamanho 14pt, semibold, todas letras maiúsculas. Observa-se ainda a cor da palavra escrita, a depender da cor do botão, para cumprir o contraste.
 
 ![botoes](img/identidade/botoes.png)
 
